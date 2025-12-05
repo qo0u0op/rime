@@ -15,9 +15,12 @@ schema:
     - latex
 
 switches:
-  - name: simplification
+  - name: t2s                  # 簡繁轉換
     reset: 0
     states: [漢字, 汉字]
+  - name: t2tw                  # 正繁轉換
+    states: [傳承, 正體]
+    reset: 1
   - name: extended_charset
     reset: 0
     states: [通用, 增廣]
@@ -54,15 +57,21 @@ engine:
     - table_translator@translator_cangjie5
     - script_translator
   filters:
-    - simplifier
+    - simplifier@t2s  # 簡繁轉換
+    - simplifier@t2tw  # 正繁轉換
     - reverse_lookup_filter@reverse_lookup_flypy
     - uniquifier
+    - cjk_minifier
 
 # add menu option to use TW Chinese
-simplifier:
-  opencc_config:
-  __default__: t2tw.json
-  simplification/汉字: t2s.json
+t2s: # 簡繁轉換
+  option_name: t2s
+  opencc_config: t2s.json
+  tips: none
+t2tw: # 正繁轉換
+  option_name: t2tw
+  opencc_config: t2tw.json
+  tips: none
 
 translator_cangjie5:
   __include: cangjie5.schema:/translator

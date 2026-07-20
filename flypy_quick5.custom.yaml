@@ -57,3 +57,8 @@ patch:
         punct: '^/(nm([0-9]|10)|[A-Za-z]+)$'
         translator_cangjie5: "`c[a-z]*'?$"
 
+__patch:
+# Rx: lotem/rime-octagram-data:customize:schema=flypy_quick5,model=hant {
+  - patch/+:
+      __include: grammar:/hant
+# }

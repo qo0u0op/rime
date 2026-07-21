@@ -189,9 +189,13 @@ def main():
   for char in sorted(common):
     cj_codes = cangjie_map[char]
     cj_quicks = set()
-    # collect all valid quick codes, preferring non-x/z-prefixed
+
+    has_normal = any(not code.startswith('x') and not code.startswith('z') for code, _ in cj_codes)
+
     for code, _ in cj_codes:
       if code.startswith('x') or code.startswith('z'):
+        if has_normal:
+          continue
         code = re.sub(r'^[xz]+', '', code)
         if not code:
           continue

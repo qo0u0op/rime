@@ -8675,11 +8675,8 @@ use_preset_vocabulary: true
 乡	xg;vh	0%
 乡	yn;vh
 乡	yz;vh
-乢	ge;ua
 乢	ge;uu
-乢	gm;ua
 乢	gm;uu
-乢	he;ua
 乢	he;uu
 乣	jb;vu
 乤	xt;mn
@@ -8833,7 +8830,6 @@ use_preset_vocabulary: true
 亲	qy;yd	0%
 亲	xy;yd	10%
 亳	bo;yp
-亴	yr;yb
 亴	yr;yn
 亵	xj;yv
 亶	ds;ym
@@ -9400,9 +9396,7 @@ use_preset_vocabulary: true
 倏	eu;ok
 倏	vu;ok
 倐	eu;of
-倐	eu;ol
 倐	vu;of
-倐	vu;ol
 們	mt;on
 倒	dc;on
 倓	ts;of
@@ -9847,11 +9841,7 @@ use_preset_vocabulary: true
 儳	is;oi
 儴	rf;ov
 儵	eu;of
-儵	eu;oh
-儵	eu;oo
 儵	vu;of
-儵	vu;oh
-儵	vu;oo
 儶	hv;ob
 儶	hy;ob
 儶	xi;ob
@@ -9923,15 +9913,10 @@ use_preset_vocabulary: true
 兜	dr;hu
 兝	ft;jh
 兞	mc;ju
-兟	et;hg
 兟	et;hu
-兟	vt;hg
 兟	vt;hu
-兟	xh;hg
 兟	xh;hu
-兟	xq;hg
 兟	xq;hu
-兟	xy;hg
 兟	xy;hu
 兠	dr;lu
 兡	bm;ja
@@ -9973,7 +9958,6 @@ use_preset_vocabulary: true
 典	dh;tc
 典	dq;tc
 兹	zi;ti	93.26%
-兺	ft;ch
 兺	ft;cp
 养	yf;tl
 兼	jh;tc
@@ -10276,7 +10260,6 @@ use_preset_vocabulary: true
 剎	ea;kn	92.42%
 剎	ia;kn	7.58%
 剎	va;kn	92.42%
-剏	ix;th
 剏	ix;ti
 剏	ix;tk
 剐	gq;rn
@@ -10294,7 +10277,6 @@ use_preset_vocabulary: true
 剘	qi;tn
 剙	ix;tc
 剙	ix;ti
-剙	ix;ts
 剚	ei;jn
 剚	vi;jn
 剚	zi;jn
@@ -10335,10 +10317,8 @@ use_preset_vocabulary: true
 副	pi;mn	0%
 剰	en;hn
 剰	vn;hn
-剱	jh;oh
 剱	jh;oi
 剱	jh;ok
-剱	jq;oh
 剱	jq;oi
 剱	jq;ok
 割	ge;jn
@@ -10359,7 +10339,6 @@ use_preset_vocabulary: true
 剼	es;in
 剼	vs;in
 剽	pp;mn
-剾	kr;sl
 剾	kr;sn
 剿	ic;vn	6.56%
 剿	jp;vn	93.44%
@@ -10404,9 +10383,7 @@ use_preset_vocabulary: true
 劓	yi;hn
 劔	jh;ok
 劔	jq;ok
-劕	ai;hl
 劕	ai;hn
-劕	oi;hl
 劕	oi;hn
 劖	is;nn
 劗	cz;hn
@@ -10476,7 +10453,6 @@ use_preset_vocabulary: true
 勅	ii;ds
 勆	lf;is
 勇	yk;ns
-勈	yk;nk
 勈	yk;ns
 勉	mh;ns
 勉	mq;ns
@@ -10538,7 +10514,6 @@ use_preset_vocabulary: true
 勮	jv;ys
 勯	ds;ys
 勰	xj;kp
-勱	mm;tk
 勱	mm;ts
 勲	xd;hf
 勲	xw;hf
@@ -10924,10 +10899,8 @@ use_preset_vocabulary: true
 叅	et;ip
 叅	ss;ip
 叅	vt;ip
-叆	um;mb
 叆	um;me
 叇	dm;me
-叇	dm;ml
 又	yr;nk
 叉	ia;ei
 及	ji;ne
@@ -11371,7 +11344,6 @@ use_preset_vocabulary: true
 哏	gt;rv
 哏	ht;rv
 哐	kx;rg
-哐	kx;rm
 哑	ya;rc
 哒	da;rk
 哓	xp;ru
@@ -11409,7 +11381,6 @@ use_preset_vocabulary: true
 哪	ne;rl	0.88%
 哪	nw;rl	0.13%
 哫	zu;ro
-哬	he;rm
 哬	he;rr
 哭	kc;rk	0%
 哭	ku;rk	100%
@@ -11485,7 +11456,6 @@ use_preset_vocabulary: true
 唓	ie;rj
 唔	mu;rr	26.76%
 唔	wu;rr	73.24%
-唕	zc;ra
 唕	zc;rj
 唖	ue;rm
 唖	ya;rm
@@ -12029,7 +11999,6 @@ use_preset_vocabulary: true
 噙	qy;rb
 噚	xd;ri
 噚	xw;ri
-噛	nj;rm
 噛	nj;ru
 噜	lu;ra
 噝	si;rf
@@ -12176,9 +12145,7 @@ use_preset_vocabulary: true
 嚸	dq;rr
 嚹	la;rd
 嚺	ta;ro
-嚻	qi;rc
 嚻	qi;rr
-嚻	xp;rc
 嚻	xp;rr
 嚼	jm;ri	17.62%
 嚼	jp;ri	82.38%
@@ -15096,7 +15063,6 @@ use_preset_vocabulary: true
 差	co;tm	0%
 差	ia;tm	98.10%
 差	im;tm	1.63%
-巯	qb;ni
 巯	qb;nu
 巰	lb;mu
 巰	qb;mu
@@ -15111,9 +15077,7 @@ use_preset_vocabulary: true
 巷	hf;tu	3.38%
 巷	xg;tu	96.62%
 巸	yi;su
-巹	in;ns
 巹	in;nu
-巹	jy;ns
 巹	jy;nu
 巺	sd;rc
 巺	xd;rc
@@ -15208,7 +15172,6 @@ use_preset_vocabulary: true
 席	xi;ib
 帮	bf;qb
 帯	dm;tb
-帯	dm;tl
 帰	gv;lb
 帰	gy;lb
 帰	kv;lb
@@ -15254,7 +15217,6 @@ use_preset_vocabulary: true
 幈	bl;lt
 幈	pl;lt
 幉	dj;ld
-幊	gk;lb
 幊	gk;lc
 幋	ps;hb
 幌	hx;lu
@@ -15564,9 +15526,7 @@ use_preset_vocabulary: true
 弑	ei;km
 弑	vi;km
 弒	ei;km
-弒	ei;kp
 弒	vi;km
-弒	vi;kp
 弓	gk;nn
 弔	dp;nl
 引	yy;nl
@@ -15644,7 +15604,6 @@ use_preset_vocabulary: true
 弿	jh;jn
 弿	jq;jn
 彀	gr;ge
-彀	gr;gn
 彁	ge;nr
 彂	fa;tk
 彃	bi;nj
@@ -15697,7 +15656,6 @@ use_preset_vocabulary: true
 彝	yi;vt
 彞	yi;nt
 彟	ho;se
-彟	ho;so
 彠	ho;se
 彡	xh;hh
 彡	xq;hh
@@ -15825,14 +15783,9 @@ use_preset_vocabulary: true
 徱	pp;hf
 徲	ii;hq
 徳	de;hp
-徳	de;hw
-徴	ai;hg
 徴	ai;hk
-徴	an;hg
 徴	an;hk
-徴	oi;hg
 徴	oi;hk
-徴	on;hg
 徴	on;hk
 徵	ai;hk	4%
 徵	an;hk	96%
@@ -15899,7 +15852,6 @@ use_preset_vocabulary: true
 忠	ak;lp
 忠	ok;lp
 忡	ik;pl
-忢	wu;mm
 忢	wu;mp
 忣	ji;pe
 忤	wu;pj
@@ -16489,7 +16441,6 @@ use_preset_vocabulary: true
 慔	mu;pk
 慕	mu;tp
 慖	go;pm
-慗	ii;dk
 慗	ii;dp
 慘	cs;ph
 慙	cs;jp
@@ -16692,7 +16643,6 @@ use_preset_vocabulary: true
 懖	go;cp
 懖	gq;cp
 懗	xt;pc
-懘	ii;eb
 懘	ii;ep
 懙	yu;pc
 懙	yv;pc
@@ -18254,7 +18204,6 @@ use_preset_vocabulary: true
 敉	mi;fk
 敊	iu;ye
 敋	ge;hk
-敋	ge;ho
 敌	di;hk	0%
 敌	hq;hk
 敍	xu;oe
@@ -18724,7 +18673,6 @@ use_preset_vocabulary: true
 晦	hy;ay
 晧	hc;ar
 晨	it;av
-晩	ws;aa
 晩	ws;au
 晪	th;ac
 晪	tq;ac
@@ -19862,7 +19810,6 @@ use_preset_vocabulary: true
 楂	ia;dm	50%
 楂	oa;dm	50%
 楃	wo;dg
-楃	wo;dm
 楄	bh;db
 楄	bq;db
 楄	ph;db
@@ -19991,7 +19938,6 @@ use_preset_vocabulary: true
 榔	lf;dl
 榕	rk;dr
 榖	gu;ge
-榖	gu;gn
 榗	jh;da
 榗	jq;da
 榗	jy;da
@@ -20237,7 +20183,6 @@ use_preset_vocabulary: true
 樬	ck;dp
 樭	ji;dg
 樮	ys;df
-樮	ys;dw
 樯	qg;dw
 樰	xm;dm
 樰	xm;ds
@@ -20397,7 +20342,6 @@ use_preset_vocabulary: true
 檐	ys;dr
 檑	lw;dw
 檒	fn;di
-檒	fn;dn
 檓	hv;de
 檓	hy;de
 檔	df;dw
@@ -20429,7 +20373,6 @@ use_preset_vocabulary: true
 檢	jh;do
 檢	jq;do
 檣	qg;dw
-檤	dc;dt
 檤	dc;du
 檥	yi;di
 檦	bp;dn
@@ -20528,9 +20471,7 @@ use_preset_vocabulary: true
 櫡	ou;da
 櫢	sr;dk
 櫣	lh;dj
-櫣	lh;dt
 櫣	lq;dj
-櫣	lq;dt
 櫤	jg;dn
 櫥	iu;di
 櫦	ql;de
@@ -20703,7 +20644,6 @@ use_preset_vocabulary: true
 歏	jy;to
 歐	ur;so
 歑	hu;yo
-歒	ti;yn
 歒	ti;yo
 歓	hz;oo
 歔	xu;yo
@@ -20742,7 +20682,6 @@ use_preset_vocabulary: true
 步	bu;yh
 武	wu;mm
 歧	qi;ye
-歨	bu;ym
 歨	bu;yo
 歩	bu;yh
 歪	wm;mm
@@ -20844,7 +20783,6 @@ use_preset_vocabulary: true
 殤	ef;mh
 殤	vf;mh
 殥	yy;mc
-殥	yy;mm
 殦	dp;mf
 殧	cu;mu
 殨	hv;mc
@@ -20881,19 +20819,14 @@ use_preset_vocabulary: true
 殸	ql;ge
 殸	vn;ge
 殹	yi;se
-殹	yi;sn
 殺	ea;ke	100%
 殺	em;ke	0%
 殺	va;ke	100%
 殺	vm;ke	0%
 殻	ke;ge
-殻	ke;gh
 殻	qm;ge
-殻	qm;gh
 殻	qp;ge
-殻	qp;gh
 殻	qx;ge
-殻	qx;gh
 殼	ke;ge	97.56%
 殼	qm;ge	2.44%
 殼	qp;ge	2.44%
@@ -20979,7 +20912,6 @@ use_preset_vocabulary: true
 毳	cv;hu
 毳	cy;hu
 毴	bi;hy
-毵	ss;iq
 毵	ss;iu
 毶	ss;hh
 毷	mc;au
@@ -21016,7 +20948,6 @@ use_preset_vocabulary: true
 氅	if;fu
 氆	pu;ha
 氇	lu;ha
-氇	lu;hw
 氈	as;yu	100%
 氈	os;yu	100%
 氈	ts;yu	0%
@@ -21915,7 +21846,6 @@ use_preset_vocabulary: true
 渣	oa;em
 渤	bo;es
 渥	wo;eg
-渥	wo;em
 渦	go;er	5.26%
 渦	wo;er	94.74%
 渧	di;eb
@@ -22053,7 +21983,6 @@ use_preset_vocabulary: true
 湷	iv;ea
 湷	iy;ea
 湸	lg;en
-湸	lg;er
 湸	lg;eu
 湹	is;eg
 湺	ys;ed
@@ -22692,7 +22621,6 @@ use_preset_vocabulary: true
 瀙	qy;eu
 瀚	hs;em
 瀛	yl;ev
-瀜	rk;eb
 瀜	rk;ei
 瀝	li;em
 瀞	jl;ed
@@ -23368,9 +23296,7 @@ use_preset_vocabulary: true
 熯	hs;fo
 熰	ur;fr
 熱	re;gf
-熲	jk;pb
 熲	jk;pc
-熲	yl;pb
 熲	yl;pc
 熳	ms;fe
 熴	kd;fp
@@ -23568,7 +23494,6 @@ use_preset_vocabulary: true
 爬	pa;hu
 爭	an;bd
 爭	on;bd
-爮	pc;hr
 爮	pc;hu
 爯	in;bb
 爰	yn;be
@@ -23621,13 +23546,9 @@ use_preset_vocabulary: true
 牐	aa;lx
 牐	oa;lx
 牑	bh;lb
-牑	bh;ls
 牑	bq;lb
-牑	bq;ls
 牑	mh;lb
-牑	mh;ls
 牑	mq;lb
-牑	mq;ls
 牒	dj;ld
 牓	bf;ls
 牔	bo;li
@@ -23870,7 +23791,6 @@ use_preset_vocabulary: true
 狰	on;kd
 狱	yu;kk
 狱	yv;kk
-狲	sd;kd
 狲	sd;kf
 狳	yu;kd
 狳	yv;kd
@@ -23916,9 +23836,7 @@ use_preset_vocabulary: true
 猎	qx;ka	35%
 猎	xi;ka	35%
 猏	jh;kb
-猏	jh;ks
 猏	jq;kb
-猏	jq;ks
 猐	qg;ku
 猑	kd;kp
 猒	ys;ak
@@ -23993,9 +23911,7 @@ use_preset_vocabulary: true
 獄	yv;kk
 獅	ei;kb
 獅	vi;kb
-獆	gc;ka
 獆	gc;kj
-獆	hc;ka
 獆	hc;kj
 獇	qg;ki
 獈	yi;kt
@@ -24114,9 +24030,7 @@ use_preset_vocabulary: true
 玈	lu;yv
 玉	yu;mi
 玉	yv;mi
-玊	su;mg
 玊	su;mi
-玊	xb;mg
 玊	xb;mi
 王	wf;mg	100%
 王	yu;mg	0%
@@ -24170,7 +24084,6 @@ use_preset_vocabulary: true
 玨	yu;mg
 玨	yv;mg
 玩	ws;mu
-玪	ly;mi
 玪	ly;mn
 玫	mw;mk
 玬	ds;my
@@ -24237,11 +24150,8 @@ use_preset_vocabulary: true
 珒	lv;mq
 珓	jp;mk
 珔	cd;md
-珔	cd;ml
 珔	jh;md
-珔	jh;ml
 珔	jq;md
-珔	jq;ml
 珕	li;ms
 珖	gx;mu
 珗	xh;mu
@@ -24278,7 +24188,6 @@ use_preset_vocabulary: true
 珩	hn;mn
 珪	gv;mg
 珪	gy;mg
-珫	ik;mi
 珫	ik;mu
 珬	xu;mm
 珬	xv;mm
@@ -24307,7 +24216,6 @@ use_preset_vocabulary: true
 現	xq;mu
 珿	io;mo
 珿	zu;mo
-琀	hs;mi
 琀	hs;mr
 琁	xn;mo
 琁	xz;mo
@@ -24470,11 +24378,8 @@ use_preset_vocabulary: true
 瑥	wt;mt
 瑦	wu;mf
 瑧	at;md
-瑧	at;mk
 瑧	jy;md
-瑧	jy;mk
 瑧	ot;md
-瑧	ot;mk
 瑨	jy;ma
 瑩	yl;fi
 瑪	ma;mf
@@ -24501,9 +24406,7 @@ use_preset_vocabulary: true
 瑵	ac;mi
 瑵	oc;mi
 瑵	zc;mi
-瑶	yc;mo
 瑶	yc;mu
-瑷	um;mb
 瑷	um;me
 瑸	by;mc
 瑹	tu;md
@@ -24536,7 +24439,6 @@ use_preset_vocabulary: true
 璋	af;mj
 璋	of;mj
 璌	yy;mc
-璌	yy;mm
 璍	hq;mj
 璎	yl;mv
 璏	ai;mp
@@ -24723,9 +24625,7 @@ use_preset_vocabulary: true
 甃	ar;hn
 甃	or;hn
 甄	at;mn
-甄	at;mv
 甄	ot;mn
-甄	ot;mv
 甆	ci;tn
 甇	yl;fn
 甈	nj;hn
@@ -24735,7 +24635,6 @@ use_preset_vocabulary: true
 甊	lr;ln
 甋	di;yn
 甌	ur;sn
-甍	mn;tl
 甍	mn;tn
 甎	az;jn
 甎	oz;jn
@@ -24749,11 +24648,8 @@ use_preset_vocabulary: true
 甕	wn;yn
 甖	yl;bn
 甗	xh;yn
-甗	xh;yv
 甗	xq;yn
-甗	xq;yv
 甗	ys;yn
-甗	ys;yv
 甘	gs;tm
 甙	dm;im
 甚	et;tv
@@ -25139,7 +25035,6 @@ use_preset_vocabulary: true
 瘉	yv;kn
 瘊	hr;kk
 瘋	fn;ki
-瘌	la;kl
 瘌	la;kn
 瘍	yf;kh
 瘎	it;kv
@@ -25349,9 +25244,7 @@ use_preset_vocabulary: true
 皜	gc;hb
 皜	hc;hb
 皝	hx;hu
-皞	gc;ha
 皞	gc;hj
-皞	hc;ha
 皞	hc;hj
 皟	ze;hc
 皠	cv;hg
@@ -25384,7 +25277,6 @@ use_preset_vocabulary: true
 皲	jd;be
 皲	jw;be
 皳	qb;ie
-皳	qb;ih
 皴	cd;ie
 皵	qm;te
 皵	qx;te
@@ -25397,13 +25289,9 @@ use_preset_vocabulary: true
 皺	ar;pe
 皺	or;pe
 皻	aa;ye
-皻	aa;yh
 皻	cu;ye
-皻	cu;yh
 皻	oa;ye
-皻	oa;yh
 皼	gu;ge
-皼	gu;gh
 皽	as;ye
 皽	os;ye
 皽	ts;ye
@@ -25738,9 +25626,7 @@ use_preset_vocabulary: true
 瞄	mp;bw
 瞅	ir;bf
 瞅	qb;bf
-瞆	kv;bm
 瞆	kv;bo
-瞆	ky;bm
 瞆	ky;bo
 瞇	mi;bd
 瞈	wn;bm
@@ -25754,7 +25640,6 @@ use_preset_vocabulary: true
 瞏	qk;wv
 瞏	yn;wv
 瞏	yz;wv
-瞐	mo;bb
 瞐	mo;bu
 瞑	mh;bc
 瞑	ml;bc
@@ -25766,15 +25651,12 @@ use_preset_vocabulary: true
 瞕	af;bj
 瞕	of;bj
 瞖	yi;su
-瞗	dp;ba
 瞗	dp;bf
 瞘	kr;br
 瞘	ur;br
 瞙	mo;bk
 瞚	ed;bc
-瞚	ed;bm
 瞚	vd;bc
-瞚	vd;bm
 瞛	ck;bo
 瞜	lr;bv
 瞝	ii;bb
@@ -25851,7 +25733,6 @@ use_preset_vocabulary: true
 矄	xd;bf
 矄	xw;bf
 矅	yc;bg
-矅	yc;bm
 矆	ho;be
 矇	mn;bo
 矈	mh;bs
@@ -26248,7 +26129,6 @@ use_preset_vocabulary: true
 碶	qi;mk
 碷	dd;mu
 碸	fn;mi
-碸	fn;mn
 碹	xn;mm
 碹	xz;mm
 確	qm;mg
@@ -26257,7 +26137,6 @@ use_preset_vocabulary: true
 碻	qm;mb
 碻	qx;mb
 碼	ma;mf
-碽	gk;mb
 碽	gk;mc
 碾	nh;mv
 碾	nq;mv
@@ -26424,9 +26303,7 @@ use_preset_vocabulary: true
 礜	yv;hr
 礝	rz;mb
 礞	mn;mo
-礟	bc;mf
 礟	bc;mk
-礟	pc;mf
 礟	pc;mk
 礠	ci;mp
 礡	bo;mi
@@ -26785,7 +26662,6 @@ use_preset_vocabulary: true
 秾	nk;hv
 秿	fu;hb
 稀	xi;hb
-稁	gc;yb
 稁	gc;yd
 稂	lf;hv
 稃	fu;hd
@@ -26804,13 +26680,9 @@ use_preset_vocabulary: true
 稌	tu;hd
 稍	ec;hb
 稍	vc;hb
-税	ev;hr
 税	ev;hu
-税	ey;hr
 税	ey;hu
-税	vv;hr
 税	vv;hu
-税	vy;hr
 税	vy;hu
 稏	ya;hm
 稐	ld;hb
@@ -26911,7 +26783,6 @@ use_preset_vocabulary: true
 穐	qb;hu
 穑	se;hw
 穒	he;hf
-穒	he;hh
 穓	yi;hc
 穔	hx;hc
 穕	qj;hd
@@ -26930,7 +26801,6 @@ use_preset_vocabulary: true
 穝	zv;he
 穝	zy;he
 穞	lv;ha
-穞	lv;hw
 穟	sv;ho
 穟	sy;ho
 穠	nk;hv
@@ -27043,9 +26913,7 @@ use_preset_vocabulary: true
 窢	xv;jm
 窣	su;jj
 窤	gz;jp
-窥	kv;jo
 窥	kv;ju
-窥	ky;jo
 窥	ky;ju
 窦	dr;jk
 窧	ao;jj
@@ -27158,7 +27026,6 @@ use_preset_vocabulary: true
 竵	wm;yb
 競	jl;yu
 竷	ks;ye
-竸	jl;yt
 竸	jl;yu
 竹	au;hh
 竹	ou;hh
@@ -27280,7 +27147,6 @@ use_preset_vocabulary: true
 筅	xq;hu
 筆	bi;hq
 筇	qk;hl
-筇	qk;hn
 筈	gq;hr
 等	dn;hi
 筊	jp;hk
@@ -27464,7 +27330,6 @@ use_preset_vocabulary: true
 箺	id;ha
 箻	lv;hq
 箼	wu;hg
-箼	wu;hm
 箽	dk;hg
 箾	eo;hn
 箾	vo;hn
@@ -27821,9 +27686,7 @@ use_preset_vocabulary: true
 粣	ce;fm
 粣	ce;ft
 粤	ym;hs
-粤	ym;hv
 粤	yx;hs
-粤	yx;hv
 粥	ar;nn	100%
 粥	au;nn	0%
 粥	or;nn	100%
@@ -27885,11 +27748,8 @@ use_preset_vocabulary: true
 糇	hr;fk
 糈	xu;fb
 糈	xv;fb
-糉	ak;fc
 糉	ak;fe
-糉	ok;fc
 糉	ok;fe
-糉	zk;fc
 糉	zk;fe
 糊	hu;fb
 糋	jh;fn
@@ -27905,7 +27765,6 @@ use_preset_vocabulary: true
 糑	no;fm
 糒	bw;fb
 糓	gu;ge
-糓	gu;gh
 糔	sc;fi
 糔	xb;fi
 糔	zc;fi
@@ -28176,11 +28035,8 @@ use_preset_vocabulary: true
 絹	jn;vb
 絹	jz;vb
 絺	ii;vb
-絻	mh;va
 絻	mh;vu
-絻	mq;va
 絻	mq;vu
-絻	wt;va
 絻	wt;vu
 絼	at;vh
 絼	ot;vh
@@ -28197,11 +28053,8 @@ use_preset_vocabulary: true
 綅	xh;ve
 綅	xq;ve
 綆	gn;vk
-綇	xj;vc
 綇	xj;vw
-綇	xu;vc
 綇	xu;vw
-綇	xv;vc
 綇	xv;vw
 綈	ti;vh
 綉	xb;vs
@@ -28239,7 +28092,6 @@ use_preset_vocabulary: true
 綞	iv;vm
 綞	iy;vm
 綟	li;vk
-綟	li;vs
 綠	lu;ve	0.74%
 綠	lv;ve	99.26%
 綡	lg;vf
@@ -28330,9 +28182,7 @@ use_preset_vocabulary: true
 緔	vf;vr
 緕	qi;vl
 緖	xu;va
-緖	xu;vk
 緖	xv;va
-緖	xv;vk
 緗	xg;vu
 緘	jh;vr
 緘	jq;vr
@@ -28403,7 +28253,6 @@ use_preset_vocabulary: true
 緽	in;vc
 緽	ot;vc
 緾	is;vg
-緾	is;vm
 緿	dm;vp
 縀	xt;ve
 縁	yn;vo
@@ -28463,9 +28312,7 @@ use_preset_vocabulary: true
 縞	gc;vb
 縟	ru;vi
 縠	gu;ge
-縠	gu;gn
 縠	hu;ge
-縠	hu;gn
 縡	zm;vj
 縢	tn;bf
 縣	xh;bf	99.88%
@@ -28476,7 +28323,6 @@ use_preset_vocabulary: true
 縥	at;vd
 縥	ot;vd
 縥	qy;vd
-縦	zk;vh
 縦	zk;vo
 縧	tc;vd
 縧	tp;vd
@@ -28490,9 +28336,7 @@ use_preset_vocabulary: true
 縮	so;va	99.38%
 縮	su;va	0.62%
 縯	ys;vc
-縯	ys;vm
 縯	yy;vc
-縯	yy;vm
 縰	xi;vo
 縱	zk;vo
 縲	lo;vf
@@ -28529,7 +28373,6 @@ use_preset_vocabulary: true
 繂	vh;vj
 繃	bn;vb
 繄	yi;sf
-繄	yi;si
 繅	sc;vd
 繆	mb;vh	60%
 繆	mp;vh	32.77%
@@ -28546,7 +28389,6 @@ use_preset_vocabulary: true
 繊	xh;vc
 繊	xq;vc
 繋	xi;jf
-繋	xi;ji
 繌	ea;ve
 繌	va;ve
 繌	zk;ve
@@ -28592,7 +28434,6 @@ use_preset_vocabulary: true
 繤	zz;tf
 繥	xi;vr
 繦	qg;vi
-繦	qg;vr
 繧	yd;vi
 繧	yw;vi
 繨	da;vq
@@ -28664,7 +28505,6 @@ use_preset_vocabulary: true
 纐	jp;vc
 纑	lu;vt
 纒	is;vg
-纒	is;vw
 纓	yl;vv
 纔	cm;vi
 纕	xg;vv
@@ -29025,7 +28865,6 @@ use_preset_vocabulary: true
 羍	ta;kq
 美	mw;tk
 羏	yf;th
-羐	yr;tg
 羐	yr;to
 羑	yr;to
 羒	ft;th
@@ -29204,7 +29043,6 @@ use_preset_vocabulary: true
 翵	qu;sf
 翵	qv;sf
 翶	uc;hm
-翶	uc;hs
 翷	ly;fm
 翸	pt;jm
 翹	qp;gm
@@ -29338,7 +29176,6 @@ use_preset_vocabulary: true
 职	ai;sc
 职	oi;sc
 聍	nl;sn
-聎	tp;sm
 聎	tp;so
 聏	nv;sl
 聏	uu;sl
@@ -29378,9 +29215,7 @@ use_preset_vocabulary: true
 聦	ck;sp
 聧	kv;sk
 聧	ky;sk
-聨	lh;si
 聨	lh;st
-聨	lq;si
 聨	lq;st
 聩	kv;so
 聩	ky;so
@@ -29391,9 +29226,7 @@ use_preset_vocabulary: true
 聭	kv;si
 聭	ky;si
 聮	lh;sf
-聮	lh;si
 聮	lq;sf
-聮	lq;si
 聯	lh;st
 聯	lq;st
 聰	ck;sp
@@ -29886,11 +29719,8 @@ use_preset_vocabulary: true
 膕	go;bm
 膖	pf;bj
 膗	cv;bg
-膗	cv;bo
 膗	cy;bg
-膗	cy;bo
 膗	ih;bg
-膗	ih;bo
 膘	bp;bf
 膙	jg;bi
 膙	qg;bi
@@ -30051,16 +29881,13 @@ use_preset_vocabulary: true
 至	oi;mg
 致	ai;mk
 致	oi;mk
-臵	ge;me
 臵	ge;mr
 臶	jh;md
 臶	jq;md
 臷	dj;jg
 臸	ai;mg
 臸	oi;mg
-臹	in;mh
 臹	in;ms
-臹	xb;mh
 臹	xb;ms
 臺	tm;gg
 臻	at;md
@@ -30114,7 +29941,6 @@ use_preset_vocabulary: true
 舕	ts;hf
 舖	pu;ob
 舗	pu;ob
-舗	pu;oj
 舘	gz;or
 舙	hq;hr
 舚	ts;hr
@@ -30139,7 +29965,6 @@ use_preset_vocabulary: true
 舥	pa;hu
 舦	tm;hi
 舧	fs;hi
-舧	fs;hn
 舨	bs;he
 舩	iz;hi
 航	hf;hn
@@ -30253,7 +30078,6 @@ use_preset_vocabulary: true
 色	vm;nu	0.09%
 艳	ys;qu
 艴	fu;lu
-艵	pl;ta
 艵	pl;tu
 艶	ys;tu
 艷	ys;uu
@@ -30633,9 +30457,7 @@ use_preset_vocabulary: true
 荬	mm;tk
 荭	hk;tm
 荮	ar;ti
-荮	ar;tv
 荮	or;ti
-荮	or;tv
 药	yc;ti
 荰	du;tg
 荱	ww;tu
@@ -30737,7 +30559,6 @@ use_preset_vocabulary: true
 莭	jj;tl
 莮	ns;ts
 莯	mu;td
-莰	ks;tn
 莰	ks;to
 莱	lm;tt
 莲	lh;tq
@@ -30989,7 +30810,6 @@ use_preset_vocabulary: true
 葓	hk;tc
 葔	hr;tk
 葕	tl;tn
-葕	tl;to
 葖	tu;tk
 著	ac;ta	4.25%
 著	ae;ta	93.74%
@@ -31194,7 +31014,6 @@ use_preset_vocabulary: true
 蓍	ei;ta
 蓍	vi;ta
 蓎	tf;tr
-蓏	lo;th
 蓏	lo;to
 蓐	ru;ti
 蓑	so;tv
@@ -31473,7 +31292,6 @@ use_preset_vocabulary: true
 蕷	yu;tc
 蕷	yv;tc
 蕸	xt;te
-蕸	xt;tr
 蕹	wn;tg
 蕹	yk;tg
 蕺	ji;ti
@@ -31492,7 +31310,6 @@ use_preset_vocabulary: true
 薄	bc;ti	43.39%
 薄	bo;ti	56.61%
 薅	hc;ti
-薅	hc;tm
 薆	um;te
 薇	ww;tk
 薈	hv;ta
@@ -31550,13 +31367,9 @@ use_preset_vocabulary: true
 薤	jb;tm
 薤	xj;tm
 薥	au;ti
-薥	au;tl
 薥	eu;ti
-薥	eu;tl
 薥	ou;ti
-薥	ou;tl
 薥	vu;ti
-薥	vu;tl
 薦	jh;tf
 薦	jq;tf
 薧	hk;tp
@@ -31606,7 +31419,6 @@ use_preset_vocabulary: true
 藃	xp;to
 藄	qi;tf
 藅	fa;tn
-藅	fa;tw
 藆	jh;tq
 藆	jq;tq
 藆	qh;tq
@@ -31771,7 +31583,6 @@ use_preset_vocabulary: true
 蘬	kv;tb
 蘬	ky;tb
 蘭	ls;tw
-蘮	ji;ta
 蘮	ji;tn
 蘯	df;tt
 蘰	ms;te
@@ -31994,9 +31805,7 @@ use_preset_vocabulary: true
 蚪	dr;lj
 蚫	bc;lu
 蚫	pc;lu
-蚬	xh;lh
 蚬	xh;lu
-蚬	xq;lh
 蚬	xq;lu
 蚭	ni;lp
 蚮	te;lp
@@ -32137,11 +31946,8 @@ use_preset_vocabulary: true
 蛽	bw;lc
 蛾	ue;li	100%
 蛾	yi;li	0%
-蛿	hs;li
 蛿	hs;lr
-蛿	xh;li
 蛿	xh;lr
-蛿	xq;li
 蛿	xq;lr
 蜀	eu;wi
 蜀	vu;wi
@@ -32180,17 +31986,11 @@ use_preset_vocabulary: true
 蜓	tl;lg
 蜔	dh;lw
 蜔	dq;lw
-蜕	ev;lr
 蜕	ev;lu
-蜕	ey;lr
 蜕	ey;lu
-蜕	tv;lr
 蜕	tv;lu
-蜕	ty;lr
 蜕	ty;lu
-蜕	vv;lr
 蜕	vv;lu
-蜕	vy;lr
 蜕	vy;lu
 蜖	hv;ll
 蜖	hy;ll
@@ -32203,7 +32003,6 @@ use_preset_vocabulary: true
 蜛	jv;lr
 蜜	mi;ji
 蜝	qi;ti
-蜝	qi;tm
 蜞	qi;lc
 蜟	yu;lb
 蜟	yv;lb
@@ -32272,7 +32071,6 @@ use_preset_vocabulary: true
 蝃	oo;le
 蝄	wf;lv
 蝅	cs;mi
-蝅	cs;mm
 蝆	mi;lq
 蝆	yf;lq
 蝇	yl;lu
@@ -32398,7 +32196,6 @@ use_preset_vocabulary: true
 螔	yi;ln
 螔	yi;lu
 螕	bi;lp
-螕	bi;lw
 螖	gu;lb
 螖	hq;lb
 螗	tf;lr
@@ -32438,7 +32235,6 @@ use_preset_vocabulary: true
 螭	li;lb
 螮	di;lb
 螯	uc;gi
-螯	uc;gm
 螯	uc;qi
 螰	lu;lp
 螱	ww;si
@@ -32462,7 +32258,6 @@ use_preset_vocabulary: true
 螽	ak;hi
 螽	ok;hi
 螾	yy;lc
-螾	yy;lm
 螿	jg;vi
 蟀	eh;lj
 蟀	eo;lj
@@ -32592,9 +32387,7 @@ use_preset_vocabulary: true
 蠐	qi;lx
 蠑	rk;ld
 蠒	jh;mi
-蠒	jh;mm
 蠒	jq;mi
-蠒	jq;mm
 蠓	mn;lo
 蠔	hc;lo
 蠕	ru;lb
@@ -32642,9 +32435,7 @@ use_preset_vocabulary: true
 蠲	jz;ti
 蠳	yl;lv
 蠴	eu;la
-蠴	eu;lw
 蠴	vu;la
-蠴	vu;lw
 蠵	jn;lb
 蠵	jz;lb
 蠵	xi;lb
@@ -33127,7 +32918,6 @@ use_preset_vocabulary: true
 襂	ss;lh
 襂	st;lh
 襂	vs;lh
-襃	bc;yd
 襃	bc;yv
 襄	xg;yv
 襅	bi;lj
@@ -33234,7 +33024,6 @@ use_preset_vocabulary: true
 覅	fp;mh
 覆	fu;me
 覇	ba;mb
-覇	ba;mj
 覈	he;mk	99.92%
 覈	jp;mk	0.08%
 覉	ji;mr
@@ -33328,7 +33117,6 @@ use_preset_vocabulary: true
 覸	jh;au
 覸	jq;au
 覹	ww;bk
-覹	ww;bo
 覺	jm;hu	78.17%
 覺	jp;hu	21.83%
 覺	jx;hu	78.17%
@@ -33483,7 +33271,6 @@ use_preset_vocabulary: true
 觿	xi;nb
 言	ys;yr	100%
 言	yy;yr	0%
-訁	ys;ym
 訁	ys;yr
 訂	dl;yn
 訃	bu;yy
@@ -33496,7 +33283,6 @@ use_preset_vocabulary: true
 訇	hk;pr
 計	ji;yj
 訉	fs;yi
-訉	fs;yn
 訊	xd;yj
 訊	xw;yj
 訋	dp;yi
@@ -33745,7 +33531,6 @@ use_preset_vocabulary: true
 誛	qy;ye
 誜	eq;ye
 誜	vq;ye
-誝	us;yi
 誝	us;yr
 語	yu;yr
 語	yv;yr
@@ -33773,21 +33558,13 @@ use_preset_vocabulary: true
 誫	at;yv
 誫	it;yv
 誫	ot;yv
-説	eo;yr
 説	eo;yu
-説	ev;yr
 説	ev;yu
-説	ey;yr
 説	ey;yu
-説	vo;yr
 説	vo;yu
-説	vv;yr
 説	vv;yu
-説	vy;yr
 説	vy;yu
-説	ym;yr
 説	ym;yu
-説	yx;yr
 説	yx;yu
 読	du;yu
 誮	hq;yp
@@ -34006,7 +33783,6 @@ use_preset_vocabulary: true
 謞	xx;yb
 謟	tc;yx
 謠	yc;yu
-謡	yc;yo
 謡	yc;yu
 謢	hu;ye
 謣	xu;ys
@@ -34021,9 +33797,7 @@ use_preset_vocabulary: true
 謨	mo;yk
 謩	mo;tr
 謪	ef;yb
-謪	ef;yc
 謪	vf;yb
-謪	vf;yc
 謫	ae;yb
 謫	di;yb
 謫	oe;yb
@@ -34034,13 +33808,9 @@ use_preset_vocabulary: true
 謭	jq;yh
 謮	ze;yc
 謯	aa;ym
-謯	aa;yp
 謯	au;ym
-謯	au;yp
 謯	oa;ym
-謯	oa;yp
 謯	ou;ym
-謯	ou;yp
 謰	lh;yj
 謰	lq;yj
 謱	lr;yv
@@ -34061,7 +33831,6 @@ use_preset_vocabulary: true
 謺	ai;gr
 謺	oe;gr
 謺	oi;gr
-謻	yi;yd
 謻	yi;yn
 謼	hu;yd
 謼	xp;yd
@@ -34078,10 +33847,8 @@ use_preset_vocabulary: true
 譂	is;yj
 譃	xu;yc
 譃	xu;ym
-譃	xu;yy
 譃	xv;yc
 譃	xv;ym
-譃	xv;yy
 譄	zn;ya
 譅	se;ym
 譆	xi;yr
@@ -34164,9 +33931,7 @@ use_preset_vocabulary: true
 譴	qh;yr
 譴	qq;yr
 譵	dv;yi
-譵	dv;yt
 譵	dy;yi
-譵	dy;yt
 譶	ta;yr
 護	hu;ye
 譸	ar;yi
@@ -34203,18 +33968,14 @@ use_preset_vocabulary: true
 讉	yi;yc
 變	bh;vk
 變	bq;vk
-讋	ae;ym
 讋	ae;yr
-讋	oe;ym
 讋	oe;yr
 讌	ys;yf
 讍	ue;yr
 讎	ir;og
-讏	ww;hm
 讏	ww;hr
 讐	ir;or
 讑	yc;yb
-讑	yc;ym
 讒	is;yi
 讓	rf;yv
 讔	yy;yp
@@ -34231,7 +33992,6 @@ use_preset_vocabulary: true
 讘	oe;yj
 讙	hz;yg
 讚	zs;yc
-讛	yi;yg
 讛	yi;yi
 讜	df;yf
 讝	as;yk
@@ -34669,9 +34429,7 @@ use_preset_vocabulary: true
 貶	bq;bo
 買	mm;wc
 貸	dm;oc	100%
-貸	dm;ou	100%
 貸	te;oc	0%
-貸	te;ou	0%
 貹	en;bm
 貹	vn;bm
 貺	kx;bu
@@ -34771,7 +34529,6 @@ use_preset_vocabulary: true
 賵	fn;bu
 賶	cf;br
 賷	ji;jc
-賷	ji;ju
 賸	en;bc
 賸	vn;bc
 賹	um;bt
@@ -34785,9 +34542,7 @@ use_preset_vocabulary: true
 賾	ze;sc
 賿	lp;bh
 贀	ww;sc
-贀	ww;su
 贀	yi;sc
-贀	yi;su
 贁	bm;bk
 贂	cs;bh
 贂	it;bh
@@ -34832,9 +34587,7 @@ use_preset_vocabulary: true
 贘	ef;bc
 贘	vf;bc
 贙	xn;yc
-贙	xn;yu
 贙	xz;yc
-贙	xz;yu
 贚	lk;bp
 贛	gk;yc	0%
 贛	gs;yc	100%
@@ -35287,14 +35040,10 @@ use_preset_vocabulary: true
 踬	ai;ro
 踬	oi;ro
 踭	an;rd
-踭	an;rs
 踭	on;rd
-踭	on;rs
 踮	dh;rr
 踮	dq;rr
-踯	ai;rk
 踯	ai;rl
-踯	oi;rk
 踯	oi;rl
 踰	yu;rn
 踰	yv;rn
@@ -35358,11 +35107,8 @@ use_preset_vocabulary: true
 蹏	ti;ru
 蹐	ji;rb
 蹑	ee;re
-蹑	ee;rj
 蹑	nj;re
-蹑	nj;rj
 蹑	ve;re
-蹑	ve;rj
 蹒	ps;rb
 蹓	lb;rw
 蹔	as;jo
@@ -35417,7 +35163,6 @@ use_preset_vocabulary: true
 蹳	bo;re
 蹴	cu;ru
 蹵	cu;yo
-蹵	cu;yr
 蹶	jm;ro
 蹶	jx;ro
 蹷	jm;mo
@@ -35475,7 +35220,6 @@ use_preset_vocabulary: true
 躚	xh;ru
 躚	xq;ru
 躛	ww;ho
-躛	ww;hy
 躜	zz;ro
 躝	ls;rw
 躞	xj;re
@@ -35778,9 +35522,7 @@ use_preset_vocabulary: true
 轘	hz;jv
 轙	yi;ji
 轚	ji;jj
-轛	dv;jg
 轛	dv;ji
-轛	dy;jg
 轛	dy;ji
 轜	uu;jb
 轝	yu;hj
@@ -36409,15 +36151,10 @@ use_preset_vocabulary: true
 郧	yw;rl
 部	bu;yl
 郩	uc;kl
-郩	uc;kn
 郩	xp;kl
-郩	xp;kn
 郩	yc;kl
-郩	yc;kn
 郩	yu;kl
-郩	yu;kn
 郩	yv;kl
-郩	yv;kn
 郪	qi;jl
 郫	pi;hl
 郬	ql;ql
@@ -36485,7 +36222,6 @@ use_preset_vocabulary: true
 鄘	yk;il
 鄙	bi;rl
 鄚	mo;tl
-鄚	mo;tn
 鄛	ic;vl
 鄜	fu;il
 鄝	lp;sl
@@ -37892,7 +37628,6 @@ use_preset_vocabulary: true
 钟	ak;ol
 钟	ok;ol
 钠	na;ob
-钡	bw;ob
 钡	bw;oo
 钢	gf;ok
 钣	bs;oe
@@ -38003,10 +37738,8 @@ use_preset_vocabulary: true
 铮	on;od
 铯	se;ou
 铰	jp;ok
-铱	yi;oh
 铱	yi;ov
 铲	is;oh
-铳	ik;oi
 铳	ik;ou
 铴	tf;oh
 铵	us;ov
@@ -38099,7 +37832,6 @@ use_preset_vocabulary: true
 锼	sr;oe
 锽	hx;og
 锾	hz;oe
-锿	um;or
 锿	um;ov
 镀	du;oe
 镁	mw;ok
@@ -38123,7 +37855,6 @@ use_preset_vocabulary: true
 镐	hc;ob	30.69%
 镑	bf;os
 镒	yi;ot
-镓	jt;om
 镓	jt;oo
 镔	by;oc
 镕	rk;or
@@ -38150,7 +37881,6 @@ use_preset_vocabulary: true
 镨	pu;oa
 镩	cz;ol
 镪	qg;oi
-镪	qg;or
 镫	dn;ot
 镬	ho;oe
 镭	lw;ow
@@ -38260,9 +37990,7 @@ use_preset_vocabulary: true
 閰	ys;ax
 閱	ym;au
 閱	yx;au
-閲	ym;ar
 閲	ym;au
-閲	yx;ar
 閲	yx;au
 閳	is;aj
 閴	qu;ac
@@ -38581,9 +38309,7 @@ use_preset_vocabulary: true
 陸	lu;ng	93.75%
 陹	en;na
 陹	vn;na
-険	xh;nm
 険	xh;no
-険	xq;nm
 険	xq;no
 陻	ys;ng
 陻	yy;ng
@@ -38618,9 +38344,7 @@ use_preset_vocabulary: true
 隍	hx;ng
 階	jj;na
 随	sv;nb
-随	sv;nk
 随	sy;nb
-随	sy;nk
 隐	yy;np
 隑	gm;nt
 隑	qi;nt
@@ -38679,9 +38403,7 @@ use_preset_vocabulary: true
 隰	xi;nf
 隱	yy;np
 隲	ai;nf
-隲	ai;nh
 隲	oi;nf
-隲	oi;nh
 隳	hv;np
 隳	hy;np
 隴	lk;np
@@ -38924,7 +38646,6 @@ use_preset_vocabulary: true
 靍	he;mf
 靎	he;mf
 靏	he;mf
-靏	he;mg
 靐	bl;mw
 靑	jl;qm	0%
 靑	ql;qm	100%
@@ -39207,11 +38928,9 @@ use_preset_vocabulary: true
 頇	hs;mc
 須	xu;hc
 須	xv;hc
-頉	yi;yb
 頉	yi;yc
 頊	xu;mc
 頊	xv;mc
-頋	ue;mb
 頋	ue;mc
 頌	rk;cc	0%
 頌	sk;cc	100%
@@ -39233,7 +38952,6 @@ use_preset_vocabulary: true
 頗	pe;dc
 頗	po;dc
 領	ll;oc
-頙	ie;mb
 頙	ie;mc
 頚	jl;ec
 頛	lw;qc
@@ -39243,19 +38961,14 @@ use_preset_vocabulary: true
 頝	jp;yc
 頝	qp;yc
 頞	ue;jc
-頟	ue;hb
 頟	ue;hc
 頠	ww;nc
 頡	jj;gc	95.52%
 頡	jt;gc	0%
 頡	xj;gc	4.48%
 頢	ko;hc
-頢	ko;hr
 頢	ko;mc
-頢	ko;mr
-頣	et;sb
 頣	et;sc
-頣	vt;sb
 頣	vt;sc
 頤	yi;sc
 頥	yi;lc
@@ -39288,8 +39001,6 @@ use_preset_vocabulary: true
 頵	jd;sc
 頵	jw;sc
 頶	hu;hc
-頶	hu;hm
-頷	hs;ob
 頷	hs;oc
 頸	gn;mc	2.66%
 頸	jl;mc	97.34%
@@ -39307,7 +39018,6 @@ use_preset_vocabulary: true
 顀	iy;oc
 顁	dl;jc
 顂	lm;dc
-顃	ys;fb
 顃	ys;fc
 顄	hs;uc
 顅	qh;hc
@@ -39315,16 +39025,11 @@ use_preset_vocabulary: true
 顅	qq;hc
 顅	qq;ic
 顆	ke;wc
-顇	cv;yb
 顇	cv;yc
-顇	cy;yb
 顇	cy;yc
 顈	jk;pc
-顈	jk;pm
 顈	qk;pc
-顈	qk;pm
 顈	yl;pc
-顈	yl;pm
 顉	qy;cc
 顉	ye;cc
 顊	yi;hc
@@ -39332,7 +39037,6 @@ use_preset_vocabulary: true
 題	ti;ac
 額	ue;jc
 顎	ue;rc
-顏	ys;yb
 顏	ys;yc
 顐	hd;bc
 顐	wt;bc
@@ -39345,12 +39049,9 @@ use_preset_vocabulary: true
 顓	az;uc
 顓	oz;uc
 顔	ys;yc
-顔	ys;yh
 顕	xh;ac
 顕	xq;ac
-顖	ck;hb
 顖	ck;hc
-顖	xy;hb
 顖	xy;hc
 顗	km;uc
 顗	yi;uc
@@ -39367,21 +39068,15 @@ use_preset_vocabulary: true
 類	lw;fc
 顟	lc;sc
 顟	lp;sc
-顠	pp;mb
 顠	pp;mc
-顡	ah;yb
 顡	ah;yc
-顡	oh;yb
 顡	oh;yc
-顢	ms;tb
 顢	ms;tc
-顢	ps;tb
 顢	ps;tc
 顣	cu;ic
 顣	qi;ic
 顤	xp;gc
 顤	yc;gc
-顥	hc;ab
 顥	hc;ac
 顦	jp;oc
 顦	qp;oc
@@ -39394,19 +39089,14 @@ use_preset_vocabulary: true
 顩	qq;oc
 顩	ys;oc
 顪	hv;yc
-顪	hv;ym
 顪	hy;yc
-顪	hy;ym
 顪	sv;yc
-顪	sv;ym
 顪	sy;yc
-顪	sy;ym
 顫	as;yc	9.11%
 顫	is;yc	90.89%
 顫	os;yc	9.11%
 顬	ru;mc
 顭	mn;tc
-顮	by;jb
 顮	by;jc
 顯	xh;ac
 顯	xq;ac
@@ -39428,7 +39118,6 @@ use_preset_vocabulary: true
 须	xv;ho
 顼	xu;mo
 顼	xv;mo
-顽	ws;mb
 顽	ws;mo
 顾	gu;mo
 顿	dd;po	98.64%
@@ -39446,10 +39135,8 @@ use_preset_vocabulary: true
 颉	xj;go	4.48%
 颊	jt;ko
 颋	tl;no
-颌	he;ob	91.01%
 颌	he;oo	91.01%
 颍	yl;po
-颎	jk;pb
 颎	jk;po
 颏	ke;yo
 颐	yi;so
@@ -39467,7 +39154,6 @@ use_preset_vocabulary: true
 颚	ue;ro
 颛	az;uo
 颛	oz;uo
-颜	ys;yb
 颜	ys;yo
 额	ue;jo
 颞	nj;so
@@ -39537,18 +39223,13 @@ use_preset_vocabulary: true
 飏	yf;hh
 飐	as;hr
 飐	os;hr
-飑	bp;hr
 飑	bp;hu
 飒	sa;yk
 飓	ju;hc
-飓	ju;hm
 飓	jv;hc
-飓	jv;hm
 飔	si;hp
 飕	sr;he
-飕	sr;hx
 飖	yc;bk
-飗	lb;hh
 飗	lb;hw
 飘	pp;mk
 飙	bp;ik
@@ -39639,9 +39320,7 @@ use_preset_vocabulary: true
 餘	yu;od
 餘	yv;od
 餙	ei;ob
-餙	ei;ok
 餙	vi;ob
-餙	vi;ok
 餚	xp;ob
 餚	yc;ob
 餛	hd;op
@@ -39748,7 +39427,6 @@ use_preset_vocabulary: true
 饚	hm;ot
 饚	um;ot
 饛	mn;oo
-饜	ys;mi
 饜	ys;mv
 饝	mo;or
 饞	is;oi
@@ -40017,7 +39695,6 @@ use_preset_vocabulary: true
 騐	ys;sp
 騑	fw;sy
 騒	sc;si
-験	ys;sm
 験	ys;so
 騔	ge;sv
 騔	he;sv
@@ -40091,9 +39768,7 @@ use_preset_vocabulary: true
 騽	xi;sa
 騾	lo;sf
 騿	af;sj
-騿	af;st
 騿	of;sj
-騿	of;st
 驀	mo;tf
 驀	mu;tf
 驁	uc;gf
@@ -40105,9 +39780,7 @@ use_preset_vocabulary: true
 驅	qv;sr
 驆	bi;sj
 驇	ai;gf
-驇	ai;gq
 驇	oi;gf
-驇	oi;gq
 驈	yu;sb
 驈	yv;sb
 驉	xu;sc
@@ -40285,9 +39958,7 @@ use_preset_vocabulary: true
 髂	qt;br
 髃	ur;bb
 髄	sv;bb
-髄	sv;bk
 髄	sy;bb
-髄	sy;bk
 髅	lr;bv
 髆	bo;bi
 髇	gc;bb
@@ -40437,12 +40108,9 @@ use_preset_vocabulary: true
 鬬	dr;ll
 鬭	dr;ll
 鬮	jb;lu
-鬮	jb;lx
 鬯	if;up
 鬰	yu;dh
-鬰	yu;du
 鬰	yv;dh
-鬰	yv;du
 鬱	yu;dh
 鬱	yv;dh
 鬲	ge;ml	50%
@@ -40458,11 +40126,8 @@ use_preset_vocabulary: true
 鬵	yu;mb
 鬵	yv;mb
 鬶	gv;qb
-鬶	gv;qr
 鬶	gy;qb
-鬶	gy;qr
 鬷	zk;me
-鬸	lb;mh
 鬸	lb;mw
 鬹	gv;qb
 鬹	gy;qb
@@ -40623,7 +40288,6 @@ use_preset_vocabulary: true
 鮖	ei;nr
 鮖	vi;nr
 鮗	dk;ny
-鮘	dm;ni
 鮘	dm;np
 鮙	ta;nm
 鮚	ji;nr
@@ -40856,9 +40520,7 @@ use_preset_vocabulary: true
 鰲	uc;qf
 鰳	le;ns
 鰴	hv;hk
-鰴	hv;hu
 鰴	hy;hk
-鰴	hy;hu
 鰵	mh;of
 鰵	mq;of
 鰶	ji;nf
@@ -40972,7 +40634,6 @@ use_preset_vocabulary: true
 鱳	li;nd
 鱳	lo;nd
 鱴	mj;ni
-鱴	mj;nw
 鱵	at;nr
 鱵	ot;nr
 鱶	xg;nv
@@ -41002,7 +40663,6 @@ use_preset_vocabulary: true
 鲉	yr;nw
 鲊	aa;ns
 鲊	oa;ns
-鲋	fu;nd
 鲋	fu;ni
 鲌	ba;na
 鲍	bc;nu
@@ -41050,7 +40710,6 @@ use_preset_vocabulary: true
 鲭	ql;nb
 鲮	ll;ne
 鲯	qi;nc
-鲯	qi;nm
 鲰	zr;ne
 鲱	fw;ny
 鲲	kd;np
@@ -41062,9 +40721,7 @@ use_preset_vocabulary: true
 鲷	dp;nr
 鲸	jl;nf
 鲹	et;nh
-鲹	et;nk
 鲹	vt;nh
-鲹	vt;nk
 鲺	ei;ni
 鲺	vi;ni
 鲻	zi;nw
@@ -41083,11 +40740,8 @@ use_preset_vocabulary: true
 鳈	qn;ne
 鳈	qz;ne
 鳉	jg;ni
-鳉	jg;nm
 鳊	bh;nb
-鳊	bh;ns
 鳊	bq;nb
-鳊	bq;ns
 鳋	sc;ni
 鳌	uc;qm
 鳍	qi;na
@@ -41100,7 +40754,6 @@ use_preset_vocabulary: true
 鳒	jq;nc
 鳓	le;ns
 鳔	bp;nf
-鳔	bp;nw
 鳕	xm;ns
 鳕	xx;ns
 鳖	bj;fm
@@ -41132,7 +40785,6 @@ use_preset_vocabulary: true
 鳫	ys;mf
 鳬	fu;hn
 鳬	ji;hn
-鳭	dp;sa
 鳭	dp;sf
 鳮	ji;ef
 鳯	fn;hf
@@ -41153,20 +40805,14 @@ use_preset_vocabulary: true
 鳹	qh;of
 鳹	qq;of
 鳺	fu;qf
-鳻	ft;ca
 鳻	ft;cf
 鳼	wt;yf
-鳼	wt;yh
 鳽	jh;mf
 鳽	jq;mf
 鳽	ys;mf
 鳾	ei;mf
-鳾	ei;mh
 鳾	vi;mf
-鳾	vi;mh
-鳿	yu;ma
 鳿	yu;mf
-鳿	yv;ma
 鳿	yv;mf
 鴀	fr;mf
 鴁	uc;hf
@@ -41188,16 +40834,12 @@ use_preset_vocabulary: true
 鴈	ys;mf
 鴉	ya;mf
 鴊	an;mf
-鴊	an;mm
 鴊	on;mf
-鴊	on;mm
 鴋	ff;yf
 鴌	fn;mf
 鴍	wt;yf
-鴍	wt;yk
 鴎	ur;sf
 鴏	dm;hp
-鴐	jt;ka
 鴐	jt;kf
 鴑	ru;vf
 鴒	ll;of
@@ -41205,7 +40847,6 @@ use_preset_vocabulary: true
 鴔	fu;hf
 鴕	to;hp
 鴖	wt;rf
-鴗	li;ya
 鴗	li;yf
 鴘	bh;if
 鴘	bq;if
@@ -41215,19 +40856,13 @@ use_preset_vocabulary: true
 鴛	yn;nf
 鴛	yz;nf
 鴜	ci;yf
-鴜	ci;yh
 鴝	qu;pf
 鴝	qv;pf
-鴞	xb;ra
 鴞	xb;rf
-鴞	xp;ra
 鴞	xp;rf
 鴟	ai;hf
-鴟	ai;hh
 鴟	ii;hf
-鴟	ii;hh
 鴟	oi;hf
-鴟	oi;hh
 鴠	ds;af
 鴡	ju;bf
 鴡	jv;bf
@@ -41240,67 +40875,44 @@ use_preset_vocabulary: true
 鴥	yu;hc
 鴥	yv;hc
 鴦	yf;lf
-鴧	yu;ja
 鴧	yu;jf
-鴧	yv;ja
 鴧	yv;jf
 鴨	ya;wf
-鴩	ai;ha
 鴩	ai;hf
-鴩	oi;ha
 鴩	oi;hf
-鴩	yi;ha
 鴩	yi;hf
 鴪	yu;jf
-鴪	yu;jh
 鴪	yv;jf
-鴪	yv;jh
 鴫	th;wf
 鴫	tq;wf
-鴬	yl;fa
 鴬	yl;ff
 鴭	av;hf
-鴭	av;hr
 鴭	ay;hf
-鴭	ay;hr
 鴭	ov;hf
-鴭	ov;hr
 鴭	oy;hf
-鴭	oy;hr
 鴮	wu;kf
-鴯	uu;mb
 鴯	uu;mf
-鴰	gq;ha
 鴰	gq;hf
-鴱	um;ta
 鴱	um;tf
-鴲	ai;pa
 鴲	ai;pf
-鴲	oi;pa
 鴲	oi;pf
-鴳	us;ja
 鴳	us;jf
-鴳	ys;ja
 鴳	ys;jf
 鴴	hn;hf
 鴵	xp;lf
 鴶	ji;gf
 鴶	jt;gf
-鴷	lj;ma
 鴷	lj;mf
 鴸	au;hf
 鴸	ou;hf
 鴹	xg;tf
-鴺	ti;ka
 鴺	ti;kf
-鴺	yi;ka
 鴺	yi;kf
 鴻	hk;ef
 鴼	lu;hr
 鴽	ru;vf
 鴾	mr;if
 鴿	ge;of
-鵀	rt;oa
 鵀	rt;of
 鵁	jp;yf
 鵂	xb;of
@@ -41308,22 +40920,17 @@ use_preset_vocabulary: true
 鵃	or;hf
 鵄	ii;mf
 鵅	lo;hf
-鵅	lo;hh
 鵆	hn;hn
 鵇	nh;of
 鵇	nq;of
-鵈	ue;sa
 鵈	ue;sf
 鵉	lz;yf
 鵊	jt;kf
 鵋	ji;sf
 鵌	tu;hd
 鵍	hz;jf
-鵍	hz;jh
-鵎	to;ba
 鵎	to;bf
 鵏	bu;if
-鵐	wu;ma
 鵐	wu;mf
 鵑	jn;rf
 鵑	jz;rf
@@ -41341,43 +40948,31 @@ use_preset_vocabulary: true
 鵖	jj;hf
 鵗	xi;kf
 鵘	jd;sf
-鵘	jd;sh
 鵘	jw;sf
-鵘	jw;sh
 鵙	jm;bf
 鵙	ju;bf
 鵙	jv;bf
 鵙	jx;bf
 鵚	tu;hf
-鵚	tu;hh
-鵛	jl;ma
 鵛	jl;mf
 鵜	ti;cf
 鵝	ue;hf
-鵞	ue;ha
 鵞	ue;hf
 鵟	kx;kf
 鵠	gc;hf
 鵠	gu;hf	50%
 鵠	hu;hf	50%
 鵡	wu;mf
-鵢	et;ha
 鵢	et;hf
-鵢	vt;ha
 鵢	vt;hf
 鵣	lm;df
-鵤	jp;na
 鵤	jp;nf
 鵥	ps;ff
 鵦	lu;he
-鵧	bl;ta
 鵧	bl;tf
-鵧	pl;ta
 鵧	pl;tf
 鵨	eu;of
-鵨	eu;oh
 鵨	vu;of
-鵨	vu;oh
 鵩	fu;bf
 鵪	us;kf
 鵫	ac;yf
@@ -41394,25 +40989,19 @@ use_preset_vocabulary: true
 鵲	qm;tf	100%
 鵲	qp;tf	0%
 鵲	qx;tf	100%
-鵳	jh;hb
 鵳	jh;hf
-鵳	jh;ib
 鵳	jh;if
-鵳	jq;hb
 鵳	jq;hf
-鵳	jq;ib
 鵳	jq;if
 鵴	ju;pf
 鵴	jv;pf
 鵵	tu;nf
 鵶	ya;mf
-鵶	ya;mh
 鵷	ws;jf
 鵷	yn;jf
 鵷	yz;jf
 鵸	qi;kf
 鵹	li;hf
-鵺	ye;yb
 鵺	ye;yf
 鵻	av;hg
 鵻	ay;hg
@@ -41439,18 +41028,14 @@ use_preset_vocabulary: true
 鶈	qi;jf
 鶉	id;yf
 鶊	gn;if
-鶋	ju;sa
 鶋	ju;sf
-鶋	jv;sa
 鶋	jv;sf
 鶌	qu;sf
 鶌	qv;sf
 鶍	yi;af
 鶎	zd;jf
 鶏	ji;bf
-鶐	eu;ya
 鶐	eu;yf
-鶐	vu;ya
 鶐	vu;yf
 鶑	yl;ff
 鶒	ii;df
@@ -41467,7 +41052,6 @@ use_preset_vocabulary: true
 鶛	km;pf
 鶜	mc;tf
 鶝	fu;mf
-鶞	id;ha
 鶞	id;hf
 鶟	tu;jf
 鶠	ys;sf
@@ -41489,20 +41073,13 @@ use_preset_vocabulary: true
 鶨	dd;vf
 鶩	mu;nf
 鶩	wu;nf
-鶪	jm;ba
 鶪	jm;bf
-鶪	ju;ba
 鶪	ju;bf
-鶪	jv;ba
 鶪	jv;bf
-鶪	jx;ba
 鶪	jx;bf
-鶫	dk;da
 鶫	dk;df
-鶬	cf;oa
 鶬	cf;of
 鶭	ff;vf
-鶮	he;ya
 鶮	he;yf
 鶯	yl;ff
 鶰	yn;rf
@@ -41522,16 +41099,11 @@ use_preset_vocabulary: true
 鶴	he;of	100%
 鶵	iu;pf
 鶶	tf;if
-鶷	ge;ja
 鶷	ge;jf
-鶷	he;ja
 鶷	he;jf
-鶷	hm;ja
 鶷	hm;jf
-鶷	xt;ja
 鶷	xt;jf
 鶸	ro;nf
-鶹	lb;ha
 鶹	lb;hf
 鶺	ji;ff
 鶻	gu;bf
@@ -41546,13 +41118,10 @@ use_preset_vocabulary: true
 鶾	hs;jf
 鶿	ci;tf
 鶿	zi;tf
-鷀	ci;ta
 鷀	ci;tf
-鷀	zi;ta
 鷀	zi;tf
 鷁	yi;tf
 鷂	yc;bf
-鷃	ys;aa
 鷃	ys;af
 鷄	ji;bf
 鷅	li;mf
@@ -41562,31 +41131,20 @@ use_preset_vocabulary: true
 鷇	kr;ge
 鷈	ti;hn
 鷈	ti;hu
-鷉	ti;ha
 鷉	ti;hf
 鷊	ni;mf
 鷊	yi;mf
-鷋	tu;ta
 鷋	tu;tf
 鷌	ma;hf
-鷍	jp;ha
 鷍	jp;hf
-鷍	nj;ha
 鷍	nj;hf
 鷎	gc;hf
-鷎	gc;hh
 鷎	lb;hf
-鷎	lb;hh
-鷏	at;ja
 鷏	at;jf
-鷏	ot;ja
 鷏	ot;jf
-鷏	th;ja
 鷏	th;jf
-鷏	tq;ja
 鷏	tq;jf
 鷐	it;af
-鷐	it;ah
 鷑	ji;hf
 鷑	li;hf
 鷒	az;jf
@@ -41599,40 +41157,29 @@ use_preset_vocabulary: true
 鷕	yc;rf
 鷖	yi;sf
 鷗	ur;sf
-鷘	ii;da
 鷘	ii;df
 鷙	ai;gf
 鷙	oi;gf
 鷚	lb;sf
-鷛	rk;ia
 鷛	rk;if
-鷛	yk;ia
 鷛	yk;if
 鷜	lr;lf
-鷝	bi;wa
 鷝	bi;wf
 鷞	ex;kf
 鷞	vx;kf
-鷟	ao;ya
 鷟	ao;yf
-鷟	oo;ya
 鷟	oo;yf
-鷟	zu;ya
 鷟	zu;yf
 鷠	yu;nf
 鷠	yv;nf
-鷡	wu;oa
 鷡	wu;of
 鷢	jm;mf
 鷢	jx;mf
-鷣	ts;ma
 鷣	ts;mf
-鷣	yy;ma
 鷣	yy;mf
 鷤	ds;rf
 鷤	ti;rf
 鷤	ts;rf
-鷥	si;va
 鷥	si;vf
 鷦	jp;of
 鷧	yi;gf
@@ -41641,14 +41188,11 @@ use_preset_vocabulary: true
 鷩	bj;ff
 鷪	yl;bf
 鷫	su;lf
-鷬	hx;ta
 鷬	hx;tf
 鷭	fs;hf
-鷮	jp;ha
 鷮	jp;hf
 鷯	lp;kf
 鷰	ys;tf
-鷱	gc;ha
 鷱	gc;hf
 鷲	jb;yf
 鷳	xh;af
@@ -41666,9 +41210,7 @@ use_preset_vocabulary: true
 鷼	xh;af
 鷼	xq;af
 鷽	xm;hf
-鷽	xm;hh
 鷽	xx;hf
-鷽	xx;hh
 鷾	yi;yf
 鷿	pi;sf
 鸀	eu;wf
@@ -41677,17 +41219,13 @@ use_preset_vocabulary: true
 鸂	qi;ef
 鸂	xi;ef
 鸃	yi;hi
-鸄	ji;ha
 鸄	ji;hf
-鸄	jp;ha
 鸄	jp;hf
 鸅	ae;wf
 鸅	oe;wf
 鸅	yi;wf
 鸅	ze;wf
-鸆	yu;ya
 鸆	yu;yf
-鸆	yv;ya
 鸆	yv;yf
 鸇	as;yf
 鸇	os;yf
@@ -41696,22 +41234,16 @@ use_preset_vocabulary: true
 鸊	pi;sf
 鸋	nl;jf
 鸌	ho;he
-鸍	ei;ma
 鸍	ei;mf
-鸍	mi;ma
 鸍	mi;mf
-鸍	vi;ma
 鸍	vi;mf
-鸎	yl;ba
 鸎	yl;bf
 鸏	mf;tf
 鸏	mn;tf
 鸐	ao;sf
 鸐	di;sf
 鸐	oo;sf
-鸑	ym;ka
 鸑	ym;kf
-鸑	yx;ka
 鸑	yx;kf
 鸒	yu;hf
 鸒	yv;hf
@@ -41719,10 +41251,7 @@ use_preset_vocabulary: true
 鸔	bo;he
 鸕	lu;yf
 鸖	hc;mf
-鸖	hc;mh
 鸖	he;mf
-鸖	he;mh
-鸗	lk;ya
 鸗	lk;yf
 鸘	ex;mf
 鸘	vx;mf
@@ -41753,27 +41282,21 @@ use_preset_vocabulary: true
 鸬	lu;ym
 鸭	ya;wm
 鸮	xp;rm
-鸮	xp;ry
 鸯	yf;lm
 鸰	ll;om
 鸱	ii;hm
-鸱	ii;hy
 鸲	qu;pm
 鸲	qv;pm
 鸳	yn;nm
 鸳	yz;nm
 鸴	xm;fm
-鸴	xm;fy
 鸴	xx;fm
-鸴	xx;fy
 鸵	to;pp
 鸶	si;vm
 鸷	ai;qm
 鸷	oi;qm
 鸸	uu;mm
-鸸	uu;mp
 鸹	gq;hm
-鸹	gq;hy
 鸺	xb;om
 鸻	hn;hm
 鸼	ar;hm
@@ -41818,7 +41341,6 @@ use_preset_vocabulary: true
 鹛	mw;am
 鹜	wu;nm
 鹝	yi;mm
-鹝	yi;my
 鹞	yc;bm
 鹟	wn;cm
 鹠	lb;hm
@@ -41850,9 +41372,7 @@ use_preset_vocabulary: true
 鹵	lu;yi
 鹶	jl;yn
 鹷	ll;yi
-鹸	jh;ym
 鹸	jh;yo
-鹸	jq;ym
 鹸	jq;yo
 鹹	xh;yr
 鹹	xq;yr
@@ -41863,7 +41383,6 @@ use_preset_vocabulary: true
 鹼	jq;yo
 鹽	ys;st
 鹾	co;ym
-鹾	co;yq
 鹿	lu;ip
 麀	yr;ip
 麁	cu;np
@@ -42058,14 +41577,10 @@ use_preset_vocabulary: true
 黰	at;wc
 黰	ot;wc
 黱	dm;bf
-黱	dm;bq
 黲	cs;wh
 黳	yi;sf
-黴	hv;hf	0%
 黴	hv;hk	0%
-黴	hy;hf	0%
 黴	hy;hk	0%
-黴	mw;hf	100%
 黴	mw;hk	100%
 黵	ds;wr
 黶	ys;mf
@@ -42099,7 +41614,6 @@ use_preset_vocabulary: true
 鼋	yn;mu
 鼋	yz;mu
 鼌	ic;au
-鼍	to;rm
 鼍	to;ru
 鼎	dl;bl
 鼎	dl;bn
@@ -42254,7 +41768,6 @@ use_preset_vocabulary: true
 齠	tp;yr
 齡	ll;yi
 齢	ll;yi
-齢	ll;yo
 齣	iu;yr
 齤	qn;fu
 齤	qz;fu
@@ -42306,37 +41819,26 @@ use_preset_vocabulary: true
 龀	it;yp
 龁	he;yn
 龂	yy;yl
-龂	yy;ym
 龃	ju;ym
 龃	jv;ym
 龄	ll;yi
-龅	bc;yr
 龅	bc;yu
-龆	tp;yh
 龆	tp;yr
-龇	zi;ym
 龇	zi;yp
 龈	kt;yv	11.11%
 龈	yy;yv	88.89%
-龉	yu;ym
 龉	yu;yr
-龉	yv;ym
 龉	yv;yr
 龊	io;yo
-龊	io;yy
 龋	qu;yb
-龋	qu;yl
 龋	qv;yb
-龋	qv;yl
 龌	wo;yg
-龌	wo;ym
 龍	lk;yp
 龎	pf;mp
 龏	gk;yt
 龐	pf;ip
 龑	ys;yk
 龒	lk;yf
-龒	lk;ym
 龓	lk;kp
 龔	gk;yc
 龕	ks;op

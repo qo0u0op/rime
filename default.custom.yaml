@@ -6,6 +6,7 @@
 patch:
   schema_list:
     - schema: flypy_quick5
+    - schema: lisp
   switcher/hotkeys:
     - Control+grave
   ascii_composer/good_old_caps_lock: true

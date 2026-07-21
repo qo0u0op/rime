@@ -189,7 +189,12 @@ def main():
   for char in sorted(common):
     cj_codes = cangjie_map[char]
     cj_quicks = set()
+    # collect all valid quick codes, preferring non-x/z-prefixed
     for code, _ in cj_codes:
+      if code.startswith('x') or code.startswith('z'):
+        code = re.sub(r'^[xz]+', '', code)
+        if not code:
+          continue
       qc = cangjie_quick(code)
       if qc and len(qc) == 2 and all('a' <= c <= 'z' for c in qc):
         cj_quicks.add(qc)
@@ -201,7 +206,7 @@ def main():
         continue
       for dp in dp_codes:
         for qc in cj_quicks:
-          code_entry = f"{dp}'{qc}"
+          code_entry = f"{dp};{qc}"
           key = (char, code_entry)
           if key in seen:
             duplicates += 1

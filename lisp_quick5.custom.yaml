@@ -1,0 +1,6 @@
+# lisp_quick5.custom.yaml
+# 闊碼速成客製化設定
+
+__patch:
+  - patch/+:
+      __include: grammar:/hant

@@ -1,0 +1,58 @@
+# lisp_quick5.custom.yaml
+# 闊碼速成客製化設定 (hamster 精簡版)
+
+patch:
+  # 1. 倉頡反查 translator
+  translator_cangjie5:
+    dictionary: cangjie5
+    prism: cangjie5
+    prefix: "`c"
+    tag: translator_cangjie5
+    tips: "〔倉頡〕"
+    comment_format: []
+    preedit_format:
+      - "xform/^([a-z]*)$/$1\\t（\\U$1\\E）/"
+      - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    enable_charset_filter: true
+    enable_encoder: false
+    enable_sentence: false
+    max_phrase_length: 5
+    disable_user_dict_for_patterns:
+      - "^z.*$"
+      - "^yyy.*$"
+
+  # 2. translator 列表
+  engine/translators:
+    - punct_translator
+    - table_translator@translator_cangjie5
+    - script_translator
+
+  # 3. segmentor 列表
+  engine/segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@translator_cangjie5
+    - punct_segmentor
+    - fallback_segmentor
+
+  # 4. 符號表
+  punctuator/import_preset: symbols
+  punctuator/symbols:
+    '/nm0': [〇, 零, ₀, ⁰, ⓪, ⓿ , ０]
+    '/nm1': [一, 壹, ₁, ¹, Ⅰ, ⅰ, ①, ➀, ❶, ➊, ⓵, ⑴, ⒈, １, ㊀, ㈠, 弌, 壱, 幺, ㆒ ]
+    '/nm2': [二, 貳, ₂, ², Ⅱ, ⅱ, ②, ➁, ❷, ➋, ⓶, ⑵, ⒉, ２, ㊁, ㈡, 弍, 弐, 貮, 㒃, 㒳, 兩, 倆, ㆓]
+    '/nm3': [三, 叄, ₃, ³, Ⅲ, ⅲ, ③, ➂, ❸, ➌, ⓷, ⑶, ⒊, ３, ㊂, ㈢, 參, 参, 叁, 弎, 仨, ㆔]
+    '/nm4': [四, 肆, ₄, ⁴, Ⅳ, ⅳ, ④, ➃, ❹, ➍, ⓸, ⑷, ⒋, ４, ㊃, ㈣, 亖]
+    '/nm5': [五, 伍, ₅, ⁵, Ⅴ, ⅴ, ⑤, ➄, ❺, ➎, ⓹, ⑸, ⒌, ５, ㊄, ㈤, 㐅, 㠪, 𠄡 ]
+    '/nm6': [六, 陸, ₆, ⁶, Ⅵ, ⅵ, ⑥, ➅, ❻, ➏, ⓺, ⑹, ⒍, ６, ㊅, ㈥, ↅ]
+    '/nm7': [七, 柒, ₇, ⁷, Ⅶ, ⅶ, ⑦, ➆, ❼, ➐, ⓻, ⑺, ⒎, ７, ㊆, ㈦, 漆]
+    '/nm8': [八, 捌, ₈, ⁸, Ⅷ, ⅷ, ⑧, ➇, ❽, ➑, ⓼, ⑻, ⒏, ８, ㊇, ㈧ ]
+    '/nm9': [九, 玖, ₉, ⁹, Ⅸ, ⅸ, ⑨, ➈, ❾, ➒, ⓽, ⑼, ⒐, ９, ㊈, ㈨ ]
+    '/nm10': [十, 拾, ₁₀, ¹⁰, Ⅹ, ⅹ, ⑩, ➉, ❿, ➓, ⓾, ⑽, ⒑, １０, ㊉, ㈩, 什 ]
+
+  # 5. 觸發規則
+  recognizer:
+    patterns:
+      translator_cangjie5: "^`c[a-z]+$"
+      punct: '^/(nm([0-9]|10)|[A-Za-z]+)$'

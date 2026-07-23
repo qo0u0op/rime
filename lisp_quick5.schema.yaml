@@ -1,0 +1,43 @@
+# Rime schema
+# encoding: utf-8
+
+__include: lisp.schema:/
+
+schema:
+  schema_id: lisp_quick5
+  name: 闊碼速成
+  version: "0.1"
+  author:
+    - double pinyin layout by 吅吅大山
+    - Colemak-DH adaptation by 无名氏
+  description: |
+    闊碼雙拼（Colemak-DH 大牛雙拼改造）
+    ＋倉頡速成輔助碼（倉頡首尾二碼）
+
+speller:
+  delimiter: "|"
+  alphabet: "zyxwvutsrqponmlkjihgfedcba/"
+  algebra:
+    - derive|^(\w\w)/(\w\w)$|$1$2|
+    - derive|^(\w\w)/\w\w$|$1|
+
+templates:
+  quick5:
+    preedit_format:
+      - 'xform/((?<=[a-z]{2})[a-z]{2})/\U$1\E/'
+      - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXY|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜|"
+    comment_format:
+      - 'xform/((?<=[a-z]{2})[a-z]{2})/\U$1\E/'
+      - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXY|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜|"
+
+translator:
+  dictionary: lisp_quick5
+  prism: lisp_quick5
+  spelling_hints: 4
+  preedit_format:
+    __include: templates/quick5/preedit_format
+  comment_format:
+    __include: templates/quick5/comment_format
+
+__patch:
+  - lisp_quick5.custom:/patch?

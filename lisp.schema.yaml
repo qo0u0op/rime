@@ -1,0 +1,117 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: lisp
+  name: 闊碼雙拼
+  version: "0.1"
+  author:
+    - 无名氏
+  description: |
+    朙月拼音＋闊碼雙拼方案。
+
+switches:
+  - name: t2s                  # 簡繁轉換
+    reset: 0
+    states: [漢字, 汉字]
+  - name: t2tw                  # 正繁轉換
+    states: [傳承, 正體]
+    reset: 1
+  - name: extended_charset
+    reset: 0
+    states: [通用, 增廣]
+  - name: full_shape
+    reset: 0
+    states: [半角, 全角]
+  - name: ascii_punct
+    reset: 0
+    states: [句讀, 符號]
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 西文]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+  filters:
+    - simplifier@t2s  # 簡繁轉換
+    - simplifier@t2tw  # 正繁轉換
+    - uniquifier
+    - cjk_minifier
+# add menu option to use TW Chinese
+t2s: # 簡繁轉換
+  option_name: t2s
+  opencc_config: t2s.json
+  tips: none
+t2tw: # 正繁轉換
+  option_name: t2tw
+  opencc_config: t2tw.json
+  tips: none
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    - erase/^xx$/
+    - xform/^([aoe].*)$/U$1/
+    - derive/^([jqxy])u(.*)$/$1v$2/
+    - xform/^sh/E/
+    - derive/E/V/
+    - xform/^zh/O/
+    - derive/O/A/
+    - xform/^ch/I/
+    - xform/ian$/H/
+    - derive/H/Q/
+    - xform/ui$/Y/ #
+    - derive/Y/V/ #
+    - xform/iang$/G/
+    - xform/iao$/P/
+    - xform/uang$|ve$/X/
+    - xform/uan$/Z/
+    - xform/(.)eng$|van$/$1N/
+    - xform/ua$/Q/
+    - xform/(.)ei$|vn$/$1W/
+    - xform/ou$/R/
+    - xform/iu$/B/
+    - xform/er$/U/
+    - xform/uo$/O/
+    - xform/ie$/J/
+    - xform/(.)ao$/$1C/
+    - xform/(.)an$/$1S/
+    - xform/(.)ang$/$1F/
+    - xform/uai$/H/
+    - xform/ing$/L/
+    - xform/(.)ai$|ue$/$1M/
+    - xform/(.)en$|ia$/$1T/
+    - xform/i?ong$/K/
+    - xform/in$/Y/ #
+    - xform/un$/D/
+    - xlit/QWFPBJLUYARSTGMNEIOZXCDVKH/qwfpbjluyarstgmneiozxcdvkh/
+    #- abbrev/^(.).+$/$1/
+
+translator:
+  dictionary: luna_pinyin
+  prism: double_pinyin
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default

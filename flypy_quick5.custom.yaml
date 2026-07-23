@@ -3,7 +3,7 @@
 
 patch:
   # 1. 將 `\` 符號加入 speller 的字母表，這樣才能夠輸入
-  speller/alphabet: 'zyxwvutsrqponmlkjihgfedcba''\\'
+  speller/alphabet: 'zyxwvutsrqponmlkjihgfedcba/\'
 
   # 2. 引用 latex.schema.yaml 中定義好的 translator
   # 並加上觸發符號等設定

@@ -13,13 +13,12 @@ schema:
   description: |
     小鶴雙拼加速成補助方案
 
-
 speller:
   delimiter: "|"
-  alphabet: zyxwvutsrqponmlkjihgfedcba'
+  alphabet: "zyxwvutsrqponmlkjihgfedcba/"
   algebra:
-    - derive/^(\w\w)'(\w\w)$/$1$2/
-    - derive/^(\w\w)'\w\w$/$1/
+    - derive|^(\w\w)/(\w\w)$|$1$2|
+    - derive|^(\w\w)/\w\w$|$1|
     # - derive/^(..).+$/$1/
     # this is a very aggresive pattern, sometimes need to type ' to help rime to correctly pick candidate. or just comment it.
     # - derive/^(...).+$/$1/
@@ -41,7 +40,6 @@ translator:
     __include: templates/quick5/preedit_format
   comment_format:
     __include: templates/quick5/comment_format
-
 
 __patch:
   - flypy_quick5.custom:/patch?

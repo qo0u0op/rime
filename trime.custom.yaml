@@ -1,0 +1,272 @@
+patch:
+  preset_keyboards:
+    lisp_quick5:
+      name: Colemak-DH
+      ascii_mode: 1
+      lock: true
+      width: 10
+      columns: 10
+      height: 44
+      label_transform: uppercase
+      keys:
+        # Row 1: q w f p b j l u y ;
+        - { click: q }
+        - { click: w }
+        - { click: f }
+        - { click: p }
+        - { click: b }
+        - { click: j }
+        - { click: l }
+        - { click: u }
+        - { click: y }
+        - { click: ";", swipe_up: ":" }
+        # Row 2: a r s t g m n e i o (swipe_up 1-0)
+        - { click: a, swipe_up: "1", hint: "1" }
+        - { click: r, swipe_up: "2", hint: "2" }
+        - { click: s, swipe_up: "3", hint: "3" }
+        - { click: t, swipe_up: "4", hint: "4" }
+        - { click: g, swipe_up: "5", hint: "5" }
+        - { click: m, swipe_up: "6", hint: "6" }
+        - { click: n, swipe_up: "7", hint: "7" }
+        - { click: e, swipe_up: "8", hint: "8" }
+        - { click: i, swipe_up: "9", hint: "9" }
+        - { click: o, swipe_up: "0", hint: "0" }
+        # Row 3: z x c d v k h , . /
+        - { click: z }
+        - { click: x }
+        - { click: c }
+        - { click: d }
+        - { click: v }
+        - { click: k }
+        - { click: h }
+        - { click: ",", swipe_up: "<" }
+        - { click: ., swipe_up: ">" }
+        - { click: "/", swipe_up: "?" }
+        # Row 4: 比例 1.5u:1.5u:2u:2u:1.5u:1.5u = 15:15:20:20:15:15 = 100
+        - { click: Shift_L, width: 15 }
+        - { click: Keyboard_number, width: 15 }
+        - { click: space, swipe_up: Mode_switch, width: 20 }
+        - { click: Return, width: 20 }
+        - { click: Keyboard_symbols, width: 15 }
+        - { click: BackSpace, width: 15 }
+    flypy_quick5:
+      name: Colemak-DH
+      ascii_mode: 1
+      lock: true
+      width: 10
+      columns: 10
+      height: 44
+      label_transform: uppercase
+      keys:
+        # Row 1: q w f p b j l u y ;
+        - { click: q }
+        - { click: w }
+        - { click: f }
+        - { click: p }
+        - { click: b }
+        - { click: j }
+        - { click: l }
+        - { click: u }
+        - { click: y }
+        - { click: ";", swipe_up: ":" }
+        # Row 2: a r s t g m n e i o (swipe_up 1-0)
+        - { click: a, swipe_up: "1", hint: "1" }
+        - { click: r, swipe_up: "2", hint: "2" }
+        - { click: s, swipe_up: "3", hint: "3" }
+        - { click: t, swipe_up: "4", hint: "4" }
+        - { click: g, swipe_up: "5", hint: "5" }
+        - { click: m, swipe_up: "6", hint: "6" }
+        - { click: n, swipe_up: "7", hint: "7" }
+        - { click: e, swipe_up: "8", hint: "8" }
+        - { click: i, swipe_up: "9", hint: "9" }
+        - { click: o, swipe_up: "0", hint: "0" }
+        # Row 3: z x c d v k h , . /
+        - { click: z }
+        - { click: x }
+        - { click: c }
+        - { click: d }
+        - { click: v }
+        - { click: k }
+        - { click: h }
+        - { click: ",", swipe_up: "<" }
+        - { click: ., swipe_up: ">" }
+        - { click: "/", swipe_up: "?" }
+        # Row 4: 比例 1.5u:1.5u:2u:2u:1.5u:1.5u = 15:15:20:20:15:15 = 100
+        - { click: Shift_L, width: 15 }
+        - { click: Keyboard_number, width: 15 }
+        - { click: space, swipe_up: Mode_switch, width: 20 }
+        - { click: Return, width: 20 }
+        - { click: Keyboard_symbols, width: 15 }
+        - { click: BackSpace, width: 15 }
+    flypy_self:
+      ascii_mode: 0
+      height: 44
+      keys:
+        [
+          { click: 1, long_click: "!" },
+          { click: 2, long_click: "@" },
+          { click: 3, long_click: "#" },
+          { click: 4, long_click: "$" },
+          { click: 5, long_click: "%" },
+          { click: 6, long_click: "^" },
+          { click: 7, long_click: "&" },
+          { click: 8, long_click: "*" },
+          { click: 9, long_click: "(" },
+          { click: 0, long_click: ")" },
+          { click: q, long_click: _ },
+          { click: w, long_click: "-" },
+          { click: e, long_click: "+" },
+          { click: r, long_click: "=" },
+          { click: t, long_click: "|" },
+          { click: y, long_click: "\\" },
+          { click: u, long_click: "[" },
+          { click: i, long_click: "]" },
+          { click: o, long_click: "{" },
+          { click: p, long_click: "}" },
+          { width: 5 },
+          { click: a, long_click: select_all },
+          { click: s, long_click: Home },
+          { click: d, long_click: End },
+          { click: f, long_click: Page_Up },
+          { click: g, long_click: Page_Down },
+          { click: h, long_click: Left },
+          { click: j, long_click: Down },
+          { click: k, long_click: ":" },
+          { click: l, long_click: ";" },
+          { width: 5 },
+          { click: Shift_L, has_menu: "'", width: 15 },
+          { click: z, long_click: "`" },
+          { click: x, long_click: cut },
+          { click: c, long_click: copy },
+          { click: v, long_click: paste },
+          { click: b, long_click: "~" },
+          { click: n, long_click: "\"" },
+          { click: m, long_click: MoeDict },
+          { click: BackSpace, width: 15 },
+          { click: Mode_switch, long_click: Menu, width: 15 },
+          { click: Keyboard_symbols, long_click: Keyboard_number },
+          { click: ",", long_click: "<" },
+          { click: space, width: 30 },
+          { click: ., long_click: ">" },
+          { click: "/", long_click: "?" },
+          { click: Return, composing: Return1, long_click: CommitComment, width: 15 },
+        ]
+      label_transform: uppercase
+      lock: true
+      name: "預設36鍵"
+      width: 10
+    number:
+      author: "osfans <waxaca@163.com>"
+      height: 44
+      keys:
+        [
+          { click: "+" },
+          { click: KP_1 },
+          { click: KP_2 },
+          { click: KP_3 },
+          { click: "#" },
+          { click: "-" },
+          { click: KP_4 },
+          { click: KP_5 },
+          { click: KP_6 },
+          { click: "%" },
+          { click: "*" },
+          { click: KP_7 },
+          { click: KP_8 },
+          { click: KP_9 },
+          { click: ":" },
+          { click: "/" },
+          { click: "±" },
+          { click: KP_0 },
+          { click: . },
+          { click: "," },
+          { click: "=" },
+          { click: Keyboard_default, long_click: Keyboard_symbols },
+          { click: space },
+          { click: BackSpace },
+          { click: Return },
+        ]
+      name: "預設數字"
+      width: 20
+    symbols:
+      ascii_mode: 1
+      author: "天真可愛的滿滿"
+      height: 44
+      columns: 10
+      keys:
+        [
+          { click: 1 },
+          { click: 2 },
+          { click: 3 },
+          { click: 4 },
+          { click: 5 },
+          { click: 6 },
+          { click: 7 },
+          { click: 8 },
+          { click: 9 },
+          { click: 0 },
+          { click: "~", long_click: "`" },
+          { click: "!" },
+          { click: "@" },
+          { click: "#" },
+          { click: "$" },
+          { click: "￥" },
+          { click: "%" },
+          { click: "^" },
+          { click: "&" },
+          { click: "*" },
+          { click: "(", long_click: "{" },
+          { click: ")", long_click: "}" },
+          { click: "[", long_click: "【" },
+          { click: "]", long_click: "】" },
+          { click: "「", long_click: "『" },
+          { click: "」", long_click: "』" },
+          { ascii: "\\", click: "、", long_click: "|" },
+          { click: "/", long_click: "·" },
+          { click: ":" },
+          { click: ";" },
+          { click: "+" },
+          { click: "-", long_click: _ },
+          { click: "=" },
+          { ascii: "<", click: "〈", long_click: "《" },
+          { ascii: ">", click: "〉", long_click: "》" },
+          { ascii: '"', click: "“", long_click: "‘" },
+          { ascii: "'", click: "”", long_click: "’" },
+          { ascii: ".", click: "。" },
+          { ascii: ",", click: "，" },
+          { ascii: "?", click: "？" },
+          { click: liquid_keyboard_switch, width: 15 },
+          { click: Keyboard_number, long_click: Color_switch, width: 15 },
+          { click: space, width: 20 },
+          { click: Return, width: 20 },
+          { click: Keyboard_default, long_click: Menu, width: 15 },
+          { click: BackSpace, long_click: Delete, width: 15 },
+        ]
+      name: "符號"
+      width: 10
+  preset_color_schemes:
+    eink:
+      name: E-Ink
+      back_color: 0xFFFFFF
+      text_color: 0x000000
+      border_color: 0xCCCCCC
+      candidate_text_color: 0x000000
+      comment_text_color: 0x666666
+      hilited_candidate_back_color: 0x000000
+      hilited_candidate_text_color: 0xFFFFFF
+      hilited_text_color: 0x000000
+      key_back_color: 0xFFFFFF
+      key_text_color: 0x000000
+      key_symbol_color: 0x666666
+      keyboard_back_color: 0xFFFFFF
+      label_color: 0x000000
+      hilited_key_back_color: 0xE0E0E0
+      hilited_key_text_color: 0x000000
+      hilited_on_key_back_color: 0xE0E0E0
+      hilited_on_key_text_color: 0x000000
+      hilited_off_key_back_color: 0xFFFFFF
+      hilited_off_key_text_color: 0x000000
+      preview_back_color: 0xFFFFFF
+      preview_text_color: 0x000000
+      shadow_color: 0xFFFFFF
+      text_back_color: 0xFFFFFF

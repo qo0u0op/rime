@@ -28,7 +28,6 @@ def algebra_rules():
     ("erase", r"^xx$", ""),
     ("xform", r"^([aoe].*)$", r"U\1"),
     ("derive", r"^([jqxy])u(.*)$", r"\1v\2"),
-    ("derive", r"^po$", "pe"),
     ("xform", r"^sh", "E"),
     ("derive", r"^E", "V"),
     ("xform", r"^zh", "O"),
@@ -210,7 +209,7 @@ def main():
         continue
       for dp in dp_codes:
         for qc in cj_quicks:
-          code_entry = f"{dp};{qc}"
+          code_entry = f"{dp}/{qc}"
           key = (char, code_entry)
           if key in seen:
             duplicates += 1

@@ -72,7 +72,6 @@ speller:
     - erase/^xx$/
     - xform/^([aoe].*)$/U$1/
     - derive/^([jqxy])u(.*)$/$1v$2/
-    - derive/^po$/pe/
     - xform/^sh/E/
     - derive/E/V/
     - xform/^zh/O/

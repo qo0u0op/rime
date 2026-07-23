@@ -13,22 +13,43 @@ patch:
     suffix: ' '
     tips: Latex
 
-  # 3. translator 列表
+  # 3. 倉頡反查 translator
+  translator_cangjie5:
+    dictionary: cangjie5
+    prism: cangjie5
+    prefix: "`c"
+    tag: translator_cangjie5
+    tips: "〔倉頡〕"
+    comment_format: []
+    preedit_format:
+      - "xform/^([a-z]*)$/$1\\t（\\U$1\\E）/"
+      - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    enable_charset_filter: true
+    enable_encoder: false
+    enable_sentence: false
+    max_phrase_length: 5
+    disable_user_dict_for_patterns:
+      - "^z.*$"
+      - "^yyy.*$"
+
+  # 4. translator 列表
   engine/translators:
     - punct_translator
+    - table_translator@translator_cangjie5
     - table_translator@translator_latex
     - script_translator
 
-  # 4. segmentor 列表
+  # 5. segmentor 列表
   engine/segmentors:
     - ascii_segmentor
     - matcher
     - abc_segmentor
+    - affix_segmentor@translator_cangjie5
     - affix_segmentor@translator_latex
     - punct_segmentor
     - fallback_segmentor
 
-  # 5. 符號表
+  # 6. 符號表
   punctuator/import_preset: symbols
   punctuator/symbols:
     '/nm0': [〇, 零, ₀, ⁰, ⓪, ⓿ , ０]
@@ -43,10 +64,11 @@ patch:
     '/nm9': [九, 玖, ₉, ⁹, Ⅸ, ⅸ, ⑨, ➈, ❾, ➒, ⓽, ⑼, ⒐, ９, ㊈, ㈨ ]
     '/nm10': [十, 拾, ₁₀, ¹⁰, Ⅹ, ⅹ, ⑩, ➉, ❿, ➓, ⓾, ⑽, ⒑, １０, ㊉, ㈩, 什 ]
 
-  # 6. 觸發規則
+  # 7. 觸發規則
   recognizer:
     patterns:
       translator_latex: "^\\\\[a-zA-Z^_]+$"
+      translator_cangjie5: "^`c[a-z]+$"
       punct: '^/(nm([0-9]|10)|[A-Za-z]+)$'
 
 # grammar 八股文

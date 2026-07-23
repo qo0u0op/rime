@@ -1,5 +1,6 @@
 build/
 *.userdb/
+*.gram
 sync/
 installation.yaml
 user.yaml

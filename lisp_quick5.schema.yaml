@@ -34,6 +34,8 @@ translator:
   dictionary: lisp_quick5
   prism: lisp_quick5
   spelling_hints: 4
+  import_tables:
+    - lisp_quick5_phrases
   preedit_format:
     __include: templates/quick5/preedit_format
   comment_format:

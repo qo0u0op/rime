@@ -1,0 +1,211 @@
+#!/usr/bin/env python3
+"""
+Generate lisp_quick5_phrases.dict.yaml from luna_pinyin.dict.yaml phrases.
+
+Extracts phrase entries (from line 49015 onward) and converts them to
+lisp double-pinyin + Cangjie quick codes.
+"""
+
+import re
+import sys
+from itertools import product
+from collections import defaultdict
+
+from generate_lisp_quick5 import (
+    pinyin_to_double_codes,
+    cangjie_quick,
+    is_cjk,
+    parse_dict,
+)
+
+LUNA_PINYIN = "luna_pinyin.dict.yaml"
+CANGJIE5 = "cangjie5.dict.yaml"
+OUTPUT = "lisp_quick5_phrases.dict.yaml"
+
+# ---------------------------------------------------------------------------
+# 1. Parse phrases from luna_pinyin.dict.yaml (from line 49015)
+# ---------------------------------------------------------------------------
+
+def parse_phrases(path):
+  """
+  Parse phrase entries from luna_pinyin.dict.yaml.
+  Returns list of (phrase, syllables) tuples.
+  Only includes phrases where all characters are CJK.
+  """
+  phrases = []
+  in_header = True
+  in_phrase_section = False
+
+  with open(path, "r", encoding="utf-8") as f:
+    for line in f:
+      stripped = line.strip()
+
+      # Skip empty lines and comments
+      if not stripped:
+        continue
+      if stripped.startswith("#"):
+        # Check for phrase section marker
+        if stripped == "#以下爲詞組":
+          in_phrase_section = True
+        continue
+
+      # Skip YAML header
+      if in_header:
+        if stripped == "...":
+          in_header = False
+        continue
+
+      if not in_phrase_section:
+        continue
+
+      parts = stripped.split("\t")
+      if len(parts) < 2:
+        continue
+
+      phrase = parts[0]
+      pinyin_str = parts[1]
+
+      # Skip if phrase contains non-CJK characters
+      if not all(is_cjk(c) for c in phrase):
+        continue
+
+      # Split pinyin into syllables
+      syllables = pinyin_str.split()
+
+      # Skip if syllable count doesn't match character count
+      if len(syllables) != len(phrase):
+        continue
+
+      phrases.append((phrase, syllables))
+
+  return phrases
+
+
+# ---------------------------------------------------------------------------
+# 2. Get Cangjie quick codes for a character
+# ---------------------------------------------------------------------------
+
+def get_cangjie_quicks(char, cangjie_map):
+  """Return set of Cangjie quick codes for a character."""
+  if char not in cangjie_map:
+    return set()
+
+  cj_codes = cangjie_map[char]
+  cj_quicks = set()
+
+  has_normal = any(
+    not code.startswith('x') and not code.startswith('z')
+    for code, _ in cj_codes
+  )
+
+  for code, _ in cj_codes:
+    if code.startswith('x') or code.startswith('z'):
+      if has_normal:
+        continue
+      code = re.sub(r'^[xz]+', '', code)
+      if not code:
+        continue
+    qc = cangjie_quick(code)
+    if qc and len(qc) == 2 and all('a' <= c <= 'z' for c in qc):
+      cj_quicks.add(qc)
+
+  return cj_quicks
+
+
+# ---------------------------------------------------------------------------
+# 3. Main
+# ---------------------------------------------------------------------------
+
+def main():
+  print("Parsing cangjie5.dict.yaml ...")
+  cangjie_map = parse_dict(CANGJIE5)
+  print(f"  {len(cangjie_map)} unique characters")
+
+  print("Parsing phrases from luna_pinyin.dict.yaml ...")
+  phrases = parse_phrases(LUNA_PINYIN)
+  print(f"  {len(phrases)} phrases found")
+
+  # Generate entries
+  output_lines = []
+  seen = set()
+  skipped_no_cj = 0
+  skipped_no_dp = 0
+
+  for phrase, syllables in phrases:
+    # Get double pinyin codes for each character's syllable
+    char_dp_codes = []
+    valid = True
+    for char, syl in zip(phrase, syllables):
+      dp_codes = pinyin_to_double_codes(syl)
+      if not dp_codes:
+        skipped_no_dp += 1
+        valid = False
+        break
+      char_dp_codes.append(dp_codes)
+    if not valid:
+      continue
+
+    # Get Cangjie quick codes for each character
+    char_cj_codes = []
+    valid = True
+    for char in phrase:
+      cj_quicks = get_cangjie_quicks(char, cangjie_map)
+      if not cj_quicks:
+        skipped_no_cj += 1
+        valid = False
+        break
+      char_cj_codes.append(cj_quicks)
+    if not valid:
+      continue
+
+    # Generate all combinations
+    for dp_combo in product(*char_dp_codes):
+      for cj_combo in product(*char_cj_codes):
+        code_parts = [
+          f"{dp}/{cj}" for dp, cj in zip(dp_combo, cj_combo)
+        ]
+        code_str = " ".join(code_parts)
+        key = (phrase, code_str)
+        if key in seen:
+          continue
+        seen.add(key)
+        output_lines.append(f"{phrase}\t{code_str}")
+
+  print(f"Generated {len(output_lines)} entries")
+  print(f"  Skipped: {skipped_no_dp} (no dp code), {skipped_no_cj} (no cj code)")
+
+  # Sort: by phrase, then by code
+  output_lines.sort(key=lambda x: (x.split("\t")[0], x.split("\t")[1]))
+
+  # Write output
+  header = """# Rime dictionary
+# encoding: utf-8
+#
+# lisp_quick5_phrases - 闊碼雙拼＋倉頡速成輔助碼詞組
+#
+# Generated by generate_lisp_quick5_phrases.py
+# Source: luna_pinyin.dict.yaml, cangjie5.dict.yaml
+#
+
+---
+name: lisp_quick5_phrases
+version: "0.1"
+sort: by_weight
+use_preset_vocabulary: true
+...
+
+"""
+  with open(OUTPUT, "w", encoding="utf-8") as f:
+    f.write(header)
+    for line in output_lines:
+      f.write(line + "\n")
+
+  print(f"Written to {OUTPUT}")
+
+  # Stats
+  total_phrases = len(set(line.split("\t")[0] for line in output_lines))
+  print(f"Total unique phrases: {total_phrases}")
+
+
+if __name__ == "__main__":
+  main()

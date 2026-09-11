@@ -77,8 +77,8 @@ speller:
     - xform/^zh/O/
     - derive/O/A/
     - xform/^ch/I/
-    - xform/ian$/H/
-    - derive/H/Q/
+    - xform/ian$/K/
+    - derive/K/Q/
     - xform/ui$/Y/ #
     - derive/Y/V/ #
     - xform/iang$/G/
@@ -96,11 +96,11 @@ speller:
     - xform/(.)ao$/$1C/
     - xform/(.)an$/$1S/
     - xform/(.)ang$/$1F/
-    - xform/uai$/H/
+    - xform/uai$/K/
     - xform/ing$/L/
     - xform/(.)ai$|ue$/$1M/
     - xform/(.)en$|ia$/$1T/
-    - xform/i?ong$/K/
+    - xform/i?ong$/H/
     - xform/in$/Y/ #
     - xform/un$/D/
     - xlit/QWFPBJLUYARSTGMNEIOZXCDVKH/qwfpbjluyarstgmneiozxcdvkh/

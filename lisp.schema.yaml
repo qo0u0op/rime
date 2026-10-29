@@ -14,9 +14,6 @@ switches:
   - name: t2s                  # 簡繁轉換
     reset: 0
     states: [漢字, 汉字]
-  - name: t2tw                  # 正繁轉換
-    states: [傳承, 正體]
-    reset: 1
   - name: extended_charset
     reset: 0
     states: [通用, 增廣]
@@ -52,17 +49,12 @@ engine:
 
   filters:
     - simplifier@t2s  # 簡繁轉換
-    - simplifier@t2tw  # 正繁轉換
     - uniquifier
     - cjk_minifier
 # add menu option to use TW Chinese
 t2s: # 簡繁轉換
   option_name: t2s
   opencc_config: t2s.json
-  tips: none
-t2tw: # 正繁轉換
-  option_name: t2tw
-  opencc_config: t2tw.json
   tips: none
 
 speller:

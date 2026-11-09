@@ -49,6 +49,13 @@ patch:
     - punct_segmentor
     - fallback_segmentor
 
+  # 候選排序：詞 -> 全碼字 -> 其他同音字（見 rime.lua）
+  engine/filters:
+    - simplifier@t2s
+    - lua_filter@code_order_filter
+    - uniquifier
+    - cjk_minifier
+
   # 6. 符號表
   punctuator/import_preset: symbols
   punctuator/symbols:

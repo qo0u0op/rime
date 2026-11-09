@@ -18,8 +18,9 @@ speller:
   delimiter: "|"
   alphabet: "zyxwvutsrqponmlkjihgfedcba/"
   algebra:
-    - derive|^(\w\w)/(\w\w)$|$1$2|
+    - derive|^(\w\w)/(\w\w)$|$1$2|abbrev
     - derive|^(\w\w)/\w\w$|$1|
+    - derive|^(\w\w)/(\w)\w$|$1/$2|
 
 templates:
   quick5:

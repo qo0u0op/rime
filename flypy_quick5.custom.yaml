@@ -38,11 +38,18 @@ patch:
   key_binder/select_first_character: braceleft
   key_binder/select_last_character: braceright
 
+  # 註解形碼切換：形碼 / 倉頡
+  switches/+:
+    - name: cangjie_comment
+      reset: 1
+      states: [字母, 字根]
+
   # 候選排序：詞 -> 全碼字 -> 其他同音字（見 rime.lua）
   engine/filters:
     - simplifier@t2s
     - reverse_lookup_filter@reverse_lookup_flypy
     - lua_filter@code_order_filter
+    - lua_filter@cangjie_comment_filter
     - uniquifier
     - cjk_minifier
 

@@ -30,7 +30,6 @@ templates:
       - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXY|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜|"
     comment_format:
       - 'xform|^.*/(..)$|$1|'
-      - "xlit|abcdefghijklmnopqrstuvwxy|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜|"
 
 translator:
   dictionary: lisp_quick5

@@ -9,6 +9,8 @@ patch:
     - schema: flypy_quick5
   switcher/hotkeys:
     - Control+grave
+  switcher/save_options/+:
+    - cangjie_comment
   ascii_composer/good_old_caps_lock: true
   ascii_composer/switch_key:
     Caps_Lock: clear

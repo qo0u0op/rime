@@ -1,4 +1,4 @@
--- Select a character from the current phrase with { and }.
+-- Select a character from the current phrase with < and >.
 -- Source: https://github.com/BlindingDark/rime-lua-select-character
 -- License: LGPL-3.0
 --
@@ -56,9 +56,9 @@ local function key_matches(key, configured)
       return true
    end
 
-   -- fcitx5 may report shifted keys either as "Shift+braceleft" or as
-   -- "Shift+bracketleft"; accept both forms without stealing the plain
-   -- bracket keys.
+   -- fcitx5 may report shifted keys either as "Shift+less"/"Shift+greater"
+   -- or as "Shift+comma"/"Shift+period"; accept both forms without stealing
+   -- the plain comma/period keys.
    local mods, base = repr:match('^(.*)%+([^+]+)$')
    if not base then
       base = repr
@@ -69,6 +69,10 @@ local function key_matches(key, configured)
    end
    if mods:find('Shift', 1, true) then
       local alias = {
+         comma = 'less',
+         period = 'greater',
+         less = 'comma',
+         greater = 'period',
          bracketleft = 'braceleft',
          bracketright = 'braceright',
          braceleft = 'bracketleft',
@@ -86,8 +90,8 @@ local function select_character(key, env)
    local context = engine.context
    local config = engine.schema.config
 
-   local first_key = config:get_string('key_binder/select_first_character') or 'bracketleft'
-   local last_key = config:get_string('key_binder/select_last_character') or 'bracketright'
+   local first_key = config:get_string('key_binder/select_first_character') or 'less'
+   local last_key = config:get_string('key_binder/select_last_character') or 'greater'
 
    local commit_text = context:get_commit_text()
 

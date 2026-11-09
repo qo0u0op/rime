@@ -33,6 +33,11 @@ patch:
     - punct_segmentor
     - fallback_segmentor
 
+  # 以詞定字：{ 選首字、} 選末字（見 lua/select_character.lua）
+  'engine/processors/@before 0': lua_processor@*select_character
+  key_binder/select_first_character: braceleft
+  key_binder/select_last_character: braceright
+
   # 候選排序：詞 -> 全碼字 -> 其他同音字（見 rime.lua）
   engine/filters:
     - simplifier@t2s

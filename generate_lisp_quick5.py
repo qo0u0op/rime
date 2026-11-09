@@ -151,7 +151,7 @@ def parse_dict(path):
       parts = stripped.split("\t")
       if len(parts) < 2:
         continue
-      char, code = parts[0], parts[1]
+      char, code = parts[0], parts[1].split()[0]
       weight = parts[2] if len(parts) >= 3 else ""
 
       # Single CJK character only (all extension blocks)

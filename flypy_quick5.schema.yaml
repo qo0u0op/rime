@@ -32,6 +32,7 @@ templates:
       - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
     comment_format:
       - 'xform|^.*/(..)$|$1|'
+      - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
 
 translator:
   spelling_hints: 10

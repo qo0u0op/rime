@@ -11,3 +11,4 @@ squirrel.yaml
 __pycache__/
 *.pyc
 *.pyo
+dist/

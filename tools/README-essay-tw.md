@@ -18,6 +18,16 @@ Rime 只讀根目錄的資料檔；腳本、對照表、QA 與文件都放在 `t
 | `lisp_quick5_phrases.dict.yaml` | lisp 詞組表 |
 | `lisp_quick5.schema.yaml` | lisp schema |
 
+### 自製闊碼雙拼（lisp）
+
+`lisp.schema.yaml` 與 `lisp_quick5.schema.yaml` 是自製的**闊碼雙拼**
+（Colemak-DH 大牛雙拼）＋倉頡速成；字表 `lisp_quick5.dict.yaml`、詞組表
+`lisp_quick5_phrases.dict.yaml` 由 `tools/generate_lisp_quick5.py` 與
+`tools/generate_lisp_quick5_phrases.py` 產生。`default.custom.yaml` 的
+`schema_list` 目前是 `lisp_quick5` 與 `flypy_quick5`。
+
+lisp 詞組表也會套用字對（例如 `着實`→`著實`），所以 `aoei` 可以打到 `著實`。
+
 詞組表是在**字表的 dict 標頭**用 `import_tables` 載入，不是寫在 schema 的 `translator`：
 
 ```yaml
@@ -42,6 +52,7 @@ import_tables:
 | `essay_pairs_review.tsv` | 待人工確認的對照表 |
 | `extract_*.py`、`xlsx_rows.py` | 從外部字典重新抽取對照（開發用） |
 | `list_variants_not_in_abcn.py`、`moe_check.py` | 產生 QA 清單 |
+| `package_rime.sh` | 只打包 Rime 需要的檔案（CI 使用） |
 | `91-rime-essay-tw.hook` | pacman hook 本體 |
 | `tests/`、`docs/` | 測試與設計文件 |
 
@@ -107,6 +118,42 @@ grep '^三' tools/moe_check.tsv
 
 `essay_pairs.tsv`、`abcn.tsv`、`evidence.tsv` 產生並 commit 後，原始 xlsx／mdx 就可以移除。
 `opencc`、`readmdict` 也只在抽取時需要。
+
+## 八股文語言模型（octagram）
+
+`grammar.yaml` 定義 `zh-hant-t-essay-bgw`／`bgc`（以及 hans 版）；
+`lisp_quick5.custom.yaml`、`flypy_quick5.custom.yaml` 以 `__include: grammar:/hant` 載入。
+模型來自 [lotem/rime-octagram-data](https://github.com/lotem/rime-octagram-data)，
+是 release asset，且被 `.gitignore` 忽略。
+
+Rime 使用者目錄需要：
+
+- `zh-hant-t-essay-bgw.gram`
+- `zh-hant-t-essay-bgc.gram`
+
+（簡體模式另外需要 `zh-hans-*`。）CI 會下載 compact 版並改名成上面兩個檔名；
+本機若已有 `.gram`，`package_rime.sh` 會直接帶入。
+
+## CI 打包
+
+`.github/workflows/package.yml` 在 push／PR／手動觸發時：
+
+1. 跑 `tools/tests`。
+2. 從 `rime-octagram-data` 的 release（`OCTAGRAM_TAG`）下載 compact 模型，
+   改名成 Rime 預期的 `zh-*.gram`。
+3. 執行 `tools/package_rime.sh`，只打包 Rime 需要的產物：
+   `essay.txt`、`grammar.yaml`、`*.schema.yaml`、`*.dict.yaml`、`*.custom.yaml`、
+   `rime.lua`、`lua/`、`LICENSE`、`.gram`。
+4. 上傳 artifact `rime-config`。
+
+不會打包 `tools/`、`tests/`、`docs/`、`build/`、`*.userdb`、`sync/`、
+`installation.yaml`、`user.yaml`。
+
+本機預覽：
+
+```bash
+bash tools/package_rime.sh dist/rime-config .
+```
 
 ## pacman hook
 

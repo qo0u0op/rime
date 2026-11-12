@@ -13,6 +13,7 @@
 | `extract_opencc_pairs.py` | Python `opencc` 套件（或系統 `opencc`） |
 | `extract_evidence.py` | Python `readmdict` 套件 |
 | `extract_moe_pairs.py`／`extract_abcn.py` | 原始 xlsx（Downloads） |
+| Rime 八股文模型 | `zh-hant-t-essay-bgw.gram`、`bgc.gram`（來源：`lotem/rime-octagram-data` release） |
 
 **Rime 執行期不需要 `opencc`、`readmdict`、xlsx 或 mdx。**
 那些只是重新抽取對照資料時的工具。
@@ -237,6 +238,8 @@ weight 可寫絕對值（`20000`）或百分比（`100%`）。目前只有 `參 
   <https://github.com/TraditionalChinese/TW-ABCN>
 - 《電腦漢字字典》mdx → 只給 `extract_evidence.py`
   <https://fgwang.blogspot.com/2014/11/blog-post.html>
+- `zh-*.gram` → Rime 執行期的八股文模型，來自
+  <https://github.com/lotem/rime-octagram-data> 的 release（CI 下載）。
 
 一旦 `essay_pairs.tsv`、`abcn.tsv`、`evidence.tsv` 已產生並 commit，這些下載檔就可以移除；
 hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可。
@@ -256,6 +259,34 @@ hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可
 
 hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 `essay_pairs.tsv`、`abcn.tsv`、`reading_weights.tsv` 或兩張 dict。
+
+### `package_rime.sh`
+
+只把 Rime 真正需要的檔案複製到一個輸出目錄（CI 的 artifact）。
+
+```bash
+bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR]
+# 預設 OUT_DIR=dist/rime-config，GRAM_DIR=repo 根目錄
+```
+
+打包內容：
+
+- `essay.txt`
+- `grammar.yaml`
+- `*.schema.yaml`
+- `*.dict.yaml`
+- `*.custom.yaml`
+- `rime.lua`
+- `lua/`
+- `LICENSE`
+- `*.gram`（至少要有 `zh-hant-t-essay-bgw.gram`、`zh-hant-t-essay-bgc.gram`）
+
+不會包含 `tools/`、`tests/`、`docs/`、`build/`、`*.userdb`、`sync/`、
+`installation.yaml`、`user.yaml`。
+
+CI 在 `.github/workflows/package.yml`：
+先跑測試，再從 `lotem/rime-octagram-data` 的 release 下載 compact 模型並改名，
+最後執行這支腳本並上傳 `rime-config` artifact。
 
 ## 8. 測試
 

@@ -3,8 +3,8 @@ pairs: tools/essay_pairs.tsv
 input entries: 442799
 output entries: 453413
 added entries: 10614
-pairs applied: 2062
-overshoot: 11523
+pairs applied: 2065
+overshoot: 11520
 conflicts: 570
 skipped: 1
 
@@ -450,7 +450,6 @@ skipped: 1
 巖層 -> 岩層	weight=578.0 target=577.0 gap=466
 巖岸 -> 岩岸	weight=379.0 target=378.0 gap=401
 巖洞 -> 岩洞	weight=603.0 target=602.0 gap=332
-巡 -> 廵	weight=1118.0 target=1117.0 gap=26
 工作文件 -> 工作文檔	weight=56.0 target=55.0 gap=715
 工廠佈置 -> 工廠布置	weight=309.0 target=308.0 gap=351
 工緻 -> 工致	weight=409.0 target=408.0 gap=443
@@ -511,6 +510,8 @@ skipped: 1
 影像轉換 -> 圖像轉換	weight=341.0 target=340.0 gap=364
 影印本 -> 複印本	weight=573.0 target=572.0 gap=491
 後臺程序 -> 後臺進程	weight=79.0 target=78.0 gap=448
+得 -> 䙷	weight=90228.0 target=84729.0 gap=16
+得 -> 淂	weight=90228.0 target=78069.0 gap=51
 徵人 -> 征人	weight=536.0 target=535.0 gap=517
 徵勦 -> 征勦	weight=10.0 target=9.0 gap=5851
 德布西 -> 德彪西	weight=516.0 target=515.0 gap=465
@@ -565,7 +566,6 @@ skipped: 1
 慾念 -> 欲念	weight=582.0 target=581.0 gap=415
 慾海 -> 欲海	weight=557.0 target=556.0 gap=496
 憁 -> 愡	weight=252.0 target=251.0 gap=278
-憐 -> 怜	weight=1218.0 target=1217.0 gap=22
 憑準 -> 憑准	weight=490.0 target=489.0 gap=466
 憑空想像 -> 憑空想象	weight=388.0 target=387.0 gap=421
 憔 -> 顦	weight=566.0 target=565.0 gap=471
@@ -891,7 +891,6 @@ skipped: 1
 狎暱 -> 狎昵	weight=385.0 target=384.0 gap=425
 狼吞虎嚥 -> 狼吞虎咽	weight=603.0 target=602.0 gap=332
 猰 -> 䝟	weight=393.0 target=392.0 gap=461
-猶 -> 犹	weight=1574.0 target=1573.0 gap=18
 猿 -> 猨	weight=892.0 target=891.0 gap=86
 獅子山 -> 塞拉利昂	weight=596.0 target=595.0 gap=361
 獐 -> 麞	weight=580.0 target=579.0 gap=444
@@ -1252,7 +1251,6 @@ skipped: 1
 蘿 -> 萝	weight=1016.0 target=1015.0 gap=35
 虆梩 -> 蔂梩	weight=10.0 target=9.0 gap=5851
 虔 -> 䖍	weight=669.0 target=668.0 gap=83
-號 -> 号	weight=71247.0 target=69306.0 gap=17
 虯 -> 虬	weight=653.0 target=652.0 gap=122
 虻 -> 蝱	weight=628.0 target=627.0 gap=175
 蚊 -> 蚉	weight=1462.0 target=1461.0 gap=24
@@ -5336,7 +5334,6 @@ skipped: 1
 成功的秘訣 -> 成功的祕訣	weight=135.0 target=134.0 gap=506
 成功秘訣 -> 成功祕訣	weight=54.0 target=53.0 gap=762
 成本核算 -> 成本覈算	weight=747.0 target=746.0 gap=154
-成為 -> 成爲	weight=95999.0 target=82665.0 gap=51
 成為一體 -> 成爲一體	weight=40.0 target=39.0 gap=1043
 成為主流 -> 成爲主流	weight=808.0 target=807.0 gap=113
 成為事實 -> 成爲事實	weight=543.0 target=542.0 gap=568

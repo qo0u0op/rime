@@ -73,6 +73,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--page-size", type=int, default=5)
     parser.add_argument("--gap-pages", type=int, default=3)
     parser.add_argument("--phrase-gap-pages", type=int, default=10)
+    parser.add_argument("--abcn", default=os.path.join(HERE, "abcn.tsv"))
+    parser.add_argument("--rare-gap-pages", type=int, default=10)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -91,6 +93,22 @@ def main(argv: list[str] | None = None) -> int:
                 f"warning: pairs file is empty: {args.pairs}",
                 file=sys.stderr,
             )
+    rare_chars: set[str] = set()
+    if os.path.exists(args.abcn):
+        with open(args.abcn, encoding="utf-8") as f:
+            for line in f:
+                if not line or line.startswith("#"):
+                    continue
+                parts = line.rstrip("\n").split("\t")
+                if len(parts) >= 2 and parts[1] == "C":
+                    rare_chars.add(parts[0])
+    else:
+        print(
+            f"warning: ABCN table not found: {args.abcn} "
+            "(rare variants will not be demoted)",
+            file=sys.stderr,
+        )
+
     derived = derive_phrase_pairs(essay, pairs)
     existing = {(p.preferred, p.variant) for p in pairs}
     pairs = pairs + [
@@ -102,6 +120,8 @@ def main(argv: list[str] | None = None) -> int:
         page_size=args.page_size,
         gap_pages=args.gap_pages,
         phrase_gap_pages=args.phrase_gap_pages,
+        rare_chars=rare_chars,
+        rare_gap_pages=args.rare_gap_pages,
     )
     text = build_report(args, len(essay), len(out), report, out)
 

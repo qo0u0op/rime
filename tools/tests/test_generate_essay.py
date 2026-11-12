@@ -94,6 +94,15 @@ class TestApplyPairs(unittest.TestCase):
             [("裡面", "裏面")],
         )
 
+    def test_rare_variant_gets_a_larger_gap(self):
+        essay = {f"k{i:02d}": float(100 - i) for i in range(90)}
+        essay.update({"主": 90.0, "異": 40.0, "罕": 40.0})
+        pairs = [pair("主", "異"), pair("主", "罕")]
+        out, _ = apply_pairs(
+            essay, pairs, page_size=5, rare_chars={"罕"}, rare_gap_pages=10
+        )
+        self.assertLess(out["罕"], out["異"])
+
     def test_phrase_gap_is_larger_than_char_gap(self):
         essay = {f"k{i:02d}": float(100 - i) for i in range(60)}
         essay.update({"甲": 90.0, "乙": 40.0, "丙": 90.0, "丁": 40.0})

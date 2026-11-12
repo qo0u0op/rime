@@ -148,6 +148,8 @@ def apply_pairs(
     page_size: int = 5,
     gap_pages: int = 3,
     phrase_gap_pages: int = 10,
+    rare_chars: set[str] | None = None,
+    rare_gap_pages: int = 10,
     passes: int = 3,
 ) -> tuple[dict[str, float], list[dict]]:
     """Align each pair's two weights, keeping both entries.
@@ -213,7 +215,15 @@ def apply_pairs(
         for p in active:
             weight = preferred_weight[p.preferred]
             pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
-            gap = page_size * pages * (2 if p.type == "regional" else 1)
+            if (
+                p.scope == "char"
+                and rare_chars
+                and p.variant in rare_chars
+            ):
+                pages = rare_gap_pages
+                gap = page_size * pages
+            else:
+                gap = page_size * pages * (2 if p.type == "regional" else 1)
             target = _target_weight(table, weight, gap)
             if out.get(p.variant) != target:
                 changed = True
@@ -228,7 +238,10 @@ def apply_pairs(
         target = out[p.variant]
         gap = final.rank(target) - final.rank(weight)
         pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
-        expected = page_size * pages * (2 if p.type == "regional" else 1)
+        if p.scope == "char" and rare_chars and p.variant in rare_chars:
+            expected = page_size * rare_gap_pages
+        else:
+            expected = page_size * pages * (2 if p.type == "regional" else 1)
         report.append(
             {
                 "preferred": p.preferred,

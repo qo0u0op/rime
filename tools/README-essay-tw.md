@@ -28,6 +28,8 @@ Rime 只會讀根目錄的資料檔；所有腳本、對照表、報告、測試
 | `essay_pairs.tsv` | 已核可的對照表 |
 | `essay_pairs_review.tsv` | 待人工確認的對照表 |
 | `reading_weights.tsv` | 破音字的讀音權重覆寫（例：`參 san 20000`、`弎 san 100`） |
+| `abcn.tsv` / `extract_abcn.py` | 《臺灣TW-ABCN正字甲乙丙表》的字類（A/B/C/N） |
+| `extract_evidence.py` / `evidence.tsv` | 《電腦漢字字典》的異體字來源證據 |
 | `moe_check.py` / `moe_check.tsv` | 產生 MOE 對照的輸入檢查清單 |
 | `essay_report.txt` | 重生報告 |
 | `91-rime-essay-tw.hook` | pacman hook 本體 |
@@ -84,6 +86,36 @@ python3 tools/generate_flypy_quick5_phrases.py
 數字的大寫：`參` 的 `san` 讀音原本在 luna 只有 0.01%，被 `reading_weights.tsv`
 提高到絕對值 20000；`弎`、`叁` 則壓到 100。所以 `ss`／`sj` 的順序是
 **三 > 參 > 弎／叁**。
+
+想快速看幾個代表輸入：
+
+| 輸入（lisp／flypy） | 預期順序 |
+|---|---|
+| `ss`／`sj` | 三 > 參 > 弎／叁 |
+| `ww`／`ww` | 為 > 爲 |
+| `li`／`li` | 裡 > 裏 |
+| `ae`／`ve` | 著 > 着 |
+| `ii`／`ii` | 吃 > 喫 |
+| `mk`／`mm` | 麵 > 麪 |
+
+## ABCN 罕用字
+
+`extract_abcn.py` 從《臺灣TW-ABCN正字甲乙丙表》取出 A/B/C/N 四類。只有 **C 罕用字**
+的異體會被額外後移（預設 10 頁，`--rare-gap-pages`）。目前 56 個 C 類異體，
+例如 `怜`、`眀`；`爲`、`裏`、`着` 不在 ABCN 表內，維持原本的 3 頁。
+
+## 電腦漢字字典的證據
+
+`extract_evidence.py` 會讀《電腦漢字字典》mdx，對每個字對抓「異體字」段與來源標籤
+（民國教育部、漢語大字典、戸籍統一文字、簡化字…），輸出：
+
+- `evidence.tsv`：`preferred / variant / moe(yes/no) / sources / note`
+- `evidence_missing.tsv`：字典裡有民國教育部標籤、但不在 `essay_pairs.tsv` 的候選對
+
+目前 1,330 個字對中，1,119 個有民國教育部證據；277 個候選對已篩選 170 個
+（兩邊都在 essay）放進 `essay_pairs_review.tsv`，沒有自動套用。
+
+需要 `readmdict`（或 `PYTHONPATH=/path/to/readmdict` 執行）。
 
 ## 破音字的讀音權重
 

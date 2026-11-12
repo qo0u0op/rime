@@ -34,9 +34,22 @@ jobs:
           done
 
       - name: Package Rime files
-        run: bash tools/package_rime.sh dist/rime-config .gram
+        run: |
+          bash tools/package_rime.sh dist/rime-config-all .gram all
+          bash tools/package_rime.sh dist/rime-config-flypy .gram flypy
+          bash tools/package_rime.sh dist/rime-config-lisp .gram lisp
 
       - uses: actions/upload-artifact@v4
         with:
-          name: rime-config
-          path: dist/rime-config
+          name: rime-config-all
+          path: dist/rime-config-all
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-flypy
+          path: dist/rime-config-flypy
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-lisp
+          path: dist/rime-config-lisp

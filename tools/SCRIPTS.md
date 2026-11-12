@@ -265,9 +265,13 @@ hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 只把 Rime 真正需要的檔案複製到一個輸出目錄（CI 的 artifact）。
 
 ```bash
-bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR]
-# 預設 OUT_DIR=dist/rime-config，GRAM_DIR=repo 根目錄
+bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp]
+# 預設 OUT_DIR=dist/rime-config、GRAM_DIR=repo 根目錄、VARIANT=all
 ```
+
+- `all`：全部 schema。
+- `flypy`：只含 flypy 群組；`default.custom.yaml` 只留 `flypy_quick5`。
+- `lisp`：只含 lisp 群組；`default.custom.yaml` 只留 `lisp_quick5`。
 
 打包內容：
 
@@ -286,7 +290,7 @@ bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR]
 
 CI 在 `.github/workflows/package.yml`：
 先跑測試，再從 `lotem/rime-octagram-data` 的 release 下載 compact 模型並改名，
-最後執行這支腳本並上傳 `rime-config` artifact。
+最後依序產生 `all`、`flypy`、`lisp` 三種打包，上傳三個 artifact。
 
 ## 8. 測試
 

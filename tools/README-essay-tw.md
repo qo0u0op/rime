@@ -141,10 +141,13 @@ Rime 使用者目錄需要：
 1. 跑 `tools/tests`。
 2. 從 `rime-octagram-data` 的 release（`OCTAGRAM_TAG`）下載 compact 模型，
    改名成 Rime 預期的 `zh-*.gram`。
-3. 執行 `tools/package_rime.sh`，只打包 Rime 需要的產物：
-   `essay.txt`、`grammar.yaml`、`*.schema.yaml`、`*.dict.yaml`、`*.custom.yaml`、
-   `rime.lua`、`lua/`、`LICENSE`、`.gram`。
-4. 上傳 artifact `rime-config`。
+3. 執行 `tools/package_rime.sh`，產生三種打包：
+   - `all`：全部方案（lisp + flypy）
+   - `flypy`：只含 flypy（`default.custom.yaml` 的 schema_list 只留 `flypy_quick5`）
+   - `lisp`：只含 lisp（schema_list 只留 `lisp_quick5`）
+   只打包 Rime 需要的產物：`essay.txt`、`grammar.yaml`、`*.schema.yaml`、
+   `*.dict.yaml`、`*.custom.yaml`、`rime.lua`、`lua/`、`LICENSE`、`.gram`。
+4. 上傳三個 artifact：`rime-config-all`、`rime-config-flypy`、`rime-config-lisp`。
 
 不會打包 `tools/`、`tests/`、`docs/`、`build/`、`*.userdb`、`sync/`、
 `installation.yaml`、`user.yaml`。
@@ -152,7 +155,9 @@ Rime 使用者目錄需要：
 本機預覽：
 
 ```bash
-bash tools/package_rime.sh dist/rime-config .
+bash tools/package_rime.sh dist/rime-config-all . all
+bash tools/package_rime.sh dist/rime-config-flypy . flypy
+bash tools/package_rime.sh dist/rime-config-lisp . lisp
 ```
 
 ## pacman hook

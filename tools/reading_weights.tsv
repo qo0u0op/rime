@@ -1,0 +1,6 @@
+# Per-reading weight overrides for the character tables.
+# char<TAB>pinyin<TAB>weight   (weight may be absolute, e.g. 20000, or a percentage, e.g. 100%)
+#
+# 參 is a 破音字: cān (participate), shēn (ginseng), cēn (參差), sān (financial 三).
+# luna gives sān only 0.01%; with the tiered essay, 100% keeps it at its common-char weight.
+參	san	100%

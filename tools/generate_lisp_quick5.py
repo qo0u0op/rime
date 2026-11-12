@@ -6,15 +6,22 @@ Implements the lisp (Colemak-DH adapted 大牛双拼) algebra rules with 飛鍵�
 (derive branches at exact rule positions).
 """
 
+import os
 import re
 import sys
 import unicodedata
 from collections import defaultdict
 
-LISP_YAML = "lisp.yaml"
-LUNA_PINYIN = "luna_pinyin.dict.yaml"
-CANGJIE5 = "cangjie5.dict.yaml"
-OUTPUT = "lisp_quick5.dict.yaml"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
+LISP_YAML = os.path.join(ROOT, "lisp.yaml")
+LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
+CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
+OUTPUT = os.path.join(ROOT, "lisp_quick5.dict.yaml")
+PAIRS = os.path.join(HERE, "essay_pairs.tsv")
+READING_WEIGHTS = os.path.join(HERE, "reading_weights.tsv")
 
 # ---------------------------------------------------------------------------
 # 1. Algebra engine: simulate lisp.yaml speller rules in order
@@ -162,8 +169,44 @@ def parse_dict(path):
 
 
 # ---------------------------------------------------------------------------
-# 5. Main
+# 5. Reading weight overrides
 # ---------------------------------------------------------------------------
+
+def load_reading_weights(path):
+  """Return {(char, pinyin): weight_str} from the override TSV."""
+  overrides = {}
+  if not os.path.exists(path):
+    return overrides
+  with open(path, "r", encoding="utf-8") as f:
+    for line in f:
+      line = line.rstrip("\n")
+      if not line or line.startswith("#"):
+        continue
+      parts = line.split("\t")
+      if len(parts) < 3:
+        continue
+      overrides[(parts[0], parts[1])] = parts[2]
+  return overrides
+
+
+# ---------------------------------------------------------------------------
+# 6. Main
+# ---------------------------------------------------------------------------
+
+def load_variants(path):
+  """Characters that should use the essay variant band, not luna percentages."""
+  variants = set()
+  if not os.path.exists(path):
+    return variants
+  with open(path, encoding="utf-8") as f:
+    for line in f:
+      if not line or line.startswith("#"):
+        continue
+      parts = line.rstrip("\n").split("\t")
+      if len(parts) >= 4 and parts[2] == "char" and parts[3] == "ortho":
+        variants.add(parts[1])
+  return variants
+
 
 def main():
   print("Parsing luna_pinyin.dict.yaml ...")
@@ -179,6 +222,9 @@ def main():
   print(f"  {len(common)} characters in both")
   print(f"  {len(pinyin_map) - len(common)} in luna_pinyin only (skipped)")
   print(f"  {len(cangjie_map) - len(common)} in cangjie5 only (skipped)")
+
+  overrides = load_reading_weights(READING_WEIGHTS)
+  variants = load_variants(PAIRS)
 
   # Generate entries
   output_lines = []
@@ -204,6 +250,9 @@ def main():
 
     pinyins = pinyin_map[char]
     for pinyin, weight in pinyins:
+      weight = overrides.get((char, pinyin), weight)
+      if (char, pinyin) not in overrides and char in variants:
+        weight = ""
       dp_codes = pinyin_to_double_codes(pinyin)
       if not dp_codes:
         continue
@@ -240,6 +289,8 @@ name: lisp_quick5
 version: "0.1"
 sort: by_weight
 use_preset_vocabulary: true
+import_tables:
+  - lisp_quick5_phrases
 ...
 
 """

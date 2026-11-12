@@ -22,14 +22,18 @@ patch:
     - table_translator@translator_latex # 新增的 latex 翻譯器
     - script_translator
 
+  # 倉頡候選保留原始碼，由 cangjie_comment_filter 切換字母/字根
+  translator_cangjie5/comment_format:
+    - "xform/^(.*)$/$1/"
+
   # 4. 將 latex segmentor 加入到分詞器列表中
   # 注意：這裡是「覆蓋」整個列表，需要把原有的分詞器也一併列出
   engine/segmentors:
     - ascii_segmentor
     - matcher
-    - abc_segmentor
     - affix_segmentor@translator_cangjie5
     - affix_segmentor@translator_latex # 新增的 latex 分詞器
+    - abc_segmentor
     - punct_segmentor
     - fallback_segmentor
 
@@ -47,7 +51,6 @@ patch:
   # 候選排序：詞 -> 全碼字 -> 其他同音字（見 rime.lua）
   engine/filters:
     - simplifier@t2s
-    - reverse_lookup_filter@reverse_lookup_flypy
     - lua_filter@code_order_filter
     - lua_filter@cangjie_comment_filter
     - uniquifier

@@ -55,7 +55,6 @@ engine:
     - script_translator
   filters:
     - simplifier@t2s  # 簡繁轉換
-    - reverse_lookup_filter@reverse_lookup_flypy
     - uniquifier
     - cjk_minifier
 
@@ -75,7 +74,6 @@ translator_cangjie5:
   prefix: "`c"
   suffix: "'"
   tips: 〔倉頡〕
-  comment_format: []
 
 # this section add double pinyin symbols when query with bopomofo_tw
 reverse_lookup_flypy:

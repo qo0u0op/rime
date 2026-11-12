@@ -20,7 +20,6 @@ patch:
     prefix: "`c"
     tag: translator_cangjie5
     tips: "〔倉頡〕"
-    comment_format: []
     preedit_format:
       - "xform/^([a-z]*)$/$1\\t（\\U$1\\E）/"
       - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
@@ -43,9 +42,9 @@ patch:
   engine/segmentors:
     - ascii_segmentor
     - matcher
-    - abc_segmentor
     - affix_segmentor@translator_cangjie5
     - affix_segmentor@translator_latex
+    - abc_segmentor
     - punct_segmentor
     - fallback_segmentor
 
@@ -87,7 +86,7 @@ patch:
   recognizer:
     patterns:
       translator_latex: "^\\\\[a-zA-Z^_]+$"
-      translator_cangjie5: "^`c[a-z]+$"
+      translator_cangjie5: "^`c[a-z]*$"
       punct: '^/(nm([0-9]|10)|[A-Za-z]+)$'
 
 # grammar 八股文

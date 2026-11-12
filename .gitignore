@@ -8,3 +8,7 @@ fcitx.yaml
 fcitx5.yaml
 weasel.yaml
 squirrel.yaml
+__pycache__/
+*.pyc
+*.pyo
+dist/

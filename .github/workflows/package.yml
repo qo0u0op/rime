@@ -1,0 +1,55 @@
+name: package-rime
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  OCTAGRAM_TAG: "20260712"
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test tools
+        run: python3 -m unittest discover -s tools/tests -v
+
+      - name: Fetch octagram models
+        run: |
+          mkdir -p .gram
+          for model in \
+            zh-hant-t-essay-bgw \
+            zh-hant-t-essay-bgc \
+            zh-hans-t-essay-bgw \
+            zh-hans-t-essay-bgc; do
+            curl -fL --retry 3 -o ".gram/$model.gram" \
+              "https://github.com/lotem/rime-octagram-data/releases/download/${OCTAGRAM_TAG}/${model}-compact.gram"
+          done
+
+      - name: Package Rime files
+        run: |
+          bash tools/package_rime.sh dist/rime-config-all .gram all
+          bash tools/package_rime.sh dist/rime-config-flypy .gram flypy
+          bash tools/package_rime.sh dist/rime-config-lisp .gram lisp
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-all
+          path: dist/rime-config-all
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-flypy
+          path: dist/rime-config-flypy
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-lisp
+          path: dist/rime-config-lisp

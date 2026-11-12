@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = rime-essay
+
+[Action]
+Description = Regenerating Taiwan-first rime essay（重生台灣優先的 essay）
+When = PostTransaction
+Exec = /usr/bin/runuser -u d0w0b -- /usr/bin/python3 /home/d0w0b/.local/share/fcitx5/rime/tools/generate_essay.py --essay /usr/share/rime-data/essay.txt --pairs /home/d0w0b/.local/share/fcitx5/rime/tools/essay_pairs.tsv --out /home/d0w0b/.local/share/fcitx5/rime/essay.txt --report /home/d0w0b/.local/share/fcitx5/rime/tools/essay_report.txt

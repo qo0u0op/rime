@@ -1,0 +1,1415 @@
+essay: /usr/share/rime-data/essay.txt
+pairs: tools/essay_pairs.tsv
+input entries: 442799
+output entries: 453413
+added entries: 10614
+pairs applied: 619
+char variants banded: 1322
+phrase variants zeroed: 10824
+overshoot: 822
+conflicts: 570
+skipped: 1
+
+--- overshoot (final gap) ---
+一準 -> 一准	weight=525.0 target=524.0 gap=511
+一鬨而散 -> 一哄而散	weight=503.0 target=502.0 gap=487
+七情六慾 -> 七情六欲	weight=593.0 target=592.0 gap=408
+七絃琴 -> 七弦琴	weight=469.0 target=468.0 gap=451
+三和絃 -> 三和弦	weight=469.0 target=468.0 gap=451
+三孃教子 -> 三娘教子	weight=427.0 target=426.0 gap=447
+三絃 -> 三弦	weight=542.0 target=541.0 gap=497
+下嚥 -> 下咽	weight=591.0 target=590.0 gap=372
+不儲存 -> 不保存	weight=44.0 target=43.0 gap=919
+不捨晝夜 -> 不舍晝夜	weight=468.0 target=467.0 gap=473
+不掛眼 -> 不挂眼	weight=149.0 target=148.0 gap=376
+不採 -> 不采	weight=498.0 target=497.0 gap=472
+不託 -> 不托	weight=433.0 target=432.0 gap=435
+並介之人 -> 并介之人	weight=112.0 target=111.0 gap=554
+並刀 -> 并刀	weight=363.0 target=362.0 gap=390
+並列關係 -> 并列關係	weight=449.0 target=448.0 gap=510
+並日 -> 并日	weight=356.0 target=355.0 gap=374
+並日而食 -> 并日而食	weight=260.0 target=259.0 gap=310
+並贓拿敗 -> 并贓拿敗	weight=10.0 target=9.0 gap=5739
+並迭 -> 并迭	weight=274.0 target=273.0 gap=314
+並邦 -> 并邦	weight=128.0 target=127.0 gap=514
+中國國際信託投資公司 -> 中國國際信托投資公司	weight=399.0 target=398.0 gap=418
+中執行 -> 中運行	weight=129.0 target=128.0 gap=232
+主和絃 -> 主和弦	weight=377.0 target=376.0 gap=355
+主幹網路 -> 主幹網絡	weight=394.0 target=393.0 gap=422
+乙醯水楊酸 -> 乙酰水楊酸	weight=10.0 target=9.0 gap=5739
+乙醯胺吡咯烷酮 -> 乙酰胺吡咯烷酮	weight=221.0 target=220.0 gap=315
+乙醯膽鹼 -> 乙酰膽鹼	weight=529.0 target=528.0 gap=513
+乳酪蛋糕 -> 奶酪蛋糕	weight=32.0 target=31.0 gap=1333
+二孃 -> 二娘	weight=583.0 target=582.0 gap=414
+二氧化矽 -> 二氧化硅	weight=593.0 target=592.0 gap=408
+二絃 -> 二弦	weight=428.0 target=427.0 gap=454
+亞塞拜然 -> 阿塞拜疆	weight=590.0 target=589.0 gap=393
+亞洲週刊 -> 亞洲周刊	weight=483.0 target=482.0 gap=456
+人口分佈 -> 人口分布	weight=496.0 target=495.0 gap=486
+人慾 -> 人欲	weight=595.0 target=594.0 gap=347
+人慾橫流 -> 人欲橫流	weight=390.0 target=389.0 gap=419
+人機介面 -> 人機接口	weight=602.0 target=601.0 gap=329
+人機介面 -> 人機界面	weight=602.0 target=601.0 gap=329
+仇讎 -> 仇仇	weight=350.0 target=349.0 gap=402
+付託 -> 付托	weight=442.0 target=441.0 gap=438
+伊利諾 -> 伊利諾伊	weight=550.0 target=549.0 gap=491
+伊利諾州 -> 伊利諾伊州	weight=518.0 target=517.0 gap=540
+伏屍 -> 伏尸	weight=490.0 target=489.0 gap=454
+伏屍流血 -> 伏尸流血	weight=228.0 target=227.0 gap=304
+休慼 -> 休戚	weight=531.0 target=530.0 gap=534
+休慼相關 -> 休戚相關	weight=496.0 target=495.0 gap=486
+休慼與共 -> 休戚與共	weight=464.0 target=463.0 gap=517
+伕役 -> 夫役	weight=10.0 target=9.0 gap=5739
+伙伕 -> 伙夫	weight=474.0 target=473.0 gap=527
+伯孃 -> 伯娘	weight=463.0 target=462.0 gap=477
+佈列 -> 布列	weight=468.0 target=467.0 gap=473
+佈告 -> 布告	weight=570.0 target=569.0 gap=458
+佈德 -> 布德	weight=439.0 target=438.0 gap=448
+佈慈 -> 布慈	weight=198.0 target=197.0 gap=285
+佈政 -> 布政	weight=438.0 target=437.0 gap=440
+佈教 -> 布教	weight=401.0 target=400.0 gap=429
+佈散 -> 布散	weight=402.0 target=401.0 gap=397
+佈署 -> 布署	weight=531.0 target=530.0 gap=534
+佈菜 -> 布菜	weight=424.0 target=423.0 gap=415
+佈道 -> 布道	weight=583.0 target=582.0 gap=414
+佈防 -> 布防	weight=575.0 target=574.0 gap=440
+佈雪 -> 布雪	weight=265.0 target=264.0 gap=336
+低迴 -> 低回	weight=532.0 target=531.0 gap=496
+低階語言 -> 低級語言	weight=421.0 target=420.0 gap=401
+佔上游 -> 占上游	weight=234.0 target=233.0 gap=343
+佔地盤 -> 占地盤	weight=405.0 target=404.0 gap=392
+佔場兒 -> 占場兒	weight=90.0 target=89.0 gap=784
+佔有權 -> 占有權	weight=455.0 target=454.0 gap=444
+佔盡便宜 -> 占盡便宜	weight=412.0 target=411.0 gap=457
+佔花魁 -> 占花魁	weight=342.0 target=341.0 gap=381
+佔課 -> 占課	weight=340.0 target=339.0 gap=343
+佔頭籌 -> 占頭籌	weight=209.0 target=208.0 gap=336
+佔鰲頭 -> 占鰲頭	weight=407.0 target=406.0 gap=398
+作準 -> 作准	weight=423.0 target=422.0 gap=447
+併兼 -> 并兼	weight=471.0 target=470.0 gap=470
+併力 -> 并力	weight=482.0 target=481.0 gap=469
+併吞 -> 并吞	weight=487.0 target=486.0 gap=488
+侵佔罪 -> 侵占罪	weight=538.0 target=537.0 gap=508
+侷促一隅 -> 局促一隅	weight=218.0 target=217.0 gap=324
+侷促不安 -> 局促不安	weight=508.0 target=507.0 gap=489
+保準 -> 保准	weight=549.0 target=548.0 gap=496
+倖臣 -> 幸臣	weight=374.0 target=373.0 gap=383
+倦遊 -> 倦游	weight=390.0 target=389.0 gap=419
+假託 -> 假托	weight=476.0 target=475.0 gap=468
+停止執行 -> 停止運行	weight=77.0 target=76.0 gap=515
+備份資料 -> 備份數據	weight=64.0 target=63.0 gap=616
+傢什 -> 家什	weight=517.0 target=516.0 gap=494
+傳送器 -> 發送器	weight=500.0 target=499.0 gap=503
+傳送機 -> 發送機	weight=493.0 target=492.0 gap=543
+僱工 -> 雇工	weight=560.0 target=559.0 gap=489
+僱農 -> 雇農	weight=459.0 target=458.0 gap=433
+優哉遊哉 -> 優哉游哉	weight=505.0 target=504.0 gap=564
+優遊 -> 優游	weight=551.0 target=550.0 gap=472
+優遊自在 -> 優游自在	weight=371.0 target=370.0 gap=410
+儲存區 -> 存儲區	weight=368.0 target=367.0 gap=386
+儲存起來 -> 保存起來	weight=532.0 target=531.0 gap=496
+儲存量 -> 存儲量	weight=491.0 target=490.0 gap=529
+兇終隙末 -> 凶終隙末	weight=210.0 target=209.0 gap=253
+光纖分散式資料介面 -> 光纖分佈式數據介面	weight=66.0 target=65.0 gap=1032
+光纖通訊 -> 光纖通信	weight=566.0 target=565.0 gap=458
+光通訊 -> 光通信	weight=101.0 target=100.0 gap=319
+光電二極體 -> 光電二極管	weight=470.0 target=469.0 gap=496
+內部資料 -> 內部數據	weight=136.0 target=135.0 gap=230
+內醯胺 -> 內酰胺	weight=559.0 target=558.0 gap=530
+內醯胺酶 -> 內酰胺酶	weight=534.0 target=533.0 gap=506
+全球資訊網 -> 萬維網	weight=555.0 target=554.0 gap=509
+六慾 -> 六欲	weight=606.0 target=605.0 gap=325
+六絃琴 -> 六弦琴	weight=465.0 target=464.0 gap=493
+共享軟體 -> 共享軟件	weight=212.0 target=211.0 gap=226
+再長爹孃 -> 再長爹娘	weight=90.0 target=89.0 gap=784
+冥濛 -> 冥蒙	weight=338.0 target=337.0 gap=403
+出自孃胎 -> 出自娘胎	weight=179.0 target=178.0 gap=293
+函式庫 -> 函數庫	weight=378.0 target=377.0 gap=376
+分佈學習 -> 分布學習	weight=182.0 target=181.0 gap=305
+分散式網路 -> 分佈式網絡	weight=473.0 target=472.0 gap=489
+分時多工 -> 時分複用	weight=209.0 target=208.0 gap=336
+刊佈 -> 刊布	weight=406.0 target=405.0 gap=443
+列支敦斯登 -> 列支敦士登	weight=531.0 target=530.0 gap=534
+剋日 -> 克日	weight=429.0 target=428.0 gap=460
+剷鬥 -> 剷斗	weight=482.0 target=481.0 gap=469
+功緻 -> 功致	weight=233.0 target=232.0 gap=277
+加彭 -> 加蓬	weight=564.0 target=563.0 gap=496
+動人心絃 -> 動人心弦	weight=535.0 target=534.0 gap=518
+動態影像 -> 動態圖像	weight=522.0 target=521.0 gap=520
+包準 -> 包准	weight=441.0 target=440.0 gap=451
+包穀 -> 包谷	weight=537.0 target=536.0 gap=473
+北卡羅萊納州 -> 北卡羅來納州	weight=494.0 target=493.0 gap=482
+北迴歸線 -> 北回歸線	weight=562.0 target=561.0 gap=515
+十進位制 -> 十進制	weight=576.0 target=575.0 gap=447
+半母音 -> 半元音	weight=359.0 target=358.0 gap=377
+南迴歸線 -> 南回歸線	weight=437.0 target=436.0 gap=468
+即時新聞 -> 實時新聞	weight=366.0 target=365.0 gap=377
+即時更新 -> 實時更新	weight=563.0 target=562.0 gap=468
+即時翻譯 -> 實時翻譯	weight=81.0 target=80.0 gap=419
+取樣器 -> 採樣器	weight=115.0 target=114.0 gap=262
+取樣點 -> 採樣點	weight=107.0 target=106.0 gap=632
+口腹之慾 -> 口腹之欲	weight=486.0 target=485.0 gap=496
+叨唸 -> 叨念	weight=523.0 target=522.0 gap=516
+叮叮噹噹 -> 丁丁當當	weight=552.0 target=551.0 gap=497
+可儲存 -> 可保存	weight=47.0 target=46.0 gap=910
+可儲存 -> 可存儲	weight=47.0 target=46.0 gap=910
+可想像 -> 可想象	weight=477.0 target=476.0 gap=520
+史特勞斯 -> 施特勞斯	weight=570.0 target=569.0 gap=458
+史瓦濟蘭 -> 斯威士蘭	weight=485.0 target=484.0 gap=526
+吉里巴斯 -> 基里巴斯	weight=475.0 target=474.0 gap=473
+吉里巴斯共和國 -> 基里巴斯共和國	weight=279.0 target=278.0 gap=309
+同休共慼 -> 同休共戚	weight=182.0 target=181.0 gap=305
+同心並力 -> 同心并力	weight=220.0 target=219.0 gap=236
+吐瓦魯 -> 圖瓦盧	weight=467.0 target=466.0 gap=455
+向量化 -> 矢量化	weight=124.0 target=123.0 gap=481
+向量和 -> 矢量和	weight=67.0 target=66.0 gap=599
+向量圖形 -> 矢量圖形	weight=321.0 target=320.0 gap=363
+呼搧 -> 呼扇	weight=432.0 target=431.0 gap=453
+咖哩汁 -> 咖喱汁	weight=379.0 target=378.0 gap=376
+咖哩粉 -> 咖喱粉	weight=494.0 target=493.0 gap=482
+咖哩雞 -> 咖喱雞	weight=525.0 target=524.0 gap=511
+咖哩飯 -> 咖喱飯	weight=497.0 target=496.0 gap=547
+哀慼 -> 哀戚	weight=461.0 target=460.0 gap=487
+哥斯大黎加 -> 哥斯達黎加	weight=605.0 target=604.0 gap=303
+唐氏症 -> 唐氏綜合徵	weight=452.0 target=451.0 gap=434
+唐氏症 -> 唐氏綜合症	weight=452.0 target=451.0 gap=434
+唱唸 -> 唱念	weight=474.0 target=473.0 gap=527
+唸咒 -> 念咒	weight=530.0 target=529.0 gap=489
+唸白 -> 念白	weight=503.0 target=502.0 gap=487
+商業資訊 -> 商業信息	weight=114.0 target=113.0 gap=285
+喧鬨 -> 喧哄	weight=246.0 target=245.0 gap=277
+喬治亞州 -> 佐治亞州	weight=497.0 target=496.0 gap=547
+單位向量 -> 單位矢量	weight=331.0 target=330.0 gap=377
+單母音 -> 單元音	weight=184.0 target=183.0 gap=315
+嘉餚 -> 嘉肴	weight=340.0 target=339.0 gap=343
+噴出巖 -> 噴出岩	weight=334.0 target=333.0 gap=354
+噴墨印表機 -> 噴墨打印機	weight=233.0 target=232.0 gap=277
+嚥唾 -> 咽唾	weight=310.0 target=309.0 gap=374
+四嶽 -> 四岳	weight=70.0 target=69.0 gap=570
+四絃琴 -> 四弦琴	weight=371.0 target=370.0 gap=410
+因變數 -> 因變量	weight=464.0 target=463.0 gap=517
+國情諮文 -> 國情咨文	weight=459.0 target=458.0 gap=433
+土庫曼 -> 土庫曼斯坦	weight=548.0 target=547.0 gap=491
+在執行 -> 在運行	weight=583.0 target=582.0 gap=414
+地理資訊系統 -> 地理信息系統	weight=251.0 target=250.0 gap=364
+地誌 -> 地志	weight=482.0 target=481.0 gap=469
+坦尚尼亞 -> 坦桑尼亞	weight=588.0 target=587.0 gap=396
+型別轉換 -> 類型轉換	weight=149.0 target=148.0 gap=376
+執行人員 -> 運行人員	weight=82.0 target=81.0 gap=455
+執行效率 -> 運行效率	weight=310.0 target=309.0 gap=374
+執行時間 -> 運行時間	weight=213.0 target=212.0 gap=224
+執行期 -> 運行期	weight=38.0 target=37.0 gap=1175
+執行狀態 -> 運行狀態	weight=162.0 target=161.0 gap=374
+執行環境 -> 運行環境	weight=291.0 target=290.0 gap=357
+執行系統 -> 運行系統	weight=51.0 target=50.0 gap=768
+執行能力 -> 運行能力	weight=389.0 target=388.0 gap=434
+基本資料 -> 基本數據	weight=139.0 target=138.0 gap=223
+塑膠工業 -> 塑料工業	weight=583.0 target=582.0 gap=414
+塑膠布 -> 塑料布	weight=554.0 target=553.0 gap=501
+塑膠杯 -> 塑料杯	weight=394.0 target=393.0 gap=422
+塑膠板 -> 塑料板	weight=389.0 target=388.0 gap=434
+塑膠片 -> 塑料片	weight=370.0 target=369.0 gap=393
+塑膠瓶 -> 塑料瓶	weight=393.0 target=392.0 gap=443
+塑膠管 -> 塑料管	weight=581.0 target=580.0 gap=453
+塑膠紙 -> 塑料紙	weight=481.0 target=480.0 gap=468
+塔吉克 -> 塔吉克斯坦	weight=554.0 target=553.0 gap=501
+塞席爾 -> 塞舌爾	weight=554.0 target=553.0 gap=501
+多工 -> 多任務	weight=587.0 target=586.0 gap=431
+多文件 -> 多文檔	weight=14.0 target=13.0 gap=3163
+多明尼加 -> 多米尼加	weight=572.0 target=571.0 gap=473
+多明尼加共和國 -> 多米尼加共和國	weight=472.0 target=471.0 gap=453
+多程序 -> 多進程	weight=217.0 target=216.0 gap=240
+多通道 -> 多信道	weight=116.0 target=115.0 gap=276
+多點觸控 -> 多點觸摸	weight=60.0 target=59.0 gap=656
+大巖桐 -> 大岩桐	weight=400.0 target=399.0 gap=396
+大麴 -> 大曲	weight=549.0 target=548.0 gap=496
+天冬醯胺 -> 天冬酰胺	weight=393.0 target=392.0 gap=443
+失去聯絡 -> 失去聯繫	weight=135.0 target=134.0 gap=498
+奧勒岡州 -> 俄勒岡州	weight=504.0 target=503.0 gap=512
+奶孃 -> 奶娘	weight=553.0 target=552.0 gap=475
+姦兇 -> 姦凶	weight=340.0 target=339.0 gap=343
+姦夫 -> 奸夫	weight=543.0 target=542.0 gap=553
+威斯康辛 -> 威斯康星	weight=532.0 target=531.0 gap=496
+威斯康辛州 -> 威斯康星州	weight=485.0 target=484.0 gap=526
+婦姑勃谿 -> 婦姑勃溪	weight=188.0 target=187.0 gap=297
+孃姨 -> 娘姨	weight=375.0 target=374.0 gap=433
+孃胎 -> 娘胎	weight=548.0 target=547.0 gap=491
+孃舅 -> 娘舅	weight=515.0 target=514.0 gap=467
+子程序 -> 子進程	weight=571.0 target=570.0 gap=488
+子醜寅卯 -> 子丑寅卯	weight=462.0 target=461.0 gap=478
+安全裝置 -> 安全設備	weight=55.0 target=54.0 gap=1240
+宕機了 -> 死機了	weight=87.0 target=86.0 gap=405
+定準 -> 定准	weight=453.0 target=452.0 gap=467
+宴遊 -> 宴游	weight=377.0 target=376.0 gap=355
+家家有本難唸的經 -> 家家有本難念的經	weight=526.0 target=525.0 gap=514
+密西根州 -> 密歇根州	weight=526.0 target=525.0 gap=514
+密西根湖 -> 密歇根湖	weight=380.0 target=379.0 gap=412
+富於想像 -> 富於想象	weight=348.0 target=347.0 gap=408
+寡佔 -> 寡占	weight=364.0 target=363.0 gap=381
+寡慾 -> 寡欲	weight=561.0 target=560.0 gap=531
+實況錄影 -> 實況錄像	weight=219.0 target=218.0 gap=216
+實驗裝置 -> 實驗設備	weight=135.0 target=134.0 gap=498
+寫文件 -> 寫文檔	weight=264.0 target=263.0 gap=301
+寸絲不掛 -> 寸絲不挂	weight=316.0 target=315.0 gap=356
+專案小組 -> 項目小組	weight=448.0 target=447.0 gap=465
+專用網路 -> 專用網絡	weight=166.0 target=165.0 gap=311
+小人長慼慼 -> 小人長戚戚	weight=13.0 target=12.0 gap=3365
+尚比亞 -> 贊比亞	weight=584.0 target=583.0 gap=425
+尼日 -> 尼日爾	weight=534.0 target=533.0 gap=506
+屍身 -> 尸身	weight=525.0 target=524.0 gap=511
+屍首 -> 尸首	weight=573.0 target=572.0 gap=477
+山嶽 -> 山岳	weight=580.0 target=579.0 gap=437
+崑玉 -> 昆玉	weight=10.0 target=9.0 gap=5739
+嶽嶽 -> 岳岳	weight=421.0 target=420.0 gap=401
+嶽廟 -> 岳廟	weight=500.0 target=499.0 gap=503
+巉巖 -> 巉岩	weight=418.0 target=417.0 gap=411
+巖壁 -> 岩壁	weight=598.0 target=597.0 gap=333
+巖層 -> 岩層	weight=578.0 target=577.0 gap=450
+巖岸 -> 岩岸	weight=379.0 target=378.0 gap=376
+巖洞 -> 岩洞	weight=603.0 target=602.0 gap=319
+工作文件 -> 工作文檔	weight=56.0 target=55.0 gap=692
+工廠佈置 -> 工廠布置	weight=309.0 target=308.0 gap=328
+工緻 -> 工致	weight=409.0 target=408.0 gap=426
+巴貝多 -> 巴巴多斯	weight=517.0 target=516.0 gap=494
+布吉納法索 -> 布基納法索	weight=493.0 target=492.0 gap=543
+布拉姆斯 -> 勃拉姆斯	weight=546.0 target=545.0 gap=546
+布林代數 -> 布爾代數	weight=417.0 target=416.0 gap=453
+布簾 -> 布帘	weight=529.0 target=528.0 gap=513
+帕金森氏症 -> 帕金森病	weight=583.0 target=582.0 gap=414
+帛琉 -> 帕勞	weight=515.0 target=514.0 gap=467
+帛琉共和國 -> 帕勞共和國	weight=11.0 target=10.0 gap=3802
+席捲天下 -> 席卷天下	weight=416.0 target=415.0 gap=440
+帶狀皰疹 -> 帶狀疱疹	weight=601.0 target=600.0 gap=323
+幫夥 -> 幫伙	weight=322.0 target=321.0 gap=341
+干鏚 -> 干戚	weight=477.0 target=476.0 gap=520
+幹將 -> 干將	weight=605.0 target=604.0 gap=303
+幹證 -> 干證	weight=251.0 target=250.0 gap=364
+幾內亞比索 -> 幾內亞比紹	weight=512.0 target=511.0 gap=482
+康乃狄克 -> 康涅狄格	weight=532.0 target=531.0 gap=496
+康乃狄克州 -> 康涅狄格州	weight=498.0 target=497.0 gap=472
+建立於 -> 創建於	weight=488.0 target=487.0 gap=462
+建立時間 -> 創建時間	weight=92.0 target=91.0 gap=385
+弔客眉 -> 吊客眉	weight=131.0 target=130.0 gap=501
+弔拷繃扒 -> 吊拷繃扒	weight=112.0 target=111.0 gap=554
+強佔 -> 強占	weight=564.0 target=563.0 gap=496
+強聒不捨 -> 強聒不舍	weight=274.0 target=273.0 gap=314
+影像合成 -> 圖像合成	weight=380.0 target=379.0 gap=412
+影像轉換 -> 圖像轉換	weight=341.0 target=340.0 gap=338
+影印本 -> 複印本	weight=573.0 target=572.0 gap=477
+後臺程序 -> 後臺進程	weight=79.0 target=78.0 gap=428
+徵人 -> 征人	weight=536.0 target=535.0 gap=501
+徵勦 -> 征勦	weight=10.0 target=9.0 gap=5739
+德布西 -> 德彪西	weight=516.0 target=515.0 gap=455
+德弗札克 -> 德沃夏克	weight=498.0 target=497.0 gap=472
+德拉瓦河 -> 特拉華河	weight=311.0 target=310.0 gap=317
+徼倖 -> 徼幸	weight=340.0 target=339.0 gap=343
+心室顫動 -> 室顫	weight=91.0 target=90.0 gap=382
+心房顫動 -> 房顫	weight=544.0 target=543.0 gap=484
+急並各邦 -> 急并各邦	weight=10.0 target=9.0 gap=5739
+性潑兇頑 -> 性潑凶頑	weight=66.0 target=65.0 gap=1032
+息交絕遊 -> 息交絕游	weight=226.0 target=225.0 gap=302
+悲喜交並 -> 悲喜交并	weight=146.0 target=145.0 gap=414
+悲悲慼慼 -> 悲悲戚戚	weight=430.0 target=429.0 gap=446
+悲慼 -> 悲戚	weight=567.0 target=566.0 gap=460
+想像出 -> 想象出	weight=450.0 target=449.0 gap=458
+想像出來 -> 想象出來	weight=429.0 target=428.0 gap=460
+想像到 -> 想象到	weight=488.0 target=487.0 gap=462
+想像得到 -> 想象得到	weight=464.0 target=463.0 gap=517
+愁慼慼 -> 愁戚戚	weight=160.0 target=159.0 gap=360
+愛暱 -> 愛昵	weight=463.0 target=462.0 gap=477
+愛滋病患 -> 艾滋病人	weight=266.0 target=265.0 gap=314
+愛滋病毒 -> 艾滋病毒	weight=561.0 target=560.0 gap=531
+愛荷華州 -> 艾奧瓦州	weight=470.0 target=469.0 gap=496
+慄慄 -> 栗栗	weight=400.0 target=399.0 gap=396
+慼慼 -> 戚戚	weight=597.0 target=596.0 gap=358
+慾念 -> 欲念	weight=582.0 target=581.0 gap=404
+慾海 -> 欲海	weight=557.0 target=556.0 gap=481
+憑準 -> 憑准	weight=490.0 target=489.0 gap=454
+憑空想像 -> 憑空想象	weight=388.0 target=387.0 gap=410
+應採兒 -> 應采兒	weight=570.0 target=569.0 gap=458
+應用程式介面 -> 應用程序接口	weight=200.0 target=199.0 gap=275
+懸巖 -> 懸岩	weight=447.0 target=446.0 gap=462
+懸巖峭壁 -> 懸岩峭壁	weight=315.0 target=314.0 gap=360
+戰略夥伴 -> 戰略伙伴	weight=583.0 target=582.0 gap=414
+戰雲密佈 -> 戰雲密布	weight=498.0 target=497.0 gap=472
+戴奧辛 -> 二噁英	weight=536.0 target=535.0 gap=501
+打併 -> 打并	weight=379.0 target=378.0 gap=376
+打夥 -> 打伙	weight=363.0 target=362.0 gap=390
+扣人心絃 -> 扣人心弦	weight=586.0 target=585.0 gap=384
+批屍 -> 批尸	weight=107.0 target=106.0 gap=632
+批迴 -> 批回	weight=326.0 target=325.0 gap=330
+技術資訊 -> 技術信息	weight=82.0 target=81.0 gap=455
+披紅掛綵 -> 披紅挂綵	weight=400.0 target=399.0 gap=396
+拉壞 -> 拉坏	weight=399.0 target=398.0 gap=418
+拿不準 -> 拿不准	weight=540.0 target=539.0 gap=494
+挺屍 -> 挺尸	weight=432.0 target=431.0 gap=453
+捉姦捉雙 -> 捉奸捉雙	weight=337.0 target=336.0 gap=377
+捉姦見雙 -> 捉奸見雙	weight=241.0 target=240.0 gap=293
+捨己從人 -> 舍己從人	weight=370.0 target=369.0 gap=393
+捨本事末 -> 舍本事末	weight=75.0 target=74.0 gap=882
+捨本問末 -> 舍本問末	weight=102.0 target=101.0 gap=707
+捱揍 -> 挨揍	weight=558.0 target=557.0 gap=451
+捱磨 -> 挨磨	weight=264.0 target=263.0 gap=301
+捲尾猴 -> 卷尾猴	weight=405.0 target=404.0 gap=392
+捲心菜 -> 卷心菜	weight=583.0 target=582.0 gap=414
+捲棚 -> 卷棚	weight=431.0 target=430.0 gap=454
+捲舌 -> 卷舌	weight=483.0 target=482.0 gap=456
+掛一漏百 -> 挂一漏百	weight=151.0 target=150.0 gap=413
+掛一漏萬 -> 挂一漏萬	weight=449.0 target=448.0 gap=510
+掛冠 -> 挂冠	weight=439.0 target=438.0 gap=448
+掛孝 -> 挂孝	weight=334.0 target=333.0 gap=354
+掛心 -> 挂心	weight=538.0 target=537.0 gap=508
+掛慮 -> 挂慮	weight=444.0 target=443.0 gap=449
+掛懷 -> 挂懷	weight=464.0 target=463.0 gap=517
+掛搭 -> 挂搭	weight=324.0 target=323.0 gap=368
+掛燈結綵 -> 挂燈結綵	weight=237.0 target=236.0 gap=294
+掛衣冠 -> 挂衣冠	weight=176.0 target=175.0 gap=297
+掛齒 -> 挂齒	weight=521.0 target=520.0 gap=546
+控制裝置 -> 控制設備	weight=64.0 target=63.0 gap=616
+推託 -> 推托	weight=575.0 target=574.0 gap=440
+推輓 -> 推挽	weight=467.0 target=466.0 gap=455
+揹包袱 -> 背包袱	weight=398.0 target=397.0 gap=374
+搜尋軟體 -> 搜索軟件	weight=128.0 target=127.0 gap=514
+搧火 -> 扇火	weight=332.0 target=331.0 gap=392
+搬鬥 -> 搬斗	weight=143.0 target=142.0 gap=389
+搭夥 -> 搭伙	weight=511.0 target=510.0 gap=520
+摺子 -> 折子	weight=555.0 target=554.0 gap=509
+摺子戲 -> 折子戲	weight=548.0 target=547.0 gap=491
+摺扇 -> 折扇	weight=588.0 target=587.0 gap=396
+摺椅 -> 折椅	weight=549.0 target=548.0 gap=496
+撒馬爾幹 -> 撒馬爾干	weight=246.0 target=245.0 gap=277
+撞擊式印表機 -> 撞擊式打印機	weight=124.0 target=123.0 gap=481
+撥出來 -> 呼出來	weight=454.0 target=453.0 gap=480
+撲打 -> 扑打	weight=526.0 target=525.0 gap=514
+撲鼕鼕 -> 撲冬冬	weight=75.0 target=74.0 gap=882
+散兵遊勇 -> 散兵游勇	weight=488.0 target=487.0 gap=462
+整合到 -> 集成到	weight=560.0 target=559.0 gap=489
+整合商 -> 集成商	weight=358.0 target=357.0 gap=381
+整合性 -> 集成性	weight=498.0 target=497.0 gap=472
+整理文件 -> 整理文檔	weight=53.0 target=52.0 gap=786
+數字影像 -> 數字圖像	weight=59.0 target=58.0 gap=675
+文件內容 -> 文檔內容	weight=206.0 target=205.0 gap=250
+文件流 -> 文檔流	weight=141.0 target=140.0 gap=424
+文件編輯 -> 文檔編輯	weight=59.0 target=58.0 gap=675
+文件處理 -> 文檔處理	weight=55.0 target=54.0 gap=1240
+文件說明 -> 文檔說明	weight=24.0 target=23.0 gap=1824
+文書處理 -> 文字處理	weight=614.0 target=613.0 gap=270
+新建文件 -> 新建文檔	weight=52.0 target=51.0 gap=779
+新建立 -> 新創建	weight=71.0 target=70.0 gap=564
+新徵 -> 新征	weight=468.0 target=467.0 gap=473
+斷紙餘墨 -> 斷紙余墨	weight=10.0 target=9.0 gap=5739
+方誌 -> 方志	weight=579.0 target=578.0 gap=429
+於今 -> 于今	weight=617.0 target=616.0 gap=235
+於時 -> 于時	weight=525.0 target=524.0 gap=511
+於樂 -> 于樂	weight=592.0 target=591.0 gap=397
+施仁佈德 -> 施仁布德	weight=124.0 target=123.0 gap=481
+施仁佈恩 -> 施仁布恩	weight=10.0 target=9.0 gap=5739
+施恩佈德 -> 施恩布德	weight=179.0 target=178.0 gap=293
+旁註 -> 旁注	weight=450.0 target=449.0 gap=458
+旅遊資訊 -> 旅遊信息	weight=30.0 target=29.0 gap=1453
+旭日初昇 -> 旭日初升	weight=430.0 target=429.0 gap=446
+星羅棋佈 -> 星羅棋布	weight=572.0 target=571.0 gap=473
+晶體三極體 -> 晶體三極管	weight=442.0 target=441.0 gap=438
+晶體二極體 -> 晶體二極管	weight=410.0 target=409.0 gap=433
+智慧型 -> 智能型	weight=564.0 target=563.0 gap=496
+暱交 -> 昵交	weight=10.0 target=9.0 gap=5739
+暱友 -> 昵友	weight=10.0 target=9.0 gap=5739
+暱愛 -> 昵愛	weight=280.0 target=279.0 gap=318
+暱比 -> 昵比	weight=210.0 target=209.0 gap=253
+暱聲 -> 昵聲	weight=10.0 target=9.0 gap=5739
+有效執行 -> 有效運行	weight=40.0 target=39.0 gap=1018
+服務程序 -> 服務進程	weight=22.0 target=21.0 gap=1924
+朱干玉鏚 -> 朱干玉戚	weight=193.0 target=192.0 gap=250
+李適 -> 李适	weight=415.0 target=414.0 gap=425
+束脩 -> 束修	weight=395.0 target=394.0 gap=383
+枕蓆 -> 枕席	weight=474.0 target=473.0 gap=527
+查德 -> 乍得	weight=543.0 target=542.0 gap=553
+查詢時間 -> 查找時間	weight=337.0 target=336.0 gap=377
+柺子 -> 拐子	weight=532.0 target=531.0 gap=496
+柺棍 -> 拐棍	weight=511.0 target=510.0 gap=520
+校園網路 -> 校園網絡	weight=566.0 target=565.0 gap=458
+格瑞那達 -> 格林納達	weight=499.0 target=498.0 gap=474
+棋佈 -> 棋布	weight=578.0 target=577.0 gap=450
+棋佈星羅 -> 棋布星羅	weight=239.0 target=238.0 gap=296
+棲棲 -> 栖栖	weight=10.0 target=9.0 gap=5739
+棲身 -> 栖身	weight=599.0 target=598.0 gap=320
+榴槤果 -> 榴蓮果	weight=273.0 target=272.0 gap=354
+槓桿收購 -> 杠杆收購	weight=449.0 target=448.0 gap=510
+模擬實驗 -> 仿真實驗	weight=75.0 target=74.0 gap=882
+模擬技術 -> 仿真技術	weight=67.0 target=66.0 gap=599
+模擬系統 -> 仿真系統	weight=67.0 target=66.0 gap=599
+模里西斯 -> 毛里求斯	weight=574.0 target=573.0 gap=466
+樵採 -> 樵采	weight=402.0 target=401.0 gap=397
+樸實頭 -> 朴實頭	weight=10.0 target=9.0 gap=5739
+樸直 -> 朴直	weight=369.0 target=368.0 gap=402
+樸野 -> 朴野	weight=334.0 target=333.0 gap=354
+樸陋 -> 朴陋	weight=270.0 target=269.0 gap=281
+橫徵暴斂 -> 橫征暴斂	weight=455.0 target=454.0 gap=444
+檔案屬性 -> 文件屬性	weight=310.0 target=309.0 gap=374
+檔案庫 -> 文件庫	weight=47.0 target=46.0 gap=910
+檔案服務 -> 文件服務	weight=448.0 target=447.0 gap=465
+檔案袋 -> 文件袋	weight=547.0 target=546.0 gap=473
+檔案資料 -> 文件數據	weight=131.0 target=130.0 gap=501
+正子 -> 正電子	weight=526.0 target=525.0 gap=514
+正式宣告 -> 正式聲明	weight=94.0 target=93.0 gap=364
+步步高昇 -> 步步高升	weight=562.0 target=561.0 gap=515
+歷史檔案 -> 歷史文件	weight=45.0 target=44.0 gap=896
+死衚衕 -> 死胡同	weight=593.0 target=592.0 gap=408
+水皰 -> 水疱	weight=578.0 target=577.0 gap=450
+沒爺孃的祖宗 -> 沒爺娘的祖宗	weight=10.0 target=9.0 gap=5739
+沙烏地阿拉伯 -> 沙特阿拉伯	weight=608.0 target=607.0 gap=267
+法外行兇 -> 法外行凶	weight=66.0 target=65.0 gap=1032
+泡沫塑膠 -> 泡沫塑料	weight=593.0 target=592.0 gap=408
+波札那 -> 博茨瓦納	weight=566.0 target=565.0 gap=458
+流佈 -> 流布	weight=493.0 target=492.0 gap=543
+淨化裝置 -> 淨化設備	weight=13.0 target=12.0 gap=3365
+準了 -> 准了	weight=427.0 target=426.0 gap=447
+準信 -> 准信	weight=443.0 target=442.0 gap=450
+準定 -> 准定	weight=396.0 target=395.0 gap=389
+準式 -> 准式	weight=288.0 target=287.0 gap=356
+準擬 -> 准擬	weight=392.0 target=391.0 gap=425
+漢他病毒 -> 漢坦病毒	weight=431.0 target=430.0 gap=454
+澂江縣 -> 澄江縣	weight=560.0 target=559.0 gap=489
+濃雲密佈 -> 濃雲密布	weight=381.0 target=380.0 gap=377
+濛汜 -> 蒙汜	weight=268.0 target=267.0 gap=302
+灑淅 -> 洒淅	weight=286.0 target=285.0 gap=310
+灑濯 -> 洒濯	weight=143.0 target=142.0 gap=389
+灑然 -> 洒然	weight=468.0 target=467.0 gap=473
+炊臼之鏚 -> 炊臼之戚	weight=25.0 target=24.0 gap=2418
+烏雲密佈 -> 烏雲密布	weight=574.0 target=573.0 gap=466
+無妄之災 -> 无妄之災	weight=526.0 target=525.0 gap=514
+無業遊民 -> 無業游民	weight=555.0 target=554.0 gap=509
+無線滑鼠 -> 無線鼠標	weight=396.0 target=395.0 gap=389
+無線電通訊 -> 無線電通信	weight=515.0 target=514.0 gap=467
+照準 -> 照准	weight=470.0 target=469.0 gap=496
+燻人 -> 熏人	weight=485.0 target=484.0 gap=526
+燻草紙 -> 熏草紙	weight=10.0 target=9.0 gap=5739
+燻鑪 -> 熏鑪	weight=10.0 target=9.0 gap=5739
+牴牾 -> 抵牾	weight=435.0 target=434.0 gap=406
+狎暱 -> 狎昵	weight=385.0 target=384.0 gap=410
+狼吞虎嚥 -> 狼吞虎咽	weight=603.0 target=602.0 gap=319
+獅子山 -> 塞拉利昂	weight=596.0 target=595.0 gap=355
+獨佔花魁 -> 獨占花魁	weight=403.0 target=402.0 gap=406
+獨佔資本 -> 獨占資本	weight=222.0 target=221.0 gap=256
+獨佔鰲頭 -> 獨占鰲頭	weight=572.0 target=571.0 gap=473
+獨佔鼇頭 -> 獨占鼇頭	weight=10.0 target=9.0 gap=5739
+瓜地馬拉 -> 危地馬拉	weight=565.0 target=564.0 gap=456
+甘比亞 -> 岡比亞	weight=501.0 target=500.0 gap=472
+生物晶片 -> 生物芯片	weight=529.0 target=528.0 gap=513
+異菸鹼醯酸 -> 異菸鹼酰酸	weight=10.0 target=9.0 gap=5739
+疲睏 -> 疲困	weight=394.0 target=393.0 gap=422
+病癒 -> 病愈	weight=564.0 target=563.0 gap=496
+痠疼 -> 酸疼	weight=564.0 target=563.0 gap=496
+痠麻 -> 酸麻	weight=525.0 target=524.0 gap=511
+瘦巖巖 -> 瘦岩岩	weight=10.0 target=9.0 gap=5739
+發光二極體 -> 發光二極管	weight=618.0 target=617.0 gap=210
+發擿姦伏 -> 發擿奸伏	weight=167.0 target=166.0 gap=307
+白乾 -> 白干	weight=532.0 target=531.0 gap=496
+白遼士 -> 柏遼茲	weight=460.0 target=459.0 gap=468
+皰疹性咽狹症 -> 疱疹性咽狹症	weight=20.0 target=19.0 gap=2194
+盜版光碟 -> 盜版光盤	weight=36.0 target=35.0 gap=1148
+盧安達 -> 盧旺達	weight=563.0 target=562.0 gap=468
+直接呼叫 -> 直接調用	weight=286.0 target=285.0 gap=310
+直譯器 -> 解釋器	weight=408.0 target=407.0 gap=419
+睏乏 -> 困乏	weight=547.0 target=546.0 gap=473
+睏倦 -> 困倦	weight=595.0 target=594.0 gap=347
+矇住 -> 蒙住	weight=593.0 target=592.0 gap=408
+矇昧 -> 蒙昧	weight=553.0 target=552.0 gap=475
+矇昧無知 -> 蒙昧無知	weight=358.0 target=357.0 gap=381
+矇混 -> 蒙混	weight=576.0 target=575.0 gap=447
+矽晶片 -> 硅晶片	weight=387.0 target=386.0 gap=473
+矽片 -> 硅片	weight=584.0 target=583.0 gap=425
+矽石 -> 硅石	weight=510.0 target=509.0 gap=521
+矽肺 -> 硅肺	weight=541.0 target=540.0 gap=515
+矽肺病 -> 硅肺病	weight=489.0 target=488.0 gap=513
+矽藻 -> 硅藻	weight=529.0 target=528.0 gap=513
+矽藻土 -> 硅藻土	weight=43.0 target=42.0 gap=933
+矽質 -> 硅質	weight=508.0 target=507.0 gap=489
+矽酸鈉 -> 硅酸鈉	weight=519.0 target=518.0 gap=487
+矽鋼 -> 硅鋼	weight=598.0 target=597.0 gap=333
+硃批 -> 朱批	weight=448.0 target=447.0 gap=465
+硃砂 -> 朱砂	weight=614.0 target=613.0 gap=270
+硃砂符 -> 朱砂符	weight=244.0 target=243.0 gap=364
+碳醯氯 -> 碳酰氯	weight=270.0 target=269.0 gap=281
+磁碟組 -> 磁盤組	weight=66.0 target=65.0 gap=1032
+磁軌 -> 磁道	weight=530.0 target=529.0 gap=489
+磷醯基磷酸酶 -> 磷酰基磷酸酶	weight=10.0 target=9.0 gap=5739
+私暱 -> 私昵	weight=10.0 target=9.0 gap=5739
+科學資料 -> 科學數據	weight=107.0 target=106.0 gap=632
+秒錶 -> 秒表	weight=596.0 target=595.0 gap=355
+稅捐稽徵處 -> 稅捐稽征處	weight=169.0 target=168.0 gap=305
+程式庫 -> 程序庫	weight=493.0 target=492.0 gap=543
+程式設計員 -> 程序設計員	weight=430.0 target=429.0 gap=446
+窒慾 -> 窒欲	weight=344.0 target=343.0 gap=340
+立體影像 -> 立體圖像	weight=12.0 target=11.0 gap=3624
+竹林之遊 -> 竹林之游	weight=248.0 target=247.0 gap=280
+竹谿 -> 竹溪	weight=594.0 target=593.0 gap=359
+竹谿縣 -> 竹溪縣	weight=524.0 target=523.0 gap=507
+箇中訊息 -> 箇中消息	weight=305.0 target=304.0 gap=331
+管理資訊系統 -> 管理信息系統	weight=289.0 target=288.0 gap=274
+管絃 -> 管弦	weight=609.0 target=608.0 gap=248
+管絃樂 -> 管弦樂	weight=579.0 target=578.0 gap=429
+管絃樂團 -> 管弦樂團	weight=542.0 target=541.0 gap=497
+簾布 -> 帘布	weight=482.0 target=481.0 gap=469
+簾幕 -> 帘幕	weight=521.0 target=520.0 gap=546
+糯米餈 -> 糯米糍	weight=496.0 target=495.0 gap=486
+系統核心 -> 系統內核	weight=50.0 target=49.0 gap=777
+系統模擬 -> 系統仿真	weight=24.0 target=23.0 gap=1824
+系統程序 -> 系統進程	weight=13.0 target=12.0 gap=3365
+紅鼕鼕 -> 紅冬冬	weight=151.0 target=150.0 gap=413
+紐西蘭人 -> 新西蘭人	weight=258.0 target=257.0 gap=276
+素樸 -> 素朴	weight=499.0 target=498.0 gap=474
+紮上 -> 扎上	weight=507.0 target=506.0 gap=493
+紮上去 -> 扎上去	weight=324.0 target=323.0 gap=368
+紮下 -> 扎下	weight=549.0 target=548.0 gap=496
+紮了 -> 扎了	weight=605.0 target=604.0 gap=303
+紮在 -> 扎在	weight=595.0 target=594.0 gap=347
+紮好 -> 扎好	weight=520.0 target=519.0 gap=534
+絃歌 -> 弦歌	weight=545.0 target=544.0 gap=514
+絃歌不輟 -> 弦歌不輟	weight=325.0 target=324.0 gap=392
+絃索 -> 弦索	weight=431.0 target=430.0 gap=454
+維吉尼亞州 -> 弗吉尼亞州	weight=531.0 target=530.0 gap=534
+維德角 -> 佛得角	weight=503.0 target=502.0 gap=487
+網路伺服器 -> 網絡服務器	weight=43.0 target=42.0 gap=933
+網路作業系統 -> 網絡操作系統	weight=535.0 target=534.0 gap=518
+網路印表機 -> 網絡打印機	weight=493.0 target=492.0 gap=543
+網路架構 -> 網絡架構	weight=256.0 target=255.0 gap=319
+網路節點 -> 網絡節點	weight=160.0 target=159.0 gap=360
+網路購物 -> 網絡購物	weight=182.0 target=181.0 gap=305
+網路銀行 -> 網絡銀行	weight=41.0 target=40.0 gap=1028
+綵棚 -> 彩棚	weight=375.0 target=374.0 gap=433
+綵球 -> 彩球	weight=577.0 target=576.0 gap=518
+線上查詢 -> 在線查詢	weight=248.0 target=247.0 gap=280
+線上直播 -> 在線直播	weight=179.0 target=178.0 gap=293
+線上聊天 -> 在線聊天	weight=75.0 target=74.0 gap=882
+線上諮詢 -> 在線諮詢	weight=128.0 target=127.0 gap=514
+線上購物 -> 在線購物	weight=48.0 target=47.0 gap=873
+線上遊戲 -> 在線游戲	weight=620.0 target=619.0 gap=218
+編譯程式 -> 編譯程序	weight=27.0 target=26.0 gap=1635
+編餘 -> 編余	weight=366.0 target=365.0 gap=377
+緻密 -> 致密	weight=604.0 target=603.0 gap=323
+繫念 -> 系念	weight=499.0 target=498.0 gap=474
+繼續執行 -> 繼續運行	weight=207.0 target=206.0 gap=268
+羅德島 -> 羅得島	weight=524.0 target=523.0 gap=507
+義大利式 -> 意大利式	weight=260.0 target=259.0 gap=310
+義大利文 -> 意大利文	weight=360.0 target=359.0 gap=409
+義大利杯 -> 意大利杯	weight=75.0 target=74.0 gap=882
+翫忽職守 -> 玩忽職守	weight=595.0 target=594.0 gap=347
+老孃兒 -> 老娘兒	weight=284.0 target=283.0 gap=312
+聖文森及格瑞那丁 -> 聖文森特和格林納丁斯	weight=432.0 target=431.0 gap=453
+聖露西亞 -> 聖盧西亞	weight=484.0 target=483.0 gap=515
+聖馬利諾 -> 聖馬力諾	weight=524.0 target=523.0 gap=507
+聚醯亞胺 -> 聚酰亞胺	weight=559.0 target=558.0 gap=530
+聚醯胺 -> 聚酰胺	weight=585.0 target=584.0 gap=415
+聯絡點 -> 聯繫點	weight=581.0 target=580.0 gap=453
+股慄 -> 股栗	weight=354.0 target=353.0 gap=369
+脩名 -> 修名	weight=323.0 target=322.0 gap=351
+腿痠 -> 腿酸	weight=465.0 target=464.0 gap=493
+自變數 -> 自變量	weight=599.0 target=598.0 gap=320
+臺命 -> 台命	weight=271.0 target=270.0 gap=286
+臺槐 -> 台槐	weight=107.0 target=106.0 gap=632
+舉薦 -> 舉荐	weight=573.0 target=572.0 gap=477
+舒捲 -> 舒卷	weight=495.0 target=494.0 gap=500
+船伕 -> 船夫	weight=571.0 target=570.0 gap=488
+色胺酸 -> 色氨酸	weight=548.0 target=547.0 gap=491
+芬鬱 -> 芬郁	weight=316.0 target=315.0 gap=356
+花鬨 -> 花哄	weight=229.0 target=228.0 gap=214
+苯甲醯氯 -> 苯甲酰氯	weight=446.0 target=445.0 gap=465
+莫三比克 -> 莫桑比克	weight=553.0 target=552.0 gap=475
+華嶽 -> 華岳	weight=10.0 target=9.0 gap=5739
+萬用字元 -> 通配符	weight=522.0 target=521.0 gap=520
+萬那杜 -> 瓦努阿圖	weight=508.0 target=507.0 gap=489
+葛摩 -> 科摩羅	weight=532.0 target=531.0 gap=496
+蒐括 -> 搜括	weight=420.0 target=419.0 gap=449
+蒲隆地 -> 布隆迪	weight=514.0 target=513.0 gap=507
+蓊鬱 -> 蓊郁	weight=487.0 target=486.0 gap=488
+蓋亞那 -> 圭亞那	weight=521.0 target=520.0 gap=546
+蔥鬱 -> 蔥郁	weight=574.0 target=573.0 gap=466
+薦任 -> 荐任	weight=317.0 target=316.0 gap=348
+薰染 -> 熏染	weight=525.0 target=524.0 gap=511
+薰沐 -> 熏沐	weight=303.0 target=302.0 gap=374
+薰香 -> 熏香	weight=553.0 target=552.0 gap=475
+藉手 -> 借手	weight=360.0 target=359.0 gap=409
+藉故 -> 借故	weight=564.0 target=563.0 gap=496
+藉端 -> 借端	weight=342.0 target=341.0 gap=381
+蘇胺酸 -> 蘇氨酸	weight=492.0 target=491.0 gap=549
+蠍蠍螫螫 -> 蝎蝎螫螫	weight=10.0 target=9.0 gap=5739
+行屍走骨 -> 行尸走骨	weight=171.0 target=170.0 gap=330
+衣索比亞 -> 埃塞俄比亞	weight=603.0 target=602.0 gap=319
+袖釦 -> 袖扣	weight=548.0 target=547.0 gap=491
+裁製 -> 裁制	weight=450.0 target=449.0 gap=458
+補資料 -> 補數據	weight=20.0 target=19.0 gap=2194
+複合母音 -> 複合元音	weight=316.0 target=315.0 gap=356
+褻暱 -> 褻昵	weight=107.0 target=106.0 gap=632
+西維吉尼亞州 -> 西弗吉尼亞州	weight=413.0 target=412.0 gap=441
+視訊會議系統 -> 視頻會議系統	weight=432.0 target=431.0 gap=453
+親暱性 -> 親昵性	weight=30.0 target=29.0 gap=1453
+觸控式 -> 觸摸式	weight=584.0 target=583.0 gap=425
+言歸於好 -> 言歸于好	weight=460.0 target=459.0 gap=468
+訊號旗 -> 信號旗	weight=422.0 target=421.0 gap=441
+訊號槍 -> 信號槍	weight=383.0 target=382.0 gap=396
+託名 -> 托名	weight=438.0 target=437.0 gap=440
+託大 -> 托大	weight=512.0 target=511.0 gap=482
+託生 -> 托生	weight=495.0 target=494.0 gap=500
+設計程式 -> 設計程序	weight=500.0 target=499.0 gap=503
+註文 -> 注文	weight=457.0 target=456.0 gap=450
+註疏 -> 注疏	weight=542.0 target=541.0 gap=497
+試驗裝置 -> 試驗設備	weight=27.0 target=26.0 gap=1635
+誇誕 -> 夸誕	weight=300.0 target=299.0 gap=356
+誇飾 -> 夸飾	weight=434.0 target=433.0 gap=421
+語音通訊 -> 語音通信	weight=19.0 target=18.0 gap=2340
+說明文件 -> 說明文檔	weight=142.0 target=141.0 gap=212
+調色盤 -> 調色板	weight=560.0 target=559.0 gap=489
+諮文 -> 咨文	weight=479.0 target=478.0 gap=487
+諾魯 -> 瑙魯	weight=488.0 target=487.0 gap=462
+讀書三餘 -> 讀書三余	weight=187.0 target=186.0 gap=294
+豆乾 -> 豆干	weight=553.0 target=552.0 gap=475
+象牙海岸共和國 -> 科特迪瓦共和國	weight=306.0 target=305.0 gap=305
+貝南 -> 貝寧	weight=584.0 target=583.0 gap=425
+貝里斯 -> 伯利茲	weight=510.0 target=509.0 gap=521
+費爾幹納盆地 -> 費爾干納盆地	weight=324.0 target=323.0 gap=368
+賄賂並行 -> 賄賂并行	weight=124.0 target=123.0 gap=481
+資料介面 -> 數據介面	weight=578.0 target=577.0 gap=450
+資料介面 -> 數據接口	weight=578.0 target=577.0 gap=450
+資料卡 -> 數據卡	weight=558.0 target=557.0 gap=451
+資料庫管理系統 -> 數據庫管理系統	weight=225.0 target=224.0 gap=224
+資料收集 -> 數據收集	weight=519.0 target=518.0 gap=487
+資料整合 -> 數據集成	weight=96.0 target=95.0 gap=348
+資料整理 -> 數據整理	weight=236.0 target=235.0 gap=306
+資料時 -> 數據時	weight=406.0 target=405.0 gap=443
+資料通訊 -> 數據通信	weight=608.0 target=607.0 gap=267
+資料通訊 -> 數據通訊	weight=608.0 target=607.0 gap=267
+資訊檢索 -> 信息檢索	weight=255.0 target=254.0 gap=265
+資訊站 -> 信息站	weight=28.0 target=27.0 gap=1523
+資訊革命 -> 信息革命	weight=77.0 target=76.0 gap=515
+資訊高速公路 -> 信息高速公路	weight=512.0 target=511.0 gap=482
+賓士車 -> 奔馳車	weight=357.0 target=356.0 gap=344
+跌撲 -> 跌扑	weight=424.0 target=423.0 gap=415
+跳錶 -> 跳表	weight=418.0 target=417.0 gap=411
+軟磁碟 -> 軟磁盤	weight=420.0 target=419.0 gap=449
+軟體設計 -> 軟件設計	weight=350.0 target=349.0 gap=402
+軟體部 -> 軟件部	weight=245.0 target=244.0 gap=268
+載入器 -> 加載器	weight=296.0 target=295.0 gap=309
+輓歌 -> 挽歌	weight=612.0 target=611.0 gap=248
+輓歌郎 -> 挽歌郎	weight=135.0 target=134.0 gap=498
+輔助裝置 -> 輔助設備	weight=108.0 target=107.0 gap=303
+迴光返照 -> 回光返照	weight=553.0 target=552.0 gap=475
+迴心 -> 回心	weight=619.0 target=618.0 gap=247
+迴文 -> 回文	weight=525.0 target=524.0 gap=511
+迴旋梯 -> 回旋梯	weight=320.0 target=319.0 gap=358
+迴翔 -> 回翔	weight=421.0 target=420.0 gap=401
+退夥 -> 退伙	weight=477.0 target=476.0 gap=520
+通姦 -> 通奸	weight=572.0 target=571.0 gap=473
+通訊公司 -> 通信公司	weight=47.0 target=46.0 gap=910
+通訊兵 -> 通信兵	weight=476.0 target=475.0 gap=468
+通訊協定 -> 通信協定	weight=373.0 target=372.0 gap=396
+通訊協議 -> 通信協議	weight=191.0 target=190.0 gap=280
+通訊服務 -> 通信服務	weight=592.0 target=591.0 gap=397
+通訊業 -> 通信業	weight=50.0 target=49.0 gap=777
+通訊網 -> 通信網	weight=601.0 target=600.0 gap=323
+通訊處 -> 通信處	weight=405.0 target=404.0 gap=392
+通訊衛星 -> 通信衛星	weight=559.0 target=558.0 gap=530
+週期彗星 -> 周期彗星	weight=351.0 target=350.0 gap=362
+進佔 -> 進占	weight=502.0 target=501.0 gap=495
+遊仙窟 -> 游仙窟	weight=385.0 target=384.0 gap=410
+遊儀 -> 游儀	weight=251.0 target=250.0 gap=364
+遊勇 -> 游勇	weight=502.0 target=501.0 gap=495
+遊嘴光棍 -> 游嘴光棍	weight=117.0 target=116.0 gap=551
+遊園驚夢 -> 游園驚夢	weight=522.0 target=521.0 gap=520
+遊士 -> 游士	weight=408.0 target=407.0 gap=419
+遊奕 -> 游奕	weight=365.0 target=364.0 gap=367
+遊女 -> 游女	weight=433.0 target=432.0 gap=435
+遊宦 -> 游宦	weight=390.0 target=389.0 gap=419
+遊徼 -> 游徼	weight=320.0 target=319.0 gap=358
+遊心寓目 -> 游心寓目	weight=124.0 target=123.0 gap=481
+遊戲人間 -> 游戲人間	weight=545.0 target=544.0 gap=514
+遊戲塵寰 -> 游戲塵寰	weight=158.0 target=157.0 gap=334
+遊手 -> 游手	weight=580.0 target=579.0 gap=437
+遊手人戶 -> 游手人戶	weight=25.0 target=24.0 gap=2418
+遊手好閒 -> 游手好閒	weight=576.0 target=575.0 gap=447
+遊手遊食 -> 游手游食	weight=176.0 target=175.0 gap=297
+遊揚 -> 游揚	weight=279.0 target=278.0 gap=309
+遊日 -> 游日	weight=368.0 target=367.0 gap=386
+遊標卡尺 -> 游標卡尺	weight=515.0 target=514.0 gap=467
+遊湖借傘 -> 游湖借傘	weight=263.0 target=262.0 gap=323
+遊獵 -> 游獵	weight=523.0 target=522.0 gap=516
+遊目騁懷 -> 游目騁懷	weight=375.0 target=374.0 gap=433
+遊絲 -> 游絲	weight=570.0 target=569.0 gap=458
+遊耕 -> 游耕	weight=319.0 target=318.0 gap=350
+遊舊 -> 游舊	weight=275.0 target=274.0 gap=334
+遊衍 -> 游衍	weight=322.0 target=321.0 gap=341
+遊言 -> 游言	weight=240.0 target=239.0 gap=292
+遊談 -> 游談	weight=327.0 target=326.0 gap=361
+遊談無根 -> 游談無根	weight=266.0 target=265.0 gap=314
+遊辭 -> 游辭	weight=263.0 target=262.0 gap=323
+遊辭浮說 -> 游辭浮說	weight=83.0 target=82.0 gap=823
+遊離層 -> 游離層	weight=192.0 target=191.0 gap=279
+遊離票 -> 游離票	weight=246.0 target=245.0 gap=277
+遊離輻射 -> 游離輻射	weight=310.0 target=309.0 gap=374
+遊頭浪子 -> 游頭浪子	weight=102.0 target=101.0 gap=707
+遊食之民 -> 游食之民	weight=222.0 target=221.0 gap=256
+運算元 -> 操作數	weight=611.0 target=610.0 gap=250
+運算元 -> 算子	weight=611.0 target=610.0 gap=250
+過氧化苯甲醯 -> 過氧化苯甲酰	weight=469.0 target=468.0 gap=451
+過氧苯甲醯 -> 過氧苯甲酰	weight=411.0 target=410.0 gap=428
+遠端會議 -> 遠程會議	weight=41.0 target=40.0 gap=1028
+遮蔽罩 -> 屏蔽罩	weight=282.0 target=281.0 gap=323
+邏輯閘 -> 邏輯門	weight=109.0 target=108.0 gap=302
+酒餚 -> 酒肴	weight=423.0 target=422.0 gap=447
+酒麴 -> 酒曲	weight=500.0 target=499.0 gap=503
+酚醛塑膠 -> 酚醛塑料	weight=395.0 target=394.0 gap=383
+酸乳酪 -> 酸奶酪	weight=443.0 target=442.0 gap=450
+醇樸 -> 醇朴	weight=320.0 target=319.0 gap=358
+醫學影像 -> 醫學圖像	weight=423.0 target=422.0 gap=447
+醯胺類 -> 酰胺類	weight=10.0 target=9.0 gap=5739
+重新設定 -> 重新設置	weight=85.0 target=84.0 gap=414
+重託 -> 重托	weight=577.0 target=576.0 gap=518
+針鼴 -> 針鼹	weight=365.0 target=364.0 gap=367
+鉅公 -> 巨公	weight=322.0 target=321.0 gap=341
+鉅商 -> 巨商	weight=524.0 target=523.0 gap=507
+鉅子 -> 巨子	weight=576.0 target=575.0 gap=447
+鉅富 -> 巨富	weight=588.0 target=587.0 gap=396
+開發週期 -> 開發周期	weight=558.0 target=557.0 gap=451
+閤家子 -> 合家子	weight=158.0 target=157.0 gap=334
+閤家歡 -> 合家歡	weight=576.0 target=575.0 gap=447
+閤眼 -> 合眼	weight=577.0 target=576.0 gap=518
+闇昧 -> 暗昧	weight=496.0 target=495.0 gap=486
+闢地 -> 辟地	weight=606.0 target=605.0 gap=325
+防水錶 -> 防水表	weight=386.0 target=385.0 gap=362
+阻斷劑 -> 阻滯劑	weight=57.0 target=56.0 gap=670
+阿孃 -> 阿娘	weight=509.0 target=508.0 gap=512
+阿拉伯聯合大公國 -> 阿拉伯聯合酋長國	weight=530.0 target=529.0 gap=489
+阿茲海默症 -> 阿爾茨海默病	weight=523.0 target=522.0 gap=516
+除兇去害 -> 除凶去害	weight=97.0 target=96.0 gap=761
+隨機變數 -> 隨機變量	weight=517.0 target=516.0 gap=494
+集註 -> 集注	weight=555.0 target=554.0 gap=509
+雜湊 -> 哈希	weight=467.0 target=466.0 gap=455
+雜湊 -> 散列	weight=467.0 target=466.0 gap=455
+雲遊 -> 雲游	weight=620.0 target=619.0 gap=218
+雷射刀 -> 激光刀	weight=480.0 target=479.0 gap=467
+雷射唱片 -> 激光唱片	weight=392.0 target=391.0 gap=425
+雷射槍 -> 激光槍	weight=366.0 target=365.0 gap=377
+電信網路 -> 電信網絡	weight=281.0 target=280.0 gap=282
+電子網路 -> 電子網絡	weight=496.0 target=495.0 gap=486
+電子通訊 -> 電子通信	weight=64.0 target=63.0 gap=616
+電氣裝置 -> 電氣設備	weight=415.0 target=414.0 gap=425
+電腦斷層掃描 -> 計算機斷層掃描	weight=17.0 target=16.0 gap=2688
+電腦程式 -> 電腦程序	weight=416.0 target=415.0 gap=440
+電腦軟體 -> 電腦軟件	weight=612.0 target=611.0 gap=248
+電腦連線 -> 電腦連接	weight=43.0 target=42.0 gap=933
+霑化 -> 沾化	weight=597.0 target=596.0 gap=358
+霑化縣 -> 沾化縣	weight=562.0 target=561.0 gap=515
+霑益 -> 沾益	weight=564.0 target=563.0 gap=496
+霑益縣 -> 沾益縣	weight=534.0 target=533.0 gap=506
+非同步傳輸模式 -> 異步傳輸模式	weight=380.0 target=379.0 gap=412
+鞭屍 -> 鞭尸	weight=519.0 target=518.0 gap=487
+韋瓦第 -> 維瓦爾第	weight=396.0 target=395.0 gap=389
+韓德爾 -> 亨德爾	weight=503.0 target=502.0 gap=487
+顯示裝置 -> 顯示設備	weight=252.0 target=251.0 gap=261
+飯囊酒甕 -> 飯囊酒瓮	weight=10.0 target=9.0 gap=5739
+餚饌 -> 肴饌	weight=421.0 target=420.0 gap=401
+骨巖巖 -> 骨岩岩	weight=66.0 target=65.0 gap=1032
+高階語言 -> 高級語言	weight=547.0 target=546.0 gap=473
+鬆蛋包 -> 松蛋包	weight=10.0 target=9.0 gap=5739
+鬍匪 -> 胡匪	weight=384.0 target=383.0 gap=392
+鬥鬥 -> 斗斗	weight=519.0 target=518.0 gap=487
+鬨堂 -> 哄堂	weight=568.0 target=567.0 gap=442
+鬨堂大笑 -> 哄堂大笑	weight=565.0 target=564.0 gap=456
+鬨然 -> 哄然	weight=475.0 target=474.0 gap=473
+鬱鬱不得志 -> 鬱郁不得志	weight=490.0 target=489.0 gap=454
+魂鬥羅 -> 魂斗羅	weight=529.0 target=528.0 gap=513
+魚遊釜中 -> 魚游釜中	weight=262.0 target=261.0 gap=233
+魚遊釜底 -> 魚游釜底	weight=124.0 target=123.0 gap=481
+鳩佔鵲巢 -> 鳩占鵲巢	weight=492.0 target=491.0 gap=549
+鴻篇鉅製 -> 鴻篇巨制	weight=480.0 target=479.0 gap=467
+鵰悍 -> 雕悍	weight=138.0 target=137.0 gap=455
+鵲巢鳩佔 -> 鵲巢鳩占	weight=412.0 target=411.0 gap=457
+麩胺酸 -> 穀氨酸	weight=580.0 target=579.0 gap=437
+麴黴 -> 曲霉	weight=573.0 target=572.0 gap=477
+麻薩諸塞州 -> 馬薩諸塞州	weight=544.0 target=543.0 gap=484
+黃體素 -> 孕酮	weight=113.0 target=112.0 gap=276
+黃體素 -> 黃體酮	weight=113.0 target=112.0 gap=276
+黴乾菜 -> 霉乾菜	weight=474.0 target=473.0 gap=527
+黴味 -> 霉味	weight=536.0 target=535.0 gap=501
+黴爛 -> 霉爛	weight=501.0 target=500.0 gap=472
+鼓譟 -> 鼓噪	weight=558.0 target=557.0 gap=451
+
+--- conflicts (skipped, same key on both sides) ---
+兩天曬網 -> 兩天晒網
+區域網絡 -> 局域網絡
+區域網路 -> 區域網絡
+嚲 -> 軃
+圖 -> 啚
+失智症 -> 痴呆症
+學 -> 斅
+攴 -> 攵
+教 -> 斅
+文 -> 攵
+文件 -> 文檔
+文件管理 -> 文檔管理
+日曬雨淋 -> 日晒雨淋
+曝曬 -> 曝晒
+曬乾 -> 晒乾
+曬圖 -> 晒圖
+曬穀 -> 晒穀
+曬穀場 -> 晒穀場
+曬臺 -> 晒臺
+曬黑 -> 晒黑
+檔案 -> 文件
+檔案管理 -> 文件管理
+游標 -> 光標
+牛驥同皁 -> 牛驥同皂
+程序 -> 進程
+程序控制 -> 進程控制
+程式 -> 程序
+程式控制 -> 程序控制
+躲 -> 軃
+遊標 -> 游標
+鄙 -> 啚
+防曬油 -> 防晒油
+電子文件 -> 電子文檔
+電子檔案 -> 電子文件
+顎 -> 齶
+鬱郁 -> 郁郁
+鬱鬱 -> 鬱郁
+齶 -> 腭
+一個鍋裡喫飯的 -> 一個鍋裏喫飯的
+一個鍋裏吃飯的 -> 一個鍋裏喫飯的
+一生吃着不盡 -> 一生喫着不盡
+一生喫著不盡 -> 一生喫着不盡
+一群羣 -> 一羣羣
+一羣群 -> 一羣羣
+一般群衆 -> 一般羣衆
+一般羣眾 -> 一般羣衆
+一茌一茬 -> 一茬一茬
+一茬一茌 -> 一茬一茬
+一茌茬 -> 一茬茬
+一茬茌 -> 一茬茬
+上梁不正下樑歪 -> 上樑不正下樑歪
+上樑不正下梁歪 -> 上樑不正下樑歪
+不吃白不喫 -> 不喫白不喫
+不喫白不吃 -> 不喫白不喫
+不是湯著就抹着 -> 不是湯着就抹着
+不是湯着就抹著 -> 不是湯着就抹着
+丹唇啓秀 -> 丹脣啓秀
+丹脣啟秀 -> 丹脣啓秀
+互為表裏 -> 互爲表裏
+互爲表裡 -> 互爲表裏
+人民群衆 -> 人民羣衆
+人民羣眾 -> 人民羣衆
+人為刀俎我爲魚肉 -> 人爲刀俎我爲魚肉
+人爲刀俎我為魚肉 -> 人爲刀俎我爲魚肉
+人參皁苷 -> 人蔘皁苷
+人蔘皂苷 -> 人蔘皁苷
+你在群裏 -> 你在羣裏
+你在羣裡 -> 你在羣裏
+依靠群衆 -> 依靠羣衆
+依靠羣眾 -> 依靠羣衆
+做著做着 -> 做着做着
+做着做著 -> 做着做着
+兩天晒網 -> 兩天曬網
+共為脣齒 -> 共爲脣齒
+共爲唇齒 -> 共爲脣齒
+冷灶上着一把兒 -> 冷竈上着一把兒
+冷竈上著一把兒 -> 冷竈上着一把兒
+到群衆中去 -> 到羣衆中去
+到羣眾中去 -> 到羣衆中去
+前不著村後不着店 -> 前不着村後不着店
+前不着村後不著店 -> 前不着村後不着店
+動員群衆 -> 動員羣衆
+動員羣眾 -> 動員羣衆
+勞動群衆 -> 勞動羣衆
+勞動羣眾 -> 勞動羣衆
+千里做官為的喫穿 -> 千里做官爲的喫穿
+千里做官爲的吃穿 -> 千里做官爲的喫穿
+去哪裡喫飯 -> 去哪裏喫飯
+去哪裏吃飯 -> 去哪裏喫飯
+受災群衆 -> 受災羣衆
+受災羣眾 -> 受災羣衆
+合眾爲一 -> 合衆爲一
+合衆為一 -> 合衆爲一
+含著骨頭露着肉 -> 含着骨頭露着肉
+含着骨頭露著肉 -> 含着骨頭露着肉
+呢呢痴癡 -> 呢呢癡癡
+呢呢癡痴 -> 呢呢癡癡
+咬著脣 -> 咬着脣
+咬着唇 -> 咬着脣
+哪裡哪裏 -> 哪裏哪裏
+哪裏哪裡 -> 哪裏哪裏
+哪裡摔倒哪裏爬 -> 哪裏摔倒哪裏爬
+哪裏摔倒哪裡爬 -> 哪裏摔倒哪裏爬
+啟封祕籍 -> 啓封祕籍
+啓封秘籍 -> 啓封祕籍
+吃不了兜着走 -> 喫不了兜着走
+喫不了兜著走 -> 喫不了兜着走
+吃不喫 -> 喫不喫
+喫不吃 -> 喫不喫
+吃不完兜着走 -> 喫不完兜着走
+喫不完兜著走 -> 喫不完兜着走
+吃不着 -> 喫不着
+喫不著 -> 喫不着
+吃來喫去 -> 喫來喫去
+喫來吃去 -> 喫來喫去
+吃喫 -> 喫喫
+喫吃 -> 喫喫
+吃喫喝喝 -> 喫喫喝喝
+喫吃喝喝 -> 喫喫喝喝
+吃完麪 -> 喫完麪
+喫完麵 -> 喫完麪
+吃小竈 -> 喫小竈
+喫小灶 -> 喫小竈
+吃拉麪 -> 喫拉麪
+喫拉麵 -> 喫拉麪
+吃板刀麪 -> 喫板刀麪
+喫板刀麵 -> 喫板刀麪
+吃涼麪 -> 喫涼麪
+喫涼麵 -> 喫涼麪
+吃牀腿 -> 喫牀腿
+喫床腿 -> 喫牀腿
+吃瓜喫瓜 -> 喫瓜喫瓜
+喫瓜吃瓜 -> 喫瓜喫瓜
+吃瓜羣衆 -> 喫瓜羣衆
+喫瓜群衆 -> 喫瓜羣衆
+喫瓜羣眾 -> 喫瓜羣衆
+吃着 -> 喫着
+喫著 -> 喫着
+吃着不盡 -> 喫着不盡
+喫著不盡 -> 喫着不盡
+吃着火鍋 -> 喫着火鍋
+喫著火鍋 -> 喫着火鍋
+吃着碗裏 -> 喫着碗裏
+喫著碗裏 -> 喫着碗裏
+喫着碗裡 -> 喫着碗裏
+吃着自己的飯 -> 喫着自己的飯
+喫著自己的飯 -> 喫着自己的飯
+吃硬不喫軟 -> 喫硬不喫軟
+喫硬不吃軟 -> 喫硬不喫軟
+吃碗麪 -> 喫碗麪
+喫碗麵 -> 喫碗麪
+吃糉子 -> 喫糉子
+喫粽子 -> 喫糉子
+吃蔥喫蒜不喫薑 -> 喫蔥喫蒜不喫薑
+喫蔥吃蒜不喫薑 -> 喫蔥喫蒜不喫薑
+喫蔥喫蒜不吃薑 -> 喫蔥喫蒜不喫薑
+吃裏扒外 -> 喫裏扒外
+喫裡扒外 -> 喫裏扒外
+吃裏爬外 -> 喫裏爬外
+喫裡爬外 -> 喫裏爬外
+吃軟不喫硬 -> 喫軟不喫硬
+喫軟不吃硬 -> 喫軟不喫硬
+吃辣麪 -> 喫辣麪
+喫辣麵 -> 喫辣麪
+吃過麪 -> 喫過麪
+喫過麵 -> 喫過麪
+吃順不喫搶 -> 喫順不喫搶
+喫順不吃搶 -> 喫順不喫搶
+吃飽撐着 -> 喫飽撐着
+喫飽撐著 -> 喫飽撐着
+吃麪 -> 喫麪
+喫麵 -> 喫麪
+吃麪條 -> 喫麪條
+喫麵條 -> 喫麪條
+因為那裏 -> 因爲那裏
+因爲那裡 -> 因爲那裏
+因為隨着 -> 因爲隨着
+因爲隨著 -> 因爲隨着
+困難群衆 -> 困難羣衆
+困難羣眾 -> 困難羣衆
+圍觀群衆 -> 圍觀羣衆
+圍觀羣眾 -> 圍觀羣衆
+在群衆中 -> 在羣衆中
+在羣眾中 -> 在羣衆中
+基層群衆 -> 基層羣衆
+基層羣眾 -> 基層羣衆
+外屋裡的竈君爺 -> 外屋裏的竈君爺
+外屋裏的灶君爺 -> 外屋裏的竈君爺
+大吃特喫 -> 大喫特喫
+大喫特吃 -> 大喫特喫
+大為喫驚 -> 大爲喫驚
+大爲吃驚 -> 大爲喫驚
+大群裏 -> 大羣裏
+大羣裡 -> 大羣裏
+守著鼻子抹着腮 -> 守着鼻子抹着腮
+守着鼻子抹著腮 -> 守着鼻子抹着腮
+家裡蹲着 -> 家裏蹲着
+家裏蹲著 -> 家裏蹲着
+寧為玉碎不爲瓦全 -> 寧爲玉碎不爲瓦全
+寧爲玉碎不為瓦全 -> 寧爲玉碎不爲瓦全
+寧為雞口不爲牛後 -> 寧爲雞口不爲牛後
+寧爲雞口不為牛後 -> 寧爲雞口不爲牛後
+寧為雞口無爲牛後 -> 寧爲雞口無爲牛後
+寧爲雞口無為牛後 -> 寧爲雞口無爲牛後
+少吃無着 -> 少喫無着
+少喫無著 -> 少喫無着
+屁股裡喫人參 -> 屁股裏喫人參
+屁股裏吃人參 -> 屁股裏喫人參
+峰峯 -> 峯峯
+峯峰 -> 峯峯
+峰峯礦 -> 峯峯礦
+峯峰礦 -> 峯峯礦
+峰峯礦區 -> 峯峯礦區
+峯峰礦區 -> 峯峯礦區
+幹部群衆 -> 幹部羣衆
+幹部羣眾 -> 幹部羣衆
+廣大人民群衆 -> 廣大人民羣衆
+廣大人民羣眾 -> 廣大人民羣衆
+廣大群衆 -> 廣大羣衆
+廣大羣眾 -> 廣大羣衆
+弄麵喫 -> 弄麪喫
+弄麪吃 -> 弄麪喫
+往群裏 -> 往羣裏
+往羣裡 -> 往羣裏
+從群衆中來 -> 從羣衆中來
+從羣眾中來 -> 從羣衆中來
+心裡想着 -> 心裏想着
+心裏想著 -> 心裏想着
+匆怱 -> 怱怱
+怱匆 -> 怱怱
+成則為王敗則爲虜 -> 成則爲王敗則爲虜
+成則爲王敗則為虜 -> 成則爲王敗則爲虜
+成者為王敗者爲寇 -> 成者爲王敗者爲寇
+成者爲王敗者為寇 -> 成者爲王敗者爲寇
+才為 -> 才爲
+挨挨拶桚 -> 挨挨桚桚
+挨挨桚拶 -> 挨挨桚桚
+教育群衆 -> 教育羣衆
+教育羣眾 -> 教育羣衆
+敬酒不吃喫罰酒 -> 敬酒不喫喫罰酒
+敬酒不喫吃罰酒 -> 敬酒不喫喫罰酒
+日晒雨淋 -> 日曬雨淋
+是為着 -> 是爲着
+是爲著 -> 是爲着
+普通群衆 -> 普通羣衆
+普通羣眾 -> 普通羣衆
+曝晒 -> 曝曬
+晒一曬 -> 曬一曬
+曬一晒 -> 曬一曬
+晒乾 -> 曬乾
+晒圖 -> 曬圖
+晒曬 -> 曬曬
+曬晒 -> 曬曬
+晒曬太陽 -> 曬曬太陽
+曬晒太陽 -> 曬曬太陽
+晒着太陽 -> 曬着太陽
+曬著太陽 -> 曬着太陽
+晒穀 -> 曬穀
+晒穀場 -> 曬穀場
+晒臺 -> 曬臺
+晒黑 -> 曬黑
+有所為有所不爲 -> 有所爲有所不爲
+有所爲有所不為 -> 有所爲有所不爲
+有群衆 -> 有羣衆
+有羣眾 -> 有羣衆
+服務群衆 -> 服務羣衆
+服務羣眾 -> 服務羣衆
+稜棱 -> 棱棱
+棱稜 -> 棱棱
+稜棱睜睜 -> 棱棱睜睜
+棱稜睜睜 -> 棱棱睜睜
+民為貴君爲輕 -> 民爲貴君爲輕
+民爲貴君為輕 -> 民爲貴君爲輕
+水裡水裏來 -> 水裏水裏來
+水裏水裡來 -> 水裏水裏來
+水裡水裏來火裏火裏去 -> 水裏水裏來火裏火裏去
+水裏水裡來火裏火裏去 -> 水裏水裏來火裏火裏去
+水裏水裏來火裡火裏去 -> 水裏水裏來火裏火裏去
+水裏水裏來火裏火裡去 -> 水裏水裏來火裏火裏去
+求灶頭不如求竈尾 -> 求竈頭不如求竈尾
+求竈頭不如求灶尾 -> 求竈頭不如求竈尾
+沒下唇就不該攬着簫吹 -> 沒下脣就不該攬着簫吹
+沒下脣就不該攬著簫吹 -> 沒下脣就不該攬着簫吹
+洩泄 -> 泄泄
+泄洩 -> 泄泄
+洩泄汨汨 -> 泄泄汨汨
+泄洩汨汨 -> 泄泄汨汨
+洩泄沓沓 -> 泄泄沓沓
+泄洩沓沓 -> 泄泄沓沓
+洩露祕密 -> 泄露祕密
+泄露秘密 -> 泄露祕密
+深入群衆 -> 深入羣衆
+深入羣眾 -> 深入羣衆
+湯裡來水裏去 -> 湯裏來水裏去
+湯裏來水裡去 -> 湯裏來水裏去
+溶溶洩泄 -> 溶溶泄泄
+溶溶泄洩 -> 溶溶泄泄
+火裡火去水裏水去 -> 火裏火去水裏水去
+火裏火去水裡水去 -> 火裏火去水裏水去
+火裡火裏去 -> 火裏火裏去
+火裏火裡去 -> 火裏火裏去
+無為而無不爲 -> 無爲而無不爲
+無爲而無不為 -> 無爲而無不爲
+煽動群衆 -> 煽動羣衆
+煽動羣眾 -> 煽動羣衆
+熱心群衆 -> 熱心羣衆
+熱心羣眾 -> 熱心羣衆
+熱灶上着一把兒 -> 熱竈上着一把兒
+熱竈上著一把兒 -> 熱竈上着一把兒
+為人爲徹 -> 爲人爲徹
+爲人為徹 -> 爲人爲徹
+為公衆所知 -> 爲公衆所知
+爲公眾所知 -> 爲公衆所知
+為名爲利 -> 爲名爲利
+爲名為利 -> 爲名爲利
+為國爲民 -> 爲國爲民
+爲國為民 -> 爲國爲民
+為愛癡狂 -> 爲愛癡狂
+爲愛痴狂 -> 爲愛癡狂
+為所欲爲 -> 爲所欲爲
+爲所欲為 -> 爲所欲爲
+為數衆多 -> 爲數衆多
+爲數眾多 -> 爲數衆多
+為權爲利 -> 爲權爲利
+爲權為利 -> 爲權爲利
+為的喫穿 -> 爲的喫穿
+爲的吃穿 -> 爲的喫穿
+為着 -> 爲着
+爲著 -> 爲着
+為羣衆 -> 爲羣衆
+爲群衆 -> 爲羣衆
+爲羣眾 -> 爲羣衆
+為羣衆服務 -> 爲羣衆服務
+爲群衆服務 -> 爲羣衆服務
+爲羣眾服務 -> 爲羣衆服務
+為裘爲箕 -> 爲裘爲箕
+爲裘為箕 -> 爲裘爲箕
+為鬼爲蜮 -> 爲鬼爲蜮
+爲鬼為蜮 -> 爲鬼爲蜮
+為鬼爲魅 -> 爲鬼爲魅
+爲鬼為魅 -> 爲鬼爲魅
+床上安牀 -> 牀上安牀
+牀上安床 -> 牀上安牀
+床上施牀 -> 牀上施牀
+牀上施床 -> 牀上施牀
+床下安牀 -> 牀下安牀
+牀下安床 -> 牀下安牀
+床公牀婆 -> 牀公牀婆
+牀公床婆 -> 牀公牀婆
+床舖 -> 牀舖
+牀鋪 -> 牀舖
+床鋪 -> 牀鋪
+牛驥同皂 -> 牛驥同皁
+特特為爲 -> 特特爲爲
+特特爲為 -> 特特爲爲
+狼吃幞頭 -> 狼喫幞頭
+狼喫襆頭 -> 狼喫幞頭
+瓦灶繩牀 -> 瓦竈繩牀
+瓦竈繩床 -> 瓦竈繩牀
+當著不着 -> 當着不着
+當着不著 -> 當着不着
+疏散群衆 -> 疏散羣衆
+疏散羣眾 -> 疏散羣衆
+瘦稜棱 -> 瘦棱棱
+瘦棱稜 -> 瘦棱棱
+痴人癡福 -> 癡人癡福
+癡人痴福 -> 癡人癡福
+痴呆症 -> 癡呆症
+痴癡 -> 癡癡
+癡痴 -> 癡癡
+痴癡傻傻 -> 癡癡傻傻
+癡痴傻傻 -> 癡癡傻傻
+發動群衆 -> 發動羣衆
+發動羣眾 -> 發動羣衆
+發在群裏 -> 發在羣裏
+發在羣裡 -> 發在羣裏
+發洩着 -> 發泄着
+發泄著 -> 發泄着
+相信群衆 -> 相信羣衆
+相信羣眾 -> 相信羣衆
+相為表裏 -> 相爲表裏
+相爲表裡 -> 相爲表裏
+看著鍋裏 -> 看着鍋裏
+看着鍋裡 -> 看着鍋裏
+著三不着兩 -> 着三不着兩
+着三不著兩 -> 着三不着兩
+著牀 -> 着牀
+着床 -> 着牀
+著着 -> 着着
+着著 -> 着着
+著着失敗 -> 着着失敗
+着著失敗 -> 着着失敗
+著着實實 -> 着着實實
+着著實實 -> 着着實實
+著着進逼 -> 着着進逼
+着著進逼 -> 着着進逼
+知其不可為而爲之 -> 知其不可爲而爲之
+知其不可爲而為之 -> 知其不可爲而爲之
+石稜棱 -> 石棱棱
+石棱稜 -> 石棱棱
+棋峯 -> 碁峯
+碁峰 -> 碁峯
+碟大碗小磕著碰着 -> 碟大碗小磕着碰着
+碟大碗小磕着碰著 -> 碟大碗小磕着碰着
+秘而不泄 -> 祕而不泄
+祕而不洩 -> 祕而不泄
+神神秘祕 -> 神神祕祕
+神神祕秘 -> 神神祕祕
+積裡漸裏 -> 積裏漸裏
+積裏漸裡 -> 積裏漸裏
+灶牀 -> 竈牀
+竈床 -> 竈牀
+站著喫 -> 站着喫
+站着吃 -> 站着喫
+筍裡不知茆裏 -> 筍裏不知茆裏
+筍裏不知茆裡 -> 筍裏不知茆裏
+組織群衆 -> 組織羣衆
+組織羣眾 -> 組織羣衆
+緊溜子裡爲着人 -> 緊溜子裏爲着人
+緊溜子裏為着人 -> 緊溜子裏爲着人
+緊溜子裏爲著人 -> 緊溜子裏爲着人
+繩床瓦竈 -> 繩牀瓦竈
+繩牀瓦灶 -> 繩牀瓦竈
+才爲 -> 纔爲
+纔為 -> 纔爲
+羊群裏跑出駱駝來 -> 羊羣裏跑出駱駝來
+羊羣裡跑出駱駝來 -> 羊羣裏跑出駱駝來
+群峯 -> 羣峯
+羣峰 -> 羣峯
+群策羣力 -> 羣策羣力
+羣策群力 -> 羣策羣力
+群羣 -> 羣羣
+羣群 -> 羣羣
+群衆 -> 羣衆
+羣眾 -> 羣衆
+群衆代表 -> 羣衆代表
+羣眾代表 -> 羣衆代表
+群衆利益 -> 羣衆利益
+羣眾利益 -> 羣衆利益
+群衆反映 -> 羣衆反映
+羣眾反映 -> 羣衆反映
+群衆團體 -> 羣衆團體
+羣眾團體 -> 羣衆團體
+群衆基礎 -> 羣衆基礎
+羣眾基礎 -> 羣衆基礎
+群衆大會 -> 羣衆大會
+羣眾大會 -> 羣衆大會
+群衆工作 -> 羣衆工作
+羣眾工作 -> 羣衆工作
+群衆心理 -> 羣衆心理
+羣眾心理 -> 羣衆心理
+群衆性 -> 羣衆性
+羣眾性 -> 羣衆性
+群衆意見 -> 羣衆意見
+羣眾意見 -> 羣衆意見
+群衆會 -> 羣衆會
+羣眾會 -> 羣衆會
+群衆滿意 -> 羣衆滿意
+羣眾滿意 -> 羣衆滿意
+群衆演員 -> 羣衆演員
+羣眾演員 -> 羣衆演員
+群衆的 -> 羣衆的
+羣眾的 -> 羣衆的
+群衆監督 -> 羣衆監督
+羣眾監督 -> 羣衆監督
+群衆組織 -> 羣衆組織
+羣眾組織 -> 羣衆組織
+群衆舉報 -> 羣衆舉報
+羣眾舉報 -> 羣衆舉報
+群衆觀點 -> 羣衆觀點
+羣眾觀點 -> 羣衆觀點
+群衆路線 -> 羣衆路線
+羣眾路線 -> 羣衆路線
+群衆運動 -> 羣衆運動
+羣眾運動 -> 羣衆運動
+群衆關係 -> 羣衆關係
+羣眾關係 -> 羣衆關係
+群衆體育 -> 羣衆體育
+羣眾體育 -> 羣衆體育
+群裏 -> 羣裏
+羣裡 -> 羣裏
+群裏有 -> 羣裏有
+羣裡有 -> 羣裏有
+群體行爲 -> 羣體行爲
+羣體行為 -> 羣體行爲
+羹裡不着飯裏着 -> 羹裏不着飯裏着
+羹裏不著飯裏着 -> 羹裏不着飯裏着
+羹裏不着飯裡着 -> 羹裏不着飯裏着
+羹裏不着飯裏著 -> 羹裏不着飯裏着
+羹裡來飯裏去 -> 羹裏來飯裏去
+羹裏來飯裡去 -> 羹裏來飯裏去
+翻手為雲覆手爲雨 -> 翻手爲雲覆手爲雨
+翻手爲雲覆手為雨 -> 翻手爲雲覆手爲雨
+聯繫群衆 -> 聯繫羣衆
+聯繫羣眾 -> 聯繫羣衆
+脫離群衆 -> 脫離羣衆
+脫離羣眾 -> 脫離羣衆
+與群衆 -> 與羣衆
+與羣眾 -> 與羣衆
+葉協琹 -> 葉叶琹
+葉叶琴 -> 葉叶琹
+藏著掖着 -> 藏着掖着
+藏着掖著 -> 藏着掖着
+蘸著喫 -> 蘸着喫
+蘸着吃 -> 蘸着喫
+眾裏尋他千百度 -> 衆裏尋他千百度
+衆裡尋他千百度 -> 衆裏尋他千百度
+袖裡來袖裏去 -> 袖裏來袖裏去
+袖裏來袖裡去 -> 袖裏來袖裏去
+裡外裏 -> 裏外裏
+裏外裡 -> 裏外裏
+裡懷裏 -> 裏懷裏
+裏懷裡 -> 裏懷裏
+裡裏 -> 裏裏
+裏裡 -> 裏裏
+裡裏外外 -> 裏裏外外
+裏裡外外 -> 裏裏外外
+靦着臉 -> 覥着臉
+覥著臉 -> 覥着臉
+觀眾羣 -> 觀衆羣
+觀衆群 -> 觀衆羣
+讓人民群衆 -> 讓人民羣衆
+讓人民羣眾 -> 讓人民羣衆
+讓群衆 -> 讓羣衆
+讓羣眾 -> 讓羣衆
+貼近群衆 -> 貼近羣衆
+貼近羣眾 -> 貼近羣衆
+賣炭的掉在麵缸裏 -> 賣炭的掉在麪缸裏
+賣炭的掉在麪缸裡 -> 賣炭的掉在麪缸裏
+走為上着 -> 走爲上着
+走爲上著 -> 走爲上着
+走著走着 -> 走着走着
+走着走著 -> 走着走着
+超群出衆 -> 超羣出衆
+超羣出眾 -> 超羣出衆
+越吃越想喫 -> 越喫越想喫
+越喫越想吃 -> 越喫越想喫
+趕著增福神着棍打 -> 趕着增福神着棍打
+趕着增福神著棍打 -> 趕着增福神着棍打
+農民群衆 -> 農民羣衆
+農民羣眾 -> 農民羣衆
+這個群裏 -> 這個羣裏
+這個羣裡 -> 這個羣裏
+逛吃逛喫 -> 逛喫逛喫
+逛喫逛吃 -> 逛喫逛喫
+逛著逛着 -> 逛着逛着
+逛着逛著 -> 逛着逛着
+部分群衆 -> 部分羣衆
+部分羣眾 -> 部分羣衆
+缽鉢雞 -> 鉢鉢雞
+鉢缽雞 -> 鉢鉢雞
+門神裡邊捲竈爺 -> 門神裏邊捲竈爺
+門神裏邊捲灶爺 -> 門神裏邊捲竈爺
+關心群衆 -> 關心羣衆
+關心羣眾 -> 關心羣衆
+防晒油 -> 防曬油
+隔裡個裏 -> 隔裏個裏
+隔裏個裡 -> 隔裏個裏
+雙日不著單日着 -> 雙日不着單日着
+雙日不着單日著 -> 雙日不着單日着
+雲裡霧裏 -> 雲裏霧裏
+雲裏霧裡 -> 雲裏霧裏
+靠山吃山靠水喫水 -> 靠山喫山靠水喫水
+靠山喫山靠水吃水 -> 靠山喫山靠水喫水
+風在那裡起雨在那裏落 -> 風在那裏起雨在那裏落
+風在那裏起雨在那裡落 -> 風在那裏起雨在那裏落
+驚群動衆 -> 驚羣動衆
+驚羣動眾 -> 驚羣動衆
+骨頭裡掙出來的錢纔做得肉 -> 骨頭裏掙出來的錢纔做得肉
+骨頭裏掙出來的錢才做得肉 -> 骨頭裏掙出來的錢纔做得肉
+
+--- skipped (neither side in upstream) ---
+韝鞴 -> 鞲鞴
+
+--- core characters still at weight 0 ---
+(none)
+
+note: .gram is not regenerated by this pipeline; rebuild it separately if needed.

@@ -58,6 +58,42 @@ class TestApplyPairs(unittest.TestCase):
         twice, _ = apply_pairs(once, [pair()], page_size=5)
         self.assertEqual(once, twice)
 
+    def test_chain_conflict_is_skipped(self):
+        essay = {"A": 100.0, "B": 50.0, "C": 10.0, "x": 1.0}
+        pairs = [pair("A", "B"), pair("B", "C")]
+        out, report = apply_pairs(essay, pairs, page_size=5)
+        self.assertEqual(out["B"], 50.0)
+        self.assertEqual(sorted(r["action"] for r in report), ["conflict", "conflict"])
+
+    def test_report_gap_is_measured_on_final_essay(self):
+        essay = {f"k{i:02d}": float(100 - i) for i in range(40)}
+        essay["主"] = 90.0
+        essay["異"] = 40.0
+        out, report = apply_pairs(essay, [pair()], page_size=5)
+        from essay_lib import RankTable
+
+        table = RankTable(out.values())
+        self.assertEqual(
+            report[0]["gap"],
+            table.rank(out["異"]) - table.rank(out["主"]),
+        )
+
+    def test_derived_phrase_pairs(self):
+        from essay_lib import derive_phrase_pairs
+
+        pairs = [Pair("裡", "裏", "char", "ortho", "test", "")]
+        got = derive_phrase_pairs({"裏面": 10.0}, pairs)
+        self.assertEqual(
+            [(p.preferred, p.variant) for p in got],
+            [("裡面", "裏面")],
+        )
+
+    def test_preferred_takes_max_across_variants(self):
+        essay = {"A": 10.0, "B": 100.0, "C": 5.0, "x": 1.0}
+        pairs = [pair("A", "B"), pair("A", "C")]
+        out, _ = apply_pairs(essay, pairs, page_size=5)
+        self.assertEqual(out["A"], 100.0)
+
 
 if __name__ == "__main__":
     unittest.main()

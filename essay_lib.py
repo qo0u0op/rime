@@ -101,76 +101,174 @@ class RankTable:
         return self._values[index]
 
 
+def _target_weight(table: RankTable, weight: float, gap: int) -> float:
+    target = table.value_at(table.rank(weight) + gap)
+    if target >= weight:
+        lower = table.next_lower(weight)
+        if lower is not None and lower > 0.0:
+            return lower
+        return max(1.0, weight * 0.5)
+    return max(1.0, target)
+
+
+def derive_phrase_pairs(essay: dict[str, float], pairs: list[Pair]) -> list[Pair]:
+    """Create orthographic phrase pairs from approved character pairs.
+
+    Only one character is substituted per phrase, so the result stays
+    reviewable and does not explode combinatorially.
+    """
+    mapping: dict[str, str] = {}
+    for p in pairs:
+        if p.scope == "char" and p.type == "ortho":
+            mapping[p.variant] = p.preferred
+
+    derived: list[Pair] = []
+    seen: set[tuple[str, str]] = set()
+    for key in essay:
+        if len(key) < 2:
+            continue
+        for index, char in enumerate(key):
+            replacement = mapping.get(char)
+            if not replacement:
+                continue
+            alternative = key[:index] + replacement + key[index + 1 :]
+            pair_key = (alternative, key)
+            if alternative == key or pair_key in seen:
+                continue
+            seen.add(pair_key)
+            derived.append(
+                Pair(alternative, key, "phrase", "ortho", "derived", "")
+            )
+    return derived
+
+
 def apply_pairs(
     essay: dict[str, float],
     pairs: list[Pair],
     page_size: int = 5,
     gap_pages: int = 3,
+    passes: int = 3,
 ) -> tuple[dict[str, float], list[dict]]:
     """Align each pair's two weights, keeping both entries.
 
-    The rank table is built once from the original essay, so every target
-    is measured against the same distribution.
+    Preferred weights are fixed first, then variant targets are recomputed
+    against the live distribution for a few passes so later pairs do not
+    silently undo earlier ones.
     """
     out = dict(essay)
-    table = RankTable(out.values())
-    report: list[dict] = []
-
+    preferred_keys = {p.preferred for p in pairs}
+    variant_owners: dict[str, set[str]] = {}
     for p in pairs:
-        wp = out.get(p.preferred)
-        wv = out.get(p.variant)
-        entry = {
-            "preferred": p.preferred,
-            "variant": p.variant,
-            "type": p.type,
-        }
+        variant_owners.setdefault(p.variant, set()).add(p.preferred)
+    conflicted = {k for k in preferred_keys if k in variant_owners}
+    conflicted |= {
+        key for key, owners in variant_owners.items() if len(owners) > 1
+    }
 
+    reading: list[Pair] = []
+    active: list[Pair] = []
+    skipped: list[Pair] = []
+    conflicts: list[Pair] = []
+    for p in pairs:
         if p.type == "reading":
-            if wp is None and wv is None:
-                entry["action"] = "skip"
-                report.append(entry)
-                continue
-            base = max(wp or 0.0, wv or 0.0)
-            floor = max(1.0, table.value_at(table.rank(base) + page_size * gap_pages * 2))
-            if wp is None:
-                pass
-            elif wp == 0.0:
-                out[p.preferred] = floor
-            if wv is None:
-                pass
-            elif wv == 0.0:
-                out[p.variant] = floor
-            entry["action"] = "ok"
-            report.append(entry)
-            continue
+            reading.append(p)
+        elif p.preferred in conflicted or p.variant in conflicted:
+            conflicts.append(p)
+        elif p.preferred not in essay and p.variant not in essay:
+            skipped.append(p)
+        else:
+            active.append(p)
 
-        if wp is None and wv is None:
-            entry["action"] = "skip"
-            report.append(entry)
-            continue
-
-        weight = max(wp or 0.0, wv or 0.0)
+    preferred_weight: dict[str, float] = {}
+    for p in active:
+        weight = max(essay.get(p.preferred, 0.0), essay.get(p.variant, 0.0))
         if weight <= 0.0:
             weight = 10.0
-        gap = page_size * gap_pages * (2 if p.type == "regional" else 1)
-        target = table.value_at(table.rank(weight) + gap)
-        action = "ok"
-        if target >= weight:
-            lower = table.next_lower(weight)
-            if lower is not None and lower > 0.0:
-                target = lower
-            else:
-                target = max(1.0, weight * 0.5)
-            action = "overshoot"
+        preferred_weight[p.preferred] = max(
+            preferred_weight.get(p.preferred, 0.0), weight
+        )
+    for key, weight in preferred_weight.items():
+        out[key] = weight
 
-        out[p.preferred] = weight
-        out[p.variant] = target
-        entry["action"] = action
-        entry["weight"] = weight
-        entry["target"] = target
-        entry["gap"] = table.rank(target) - table.rank(weight)
-        report.append(entry)
+    for p in reading:
+        wp = out.get(p.preferred)
+        wv = out.get(p.variant)
+        if wp is None and wv is None:
+            skipped.append(p)
+            continue
+        table = RankTable(out.values())
+        base = max(wp or 0.0, wv or 0.0)
+        floor = max(
+            1.0, table.value_at(table.rank(base) + page_size * gap_pages * 2)
+        )
+        if wp == 0.0:
+            out[p.preferred] = floor
+        if wv == 0.0:
+            out[p.variant] = floor
 
+    for _ in range(max(1, passes)):
+        table = RankTable(out.values())
+        changed = False
+        for p in active:
+            weight = preferred_weight[p.preferred]
+            gap = page_size * gap_pages * (2 if p.type == "regional" else 1)
+            target = _target_weight(table, weight, gap)
+            if out.get(p.variant) != target:
+                changed = True
+            out[p.variant] = target
+        if not changed:
+            break
+
+    final = RankTable(out.values())
+    report: list[dict] = []
+    for p in active:
+        weight = preferred_weight[p.preferred]
+        target = out[p.variant]
+        gap = final.rank(target) - final.rank(weight)
+        expected = page_size * gap_pages * (2 if p.type == "regional" else 1)
+        report.append(
+            {
+                "preferred": p.preferred,
+                "variant": p.variant,
+                "type": p.type,
+                "action": "overshoot" if gap > expected else "ok",
+                "weight": weight,
+                "target": target,
+                "gap": gap,
+            }
+        )
+    for p in conflicts:
+        report.append(
+            {
+                "preferred": p.preferred,
+                "variant": p.variant,
+                "type": p.type,
+                "action": "conflict",
+            }
+        )
+    for p in skipped:
+        report.append(
+            {
+                "preferred": p.preferred,
+                "variant": p.variant,
+                "type": p.type,
+                "action": "skip",
+            }
+        )
+    for p in reading:
+        if any(
+            r["preferred"] == p.preferred and r["variant"] == p.variant
+            for r in report
+        ):
+            continue
+        report.append(
+            {
+                "preferred": p.preferred,
+                "variant": p.variant,
+                "type": p.type,
+                "action": "ok",
+            }
+        )
     return out, report
 
 

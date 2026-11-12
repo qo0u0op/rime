@@ -812,6 +812,9 @@
 年	秊	char	ortho	moe	
 幵	开	char	ortho	moe	
 并	幷	char	ortho	moe	
+幷州	并州	phrase	ortho	opencc	
+幷州剪	并州剪	phrase	ortho	opencc	
+幷州故鄉	并州故鄉	phrase	ortho	opencc	
 幹將	干將	phrase	regional	opencc	
 幹證	干證	phrase	regional	opencc	
 幾內亞比索	幾內亞比紹	phrase	regional	opencc	
@@ -1181,7 +1184,7 @@
 旅遊資訊	旅遊信息	phrase	regional	opencc	
 旆	斾	char	ortho	moe	
 既	旣	char	ortho	moe	
-日曬雨淋	日晒雨淋	phrase	regional	opencc	
+日曬雨淋	日晒雨淋	phrase	ortho	opencc	
 旨	㫖	char	ortho	moe	
 旨	󲥛	char	ortho	moe	
 旭日初昇	旭日初升	phrase	regional	opencc	
@@ -1221,14 +1224,16 @@
 暱稱	昵稱	phrase	regional	opencc	
 暱聲	昵聲	phrase	regional	opencc	
 曄	曅	char	ortho	moe	
-曝曬	曝晒	phrase	regional	opencc	
+曝曬	曝晒	phrase	ortho	opencc	
 曠	旷	char	ortho	moe	
-曬乾	晒乾	phrase	regional	opencc	
+曬乾	晒乾	phrase	ortho	opencc	
 曬圖	晒圖	phrase	regional	opencc	
-曬穀	晒穀	phrase	regional	opencc	
+曬斑	晒斑	phrase	ortho	opencc	
+曬書	晒書	phrase	ortho	opencc	
+曬穀	晒穀	phrase	ortho	opencc	
 曬穀場	晒穀場	phrase	regional	opencc	
 曬臺	晒臺	phrase	regional	opencc	
-曬黑	晒黑	phrase	regional	opencc	
+曬黑	晒黑	phrase	ortho	opencc	
 更多資訊	更多信息	phrase	regional	opencc	
 曹	󹶁	char	ortho	moe	
 曼	㬅	char	ortho	moe	
@@ -1240,6 +1245,7 @@
 服務程序	服務進程	phrase	regional	opencc	
 期	朞	char	ortho	moe	
 朮	术	char	ortho	moe	
+朱儁曉	朱俊曉	phrase	ortho	opencc	
 朱干玉鏚	朱干玉戚	phrase	regional	opencc	
 朵	朶	char	ortho	moe	
 李適	李适	phrase	regional	opencc	
@@ -1464,6 +1470,7 @@
 瀆	凟	char	ortho	moe	
 瀝	󺫼	char	ortho	moe	
 瀰	㳽	char	ortho	moe	
+灑曬	灑晒	phrase	ortho	opencc	
 灑淅	洒淅	phrase	regional	opencc	
 灑濯	洒濯	phrase	regional	opencc	
 灑然	洒然	phrase	regional	opencc	
@@ -2100,6 +2107,7 @@
 蘊	藴	char	ortho	moe	
 蘞	薟	char	ortho	moe	
 蘿	萝	char	ortho	moe	
+虆梩	蔂梩	phrase	ortho	opencc	
 虎	󿲂	char	ortho	moe	
 虔	䖍	char	ortho	moe	
 處	䖏	char	ortho	moe	
@@ -2533,6 +2541,7 @@
 邏輯閘	邏輯門	phrase	regional	opencc	
 邢	郉	char	ortho	moe	
 邪	衺	char	ortho	moe	
+郝隆曬書	郝隆晒書	phrase	ortho	opencc	
 郤	郄	char	ortho	moe	
 部落格	博客	phrase	regional	opencc	
 鄙	啚	char	ortho	moe	
@@ -2622,7 +2631,7 @@
 阨	阸	char	ortho	moe	
 阪	岅	char	ortho	moe	
 阱	穽	char	ortho	moe	
-防曬油	防晒油	phrase	regional	opencc	
+防曬油	防晒油	phrase	ortho	opencc	
 防毒	殺毒	phrase	regional	opencc	
 防水錶	防水表	phrase	regional	opencc	
 阻斷劑	阻滯劑	phrase	regional	opencc	
@@ -2719,6 +2728,7 @@
 韌體	固件	phrase	regional	opencc	
 韓德爾	亨德爾	phrase	regional	opencc	
 韝	鞲	char	ortho	moe	
+韝鞴	鞲鞴	phrase	ortho	opencc	
 韠	鞸	char	ortho	moe	
 韭	韮	char	ortho	moe	
 音效卡	聲卡	phrase	regional	opencc	
@@ -2751,7 +2761,7 @@
 飼	飤	char	ortho	moe	
 餅	餠	char	ortho	moe	
 餈	糍	char	ortho	moe	
-餈粑	糍粑	phrase	regional	opencc	
+餈粑	糍粑	phrase	ortho	opencc	
 養	󽘗	char	ortho	moe	
 餐	湌	char	ortho	moe	
 餐	飡	char	ortho	moe	
@@ -2879,6 +2889,7 @@
 黃	黄	char	ortho	moe	
 黃	󶾄	char	ortho	moe	
 黃巖	黃岩	phrase	regional	opencc	
+黃鍾公	黄鍾公	phrase	ortho	opencc	
 黃體素	孕酮	phrase	regional	opencc	
 黃體素	黃體酮	phrase	regional	opencc	
 默唸	默念	phrase	regional	opencc	

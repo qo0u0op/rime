@@ -40,10 +40,17 @@ python3 generate_flypy_quick5_phrases.py
 
 `essay_report.txt` 會列出：
 
+- `added entries`：相對上游新增的條目數。
 - `pairs applied`：套用成功的對照組。
-- `overshoot`：因低頻同值區（tie block）無法精確切出 3 頁而超過目標的對照組。
+- `conflicts`：同一個字同時是某組的主形、又是另一組的異體（資料層衝突）；
+  這些組會跳過，不強行對齊，避免方向反轉。
+- `overshoot`：因同值區（tie block）無法精確切出 3 頁而超過目標的對照組。
   這是**全域名次**的差距；實際候選清單是同一個 code 的子集，通常會更近。
 - `skipped`：兩邊都不存在於上游，直接跳過。
+- `core characters still at weight 0`：核心字若仍為 0，會列在這裡。
+
+同值區不只出現在 0/1；中頻（例如權重 500 附近）也可能有數百筆同值。
+在「只調整既有權重、不重寫整份排序」的前提下，`overshoot` 是最佳解，不是錯誤。
 
 ## pacman hook
 
@@ -82,8 +89,10 @@ git checkout -- essay.txt flypy_quick5.dict.yaml flypy_quick5_phrases.dict.yaml
 
 ## 已知限制
 
-- 低頻區有大量同值（權重 0、1 各有數千到數萬條），全域名次差無法精確做到 3 頁；
+- 低頻與中頻都有大量同值（權重 0、1 各有數千到數萬條），全域名次差無法精確做到 3 頁；
   報告會列在 `overshoot`。
 - `essay.txt` 是 git tracked；hook 重生後會讓 repo 顯示 modified，需自行 commit。
 - `.gram` 語言模型不會隨 essay 重生。
 - 只處理字形與已存在詞形的權重，不新增未經核可的詞彙。
+- `flypy_quick5_phrases_legacy.tsv` 保留了舊手動詞表的 11,412 個詞形；
+  新產生的詞表若缺少它們，會從這個檔補回。

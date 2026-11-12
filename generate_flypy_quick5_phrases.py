@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from itertools import product
 
@@ -17,6 +18,7 @@ from generate_flypy_quick5 import (
 )
 
 OUTPUT = "flypy_quick5_phrases.dict.yaml"
+LEGACY = "flypy_quick5_phrases_legacy.tsv"
 
 
 def parse_phrases(path: str) -> list[tuple[str, list[str]]]:
@@ -113,6 +115,21 @@ def main() -> int:
 
     rows: list[tuple[str, str]] = []
     seen: set[tuple[str, str]] = set()
+
+    if os.path.exists(LEGACY):
+        with open(LEGACY, encoding="utf-8") as f:
+            for line in f:
+                line = line.rstrip("\n")
+                if not line or line.startswith("#"):
+                    continue
+                parts = line.split("\t")
+                if len(parts) < 2:
+                    continue
+                key = (parts[0], parts[1])
+                if key not in seen:
+                    seen.add(key)
+                    rows.append(key)
+
     for phrase, syllables in phrases:
         for text, code in phrase_codes(phrase, syllables, cangjie, pairs):
             key = (text, code)

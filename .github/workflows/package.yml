@@ -5,9 +5,6 @@ on:
   pull_request:
   workflow_dispatch:
 
-env:
-  OCTAGRAM_TAG: "20260712"
-
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -21,25 +18,12 @@ jobs:
       - name: Test tools
         run: python3 -m unittest discover -s tools/tests -v
 
-      - name: Fetch octagram models
-        run: |
-          mkdir -p .gram
-          for model in \
-            zh-hant-t-essay-bgw \
-            zh-hant-t-essay-bgc \
-            zh-hans-t-essay-bgw \
-            zh-hans-t-essay-bgc; do
-            curl -fL --retry 3 -o ".gram/$model.gram" \
-              "https://github.com/lotem/rime-octagram-data/releases/download/${OCTAGRAM_TAG}/${model}-compact.gram"
-          done
-
       - name: Package Rime files
         run: |
-          for platform in desktop mobile; do
-            for variant in all flypy lisp; do
-              bash tools/package_rime.sh                 "dist/rime-config-$platform-$variant" .gram "$variant" "$platform"
-            done
-          done
+          bash tools/package_rime.sh dist/rime-config-desktop-all all desktop
+          bash tools/package_rime.sh dist/rime-config-desktop-flypy flypy desktop
+          bash tools/package_rime.sh dist/rime-config-desktop-lisp lisp desktop
+          bash tools/package_rime.sh dist/rime-config-mobile-all all mobile
 
       - uses: actions/upload-artifact@v4
         with:
@@ -60,13 +44,3 @@ jobs:
         with:
           name: rime-config-mobile-all
           path: dist/rime-config-mobile-all
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: rime-config-mobile-flypy
-          path: dist/rime-config-mobile-flypy
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: rime-config-mobile-lisp
-          path: dist/rime-config-mobile-lisp

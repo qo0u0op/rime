@@ -81,12 +81,13 @@ Rime 的字頻來自 `essay.txt`。上游 `rime-essay` 以異體字為主（`爲
 模型來自 [lotem/rime-octagram-data](https://github.com/lotem/rime-octagram-data)，
 是 release asset，且被 `.gitignore` 忽略。
 
-Rime 使用者目錄需要：
+模型**不隨套件打包**，請依需求自行下載：
 
-- `zh-hant-t-essay-bgw.gram`
-- `zh-hant-t-essay-bgc.gram`
+- 只要繁體：`hant` 分支／release 的 `zh-hant-t-essay-bgw.gram`、`zh-hant-t-essay-bgc.gram`。
+- 也要簡體：再加 `zh-hans-t-essay-bgw.gram`、`zh-hans-t-essay-bgc.gram`。
 
-（簡體模式另外需要 `zh-hans-*`。）CI 會下載 compact 版並改名成上述檔名。
+放到 Rime 使用者目錄即可。下載位置：
+<https://github.com/lotem/rime-octagram-data>
 
 ## 建置與維護
 
@@ -110,13 +111,16 @@ python3 tools/generate_lisp_quick5_phrases.py
 `rime-essay` 更新時，pacman hook `tools/91-rime-essay-tw.hook` 會自動重生 `essay.txt`，
 只印出提示、不會呼叫 `fcitx5-remote`。
 
-CI（`.github/workflows/package.yml`）會跑測試、下載 octagram 模型，
-並打包 **desktop/mobile × all/flypy/lisp** 六種 artifact：
+CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（不含 `.gram`）：
 
-- `rime-config-desktop-{all,flypy,lisp}`：保留 latex、`cangjie_comment` switch。
-- `rime-config-mobile-{all,flypy,lisp}`：套用 `tools/mobile/` overlay，移除 latex 與
-  `extended_charset`／`ascii_punct`，加入 `trime.custom.yaml`、`hamster.app.yaml`、
-  `cangjie5.schema.yaml`，不打包 `latex.*`。
+- `rime-config-desktop-all`
+- `rime-config-desktop-flypy`
+- `rime-config-desktop-lisp`
+- `rime-config-mobile-all`
+
+桌面版保留 latex、`cangjie_comment` switch；手機版套用 `tools/mobile/` overlay，
+移除 latex 與 `extended_charset`／`ascii_punct`，加入 `trime.custom.yaml`、
+`hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。手機只產 `all`，不再分 flypy／lisp。
 
 手機差異只存在 `tools/mobile/` 與手機 UI 檔，不再需要 `hamster` 分支。
 

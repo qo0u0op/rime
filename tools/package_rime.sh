@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Package only the files Rime needs.
 #
-# Usage: tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile]
+# Usage: tools/package_rime.sh [OUT_DIR] [all|flypy|lisp] [desktop|mobile]
 #   OUT_DIR   default: <repo>/dist/rime-config
-#   GRAM_DIR  directory holding zh-*.gram (default: repo root)
 #   VARIANT   all (default), flypy, or lisp
 #   PLATFORM  desktop (default) or mobile
+#
+# The octagram .gram models are NOT bundled; install them separately from
+# https://github.com/lotem/rime-octagram-data
 #
 # desktop : keeps latex + cangjie_comment switch
 # mobile  : overlays tools/mobile/*.custom.yaml (no latex, no extended_charset/ascii_punct),
@@ -17,9 +19,8 @@ shopt -s nullglob
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT="${1:-$ROOT/dist/rime-config}"
-GRAM_DIR="${2:-$ROOT}"
-VARIANT="${3:-all}"
-PLATFORM="${4:-desktop}"
+VARIANT="${2:-all}"
+PLATFORM="${3:-desktop}"
 
 case "$VARIANT" in
   all|flypy|lisp) ;;
@@ -116,24 +117,6 @@ if [[ "$PLATFORM" == "mobile" ]]; then
 else
   rm -f "$OUT/trime.custom.yaml" "$OUT/hamster.app.yaml" "$OUT/cangjie5.schema.yaml"
 fi
-
-# Grammar models: the full package carries both scripts; single-scheme uses hant.
-if [[ "$VARIANT" == "all" ]]; then
-  for file in "$GRAM_DIR"/*.gram; do
-    cp "$file" "$OUT/"
-  done
-else
-  for file in "$GRAM_DIR"/zh-hant-*.gram; do
-    cp "$file" "$OUT/"
-  done
-fi
-
-for required in zh-hant-t-essay-bgw.gram zh-hant-t-essay-bgc.gram; do
-  if [[ ! -s "$OUT/$required" ]]; then
-    echo "missing required grammar model: $required" >&2
-    exit 1
-  fi
-done
 
 case "$VARIANT" in
   all)

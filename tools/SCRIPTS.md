@@ -239,7 +239,7 @@ weight 可寫絕對值（`20000`）或百分比（`100%`）。目前只有 `參 
 - 《電腦漢字字典》mdx → 只給 `extract_evidence.py`
   <https://fgwang.blogspot.com/2014/11/blog-post.html>
 - `zh-*.gram` → Rime 執行期的八股文模型，來自
-  <https://github.com/lotem/rime-octagram-data> 的 release（CI 下載）。
+  <https://github.com/lotem/rime-octagram-data>；**不隨套件打包**，由使用者依需求下載。
 
 一旦 `essay_pairs.tsv`、`abcn.tsv`、`evidence.tsv` 已產生並 commit，這些下載檔就可以移除；
 hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可。
@@ -265,8 +265,8 @@ hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 只把 Rime 真正需要的檔案複製到一個輸出目錄（CI 的 artifact）。
 
 ```bash
-bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile]
-# 預設 OUT_DIR=dist/rime-config、GRAM_DIR=repo 根目錄、VARIANT=all、PLATFORM=desktop
+bash tools/package_rime.sh [OUT_DIR] [all|flypy|lisp] [desktop|mobile]
+# 預設 OUT_DIR=dist/rime-config、VARIANT=all、PLATFORM=desktop
 ```
 
 - `all`：全部 schema。
@@ -275,6 +275,8 @@ bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile
 - `desktop`：保留 latex；不加 `trime.custom.yaml`／`hamster.app.yaml`。
 - `mobile`：套用 `tools/mobile/*.custom.yaml`，移除 latex 與 `extended_charset`／`ascii_punct`，
   加入 `trime.custom.yaml`、`hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。
+- **不打包 `.gram`**；八股文模型由使用者依需求從
+  <https://github.com/lotem/rime-octagram-data> 下載（hant 或 hant+hans）。
 
 手機 overlay 檔案：
 
@@ -300,8 +302,8 @@ bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile
 `installation.yaml`、`user.yaml`。
 
 CI 在 `.github/workflows/package.yml`：
-先跑測試，再從 `lotem/rime-octagram-data` 的 release 下載 compact 模型並改名，
-最後產生 `desktop/mobile` × `all/flypy/lisp` 六種打包，上傳六個 artifact。
+先跑測試，再產生四個包：desktop 的 `all`／`flypy`／`lisp` 與 mobile 的 `all`。
+`.gram` 不打包，模型由使用者自行下載。
 
 ## 8. 測試
 

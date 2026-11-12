@@ -63,7 +63,9 @@ end
 -- Optional: translate shape-code comments into Chinese Cangjie radicals.
 -- Toggled by the `cangjie_comment` switch (字母 / 字根).
 function cangjie_comment_filter(input, env)
-  if not env.engine.context:get_option('cangjie_comment') then
+  local composing = env.engine.context.input
+  local in_cangjie = composing:sub(1, 2) == '`c'
+  if not in_cangjie or not env.engine.context:get_option('cangjie_comment') then
     for cand in input:iter() do
       yield(cand)
     end
@@ -73,7 +75,7 @@ function cangjie_comment_filter(input, env)
   for cand in input:iter() do
     local genuine = cand:get_genuine()
     local c = genuine and genuine.comment or cand.comment
-    if c and c ~= '' and c:match('^%l%l$') then
+    if c and c ~= '' and c:match('^~?[a-z ]+$') then
       local translated = c:gsub('%l', cangjie)
       if genuine then
         genuine.comment = translated

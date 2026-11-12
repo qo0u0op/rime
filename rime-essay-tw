@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# Regenerate each user's Taiwan-first rime essay after rime-essay updates.
+# Prints a reminder to redeploy; never restarts or reconfigures the IME.
+
+set -euo pipefail
+
+ROOT="${RIME_ESSAY_TW_ROOT:-/home}"
+DRY_RUN="${RIME_ESSAY_TW_DRY_RUN:-0}"
+TARGET_USER=""
+
+while (($#)); do
+  case "$1" in
+    --dry-run)
+      DRY_RUN=1
+      shift
+      ;;
+    --root)
+      ROOT="$2"
+      shift 2
+      ;;
+    --user)
+      TARGET_USER="$2"
+      shift 2
+      ;;
+    -h|--help)
+      echo "usage: rime-essay-tw [--dry-run] [--root PATH] [--user NAME]"
+      exit 0
+      ;;
+    *)
+      echo "unknown argument: $1" >&2
+      exit 2
+      ;;
+  esac
+done
+
+if [[ -n "$TARGET_USER" ]]; then
+  homes=("$ROOT/$TARGET_USER")
+else
+  homes=("$ROOT"/*)
+fi
+
+found=0
+for home in "${homes[@]}"; do
+  rime="$home/.local/share/fcitx5/rime"
+  [[ -d "$rime" ]] || continue
+  found=1
+  user="$(basename "$home")"
+
+  if [[ "$DRY_RUN" == "1" ]]; then
+    echo "[rime-essay-tw] 已更新 $rime/essay.txt（dry-run，未寫入）"
+    echo "[rime-essay-tw] 請重新部署 Rime（重新啟動 fcitx5，或使用選單的「部署」）"
+    continue
+  fi
+
+  if [[ ! -f "$rime/generate_essay.py" ]]; then
+    echo "[rime-essay-tw] 跳過 $rime（找不到 generate_essay.py）"
+    continue
+  fi
+
+  runuser -u "$user" -- python3 "$rime/generate_essay.py" \
+    --essay /usr/share/rime-data/essay.txt \
+    --pairs "$rime/essay_pairs.tsv" \
+    --out "$rime/essay.txt" \
+    --report "$rime/essay_report.txt"
+
+  echo "[rime-essay-tw] 已更新 $rime/essay.txt"
+  echo "[rime-essay-tw] 請重新部署 Rime（重新啟動 fcitx5，或使用選單的「部署」）"
+done
+
+if [[ "$found" == "0" ]]; then
+  echo "[rime-essay-tw] 找不到 rime 目錄（$ROOT）"
+fi
+
+exit 0

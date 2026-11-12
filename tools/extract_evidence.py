@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Extract variant evidence from the 電腦漢字字典 mdx for the approved pairs.
 
+Source: 電腦漢字字典（fgwang）
+  https://fgwang.blogspot.com/2014/11/blog-post.html
+
 Requires the `readmdict` package (or set PYTHONPATH to a checkout).
 The output is a review aid; it does not change ranking.
 """

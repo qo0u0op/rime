@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Seed variant pairs from OpenCC.
 
+Source: OpenCC
+  https://github.com/BYVoid/OpenCC
+
 Single characters come from OpenCC's t2tw (orthographic variants).
 Multi-character phrases only take the regional branch (t2tw unchanged,
 s2twp changed), because phrase orthography is generated later by applying

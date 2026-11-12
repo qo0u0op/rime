@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Extract variant pairs from the MOE dictionary xlsx export."""
+"""Extract variant pairs from the MOE dictionary xlsx export.
+
+Source: 教育部《重編國語辭典》資源
+  https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/index.html
+"""
 
 from __future__ import annotations
 

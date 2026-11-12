@@ -142,6 +142,7 @@ note: .gram is not regenerated
 ### `extract_moe_pairs.py` + `xlsx_rows.py`
 
 - 輸入：教育部《重編國語辭典》xlsx（Downloads）。
+- 來源：<https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/index.html>
 - 輸出：`essay_pairs.tsv`（auto）與 `essay_pairs_review.tsv`（review）。
 - 解析 `字詞名`、`多音排序`、`注音一式`、`釋義`、`異體字`。
 - `異體字` 欄是旗標；真正的正字在 `釋義` 的 `「X」的異體字`。
@@ -158,6 +159,7 @@ note: .gram is not regenerated
 ### `extract_opencc_pairs.py`
 
 - 輸入：上游 essay、`luna_pinyin.dict.yaml`、已核可的 `essay_pairs.tsv`（提供字對）。
+- 來源：<https://github.com/BYVoid/OpenCC>
 - 需要 Python `opencc`。
 - 輸出：`essay_pairs_opencc.tsv`（auto）與 `essay_pairs_opencc_review.tsv`（一對多）。
 - 單字只取 `t2tw` 的 ortho 分支；多字詞只取 `t2tw` 不變、`s2twp` 有變的 regional 分支。
@@ -166,12 +168,14 @@ note: .gram is not regenerated
 ### `extract_abcn.py`
 
 - 輸入：《臺灣TW-ABCN正字甲乙丙表》xlsx（Downloads）。
+- 來源：<https://github.com/TraditionalChinese/TW-ABCN>
 - 輸出：`tools/abcn.tsv`（`char / A|B|C|N / 字號`）。
 - 只讀 ABCN 工作表；`C` 類與 CJK 增補區會被 `generate_essay.py` 壓到 `rare_cap`。
 
 ### `extract_evidence.py`
 
 - 輸入：《電腦漢字字典》mdx（OneDrive/Documents）。
+- 來源：<https://fgwang.blogspot.com/2014/11/blog-post.html>
 - 需要 `readmdict`。
 - 輸出：
   - `evidence.tsv`：`preferred / variant / moe(yes|no) / sources / note`
@@ -228,8 +232,11 @@ weight 可寫絕對值（`20000`）或百分比（`100%`）。目前只有 `參 
 以下**不在執行期使用**，只在重新抽取對照資料時需要：
 
 - 教育部《重編國語辭典》xlsx → 只給 `extract_moe_pairs.py`
+  <https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/index.html>
 - 《臺灣TW-ABCN正字甲乙丙表》xlsx → 只給 `extract_abcn.py`
+  <https://github.com/TraditionalChinese/TW-ABCN>
 - 《電腦漢字字典》mdx → 只給 `extract_evidence.py`
+  <https://fgwang.blogspot.com/2014/11/blog-post.html>
 
 一旦 `essay_pairs.tsv`、`abcn.tsv`、`evidence.tsv` 已產生並 commit，這些下載檔就可以移除；
 hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可。

@@ -99,8 +99,11 @@ grep '^三' tools/moe_check.tsv
 以下只用來**重新抽取**對照資料，Rime 與 hook 都不會讀：
 
 - 教育部《重編國語辭典》xlsx → `extract_moe_pairs.py`
+  <https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/index.html>
 - 《臺灣TW-ABCN正字甲乙丙表》xlsx → `extract_abcn.py`
+  <https://github.com/TraditionalChinese/TW-ABCN>
 - 《電腦漢字字典》mdx → `extract_evidence.py`
+  <https://fgwang.blogspot.com/2014/11/blog-post.html>
 
 `essay_pairs.tsv`、`abcn.tsv`、`evidence.tsv` 產生並 commit 後，原始 xlsx／mdx 就可以移除。
 `opencc`、`readmdict` 也只在抽取時需要。

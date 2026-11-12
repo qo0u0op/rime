@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Extract the TW-ABCN standard-character classes from the xlsx export."""
+"""Extract the TW-ABCN standard-character classes from the xlsx export.
+
+Source: TW-ABCN（臺灣正字甲乙丙表）
+  https://github.com/TraditionalChinese/TW-ABCN
+"""
 
 from __future__ import annotations
 

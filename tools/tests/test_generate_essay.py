@@ -30,6 +30,18 @@ class TestApplyPairs(unittest.TestCase):
         out, _ = apply_pairs(essay, [pair("主", "缺")], variant_cap=1000)
         self.assertEqual(out["缺"], 1000.0)
 
+    def test_common_floor_is_above_variant_band(self):
+        essay = {"主": 5000.0, "異": 4000.0, "低": 50.0}
+        out, _ = apply_pairs(
+            essay,
+            [pair("主", "異")],
+            common_chars={"主", "低"},
+            variant_cap=1000,
+            rare_cap=100,
+        )
+        self.assertEqual(out["異"], 1000.0)
+        self.assertEqual(out["低"], 1001.0)
+
     def test_rare_variant_uses_rare_cap(self):
         essay = {"主": 5000.0, "罕": 4000.0, "x": 10.0}
         out, _ = apply_pairs(

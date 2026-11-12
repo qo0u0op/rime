@@ -96,6 +96,7 @@ def main(argv: list[str] | None = None) -> int:
                 f"warning: pairs file is empty: {args.pairs}",
                 file=sys.stderr,
             )
+    common_chars: set[str] = set()
     rare_chars: set[str] = set()
     if os.path.exists(args.abcn):
         with open(args.abcn, encoding="utf-8") as f:
@@ -103,6 +104,8 @@ def main(argv: list[str] | None = None) -> int:
                 if not line or line.startswith("#"):
                     continue
                 parts = line.rstrip("\n").split("\t")
+                if len(parts) >= 2 and parts[1] in ("A", "B", "N"):
+                    common_chars.add(parts[0])
                 if len(parts) >= 2 and parts[1] == "C":
                     rare_chars.add(parts[0])
     else:
@@ -139,6 +142,7 @@ def main(argv: list[str] | None = None) -> int:
         page_size=args.page_size,
         gap_pages=args.gap_pages,
         phrase_gap_pages=args.phrase_gap_pages,
+        common_chars=common_chars,
         rare_chars=rare_chars,
         variant_cap=args.variant_cap,
         rare_cap=args.rare_cap,

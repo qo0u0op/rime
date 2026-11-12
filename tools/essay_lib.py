@@ -145,14 +145,21 @@ def derive_phrase_pairs(essay: dict[str, float], pairs: list[Pair]) -> list[Pair
 def apply_char_bands(
     essay: dict[str, float],
     pairs: list[Pair],
+    common_chars: set[str] | None = None,
     rare_chars: set[str] | None = None,
     variant_cap: float = 1000.0,
     rare_cap: float = 100.0,
 ) -> dict[str, float]:
     """Put orthographic variants in a band below common chars and above rare ones."""
     out = dict(essay)
+    common = common_chars or set()
     rare = rare_chars or set()
     protected = {p.preferred for p in pairs}
+    variant_chars = {
+        p.variant
+        for p in pairs
+        if p.scope == "char" and p.type == "ortho"
+    }
 
     for p in pairs:
         if p.scope != "char" or p.type != "ortho":
@@ -171,6 +178,13 @@ def apply_char_bands(
         if char in out and out[char] > rare_cap:
             out[char] = rare_cap
 
+    floor = variant_cap + 1.0
+    for char in common:
+        if char in variant_chars or char in rare or char in protected:
+            continue
+        if char in out and out[char] < floor:
+            out[char] = floor
+
     return out
 
 
@@ -180,6 +194,7 @@ def apply_pairs(
     page_size: int = 5,
     gap_pages: int = 3,
     phrase_gap_pages: int = 20,
+    common_chars: set[str] | None = None,
     rare_chars: set[str] | None = None,
     variant_cap: float = 1000.0,
     rare_cap: float = 100.0,
@@ -262,7 +277,12 @@ def apply_pairs(
             break
 
     out = apply_char_bands(
-        out, active, rare_chars, variant_cap=variant_cap, rare_cap=rare_cap
+        out,
+        active,
+        common_chars,
+        rare_chars,
+        variant_cap=variant_cap,
+        rare_cap=rare_cap,
     )
 
     final = RankTable(out.values())

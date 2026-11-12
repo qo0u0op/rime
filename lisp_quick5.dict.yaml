@@ -10863,7 +10863,7 @@ import_tables:
 叁	cs/im	0%
 叁	ct/im	0%
 叁	et/im	0%
-叁	ss/im	100
+叁	ss/im	100%
 叁	vt/im	0%
 参	cs/ih	90.45%
 参	ct/ih	0.01%
@@ -10873,7 +10873,7 @@ import_tables:
 參	cs/ih	90.45%
 參	ct/ih	0.01%
 參	et/ih	8.49%
-參	ss/ih	20000
+參	ss/ih	100%
 參	vt/ih	8.49%
 叄	ss/im
 叅	cs/ip
@@ -15489,8 +15489,8 @@ import_tables:
 弋	yi/ip
 弌	yi/im
 弍	uu/im
-弎	sa/im	100
-弎	ss/im	100
+弎	sa/im
+弎	ss/im
 式	ei/im
 式	vi/im
 弐	uu/mm

@@ -762,6 +762,9 @@ preferred	variant	reading	lisp_input	flypy_input	lisp_preferred	lisp_variant	fly
 蘆	芦	lu	lu	lu	lu/tt	lu/ts	lu/tt	lu/ts
 筍	笋	sun	sd	sy	sd/ha	sd/hk	sy/ha	sy/hk
 矩	榘	ju	ju	ju	ju/os	ju/od	ju/os	ju/od
+嚲	軃	duo	do	do	do/yj	do/hj	do/yj	do/hj
+顎	齶	e	ue	ee	ue/rc	ue/ys	ee/rc	ee/ys
+齶	腭	e	ue	ee	ue/ys	ue/bs	ee/ys	ee/bs
 髓	髄	sui	sv	sv	sv/bb	sv/bb	sv/bb	sv/bb
 疆	畺	jiang	jg	jl	jg/nm	jg/mm	jl/nm	jl/mm
 棕	㯶	zong	zh	zs	zh/df	zh/de	zs/df	zs/de
@@ -978,7 +981,6 @@ preferred	variant	reading	lisp_input	flypy_input	lisp_preferred	lisp_variant	fly
 禱	祷	dao	dc	dc	dc/ii	dc/ii	dc/ii	dc/ii
 簍	篓	lou	lr	lz	lr/hv	lr/hv	lz/hv	lz/hv
 嶄	嶃	chan	is	ij	is/ul	is/ul	ij/ul	ij/ul
-顎	齶	e	ue	ee	ue/rc	ue/ys	ee/rc	ee/ys
 髯	髥	ran	rs	rj	rs/sb	rs/sm	rj/sb	rj/sm
 匆	忩	cong	ch	cs	ch/pk	ch/cp	cs/pk	cs/cp
 匆	怱	cong	ch	cs	ch/pk	ch/pp	cs/pk	cs/pp
@@ -1097,7 +1099,6 @@ preferred	variant	reading	lisp_input	flypy_input	lisp_preferred	lisp_variant	fly
 葒	葓	hong	hh	hs	hh/tm	hh/tc	hs/tm	hs/tc
 謫	讁	di	di	di	di/yb	di/yb	di/yb	di/yb
 謫	讁	zhe	ae	ve	ae/yb	ae/yb	ve/yb	ve/yb
-齶	腭	e	ue	ee	ue/ys	ue/bs	ee/ys	ee/bs
 悴	顇	cui	cv	cv	cv/pj	cv/yc	cv/pj	cv/yc
 髡	髠	kun	kd	ky	kd/su	kd/sn	ky/su	ky/sn
 麴	麯	qu	qu	qu	qu/jd	qu/jw	qu/jd	qu/jw
@@ -1337,7 +1338,6 @@ preferred	variant	reading	lisp_input	flypy_input	lisp_preferred	lisp_variant	fly
 糨	糡	jiang	jg	jl	jg/fi	jg/fu	jl/fi	jl/fu
 糨	糡	qiang	qg	ql	qg/fi	qg/fu	ql/fi	ql/fu
 鞗	䩦	tiao	tp	tn	tp/oj	tp/oj	tn/oj	tn/oj
-嚲	軃	duo	do	do	do/yj	do/hj	do/yj	do/hj
 斲	斵	zhuo	ao	vo	ao/rl	ao/hl	vo/rl	vo/hl
 醾	釄	mi	mi	mi	mi/md	mi/my	mi/md	mi/my
 鴃	鴂	ju	ju	ju	ju/hk	ju/df	ju/hk	ju/df

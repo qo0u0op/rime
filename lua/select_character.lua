@@ -94,6 +94,15 @@ local function select_character(key, env)
    local last_key = config:get_string('key_binder/select_last_character') or 'greater'
 
    local commit_text = context:get_commit_text()
+   local selected = context:get_selected_candidate()
+   local selected_len = selected and selected.text and
+       (utf8.len(selected.text) or #selected.text) or 0
+
+   -- Only select from a multi-character phrase. For a single-character
+   -- candidate, fall through so < and > can still open the punctuation menu.
+   if (selected_len <= 1) then
+      return 2 -- kNoop
+   end
 
    if (key_matches(key, first_key) and commit_text ~= "") then
       engine:commit_text(get_commit_text(context, first_character))

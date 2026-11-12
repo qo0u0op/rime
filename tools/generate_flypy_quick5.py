@@ -21,6 +21,7 @@ LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
 CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
 OUTPUT = os.path.join(ROOT, "flypy_quick5.dict.yaml")
 READING_WEIGHTS = os.path.join(HERE, "reading_weights.tsv")
+PAIRS = os.path.join(HERE, "essay_pairs.tsv")
 
 
 def algebra_rules():
@@ -157,12 +158,29 @@ def load_reading_weights(path: str) -> dict[tuple[str, str], str]:
     return overrides
 
 
+def load_variants(path: str) -> set[str]:
+    """Characters that should use the essay variant band, not luna percentages."""
+    variants: set[str] = set()
+    if not os.path.exists(path):
+        return variants
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            if not line or line.startswith("#"):
+                continue
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) >= 4 and parts[2] == "char" and parts[3] == "ortho":
+                variants.add(parts[1])
+    return variants
+
+
 def generate_char_entries(
     luna: dict[str, list[tuple[str, str]]],
     cangjie: dict[str, list[tuple[str, str]]],
     overrides: dict[tuple[str, str], str] | None = None,
+    variants: set[str] | None = None,
 ) -> list[tuple[str, str, str]]:
     overrides = overrides or {}
+    variants = variants or set()
     entries: list[tuple[str, str, str]] = []
     seen: set[tuple[str, str]] = set()
     for char in sorted(set(luna) & set(cangjie)):
@@ -171,6 +189,8 @@ def generate_char_entries(
             continue
         for pinyin, weight in luna[char]:
             weight = overrides.get((char, pinyin), weight)
+            if (char, pinyin) not in overrides and char in variants:
+                weight = ""
             for dp in sorted(pinyin_to_flypy(pinyin)):
                 for quick in sorted(quicks):
                     key = (char, f"{dp}/{quick}")
@@ -188,7 +208,8 @@ def main() -> int:
     cangjie = parse_dict(CANGJIE5)
 
     overrides = load_reading_weights(READING_WEIGHTS)
-    entries = generate_char_entries(luna, cangjie, overrides)
+    variants = load_variants(PAIRS)
+    entries = generate_char_entries(luna, cangjie, overrides, variants)
     entries.sort(key=lambda row: (row[0], row[1]))
 
     header = f"""# Rime dictionary

@@ -7299,21 +7299,21 @@ import_tables:
 么	ma/hi	0.04%
 么	me/hi	1%
 么	yc/hi	98.93%
-义	ia/ik	99%
-义	yi/ik	1%
+义	ia/ik
+义	yi/ik
 乊	yi/hc
 之	vi/io
 乌	wu/pm
 乍	va/os
 乎	hu/hd
 乏	fa/ho
-乐	le/hd	95%
-乐	yt/hd	5%
+乐	le/hd
+乐	yt/hd
 乑	vs/oo
 乒	pk/oh
 乓	ph/oi
-乔	jn/hl	0%
-乔	qn/hl	100%
+乔	jn/hl
+乔	qn/hl
 乕	hu/hb
 乖	gk/hp
 乗	ig/ht
@@ -7353,8 +7353,8 @@ import_tables:
 乮	mc/hn
 乯	hu/hn
 买	md/nk
-乱	lj/hu	0%
-乱	lr/hu	100%
+乱	lj/hu
+乱	lr/hu
 乲	zi/in
 乳	ru/bu
 乴	xt/qn
@@ -7401,7 +7401,7 @@ import_tables:
 于	xv/md	0%
 于	yu/md	100%
 于	yv/md	100%
-亏	kv/ms	0%
+亏	kv/ms
 亏	xu/ms
 亏	xv/ms
 亏	yu/ms
@@ -7487,8 +7487,8 @@ import_tables:
 仂	li/os
 仃	dk/on
 仄	ze/mo
-仅	fu/oe	100%
-仅	jb/oe	0%
+仅	fu/oe
+仅	jb/oe
 仆	fu/oy
 仆	pu/oy
 仇	iz/on	83.84%
@@ -7501,8 +7501,8 @@ import_tables:
 仌	bk/oo
 仌	nk/oo
 仍	rg/os
-从	cs/oo	100%
-从	zs/oo	0%
+从	cs/oo
+从	zs/oo
 仏	bi/oi
 仏	fo/oi
 仏	fu/oi
@@ -7606,9 +7606,9 @@ import_tables:
 众	vs/oo
 优	yz/ou
 伙	ho/of
-会	gv/oi	0%
-会	hv/oi	99.98%
-会	kk/oi	0.02%
+会	gv/oi
+会	hv/oi
+会	kk/oi
 伛	kz/ok
 伛	yu/ok
 伛	yv/ok
@@ -7800,8 +7800,8 @@ import_tables:
 依	yi/ov
 侞	ru/or
 侟	jm/od
-侠	jx/ot	0%
-侠	xx/ot	100%
+侠	jx/ot
+侠	xx/ot
 価	ga/ow
 価	jx/ow
 侢	dd/ob
@@ -8088,8 +8088,8 @@ import_tables:
 偹	bw/ow
 偺	za/oa
 偺	zj/oa
-偻	lv/ov	36.36%
-偻	lz/ov	63.64%
+偻	lv/ov
+偻	lz/ov
 偼	jp/oo
 偽	ww/of
 偾	ff/oo
@@ -8364,8 +8364,8 @@ import_tables:
 兏	vh/mu
 児	er/lu
 児	ni/lu
-兑	dv/cu	100%
-兑	yt/cu	0%
+兑	dv/cu
+兑	yt/cu
 兒	er/hu	100%
 兒	ni/hu	0%
 兓	jb/mu
@@ -8430,8 +8430,8 @@ import_tables:
 冂	js/ls
 冃	mc/bm
 冄	rj/bm
-内	na/ob	0%
-内	nw/ob	100%
+内	na/ob
+内	nw/ob
 円	yr/bm
 冇	mc/kb
 冇	mz/kb
@@ -8441,8 +8441,8 @@ import_tables:
 冊	ce/bt	100%
 冊	id/bt	0%
 冋	hv/br
-册	ce/bm	100%
-册	id/bm	0%
+册	ce/bm
+册	id/bm
 再	zd/mb
 冎	go/bb
 冎	gx/bb
@@ -8654,8 +8654,8 @@ import_tables:
 制	vi/hn
 刷	ux/sn
 券	qr/fh
-刹	ia/kn	7.58%
-刹	ua/kn	92.42%
+刹	ia/kn
+刹	ua/kn
 刺	ci/dn
 刻	ke/yn
 刼	jp/gi
@@ -8716,9 +8716,9 @@ import_tables:
 剥	bc/nn	2.33%
 剥	bo/nn	97.67%
 剦	yj/kn
-剧	ji/sn	0%
-剧	ju/sn	100%
-剧	jv/sn	100%
+剧	ji/sn
+剧	ju/sn
+剧	jv/sn
 剨	ho/qn
 剩	ug/hn
 剪	jm/th
@@ -8892,8 +8892,8 @@ import_tables:
 勰	xp/kp
 勱	md/ts
 勲	xy/hf
-勳	xs/hs	0%
-勳	xy/hs	100%
+勳	xs/hs
+勳	xy/hs
 勴	lv/ys
 勵	li/ms
 勶	ie/hs
@@ -8989,11 +8989,11 @@ import_tables:
 匷	qv/sg
 匸	xi/mv
 匹	pi/sc
-区	gz/sk	0%
-区	ou/sk	0.09%
-区	oz/sk	0.09%
-区	qu/sk	99.91%
-区	qv/sk	99.91%
+区	gz/sk
+区	ou/sk
+区	oz/sk
+区	qu/sk
+区	qv/sk
 医	yi/sk
 匼	aj/sr
 匼	an/sr
@@ -9030,9 +9030,9 @@ import_tables:
 卒	zu/yj	98.12%
 卓	vo/yj
 協	xp/js
-单	dj/cj	99.52%
-单	ij/cj	0.10%
-单	uj/cj	0.38%
+单	dj/cj
+单	ij/cj
+单	uj/cj
 卖	md/jk
 南	na/jj	0%
 南	nj/jj	100%
@@ -9117,8 +9117,8 @@ import_tables:
 厈	an/mj
 厈	hj/mj
 厈	yj/mj
-厉	ld/ms	0%
-厉	li/ms	100%
+厉	ld/ms
+厉	li/ms
 厊	ya/mh
 压	ya/mi
 厌	yj/mk
@@ -9160,8 +9160,8 @@ import_tables:
 厣	yj/ml
 厤	li/md
 厥	jt/mo
-厦	ua/me	41.78%
-厦	xx/me	58.22%
+厦	ua/me
+厦	xx/me
 厧	dm/mc
 厨	iu/mi
 厩	ji/mu
@@ -9200,14 +9200,14 @@ import_tables:
 厾	du/ni
 县	xm/bi	99.88%
 叀	vr/ji
-叁	cf/im	0%
-叁	cj/im	0%
-叁	sj/im	100%
-叁	uf/im	0%
-参	cf/ih	0.01%
-参	cj/ih	90.45%
-参	sj/ih	0.01%
-参	uf/ih	8.49%
+叁	cf/im
+叁	cj/im
+叁	sj/im
+叁	uf/im
+参	cf/ih
+参	cj/ih
+参	sj/ih
+参	uf/ih
 參	cf/ih	0.01%
 參	cj/ih	90.45%
 參	sj/ih	100%
@@ -9249,8 +9249,8 @@ import_tables:
 叝	gc/ge
 叞	ww/se
 叟	sz/he
-叠	da/em	1%
-叠	dp/em	99%
+叠	da/em
+叠	dp/em
 叡	rv/ye
 叢	cs/te
 口	kz/rr
@@ -9284,8 +9284,8 @@ import_tables:
 叵	jv/sr	0%
 叵	po/sr	100%
 叵	pz/sr	0%
-叶	xp/rj	100%
-叶	ye/rj	0%
+叶	xp/rj
+叶	ye/rj
 号	hc/rs
 司	si/sr
 叹	tj/re
@@ -9327,8 +9327,8 @@ import_tables:
 向	xl/hr
 吒	ii/rp
 吒	va/rp
-吓	he/ry	0.22%
-吓	xx/ry	99.78%
+吓	he/ry
+吓	xx/ry
 吔	ye/rd
 吕	lv/rr
 吖	aa/rl
@@ -10670,7 +10670,7 @@ import_tables:
 垺	fu/gd
 垺	pw/gd
 垻	ba/gc
-垻	bw/gc	0%
+垻	bw/gc
 垼	yi/hg
 垽	yb/eg
 垾	aj/gj
@@ -11086,8 +11086,8 @@ import_tables:
 声	ug/gh
 壱	yi/gp
 売	md/gu
-壳	ke/gn	97.56%
-壳	qn/gn	2.44%
+壳	ke/gn
+壳	qn/gn
 壳	qt/gn
 壴	vu/gt
 壵	vl/gg
@@ -11392,8 +11392,8 @@ import_tables:
 姕	zi/yv
 姖	ju/vs
 姖	jv/vs
-姗	uj/vm	100%
-姗	xm/vm	0%
+姗	uj/vm
+姗	xm/vm
 姘	pb/vt
 姙	rf/vg
 姚	yc/vo
@@ -12239,9 +12239,9 @@ import_tables:
 屈	qu/su	100%
 屈	qv/su	100%
 屉	ti/st
-届	jp/sw	100%
-届	qu/sw	0%
-届	qv/sw	0%
+届	jp/sw
+届	qu/sw
+届	qv/sw
 屋	wu/sg
 屌	dn/sb
 屍	ui/sp
@@ -12267,8 +12267,8 @@ import_tables:
 屜	ti/st
 屜	xp/st
 屝	fw/sy
-属	uu/sb	99.93%
-属	vu/sb	0.07%
+属	uu/sb
+属	vu/sb
 屟	dp/sd
 屟	xp/sd
 屠	iu/sa	0%
@@ -12990,8 +12990,8 @@ import_tables:
 庁	tk/in
 庂	ze/io
 広	gl/ii
-庄	pg/ig	98%
-庄	vl/ig	2%
+庄	pg/ig
+庄	vl/ig
 庅	mo/ii
 庆	qk/ik
 庇	bi/ip
@@ -13152,9 +13152,9 @@ import_tables:
 廾	gs/jj
 廾	nm/jj
 廿	nm/tt
-开	jm/mt	95%
-开	kd/mt	0%
-开	qm/mt	5%
+开	jm/mt
+开	kd/mt
+开	qm/mt
 弁	bm/it
 弁	pj/it
 异	yi/rt
@@ -13229,10 +13229,10 @@ import_tables:
 強	jl/ni	0.01%
 強	ql/ni	99.99%
 弸	bg/nb
-弹	dj/nj	22.28%
-弹	tj/nj	77.72%
-强	jl/ni	0.01%
-强	ql/ni	99.99%
+弹	dj/nj
+弹	tj/nj
+强	jl/ni
+强	ql/ni
 弻	bi/nn
 弼	bi/nn
 弽	ue/nd
@@ -13490,8 +13490,8 @@ import_tables:
 忾	kd/pn
 忾	xi/pn
 忿	ff/cp
-怀	fu/pf	100%
-怀	hk/pf	0%
+怀	fu/pf
+怀	hk/pf
 态	td/kp
 怂	ss/op
 怃	wu/pu
@@ -13535,7 +13535,7 @@ import_tables:
 怛	dj/pm
 怛	tj/pm
 怜	lk/pi
-怜	lm/pi	0%
+怜	lm/pi
 思	sd/wp	0%
 思	si/wp	100%
 怞	vz/pw
@@ -14203,9 +14203,9 @@ import_tables:
 戌	xv/im
 戍	uu/ii
 戎	rs/ij
-戏	hu/ei	0%
-戏	hv/ei	0%
-戏	xi/ei	100%
+戏	hu/ei
+戏	hv/ei
+戏	xi/ei
 成	ig/is
 我	ee/hi	0%
 我	wo/hi	100%
@@ -15486,10 +15486,10 @@ import_tables:
 敮	xx/me
 敯	hy/re
 敯	mb/re
-数	cu/fk	0%
-数	su/fk	0%
-数	uo/fk	0.50%
-数	uu/fk	99.50%
+数	cu/fk
+数	su/fk
+数	uo/fk
+数	uu/fk
 敱	ad/ue
 敱	ai/ue
 敱	vu/ue
@@ -16086,8 +16086,8 @@ import_tables:
 札	va/du
 朮	uu/ic	20%
 朮	vu/ic	80%
-术	uu/id	20%
-术	vu/id	80%
+术	uu/id
+术	vu/id
 朰	mu/dn
 朱	uu/hd	0%
 朱	vu/hd	100%
@@ -16115,8 +16115,8 @@ import_tables:
 杁	ru/do
 杂	do/kd	100%
 杂	za/kd	0%
-权	qr/de	0%
-权	uu/de	100%
+权	qr/de
+权	uu/de
 杄	qm/dj
 杅	yu/dd
 杅	yv/dd
@@ -17835,9 +17835,9 @@ import_tables:
 汞	hs/me	0%
 江	jl/em
 池	ii/ed
-污	wu/es	100%
-污	yu/es	0%
-污	yv/es	0%
+污	wu/es
+污	yu/es
+污	yv/es
 汢	tu/eg
 汣	jq/eo
 汤	th/eh	99.94%
@@ -17938,8 +17938,8 @@ import_tables:
 沞	za/eb
 沟	gz/ei
 沠	lq/eo
-没	mo/ee	0.11%
-没	mw/ee	99.89%
+没	mo/ee
+没	mw/ee
 沢	ze/eo
 沣	fg/ej
 沤	ou/ek
@@ -18166,8 +18166,8 @@ import_tables:
 浂	yi/ek
 浃	jx/et
 浄	jk/ed
-浅	jm/ej	0.24%
-浅	qm/ej	99.76%
+浅	jm/ej
+浅	qm/ej
 浆	jl/le
 浇	jn/eu
 浈	vf/eo
@@ -19201,8 +19201,8 @@ import_tables:
 灬	ho/hf
 灭	mp/mf
 灮	gl/fu
-灯	dg/fn	1%
-灯	dk/fn	99%
+灯	dg/fn
+灯	dk/fn
 灰	hv/kf
 灱	dc/fh
 灱	qp/fh
@@ -19527,7 +19527,7 @@ import_tables:
 煔	uj/fr
 煕	xi/sf
 煖	nr/fe
-煖	xr/fe	0.1%
+煖	xr/fe
 煗	nr/fk
 煗	xr/fk
 煘	ij/fr
@@ -20358,9 +20358,9 @@ import_tables:
 珌	bi/mh
 珍	vf/mh
 珎	vf/mf
-珏	jt/mi	100%
-珏	yu/mi	0%
-珏	yv/mi	0%
+珏	jt/mi
+珏	yu/mi
+珏	yv/mi
 珐	fa/mi
 珑	ls/mp
 珒	jb/mq
@@ -21360,8 +21360,8 @@ import_tables:
 盔	hv/kt	0%
 盔	kv/kt	100%
 盕	fj/et
-盖	gd/tt	99.91%
-盖	ge/tt	0.09%
+盖	gd/tt
+盖	ge/tt
 盖	he/tt
 盗	dc/it
 盘	pj/ht
@@ -21501,9 +21501,9 @@ import_tables:
 眾	vs/wo
 眿	md/be
 眿	mo/be
-着	vc/tu	4.25%
-着	ve/tu	93.74%
-着	vo/tu	2.02%
+着	vc/tu
+着	ve/tu
+着	vo/tu
 睁	vg/bd
 睂	mw/ou
 睃	jy/be
@@ -21937,8 +21937,8 @@ import_tables:
 硾	vv/mm
 硿	ks/mm
 碀	cg/md
-碁	ji/tr	0%
-碁	qi/tr	100%
+碁	ji/tr
+碁	qi/tr
 碂	cs/mf
 碂	zs/mf
 碃	qk/mb
@@ -22431,8 +22431,8 @@ import_tables:
 秮	td/hr
 积	ji/hc	0%
 积	vi/hc
-称	if/hf	2.48%
-称	ig/hf	97.52%
+称	if/hf
+称	ig/hf
 秱	ts/hr
 秲	vi/hi
 秳	hx/hr
@@ -24193,8 +24193,8 @@ import_tables:
 罠	mb/wp
 罡	gh/wm	100%
 罡	vg/wm	0%
-罢	ba/wi	100%
-罢	pi/wi	0%
+罢	ba/wi
+罢	pi/wi
 罣	gx/wg
 罤	ky/wh
 罤	ti/wh
@@ -24784,8 +24784,8 @@ import_tables:
 脇	xp/bs
 脈	md/bv	95.29%
 脈	mo/bv	4.71%
-脉	md/be	95.29%
-脉	mo/be	4.71%
+脉	md/be
+脉	mo/be
 脊	ji/fb
 脋	xp/sb
 脌	nb/bq
@@ -24806,8 +24806,8 @@ import_tables:
 脘	gr/bu
 脘	wj/bu
 脙	qq/be
-脚	jn/bl	99.91%
-脚	jt/bl	0.09%
+脚	jn/bl
+脚	jt/bl
 脛	jk/bm
 脜	rz/bu
 脝	hg/bn
@@ -25333,8 +25333,8 @@ import_tables:
 芤	kz/tu
 芥	gd/tl	9.59%
 芥	jp/tl	90.41%
-芦	hu/ts	99%
-芦	lu/ts	1%
+芦	hu/ts
+芦	lu/ts
 芧	vu/tn
 芧	xu/tn
 芧	xv/tn
@@ -25508,9 +25508,9 @@ import_tables:
 茩	gz/tr
 茪	gl/tu
 茫	mh/tv
-茬	ia/tg	100%
-茬	ii/tg	0%
-茬	zi/tg	0%
+茬	ia/tg
+茬	ii/tg
+茬	zi/tg
 茭	jn/tk
 茮	jn/tf
 茮	nn/tf
@@ -25581,7 +25581,7 @@ import_tables:
 荢	yu/td
 荢	yv/td
 荣	ce/td
-荣	rs/td	0%
+荣	rs/td
 荤	hy/tq
 荤	xy/tq
 荥	xk/te	46.15%
@@ -26659,7 +26659,7 @@ import_tables:
 虻	mg/lv
 虼	ge/ln
 虽	sv/ri
-虾	xx/ly	95.70%
+虾	xx/ly
 虿	id/mi
 蚀	ui/ni
 蚁	yi/lk
@@ -26689,10 +26689,10 @@ import_tables:
 蚔	di/lp
 蚔	ii/lp
 蚔	qi/lp
-蚕	cj/hi	1%
-蚕	cj/mi	1%
-蚕	tm/hi	99%
-蚕	tm/mi	99%
+蚕	cj/hi
+蚕	cj/mi
+蚕	tm/hi
+蚕	tm/mi
 蚖	yr/lu
 蚗	jt/lk
 蚘	hv/lu
@@ -27733,8 +27733,8 @@ import_tables:
 覅	fn/mh
 覆	fu/me
 覇	ba/mb
-覈	he/mk	99.92%
-覈	jn/mk	0.08%
+覈	he/mk
+覈	jn/mk
 覉	ji/mr
 覊	ji/mf
 見	jm/bu	99.05%
@@ -29903,11 +29903,11 @@ import_tables:
 迖	ta/yk
 迖	ti/yk
 迗	ee/yk
-还	hd/yf	98.01%
-还	hr/yf	1.99%
-还	xr/yf	0%
-这	ve/yk	98.59%
-这	vw/yk	1.41%
+还	hd/yf
+还	hr/yf
+还	xr/yf
+这	ve/yk
+这	vw/yk
 迚	vs/yl
 进	jb/yt
 远	yr/yu
@@ -32168,8 +32168,8 @@ import_tables:
 隻	vi/oe
 隼	sy/oj	100%
 隼	vy/oj	0%
-隽	jr/os	33.73%
-隽	jy/os	66.27%
+隽	jr/os
+隽	jy/os
 难	nj/eg
 隿	yi/ig
 雀	qn/fg	0.21%
@@ -32364,8 +32364,8 @@ import_tables:
 靎	he/mf
 靏	he/mf
 靐	bk/mw
-靑	jk/qm	0%
-靑	qk/qm	100%
+靑	jk/qm
+靑	qk/qm
 青	jk/qb	0%
 青	qk/qb	100%
 靓	jk/qu	0.85%
@@ -34748,8 +34748,8 @@ import_tables:
 麥	md/ji	100%
 麥	mo/je	0%
 麥	mo/ji	0%
-麦	md/qe	100%
-麦	mo/qe	0%
+麦	md/qe
+麦	mo/qe
 麧	ge/jn
 麧	hu/jn
 麧	qi/jn
@@ -34761,10 +34761,10 @@ import_tables:
 麭	pc/ju
 麮	qu/ji
 麮	qv/ji
-麯	ju/jw	0%
-麯	jv/jw	0%
-麯	qu/jw	100%
-麯	qv/jw	100%
+麯	ju/jw
+麯	jv/jw
+麯	qu/jw
+麯	qv/jw
 麰	mz/jq
 麱	fu/jb
 麲	xm/ju
@@ -34786,9 +34786,9 @@ import_tables:
 麼	ma/ii	0.04%
 麼	me/ii	99.93%
 麼	mo/ii	1%
-麽	ma/ii	0%
-麽	me/ii	93%
-麽	mo/ii	7%
+麽	ma/ii
+麽	me/ii
+麽	mo/ii
 麾	hc/iu
 麾	hv/iu
 麾	mc/iu
@@ -35113,7 +35113,7 @@ import_tables:
 龜	qq/nu	0%
 龝	qq/hu
 龞	bp/fu
-龟	gv/nu	99.25%
+龟	gv/nu
 龠	yt/ob
 龡	iv/oo
 龢	he/od

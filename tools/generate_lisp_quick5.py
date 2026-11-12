@@ -20,6 +20,7 @@ LISP_YAML = os.path.join(ROOT, "lisp.yaml")
 LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
 CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
 OUTPUT = os.path.join(ROOT, "lisp_quick5.dict.yaml")
+PAIRS = os.path.join(HERE, "essay_pairs.tsv")
 READING_WEIGHTS = os.path.join(HERE, "reading_weights.tsv")
 
 # ---------------------------------------------------------------------------
@@ -192,6 +193,21 @@ def load_reading_weights(path):
 # 6. Main
 # ---------------------------------------------------------------------------
 
+def load_variants(path):
+  """Characters that should use the essay variant band, not luna percentages."""
+  variants = set()
+  if not os.path.exists(path):
+    return variants
+  with open(path, encoding="utf-8") as f:
+    for line in f:
+      if not line or line.startswith("#"):
+        continue
+      parts = line.rstrip("\n").split("\t")
+      if len(parts) >= 4 and parts[2] == "char" and parts[3] == "ortho":
+        variants.add(parts[1])
+  return variants
+
+
 def main():
   print("Parsing luna_pinyin.dict.yaml ...")
   pinyin_map = parse_dict(LUNA_PINYIN)
@@ -208,6 +224,7 @@ def main():
   print(f"  {len(cangjie_map) - len(common)} in cangjie5 only (skipped)")
 
   overrides = load_reading_weights(READING_WEIGHTS)
+  variants = load_variants(PAIRS)
 
   # Generate entries
   output_lines = []
@@ -234,6 +251,8 @@ def main():
     pinyins = pinyin_map[char]
     for pinyin, weight in pinyins:
       weight = overrides.get((char, pinyin), weight)
+      if (char, pinyin) not in overrides and char in variants:
+        weight = ""
       dp_codes = pinyin_to_double_codes(pinyin)
       if not dp_codes:
         continue

@@ -73,6 +73,8 @@ def format_weight(value: float) -> str:
     value = float(value)
     if value == int(value):
         return str(int(value))
+    if abs(value) < 1.0:
+        return f"{value:.6f}".rstrip("0").rstrip(".")
     return f"{value:.1f}".rstrip("0").rstrip(".")
 
 
@@ -147,30 +149,44 @@ def apply_char_bands(
     pairs: list[Pair],
     common_chars: set[str] | None = None,
     rare_chars: set[str] | None = None,
-    variant_cap: float = 1000.0,
-    rare_cap: float = 100.0,
+    variant_cap: float = 0.9,
+    rare_cap: float = 0.1,
 ) -> dict[str, float]:
-    """Put orthographic variants in a band below common chars and above rare ones."""
+    """Keep common weights and push variants/rare characters into low bands.
+
+    Common characters keep their corpus weight (only 0 is lifted to 1).
+    Variants share a narrow band from ``rare_cap + 0.1`` to ``variant_cap``,
+    ordered by their original corpus weight and source. Rare characters are
+    capped at ``rare_cap``.
+    """
     out = dict(essay)
     common = common_chars or set()
     rare = rare_chars or set()
     protected = {p.preferred for p in pairs}
-    variant_chars = {
-        p.variant
+    variants = [
+        p
         for p in pairs
-        if p.scope == "char" and p.type == "ortho"
-    }
+        if p.scope == "char" and p.type == "ortho" and p.variant not in protected
+    ]
+    source_rank = {"moe": 0, "evidence": 1, "auto": 1, "opencc": 2, "derived": 3}
+    normal = [p for p in variants if p.variant not in rare]
+    normal.sort(
+        key=lambda p: (
+            -out.get(p.variant, 0.0),
+            source_rank.get(p.source, 9),
+            p.variant,
+        )
+    )
+    floor = min(rare_cap + 0.1, variant_cap)
+    count = len(normal)
+    for index, p in enumerate(normal):
+        span = variant_cap - floor
+        share = index / (count - 1) if count > 1 else 0.0
+        out[p.variant] = variant_cap - span * share
 
-    for p in pairs:
-        if p.scope != "char" or p.type != "ortho":
-            continue
-        if p.variant in protected:
-            continue
-        preferred = out.get(p.preferred, 10.0)
-        ceiling = min(variant_cap, max(1.0, preferred - 1.0))
+    for p in variants:
         if p.variant in rare:
-            ceiling = min(ceiling, rare_cap)
-        out[p.variant] = ceiling
+            out[p.variant] = min(out.get(p.variant, rare_cap), rare_cap)
 
     for char in rare:
         if char in protected:
@@ -178,12 +194,11 @@ def apply_char_bands(
         if char in out and out[char] > rare_cap:
             out[char] = rare_cap
 
-    floor = variant_cap + 1.0
     for char in common:
-        if char in variant_chars or char in rare or char in protected:
+        if char in protected or char in rare:
             continue
-        if char in out and out[char] < floor:
-            out[char] = floor
+        if char in out and out[char] < 1.0:
+            out[char] = 1.0
 
     return out
 

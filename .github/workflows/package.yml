@@ -35,21 +35,38 @@ jobs:
 
       - name: Package Rime files
         run: |
-          bash tools/package_rime.sh dist/rime-config-all .gram all
-          bash tools/package_rime.sh dist/rime-config-flypy .gram flypy
-          bash tools/package_rime.sh dist/rime-config-lisp .gram lisp
+          for platform in desktop mobile; do
+            for variant in all flypy lisp; do
+              bash tools/package_rime.sh                 "dist/rime-config-$platform-$variant" .gram "$variant" "$platform"
+            done
+          done
 
       - uses: actions/upload-artifact@v4
         with:
-          name: rime-config-all
-          path: dist/rime-config-all
+          name: rime-config-desktop-all
+          path: dist/rime-config-desktop-all
 
       - uses: actions/upload-artifact@v4
         with:
-          name: rime-config-flypy
-          path: dist/rime-config-flypy
+          name: rime-config-desktop-flypy
+          path: dist/rime-config-desktop-flypy
 
       - uses: actions/upload-artifact@v4
         with:
-          name: rime-config-lisp
-          path: dist/rime-config-lisp
+          name: rime-config-desktop-lisp
+          path: dist/rime-config-desktop-lisp
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-mobile-all
+          path: dist/rime-config-mobile-all
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-mobile-flypy
+          path: dist/rime-config-mobile-flypy
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rime-config-mobile-lisp
+          path: dist/rime-config-mobile-lisp

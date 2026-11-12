@@ -111,7 +111,14 @@ python3 tools/generate_lisp_quick5_phrases.py
 只印出提示、不會呼叫 `fcitx5-remote`。
 
 CI（`.github/workflows/package.yml`）會跑測試、下載 octagram 模型，
-並打包三種 artifact：`rime-config-all`、`rime-config-flypy`、`rime-config-lisp`。
+並打包 **desktop/mobile × all/flypy/lisp** 六種 artifact：
+
+- `rime-config-desktop-{all,flypy,lisp}`：保留 latex、`cangjie_comment` switch。
+- `rime-config-mobile-{all,flypy,lisp}`：套用 `tools/mobile/` overlay，移除 latex 與
+  `extended_charset`／`ascii_punct`，加入 `trime.custom.yaml`、`hamster.app.yaml`、
+  `cangjie5.schema.yaml`，不打包 `latex.*`。
+
+手機差異只存在 `tools/mobile/` 與手機 UI 檔，不再需要 `hamster` 分支。
 
 ## 個人 fork 的 PR
 

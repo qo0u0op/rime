@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 # Package only the files Rime needs.
 #
-# Usage: tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp]
+# Usage: tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile]
 #   OUT_DIR   default: <repo>/dist/rime-config
 #   GRAM_DIR  directory holding zh-*.gram (default: repo root)
 #   VARIANT   all (default), flypy, or lisp
+#   PLATFORM  desktop (default) or mobile
 #
-# all   : every schema in the repo (lisp + flypy)
-# flypy : common files + flypy_* schemas/dicts; schema_list = flypy_quick5
-# lisp  : common files + lisp_* schemas/dicts; schema_list = lisp_quick5
+# desktop : keeps latex + cangjie_comment switch
+# mobile  : overlays tools/mobile/*.custom.yaml (no latex, no extended_charset/ascii_punct),
+#           adds trime.custom.yaml / hamster.app.yaml / cangjie5.schema.yaml,
+#           and drops latex.schema.yaml / latex.dict.yaml
 
 set -euo pipefail
 shopt -s nullglob
@@ -17,11 +19,20 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT="${1:-$ROOT/dist/rime-config}"
 GRAM_DIR="${2:-$ROOT}"
 VARIANT="${3:-all}"
+PLATFORM="${4:-desktop}"
 
 case "$VARIANT" in
   all|flypy|lisp) ;;
   *)
     echo "unknown variant: $VARIANT (expected all, flypy, or lisp)" >&2
+    exit 2
+    ;;
+esac
+
+case "$PLATFORM" in
+  desktop|mobile) ;;
+  *)
+    echo "unknown platform: $PLATFORM (expected desktop or mobile)" >&2
     exit 2
     ;;
 esac
@@ -34,7 +45,7 @@ copy_file() {
   [[ -f "$file" ]] && cp "$file" "$OUT/"
 }
 
-# Files both variants need at runtime.
+# Files every package needs.
 for file in \
   essay.txt \
   grammar.yaml \
@@ -42,13 +53,23 @@ for file in \
   LICENSE \
   cangjie5.dict.yaml \
   luna_pinyin.dict.yaml \
-  latex.schema.yaml \
-  latex.dict.yaml; do
+  default.custom.yaml; do
   copy_file "$ROOT/$file"
 done
 
 [[ -d "$ROOT/lua" ]] && cp -a "$ROOT/lua" "$OUT/"
 
+# Platform-only files.
+if [[ "$PLATFORM" == "desktop" ]]; then
+  copy_file "$ROOT/latex.schema.yaml"
+  copy_file "$ROOT/latex.dict.yaml"
+else
+  copy_file "$ROOT/trime.custom.yaml"
+  copy_file "$ROOT/hamster.app.yaml"
+  copy_file "$ROOT/cangjie5.schema.yaml"
+fi
+
+# Scheme files.
 if [[ "$VARIANT" == "all" ]]; then
   for pattern in '*.schema.yaml' '*.dict.yaml' '*.custom.yaml'; do
     for file in "$ROOT"/$pattern; do
@@ -57,7 +78,6 @@ if [[ "$VARIANT" == "all" ]]; then
   done
 else
   if [[ "$VARIANT" == "flypy" ]]; then
-    schema="flypy_quick5"
     for file in \
       flypy_luna.schema.yaml \
       flypy_quick5.schema.yaml \
@@ -69,7 +89,6 @@ else
       copy_file "$ROOT/$file"
     done
   else
-    schema="lisp_quick5"
     for file in \
       lisp.schema.yaml \
       lisp_quick5.schema.yaml \
@@ -79,23 +98,32 @@ else
       copy_file "$ROOT/$file"
     done
   fi
-
-  # Keep the user's other custom settings, but restrict schema_list.
-  awk -v sel="$schema" '
-    /^  schema_list:/ {
-      print
-      print "    - schema: " sel
-      skip = 1
-      next
-    }
-    skip && /^  [^ ]/ { skip = 0 }
-    skip && /^    - schema:/ { next }
-    { print }
-  ' "$ROOT/default.custom.yaml" > "$OUT/default.custom.yaml"
 fi
 
-if [[ -d "$GRAM_DIR" ]]; then
+# Platform adjustments after the glob copy.
+if [[ "$PLATFORM" == "mobile" ]]; then
+  rm -f "$OUT/latex.schema.yaml" "$OUT/latex.dict.yaml"
+  if [[ -f "$ROOT/tools/mobile/flypy_quick5.custom.yaml" ]]; then
+    if [[ "$VARIANT" == "all" || "$VARIANT" == "flypy" ]]; then
+      cp "$ROOT/tools/mobile/flypy_quick5.custom.yaml" "$OUT/"
+    fi
+  fi
+  if [[ -f "$ROOT/tools/mobile/lisp_quick5.custom.yaml" ]]; then
+    if [[ "$VARIANT" == "all" || "$VARIANT" == "lisp" ]]; then
+      cp "$ROOT/tools/mobile/lisp_quick5.custom.yaml" "$OUT/"
+    fi
+  fi
+else
+  rm -f "$OUT/trime.custom.yaml" "$OUT/hamster.app.yaml" "$OUT/cangjie5.schema.yaml"
+fi
+
+# Grammar models: the full package carries both scripts; single-scheme uses hant.
+if [[ "$VARIANT" == "all" ]]; then
   for file in "$GRAM_DIR"/*.gram; do
+    cp "$file" "$OUT/"
+  done
+else
+  for file in "$GRAM_DIR"/zh-hant-*.gram; do
     cp "$file" "$OUT/"
   done
 fi
@@ -130,6 +158,18 @@ case "$VARIANT" in
     ;;
 esac
 
-echo "packaged [$VARIANT] $(find "$OUT" -type f | wc -l) files -> $OUT"
+if [[ "$PLATFORM" == "desktop" ]]; then
+  [[ -s "$OUT/latex.schema.yaml" ]] || { echo "desktop package missing latex" >&2; exit 1; }
+  [[ ! -e "$OUT/trime.custom.yaml" ]] || { echo "desktop package contains mobile UI" >&2; exit 1; }
+else
+  [[ -s "$OUT/trime.custom.yaml" ]] || { echo "mobile package missing trime config" >&2; exit 1; }
+  [[ ! -e "$OUT/latex.schema.yaml" ]] || { echo "mobile package contains latex" >&2; exit 1; }
+  if grep -q 'translator_latex' "$OUT/flypy_quick5.custom.yaml" 2>/dev/null; then
+    echo "mobile flypy custom still references latex" >&2
+    exit 1
+  fi
+fi
+
+echo "packaged [$VARIANT/$PLATFORM] $(find "$OUT" -type f | wc -l) files -> $OUT"
 du -sh "$OUT"
 find "$OUT" -maxdepth 1 -type f -printf '%f\n' | sort

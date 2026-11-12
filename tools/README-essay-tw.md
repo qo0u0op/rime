@@ -141,13 +141,14 @@ Rime 使用者目錄需要：
 1. 跑 `tools/tests`。
 2. 從 `rime-octagram-data` 的 release（`OCTAGRAM_TAG`）下載 compact 模型，
    改名成 Rime 預期的 `zh-*.gram`。
-3. 執行 `tools/package_rime.sh`，產生三種打包：
-   - `all`：全部方案（lisp + flypy）
-   - `flypy`：只含 flypy（`default.custom.yaml` 的 schema_list 只留 `flypy_quick5`）
-   - `lisp`：只含 lisp（schema_list 只留 `lisp_quick5`）
-   只打包 Rime 需要的產物：`essay.txt`、`grammar.yaml`、`*.schema.yaml`、
-   `*.dict.yaml`、`*.custom.yaml`、`rime.lua`、`lua/`、`LICENSE`、`.gram`。
-4. 上傳三個 artifact：`rime-config-all`、`rime-config-flypy`、`rime-config-lisp`。
+3. 執行 `tools/package_rime.sh`，產生 2 平台 × 3 方案：
+   - `desktop`：保留 latex 與 `cangjie_comment` switch。
+   - `mobile`：套用 `tools/mobile/` overlay（移除 latex、`extended_charset`、`ascii_punct`），
+     加入 `trime.custom.yaml`、`hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。
+   - `all`／`flypy`／`lisp`：方案範圍；單一方案只帶 hant 模型。
+4. 上傳六個 artifact：
+   `rime-config-desktop-all`、`rime-config-desktop-flypy`、`rime-config-desktop-lisp`、
+   `rime-config-mobile-all`、`rime-config-mobile-flypy`、`rime-config-mobile-lisp`。
 
 不會打包 `tools/`、`tests/`、`docs/`、`build/`、`*.userdb`、`sync/`、
 `installation.yaml`、`user.yaml`。
@@ -155,9 +156,8 @@ Rime 使用者目錄需要：
 本機預覽：
 
 ```bash
-bash tools/package_rime.sh dist/rime-config-all . all
-bash tools/package_rime.sh dist/rime-config-flypy . flypy
-bash tools/package_rime.sh dist/rime-config-lisp . lisp
+bash tools/package_rime.sh dist/rime-config-desktop-all . all desktop
+bash tools/package_rime.sh dist/rime-config-mobile-all . all mobile
 ```
 
 ## pacman hook

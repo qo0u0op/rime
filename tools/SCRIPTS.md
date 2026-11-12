@@ -265,13 +265,24 @@ hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 只把 Rime 真正需要的檔案複製到一個輸出目錄（CI 的 artifact）。
 
 ```bash
-bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp]
-# 預設 OUT_DIR=dist/rime-config、GRAM_DIR=repo 根目錄、VARIANT=all
+bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp] [desktop|mobile]
+# 預設 OUT_DIR=dist/rime-config、GRAM_DIR=repo 根目錄、VARIANT=all、PLATFORM=desktop
 ```
 
 - `all`：全部 schema。
 - `flypy`：只含 flypy 群組；`default.custom.yaml` 只留 `flypy_quick5`。
 - `lisp`：只含 lisp 群組；`default.custom.yaml` 只留 `lisp_quick5`。
+- `desktop`：保留 latex；不加 `trime.custom.yaml`／`hamster.app.yaml`。
+- `mobile`：套用 `tools/mobile/*.custom.yaml`，移除 latex 與 `extended_charset`／`ascii_punct`，
+  加入 `trime.custom.yaml`、`hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。
+
+手機 overlay 檔案：
+
+- `tools/mobile/flypy_quick5.custom.yaml`
+- `tools/mobile/lisp_quick5.custom.yaml`
+
+兩者都會把 `schema/dependencies` 收斂成 `cangjie5`（flypy），並在 `switches` 只留下
+`t2s`、`full_shape`、`ascii_mode`、`cangjie_comment`。
 
 打包內容：
 
@@ -290,7 +301,7 @@ bash tools/package_rime.sh [OUT_DIR] [GRAM_DIR] [all|flypy|lisp]
 
 CI 在 `.github/workflows/package.yml`：
 先跑測試，再從 `lotem/rime-octagram-data` 的 release 下載 compact 模型並改名，
-最後依序產生 `all`、`flypy`、`lisp` 三種打包，上傳三個 artifact。
+最後產生 `desktop/mobile` × `all/flypy/lisp` 六種打包，上傳六個 artifact。
 
 ## 8. 測試
 

@@ -7,14 +7,19 @@ positions) and pairs it with the 倉頡速成 first/last code.
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 import unicodedata
 from collections import defaultdict
 
-LUNA_PINYIN = "luna_pinyin.dict.yaml"
-CANGJIE5 = "cangjie5.dict.yaml"
-OUTPUT = "flypy_quick5.dict.yaml"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
+LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
+CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
+OUTPUT = os.path.join(ROOT, "flypy_quick5.dict.yaml")
 
 
 def algebra_rules():

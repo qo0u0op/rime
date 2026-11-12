@@ -6,10 +6,15 @@ Extracts phrase entries (from line 49015 onward) and converts them to
 lisp double-pinyin + Cangjie quick codes.
 """
 
+import os
 import re
 import sys
 from itertools import product
 from collections import defaultdict
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
 
 from generate_lisp_quick5 import (
     pinyin_to_double_codes,
@@ -18,9 +23,9 @@ from generate_lisp_quick5 import (
     parse_dict,
 )
 
-LUNA_PINYIN = "luna_pinyin.dict.yaml"
-CANGJIE5 = "cangjie5.dict.yaml"
-OUTPUT = "lisp_quick5_phrases.dict.yaml"
+LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
+CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
+OUTPUT = os.path.join(ROOT, "lisp_quick5_phrases.dict.yaml")
 
 # ---------------------------------------------------------------------------
 # 1. Parse phrases from luna_pinyin.dict.yaml (from line 49015)

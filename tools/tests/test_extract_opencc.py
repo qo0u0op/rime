@@ -1,6 +1,12 @@
+import os
+import sys
+
+TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, TOOLS)
+
 import unittest
 
-from tools.extract_opencc_pairs import derive_pair
+from extract_opencc_pairs import derive_pair
 
 
 def ortho(text):

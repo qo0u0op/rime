@@ -16,6 +16,8 @@ from essay_lib import (
 )
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
 
 CORE = "爲裏着衆麪喫牀峯羣為裡著眾麵吃床峰群"
 
@@ -66,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--essay", default="/usr/share/rime-data/essay.txt")
     parser.add_argument("--pairs", default=os.path.join(HERE, "essay_pairs.tsv"))
-    parser.add_argument("--out", default=os.path.join(HERE, "essay.txt"))
+    parser.add_argument("--out", default=os.path.join(ROOT, "essay.txt"))
     parser.add_argument("--report", default=os.path.join(HERE, "essay_report.txt"))
     parser.add_argument("--page-size", type=int, default=5)
     parser.add_argument("--gap-pages", type=int, default=3)
@@ -109,6 +111,7 @@ def main(argv: list[str] | None = None) -> int:
         f"wrote {args.out} ({len(essay)} -> {len(out)} entries), "
         f"{len(pairs)} pairs"
     )
+    print("請重新部署 Rime（重新啟動 fcitx5，或使用選單的「部署」）")
     return 0
 
 

@@ -6,15 +6,20 @@ Implements the lisp (Colemak-DH adapted 大牛双拼) algebra rules with 飛鍵�
 (derive branches at exact rule positions).
 """
 
+import os
 import re
 import sys
 import unicodedata
 from collections import defaultdict
 
-LISP_YAML = "lisp.yaml"
-LUNA_PINYIN = "luna_pinyin.dict.yaml"
-CANGJIE5 = "cangjie5.dict.yaml"
-OUTPUT = "lisp_quick5.dict.yaml"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
+LISP_YAML = os.path.join(ROOT, "lisp.yaml")
+LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
+CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
+OUTPUT = os.path.join(ROOT, "lisp_quick5.dict.yaml")
 
 # ---------------------------------------------------------------------------
 # 1. Algebra engine: simulate lisp.yaml speller rules in order

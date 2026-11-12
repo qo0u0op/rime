@@ -14,7 +14,8 @@ import os
 import sys
 from typing import Callable
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
 
 from essay_lib import Pair, dump_pairs, load_pairs
 

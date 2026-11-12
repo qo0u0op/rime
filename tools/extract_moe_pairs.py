@@ -10,12 +10,24 @@ import re
 import sys
 from typing import Iterable
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
 
 from essay_lib import Pair, dump_pairs
-from tools.xlsx_rows import read_xlsx_rows
+from xlsx_rows import read_xlsx_rows
 
 VARIANT_RE = re.compile(r"「(.{1,12}?)」的異體字")
+
+
+def _is_placeholder(text: str) -> bool:
+    """True for user-defined-area characters and image placeholders."""
+    if not text:
+        return False
+    for char in text:
+        code = ord(char)
+        if 0xE000 <= code <= 0xF8FF or 0xF0000 <= code <= 0xFFFFF:
+            return True
+    return bool(re.search(r"&[0-9A-Fa-f]+.*\.(?:gif|png)", text))
 
 
 def parse_moe_rows(
@@ -32,6 +44,8 @@ def parse_moe_rows(
     seen: set[tuple[str, str]] = set()
 
     for head, group in by_head.items():
+        if _is_placeholder(head):
+            continue
         flagged = [r for r in group if (r.get("異體字") or "").strip()]
         if not flagged:
             continue
@@ -46,6 +60,8 @@ def parse_moe_rows(
             if not match:
                 continue
             preferred = match.group(1)
+            if _is_placeholder(preferred):
+                continue
             key = (preferred, head)
             if key in seen:
                 continue

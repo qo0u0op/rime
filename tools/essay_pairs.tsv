@@ -27,14 +27,12 @@
 不託	不托	phrase	regional	opencc	
 丐	匃	char	ortho	moe	
 丐	匄	char	ortho	moe	
-丑	󰀉	char	ortho	moe	
 丕	㔻	char	ortho	moe	
 世	卋	char	ortho	moe	
 世	𠀍	char	ortho	moe	
 丟	丢	char	ortho	moe	
 丟擲	拋出	phrase	regional	opencc	
 並	竝	char	ortho	moe	
-並	󰀾	char	ortho	moe	
 並介之人	并介之人	phrase	regional	opencc	
 並刀	并刀	phrase	regional	opencc	
 並列關係	并列關係	phrase	regional	opencc	
@@ -62,7 +60,6 @@
 乳酪	奶酪	phrase	regional	opencc	
 乳酪蛋糕	奶酪蛋糕	phrase	regional	opencc	
 亂	乱	char	ortho	moe	
-亂	󰃨	char	ortho	moe	
 二	弍	char	ortho	moe	
 二孃	二娘	phrase	regional	opencc	
 二極體	二極管	phrase	regional	opencc	
@@ -96,7 +93,6 @@
 介面卡	適配器	phrase	regional	opencc	
 付託	付托	phrase	regional	opencc	
 仙	仚	char	ortho	moe	
-令	󹾅	char	ortho	moe	
 以	㕥	char	ortho	moe	
 以	㠯	char	ortho	moe	
 伊利諾	伊利諾伊	phrase	regional	opencc	
@@ -191,10 +187,8 @@
 停用	禁用	phrase	regional	opencc	
 偷	偸	char	ortho	moe	
 偽	僞	char	ortho	moe	
-傎	󽆅	char	ortho	moe	
 備	俻	char	ortho	moe	
 備	僃	char	ortho	moe	
-備	󷈅	char	ortho	moe	
 備份資料	備份數據	phrase	regional	opencc	
 傚	俲	char	ortho	moe	
 傢什	家什	phrase	regional	opencc	
@@ -218,10 +212,8 @@
 僱員	雇員	phrase	regional	opencc	
 僱工	雇工	phrase	regional	opencc	
 僱農	雇農	phrase	regional	opencc	
-價	󰇹	char	ortho	moe	
 儀	仪	char	ortho	moe	
 儈	侩	char	ortho	moe	
-儐	󼆻	char	ortho	moe	
 儔	俦	char	ortho	moe	
 儕	㑪	char	ortho	moe	
 儘	侭	char	ortho	moe	
@@ -261,7 +253,6 @@
 內部資料	內部數據	phrase	regional	opencc	
 內醯胺	內酰胺	phrase	regional	opencc	
 內醯胺酶	內酰胺酶	phrase	regional	opencc	
-全	󰖢	char	ortho	moe	
 全形	全角	phrase	regional	opencc	
 全球資訊網	萬維網	phrase	regional	opencc	
 兩	㒳	char	ortho	moe	
@@ -273,7 +264,6 @@
 六絃琴	六弦琴	phrase	regional	opencc	
 共享軟體	共享軟件	phrase	regional	opencc	
 兼	𠔥	char	ortho	moe	
-兼	󰘅	char	ortho	moe	
 兼併	兼并	phrase	regional	opencc	
 冀	兾	char	ortho	moe	
 冉	冄	char	ortho	moe	
@@ -329,8 +319,6 @@
 創	剙	char	ortho	moe	
 剷鬥	剷斗	phrase	regional	opencc	
 剿	𠞰	char	ortho	moe	
-劃	󰟿	char	ortho	moe	
-劃	󽅦	char	ortho	moe	
 劄	剳	char	ortho	moe	
 劇	剧	char	ortho	moe	
 劉	刘	char	ortho	moe	
@@ -351,7 +339,6 @@
 勢	势	char	ortho	moe	
 勵	励	char	ortho	moe	
 勸	劝	char	ortho	moe	
-勺	󹾬	char	ortho	moe	
 勻	匀	char	ortho	moe	
 包準	包准	phrase	regional	opencc	
 包穀	包谷	phrase	regional	opencc	
@@ -392,8 +379,6 @@
 卻	却	char	ortho	moe	
 卼	𠨜	char	ortho	moe	
 卿	卿	char	ortho	moe	
-厄	󰨳	char	ortho	moe	
-厄	󽾱	char	ortho	moe	
 厄瓜多	厄瓜多爾	phrase	regional	opencc	
 厚	垕	char	ortho	moe	
 原始碼	源代碼	phrase	regional	opencc	
@@ -407,7 +392,6 @@
 參	蔘	char	ortho	opencc	
 參考資料	參考數據	phrase	regional	opencc	
 及	及	char	ortho	moe	
-反	󰫂	char	ortho	moe	
 取樣	採樣	phrase	regional	opencc	
 取樣器	採樣器	phrase	regional	opencc	
 取樣點	採樣點	phrase	regional	opencc	
@@ -450,7 +434,6 @@
 命中註定	命中注定	phrase	regional	opencc	
 和	咊	char	ortho	moe	
 和絃	和弦	phrase	regional	opencc	
-咎	󰯁	char	ortho	moe	
 咒	呪	char	ortho	moe	
 咖哩	咖喱	phrase	regional	opencc	
 咖哩汁	咖喱汁	phrase	regional	opencc	
@@ -483,7 +466,6 @@
 啼	嗁	char	ortho	moe	
 善	善	char	ortho	moe	
 善	善	char	ortho	moe	
-喜	󰲢	char	ortho	moe	
 喧鬨	喧哄	phrase	regional	opencc	
 喪	䘮	char	ortho	moe	
 喬	乔	char	ortho	moe	
@@ -495,8 +477,6 @@
 單母音	單元音	phrase	regional	opencc	
 喻	喩	char	ortho	moe	
 嗅	齅	char	ortho	moe	
-嗔	󹬳	char	ortho	moe	
-嗢	󷏄	char	ortho	moe	
 嗥	嘷	char	ortho	moe	
 嗥	獋	char	ortho	moe	
 嘉餚	嘉肴	phrase	regional	opencc	
@@ -507,10 +487,8 @@
 器	噐	char	ortho	moe	
 噴出巖	噴出岩	phrase	regional	opencc	
 噴墨印表機	噴墨打印機	phrase	regional	opencc	
-噹	󻐇	char	ortho	moe	
 嚇	吓	char	ortho	moe	
 嚥唾	咽唾	phrase	regional	opencc	
-嚦	󷏓	char	ortho	moe	
 嚭	噽	char	ortho	moe	
 嚮往	向往	phrase	regional	opencc	
 嚲	軃	char	ortho	moe	
@@ -528,7 +506,6 @@
 國	囯	char	ortho	moe	
 國情諮文	國情咨文	phrase	regional	opencc	
 圍	囲	char	ortho	moe	
-園	󰻾	char	ortho	moe	
 圓	园	char	ortho	moe	
 圖	啚	char	ortho	moe	
 圖	图	char	ortho	moe	
@@ -542,14 +519,12 @@
 坦尚尼亞	坦桑尼亞	phrase	regional	opencc	
 坰	埛	char	ortho	moe	
 垂	𡍮	char	ortho	moe	
-垂	󰿀	char	ortho	moe	
 型	型	char	ortho	moe	
 型別	類型	phrase	regional	opencc	
 型別轉換	類型轉換	phrase	regional	opencc	
 垡	㘺	char	ortho	moe	
 域	㽣	char	ortho	moe	
 埠	端口	phrase	regional	opencc	
-埴	󿴶	char	ortho	moe	
 執	执	char	ortho	moe	
 執行	運行	phrase	regional	opencc	
 執行人員	運行人員	phrase	regional	opencc	
@@ -598,7 +573,6 @@
 壓	压	char	ortho	moe	
 壟	壠	char	ortho	moe	
 壩	垻	char	ortho	moe	
-壬	󿮮	char	ortho	moe	
 壯	壮	char	ortho	moe	
 壽	寿	char	ortho	moe	
 壽	𡔽	char	ortho	moe	
@@ -631,7 +605,6 @@
 奇	竒	char	ortho	moe	
 奈及利亞	尼日利亞	phrase	regional	opencc	
 奈米	納米	phrase	regional	opencc	
-奏	󱎑	char	ortho	moe	
 奔	犇	char	ortho	moe	
 奧勒岡州	俄勒岡州	phrase	regional	opencc	
 奪	敓	char	ortho	moe	
@@ -654,7 +627,6 @@
 姻	婣	char	ortho	moe	
 威斯康辛	威斯康星	phrase	regional	opencc	
 威斯康辛州	威斯康星州	phrase	regional	opencc	
-娘	󱒎	char	ortho	moe	
 娛	娱	char	ortho	moe	
 婀	娿	char	ortho	moe	
 婁	娄	char	ortho	moe	
@@ -692,7 +664,6 @@
 孺	𡦘	char	ortho	moe	
 孽	孼	char	ortho	moe	
 孿	孪	char	ortho	moe	
-它	󱗽	char	ortho	moe	
 安全裝置	安全設備	phrase	regional	opencc	
 宏都拉斯	洪都拉斯	phrase	regional	opencc	
 宕機	死機	phrase	regional	opencc	
@@ -702,12 +673,10 @@
 定準	定准	phrase	regional	opencc	
 宣佈	宣布	phrase	regional	opencc	
 宣告	聲明	phrase	regional	opencc	
-害	󱙗	char	ortho	moe	
 宴遊	宴游	phrase	regional	opencc	
 家家有本難唸的經	家家有本難念的經	phrase	regional	opencc	
 宿	㝛	char	ortho	moe	
 寄託在	寄托在	phrase	regional	opencc	
-密	󱛊	char	ortho	moe	
 密佈	密布	phrase	regional	opencc	
 密西根	密歇根	phrase	regional	opencc	
 密西根州	密歇根州	phrase	regional	opencc	
@@ -724,17 +693,14 @@
 寧	寕	char	ortho	moe	
 寧	寜	char	ortho	moe	
 寧	𡨴	char	ortho	moe	
-寫	󱟂	char	ortho	moe	
 寫文件	寫文檔	phrase	regional	opencc	
 寫程式	寫程序	phrase	regional	opencc	
-寬	󹤝	char	ortho	moe	
 寬頻	寬帶	phrase	regional	opencc	
 寮國	老撾	phrase	regional	opencc	
 寶	宝	char	ortho	moe	
 寶	寳	char	ortho	moe	
 寶豐	寶丰	phrase	regional	opencc	
 寸絲不掛	寸絲不挂	phrase	regional	opencc	
-寺	󱟶	char	ortho	moe	
 專案	項目	phrase	regional	opencc	
 專案小組	項目小組	phrase	regional	opencc	
 專案組	項目組	phrase	regional	opencc	
@@ -752,7 +718,6 @@
 尷	尲	char	ortho	moe	
 尷	尶	char	ortho	moe	
 尷	𡰛	char	ortho	moe	
-尼	󱢵	char	ortho	moe	
 尼日	尼日爾	phrase	regional	opencc	
 居	凥	char	ortho	moe	
 屆	届	char	ortho	moe	
@@ -840,7 +805,6 @@
 廟	庙	char	ortho	moe	
 廟	庿	char	ortho	moe	
 廠	厰	char	ortho	moe	
-廣	󱱬	char	ortho	moe	
 廨	𪠘	char	ortho	moe	
 廩	㐭	char	ortho	moe	
 廬	庐	char	ortho	moe	
@@ -862,7 +826,6 @@
 弼	弻	char	ortho	moe	
 彈	弹	char	ortho	moe	
 彉	彍	char	ortho	moe	
-彌	󸾮	char	ortho	moe	
 彎	弯	char	ortho	moe	
 彐	彑	char	ortho	moe	
 彙	彚	char	ortho	moe	
@@ -953,7 +916,6 @@
 慎	昚	char	ortho	moe	
 慚	慙	char	ortho	moe	
 慨	慨	char	ortho	moe	
-慶	󽸽	char	ortho	moe	
 慷	忼	char	ortho	moe	
 慼	慽	char	ortho	moe	
 慼慼	戚戚	phrase	regional	opencc	
@@ -1080,7 +1042,6 @@
 搬鬥	搬斗	phrase	regional	opencc	
 搭夥	搭伙	phrase	regional	opencc	
 搶佔	搶占	phrase	regional	opencc	
-摒	󲓧	char	ortho	moe	
 摠	捴	char	ortho	moe	
 摠	揔	char	ortho	moe	
 摣	揸	char	ortho	moe	
@@ -1101,7 +1062,6 @@
 擂	攂	char	ortho	moe	
 擇	𪭲	char	ortho	moe	
 擋	挡	char	ortho	moe	
-操	󲗦	char	ortho	moe	
 擔	担	char	ortho	moe	
 據	㩀	char	ortho	moe	
 擠	㨈	char	ortho	moe	
@@ -1127,8 +1087,6 @@
 效能	性能	phrase	regional	opencc	
 敕	勅	char	ortho	moe	
 敕	𢽟	char	ortho	moe	
-敖	󲛭	char	ortho	moe	
-敖	󻔥	char	ortho	moe	
 敘	叙	char	ortho	moe	
 敘	敍	char	ortho	moe	
 教	敎	char	ortho	moe	
@@ -1186,7 +1144,6 @@
 既	旣	char	ortho	moe	
 日曬雨淋	日晒雨淋	phrase	ortho	opencc	
 旨	㫖	char	ortho	moe	
-旨	󲥛	char	ortho	moe	
 旭日初昇	旭日初升	phrase	regional	opencc	
 昇天	升天	phrase	regional	opencc	
 昇平	升平	phrase	regional	opencc	
@@ -1235,7 +1192,6 @@
 曬臺	晒臺	phrase	regional	opencc	
 曬黑	晒黑	phrase	ortho	opencc	
 更多資訊	更多信息	phrase	regional	opencc	
-曹	󹶁	char	ortho	moe	
 曼	㬅	char	ortho	moe	
 最	㝡	char	ortho	moe	
 最佳化	優化	phrase	regional	opencc	
@@ -1292,7 +1248,6 @@
 棲息	栖息	phrase	regional	opencc	
 棲棲	栖栖	phrase	regional	opencc	
 棲身	栖身	phrase	regional	opencc	
-楖	󷮣	char	ortho	moe	
 楚	椘	char	ortho	moe	
 楠	枏	char	ortho	moe	
 楫	檝	char	ortho	moe	
@@ -1396,15 +1351,12 @@
 汶萊	文萊	phrase	regional	opencc	
 沒	没	char	ortho	moe	
 沒	𣳚	char	ortho	moe	
-沒	󰛫	char	ortho	moe	
 沒爺孃的祖宗	沒爺娘的祖宗	phrase	regional	opencc	
 沖	冲	char	ortho	moe	
 沙烏地阿拉伯	沙特阿拉伯	phrase	regional	opencc	
-沛	󹀆	char	ortho	moe	
 治癒	治愈	phrase	regional	opencc	
 沿	㳂	char	ortho	moe	
 沿	沿	char	ortho	moe	
-沿	󹹵	char	ortho	moe	
 況	况	char	ortho	moe	
 法	㳒	char	ortho	moe	
 法	灋	char	ortho	moe	
@@ -1434,7 +1386,6 @@
 游標	光標	phrase	regional	opencc	
 湊	凑	char	ortho	moe	
 溈	潙	char	ortho	moe	
-溉	󼭑	char	ortho	moe	
 準了	准了	phrase	regional	opencc	
 準信	准信	phrase	regional	opencc	
 準定	准定	phrase	regional	opencc	
@@ -1454,11 +1405,9 @@
 漢他病毒	漢坦病毒	phrase	regional	opencc	
 漫遊	漫游	phrase	regional	opencc	
 潀	潨	char	ortho	opencc	
-潢	󷺁	char	ortho	moe	
 澀	澁	char	ortho	moe	
 澂江	澄江	phrase	regional	opencc	
 澂江縣	澄江縣	phrase	regional	opencc	
-澤	󽧨	char	ortho	moe	
 濃雲密佈	濃雲密布	phrase	regional	opencc	
 濛汜	蒙汜	phrase	regional	opencc	
 濛濛	蒙蒙	phrase	regional	opencc	
@@ -1468,7 +1417,6 @@
 濱	滨	char	ortho	moe	
 濱	濵	char	ortho	moe	
 瀆	凟	char	ortho	moe	
-瀝	󺫼	char	ortho	moe	
 瀰	㳽	char	ortho	moe	
 灑曬	灑晒	phrase	ortho	opencc	
 灑淅	洒淅	phrase	regional	opencc	
@@ -1555,9 +1503,7 @@
 琺	珐	char	ortho	moe	
 瑙	碯	char	ortho	moe	
 瑰	瓌	char	ortho	moe	
-瑱	󻕸	char	ortho	moe	
 璃	瓈	char	ortho	moe	
-璜	󳬙	char	ortho	moe	
 環	环	char	ortho	moe	
 瓊	琼	char	ortho	moe	
 瓜地馬拉	危地馬拉	phrase	regional	opencc	
@@ -1605,7 +1551,6 @@
 登入	登錄	phrase	regional	opencc	
 登出	註銷	phrase	regional	opencc	
 發	彂	char	ortho	moe	
-發	󽦎	char	ortho	moe	
 發光二極體	發光二極管	phrase	regional	opencc	
 發擿姦伏	發擿奸伏	phrase	regional	opencc	
 發黴	發霉	phrase	regional	opencc	
@@ -1628,11 +1573,9 @@
 皺	皱	char	ortho	moe	
 皻	皶	char	ortho	moe	
 盆	瓫	char	ortho	moe	
-益	󽙹	char	ortho	moe	
 盍	盇	char	ortho	moe	
 盜版光碟	盜版光盤	phrase	regional	opencc	
 盡	尽	char	ortho	moe	
-盧	󳹱	char	ortho	moe	
 盧安達	盧旺達	phrase	regional	opencc	
 直接呼叫	直接調用	phrase	regional	opencc	
 直譯器	解釋器	phrase	regional	opencc	
@@ -1648,8 +1591,6 @@
 眥	眦	char	ortho	moe	
 眾	众	char	ortho	moe	
 眾	衆	char	ortho	opencc	
-眾	󳻱	char	ortho	moe	
-眾	󿶛	char	ortho	moe	
 睏乏	困乏	phrase	regional	opencc	
 睏倦	困倦	phrase	regional	opencc	
 睪	睾	char	ortho	opencc	
@@ -1689,7 +1630,6 @@
 硜	䃘	char	ortho	moe	
 硬碟	硬盤	phrase	regional	opencc	
 硬體	硬件	phrase	regional	opencc	
-碑	󴀳	char	ortho	moe	
 碗	椀	char	ortho	moe	
 碗	盌	char	ortho	moe	
 碟片	盤片	phrase	regional	opencc	
@@ -1698,7 +1638,6 @@
 磁碟	磁盤	phrase	regional	opencc	
 磁碟組	磁盤組	phrase	regional	opencc	
 磁軌	磁道	phrase	regional	opencc	
-磌	󸊍	char	ortho	moe	
 磚	甎	char	ortho	moe	
 磷醯基磷酸酶	磷酰基磷酸酶	phrase	regional	opencc	
 礙	碍	char	ortho	moe	
@@ -1707,7 +1646,6 @@
 祅	䄏	char	ortho	moe	
 神經網路	神經網絡	phrase	regional	opencc	
 禍	旤	char	ortho	moe	
-禛	󻕵	char	ortho	moe	
 禮	礼	char	ortho	moe	
 禰	祢	char	ortho	moe	
 禱	祷	char	ortho	moe	
@@ -1737,11 +1675,9 @@
 程式設計員	程序設計員	phrase	regional	opencc	
 程式語言	程序語言	phrase	regional	opencc	
 程式語言	編程語言	phrase	regional	opencc	
-稙	󿵰	char	ortho	moe	
 稜	棱	char	ortho	opencc	
 稟	禀	char	ortho	moe	
 稱	称	char	ortho	moe	
-稹	󻕻	char	ortho	moe	
 稽	䭫	char	ortho	moe	
 稿	稾	char	ortho	moe	
 稿	藳	char	ortho	moe	
@@ -1774,7 +1710,6 @@
 筍	笋	char	ortho	moe	
 策	筞	char	ortho	moe	
 箇中訊息	箇中消息	phrase	regional	opencc	
-算	󽙠	char	ortho	moe	
 管	𬋩	char	ortho	moe	
 管理資訊系統	管理信息系統	phrase	regional	opencc	
 管絃	管弦	phrase	regional	opencc	
@@ -1782,7 +1717,6 @@
 管絃樂團	管弦樂團	phrase	regional	opencc	
 箸	筯	char	ortho	moe	
 節	莭	char	ortho	moe	
-節	󴒋	char	ortho	moe	
 範偉	范偉	phrase	regional	opencc	
 篪	竾	char	ortho	moe	
 篽	籞	char	ortho	moe	
@@ -1790,7 +1724,6 @@
 簡	𥳑	char	ortho	moe	
 簡報	演示文稿	phrase	regional	opencc	
 簡訊	短信	phrase	regional	opencc	
-簧	󹖰	char	ortho	moe	
 簫	簘	char	ortho	moe	
 簰	篺	char	ortho	moe	
 簷	檐	char	ortho	opencc	
@@ -1893,8 +1826,6 @@
 編餘	編余	phrase	regional	opencc	
 緪	絚	char	ortho	moe	
 緻密	致密	phrase	regional	opencc	
-縝	󹜁	char	ortho	moe	
-縣	󼁚	char	ortho	moe	
 縮圖	縮略圖	phrase	regional	opencc	
 縷	𫃵	char	ortho	moe	
 總	総	char	ortho	moe	
@@ -1917,13 +1848,11 @@
 缺	𡙇	char	ortho	moe	
 缽	盋	char	ortho	moe	
 缽	鉢	char	ortho	moe	
-缾	󸕦	char	ortho	moe	
 罈	壜	char	ortho	moe	
 罈	罎	char	ortho	moe	
 罔	𦊀	char	ortho	moe	
 罝	𦊨	char	ortho	moe	
 罪	辠	char	ortho	moe	
-置	󼹼	char	ortho	moe	
 罰	罸	char	ortho	moe	
 罵	駡	char	ortho	moe	
 罷	罢	char	ortho	moe	
@@ -1942,7 +1871,6 @@
 義大利文	意大利文	phrase	regional	opencc	
 義大利杯	意大利杯	phrase	regional	opencc	
 羶	羴	char	ortho	moe	
-羽	󿽆	char	ortho	moe	
 翅	翄	char	ortho	moe	
 翥	䬡	char	ortho	moe	
 翫忽職守	玩忽職守	phrase	regional	opencc	
@@ -2005,7 +1933,6 @@
 腸	膓	char	ortho	moe	
 腿	骽	char	ortho	moe	
 腿痠	腿酸	phrase	regional	opencc	
-膂	󿷐	char	ortho	moe	
 膍	肶	char	ortho	moe	
 膝	厀	char	ortho	moe	
 膳	饍	char	ortho	moe	
@@ -2027,11 +1954,8 @@
 臺命	台命	phrase	regional	opencc	
 臺槐	台槐	phrase	regional	opencc	
 舄	舃	char	ortho	moe	
-與	󹽭	char	ortho	moe	
-興	󽶞	char	ortho	moe	
 舉	擧	char	ortho	moe	
 舉薦	舉荐	phrase	regional	opencc	
-舌	󴺣	char	ortho	moe	
 舒捲	舒卷	phrase	regional	opencc	
 舔	䑙	char	ortho	moe	
 舕	䗊	char	ortho	moe	
@@ -2039,8 +1963,6 @@
 船	舩	char	ortho	moe	
 船伕	船夫	phrase	regional	opencc	
 艘	䑹	char	ortho	moe	
-艛	󸜠	char	ortho	moe	
-色	󽽕	char	ortho	moe	
 色胺酸	色氨酸	phrase	regional	opencc	
 芬鬱	芬郁	phrase	regional	opencc	
 花	芲	char	ortho	moe	
@@ -2065,7 +1987,6 @@
 葍	䔰	char	ortho	moe	
 葒	葓	char	ortho	moe	
 著	着	char	ortho	opencc	
-著	󼹵	char	ortho	moe	
 葛摩	科摩羅	phrase	regional	opencc	
 葬	塟	char	ortho	moe	
 蒍	蔿	char	ortho	moe	
@@ -2080,7 +2001,6 @@
 蓋亞那	圭亞那	phrase	regional	opencc	
 蓱	蓱	char	ortho	moe	
 蔂	虆	char	ortho	moe	
-蔇	󿮻	char	ortho	moe	
 蔉	蓘	char	ortho	moe	
 蔥	葱	char	ortho	moe	
 蔥鬱	蔥郁	phrase	regional	opencc	
@@ -2100,7 +2020,6 @@
 藉手	借手	phrase	regional	opencc	
 藉故	借故	phrase	regional	opencc	
 藉端	借端	phrase	regional	opencc	
-藝	󵊼	char	ortho	moe	
 蘆	芦	char	ortho	moe	
 蘇	苏	char	ortho	moe	
 蘇胺酸	蘇氨酸	phrase	regional	opencc	
@@ -2108,13 +2027,10 @@
 蘞	薟	char	ortho	moe	
 蘿	萝	char	ortho	moe	
 虆梩	蔂梩	phrase	ortho	opencc	
-虎	󿲂	char	ortho	moe	
 虔	䖍	char	ortho	moe	
 處	䖏	char	ortho	moe	
 處	処	char	ortho	moe	
-處	󻑤	char	ortho	moe	
 虛	虗	char	ortho	moe	
-虛	󵎆	char	ortho	moe	
 號	号	char	ortho	moe	
 虯	虬	char	ortho	moe	
 虻	蝱	char	ortho	moe	
@@ -2131,7 +2047,6 @@
 蛾	䖸	char	ortho	moe	
 蜂	蠭	char	ortho	moe	
 蜘	鼅	char	ortho	moe	
-蝍	󸤪	char	ortho	moe	
 蝟	猬	char	ortho	moe	
 蝦	虾	char	ortho	moe	
 蝦	鰕	char	ortho	moe	
@@ -2146,7 +2061,6 @@
 蟺	蟮	char	ortho	moe	
 蟻	蚁	char	ortho	moe	
 蠁	蠁	char	ortho	moe	
-蠅	󵒽	char	ortho	moe	
 蠍蠍螫螫	蝎蝎螫螫	phrase	regional	opencc	
 蠟	䗶	char	ortho	moe	
 蠨	蟰	char	ortho	moe	
@@ -2155,7 +2069,6 @@
 蠻	蛮	char	ortho	moe	
 血紅素	血紅蛋白	phrase	regional	opencc	
 衄	䶊	char	ortho	moe	
-衄	󸧻	char	ortho	moe	
 行動電話	移動電話	phrase	regional	opencc	
 行屍走肉	行尸走肉	phrase	regional	opencc	
 行屍走骨	行尸走骨	phrase	regional	opencc	
@@ -2163,7 +2076,6 @@
 衚衕	胡同	phrase	regional	opencc	
 衛	衞	char	ortho	moe	
 衣索比亞	埃塞俄比亞	phrase	regional	opencc	
-衷	󽬿	char	ortho	moe	
 衽	袵	char	ortho	moe	
 袖	褏	char	ortho	moe	
 袖釦	袖扣	phrase	regional	opencc	
@@ -2190,7 +2102,6 @@
 褲	絝	char	ortho	moe	
 褲	袴	char	ortho	moe	
 褻暱	褻昵	phrase	regional	opencc	
-襁	󸩖	char	ortho	moe	
 襆	幞	char	ortho	moe	
 襆	襥	char	ortho	moe	
 襖	袄	char	ortho	moe	
@@ -2216,7 +2127,6 @@
 覺	斍	char	ortho	moe	
 覺	覚	char	ortho	moe	
 覽	覧	char	ortho	moe	
-覽	󵜶	char	ortho	moe	
 觀	覌	char	ortho	moe	
 解	觧	char	ortho	moe	
 解析度	分辨率	phrase	regional	opencc	
@@ -2237,7 +2147,6 @@
 託福	托福	phrase	regional	opencc	
 記憶體	內存	phrase	regional	opencc	
 訛	譌	char	ortho	moe	
-訛	󻾹	char	ortho	moe	
 設定	設置	phrase	regional	opencc	
 設定在	設置在	phrase	regional	opencc	
 設計程式	設計程序	phrase	regional	opencc	
@@ -2256,7 +2165,6 @@
 誇飾	夸飾	phrase	regional	opencc	
 語音通訊	語音通信	phrase	regional	opencc	
 誤	悞	char	ortho	moe	
-誤	󵡝	char	ortho	moe	
 說明文件	說明文檔	phrase	regional	opencc	
 調查資料	調查數據	phrase	regional	opencc	
 調色盤	調色板	phrase	regional	opencc	
@@ -2264,13 +2172,10 @@
 諂	讇	char	ortho	moe	
 諮文	咨文	phrase	regional	opencc	
 諾魯	瑙魯	phrase	regional	opencc	
-講	󵤸	char	ortho	moe	
 謫	讁	char	ortho	moe	
 識	䛊	char	ortho	moe	
 譜	諩	char	ortho	moe	
-議	&9677._104_0.gif;	char	ortho	moe	
 譽	誉	char	ortho	moe	
-讀	󵧝	char	ortho	moe	
 讀書三餘	讀書三余	phrase	regional	opencc	
 變	変	char	ortho	moe	
 變數	變量	phrase	regional	opencc	
@@ -2286,7 +2191,6 @@
 豜	豣	char	ortho	moe	
 象牙海岸	科特迪瓦	phrase	regional	opencc	
 象牙海岸共和國	科特迪瓦共和國	phrase	regional	opencc	
-豪	󹢝	char	ortho	moe	
 豬	猪	char	ortho	moe	
 貂	鼦	char	ortho	moe	
 貉	狢	char	ortho	moe	
@@ -2297,7 +2201,6 @@
 貔	𤜻	char	ortho	moe	
 貝南	貝寧	phrase	regional	opencc	
 貝里斯	伯利茲	phrase	regional	opencc	
-負	󽭐	char	ortho	moe	
 財務資料	財務數據	phrase	regional	opencc	
 費爾幹納盆地	費爾干納盆地	phrase	regional	opencc	
 貼上	粘貼	phrase	regional	opencc	
@@ -2401,7 +2304,6 @@
 輕	䡖	char	ortho	moe	
 輕	軽	char	ortho	moe	
 轉	転	char	ortho	moe	
-轎	󵹦	char	ortho	moe	
 辦	办	char	ortho	moe	
 辭	辝	char	ortho	moe	
 辭	辞	char	ortho	moe	
@@ -2546,7 +2448,6 @@
 部落格	博客	phrase	regional	opencc	
 鄙	啚	char	ortho	moe	
 鄙	𨝣	char	ortho	moe	
-鄬	󸶭	char	ortho	moe	
 鄭	郑	char	ortho	moe	
 鄰	隣	char	ortho	moe	
 酉	丣	char	ortho	moe	
@@ -2580,7 +2481,6 @@
 針	鍼	char	ortho	opencc	
 針鼴	針鼹	phrase	regional	opencc	
 釦子	扣子	phrase	regional	opencc	
-釵	󽇅	char	ortho	moe	
 釾	鋣	char	ortho	moe	
 鈃	銒	char	ortho	moe	
 鉅作	巨作	phrase	regional	opencc	
@@ -2604,7 +2504,6 @@
 鎖	鏁	char	ortho	moe	
 鏤	𨩐	char	ortho	moe	
 鏹	鏹	char	ortho	moe	
-鏽	&99bc._104_0.gif;	char	ortho	moe	
 鏽	銹	char	ortho	moe	
 鐘	鈡	char	ortho	moe	
 鐫	鎸	char	ortho	moe	
@@ -2613,7 +2512,6 @@
 鐵	銕	char	ortho	moe	
 鑒	鍳	char	ortho	moe	
 鑞	𨭛	char	ortho	moe	
-鑼	󹝺	char	ortho	moe	
 鑾	銮	char	ortho	moe	
 镼	𩭪	char	ortho	moe	
 門簾	門帘	phrase	regional	opencc	
@@ -2647,9 +2545,7 @@
 陰	隂	char	ortho	moe	
 隋	陏	char	ortho	moe	
 階	堦	char	ortho	moe	
-隕	󼵺	char	ortho	moe	
 隙	隟	char	ortho	moe	
-隙	󶛊	char	ortho	moe	
 際	际	char	ortho	moe	
 隨	随	char	ortho	moe	
 隨機變數	隨機變量	phrase	regional	opencc	
@@ -2701,9 +2597,7 @@
 霸	覇	char	ortho	moe	
 霸佔	霸占	phrase	regional	opencc	
 霽	𬰁	char	ortho	moe	
-靂	󶡲	char	ortho	moe	
 靈	霛	char	ortho	moe	
-靈	󿮫	char	ortho	moe	
 青	靑	char	ortho	moe	
 靜	静	char	ortho	moe	
 非同步	異步	phrase	regional	opencc	
@@ -2762,7 +2656,6 @@
 餅	餠	char	ortho	moe	
 餈	糍	char	ortho	moe	
 餈粑	糍粑	phrase	ortho	opencc	
-養	󽘗	char	ortho	moe	
 餐	湌	char	ortho	moe	
 餐	飡	char	ortho	moe	
 餘華	余華	phrase	regional	opencc	
@@ -2788,7 +2681,6 @@
 騮	驑	char	ortho	moe	
 騾	驘	char	ortho	moe	
 驅	駆	char	ortho	moe	
-驕	󶱨	char	ortho	moe	
 驗	騐	char	ortho	moe	
 骨巖巖	骨岩岩	phrase	regional	opencc	
 髓	髄	char	ortho	moe	
@@ -2831,7 +2723,6 @@
 鬱郁	郁郁	phrase	regional	opencc	
 鬱鬱	鬱郁	phrase	regional	opencc	
 鬱鬱不得志	鬱郁不得志	phrase	regional	opencc	
-鬲	󶵇	char	ortho	moe	
 魂	䰟	char	ortho	moe	
 魂鬥羅	魂斗羅	phrase	regional	opencc	
 魚遊釜中	魚游釜中	phrase	regional	opencc	
@@ -2870,7 +2761,6 @@
 麃	麅	char	ortho	moe	
 麇	麏	char	ortho	moe	
 麇	麕	char	ortho	moe	
-麗	󽶤	char	ortho	moe	
 麟	麐	char	ortho	moe	
 麤	麁	char	ortho	moe	
 麤	麄	char	ortho	moe	
@@ -2887,7 +2777,6 @@
 麼	庅	char	ortho	moe	
 麼	麽	char	ortho	moe	
 黃	黄	char	ortho	moe	
-黃	󶾄	char	ortho	moe	
 黃巖	黃岩	phrase	regional	opencc	
 黃鍾公	黄鍾公	phrase	ortho	opencc	
 黃體素	孕酮	phrase	regional	opencc	
@@ -2920,4 +2809,3 @@
 龐	龎	char	ortho	moe	
 龜	龟	char	ortho	moe	
 𣝓	檿	char	ortho	moe	
-󺟑	嘅	char	ortho	moe	

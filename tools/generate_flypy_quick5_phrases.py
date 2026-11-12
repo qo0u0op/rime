@@ -7,6 +7,10 @@ import os
 import sys
 from itertools import product
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
 from essay_lib import Pair, load_pairs
 from generate_flypy_quick5 import (
     CANGJIE5,
@@ -17,8 +21,7 @@ from generate_flypy_quick5 import (
     pinyin_to_flypy,
 )
 
-OUTPUT = "flypy_quick5_phrases.dict.yaml"
-LEGACY = "flypy_quick5_phrases_legacy.tsv"
+OUTPUT = os.path.join(ROOT, "flypy_quick5_phrases.dict.yaml")
 
 
 def parse_phrases(path: str) -> list[tuple[str, list[str]]]:
@@ -109,26 +112,12 @@ def main() -> int:
     print(f"Parsing phrases from {LUNA_PINYIN} ...")
     phrases = parse_phrases(LUNA_PINYIN)
     try:
-        pairs = load_pairs("essay_pairs.tsv")
+        pairs = load_pairs(os.path.join(HERE, "essay_pairs.tsv"))
     except FileNotFoundError:
         pairs = []
 
     rows: list[tuple[str, str]] = []
     seen: set[tuple[str, str]] = set()
-
-    if os.path.exists(LEGACY):
-        with open(LEGACY, encoding="utf-8") as f:
-            for line in f:
-                line = line.rstrip("\n")
-                if not line or line.startswith("#"):
-                    continue
-                parts = line.split("\t")
-                if len(parts) < 2:
-                    continue
-                key = (parts[0], parts[1])
-                if key not in seen:
-                    seen.add(key)
-                    rows.append(key)
 
     for phrase, syllables in phrases:
         for text, code in phrase_codes(phrase, syllables, cangjie, pairs):

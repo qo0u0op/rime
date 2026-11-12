@@ -1,3 +1,9 @@
+import os
+import sys
+
+TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, TOOLS)
+
 import unittest
 
 from essay_lib import Pair, apply_pairs

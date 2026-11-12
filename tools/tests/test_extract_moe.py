@@ -1,6 +1,12 @@
+import os
+import sys
+
+TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, TOOLS)
+
 import unittest
 
-from tools.extract_moe_pairs import parse_moe_rows
+from extract_moe_pairs import parse_moe_rows
 
 ROWS = [
     {"字詞名": "裡", "多音排序": "0", "注音一式": "ㄌㄧˇ", "釋義": "內部。", "異體字": ""},

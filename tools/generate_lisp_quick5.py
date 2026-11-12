@@ -20,6 +20,7 @@ LISP_YAML = os.path.join(ROOT, "lisp.yaml")
 LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
 CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
 OUTPUT = os.path.join(ROOT, "lisp_quick5.dict.yaml")
+READING_WEIGHTS = os.path.join(HERE, "reading_weights.tsv")
 
 # ---------------------------------------------------------------------------
 # 1. Algebra engine: simulate lisp.yaml speller rules in order
@@ -167,7 +168,28 @@ def parse_dict(path):
 
 
 # ---------------------------------------------------------------------------
-# 5. Main
+# 5. Reading weight overrides
+# ---------------------------------------------------------------------------
+
+def load_reading_weights(path):
+  """Return {(char, pinyin): weight_str} from the override TSV."""
+  overrides = {}
+  if not os.path.exists(path):
+    return overrides
+  with open(path, "r", encoding="utf-8") as f:
+    for line in f:
+      line = line.rstrip("\n")
+      if not line or line.startswith("#"):
+        continue
+      parts = line.split("\t")
+      if len(parts) < 3:
+        continue
+      overrides[(parts[0], parts[1])] = parts[2]
+  return overrides
+
+
+# ---------------------------------------------------------------------------
+# 6. Main
 # ---------------------------------------------------------------------------
 
 def main():
@@ -184,6 +206,8 @@ def main():
   print(f"  {len(common)} characters in both")
   print(f"  {len(pinyin_map) - len(common)} in luna_pinyin only (skipped)")
   print(f"  {len(cangjie_map) - len(common)} in cangjie5 only (skipped)")
+
+  overrides = load_reading_weights(READING_WEIGHTS)
 
   # Generate entries
   output_lines = []
@@ -209,6 +233,7 @@ def main():
 
     pinyins = pinyin_map[char]
     for pinyin, weight in pinyins:
+      weight = overrides.get((char, pinyin), weight)
       dp_codes = pinyin_to_double_codes(pinyin)
       if not dp_codes:
         continue

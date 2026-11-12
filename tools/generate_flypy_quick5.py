@@ -20,6 +20,7 @@ sys.path.insert(0, HERE)
 LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
 CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
 OUTPUT = os.path.join(ROOT, "flypy_quick5.dict.yaml")
+READING_WEIGHTS = os.path.join(HERE, "reading_weights.tsv")
 
 
 def algebra_rules():
@@ -140,10 +141,28 @@ def _cangjie_quicks(codes: list[tuple[str, str]]) -> set[str]:
     return quicks
 
 
+def load_reading_weights(path: str) -> dict[tuple[str, str], str]:
+    overrides: dict[tuple[str, str], str] = {}
+    if not os.path.exists(path):
+        return overrides
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.rstrip("\n")
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split("\t")
+            if len(parts) < 3:
+                continue
+            overrides[(parts[0], parts[1])] = parts[2]
+    return overrides
+
+
 def generate_char_entries(
     luna: dict[str, list[tuple[str, str]]],
     cangjie: dict[str, list[tuple[str, str]]],
+    overrides: dict[tuple[str, str], str] | None = None,
 ) -> list[tuple[str, str, str]]:
+    overrides = overrides or {}
     entries: list[tuple[str, str, str]] = []
     seen: set[tuple[str, str]] = set()
     for char in sorted(set(luna) & set(cangjie)):
@@ -151,6 +170,7 @@ def generate_char_entries(
         if not quicks:
             continue
         for pinyin, weight in luna[char]:
+            weight = overrides.get((char, pinyin), weight)
             for dp in sorted(pinyin_to_flypy(pinyin)):
                 for quick in sorted(quicks):
                     key = (char, f"{dp}/{quick}")
@@ -167,7 +187,8 @@ def main() -> int:
     print(f"Parsing {CANGJIE5} ...")
     cangjie = parse_dict(CANGJIE5)
 
-    entries = generate_char_entries(luna, cangjie)
+    overrides = load_reading_weights(READING_WEIGHTS)
+    entries = generate_char_entries(luna, cangjie, overrides)
     entries.sort(key=lambda row: (row[0], row[1]))
 
     header = f"""# Rime dictionary

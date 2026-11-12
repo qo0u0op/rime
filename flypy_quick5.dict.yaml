@@ -9202,7 +9202,7 @@ import_tables:
 叀	vr/ji
 叁	cf/im	0%
 叁	cj/im	0%
-叁	sj/im	100%
+叁	sj/im	100
 叁	uf/im	0%
 参	cf/ih	0.01%
 参	cj/ih	90.45%
@@ -9210,7 +9210,7 @@ import_tables:
 参	uf/ih	8.49%
 參	cf/ih	0.01%
 參	cj/ih	90.45%
-參	sj/ih	0.01%
+參	sj/ih	20000
 參	uf/ih	8.49%
 叄	sj/im
 叅	cf/ip
@@ -13174,8 +13174,8 @@ import_tables:
 弋	yi/ip
 弌	yi/im
 弍	er/im
-弎	sa/im
-弎	sj/im
+弎	sa/im	100
+弎	sj/im	100
 式	ui/im
 弐	er/mm
 弑	ui/km

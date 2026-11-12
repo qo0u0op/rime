@@ -27,6 +27,8 @@ Rime 只會讀根目錄的資料檔；所有腳本、對照表、報告、測試
 | `extract_opencc_pairs.py` | 從 OpenCC 抽對照組 |
 | `essay_pairs.tsv` | 已核可的對照表 |
 | `essay_pairs_review.tsv` | 待人工確認的對照表 |
+| `reading_weights.tsv` | 破音字的讀音權重覆寫（例：`參 san 20000`、`弎 san 100`） |
+| `moe_check.py` / `moe_check.tsv` | 產生 MOE 對照的輸入檢查清單 |
 | `essay_report.txt` | 重生報告 |
 | `91-rime-essay-tw.hook` | pacman hook 本體 |
 | `tests/` | `unittest` 測試 |
@@ -56,6 +58,47 @@ python3 tools/generate_flypy_quick5_phrases.py
 - `reading`（讀音分化）：兩邊權重都不動，只在 0 權重時給下限；用來處理 `妳/嬭`、`洒/灑`、`台/臺`。
 
 可用 `--gap-pages`（單字，預設 3）與 `--phrase-gap-pages`（詞，預設 10）調整。
+
+## MOE 檢查清單
+
+`tools/moe_check.tsv` 由 `tools/moe_check.py` 從 `essay_pairs.tsv` 產生（1,168 組），
+每列包含 `preferred`、`variant`、讀音，以及 lisp／flypy 的輸入碼。
+
+用法：`grep '^為' tools/moe_check.tsv`，照 `lisp_input`（或 `flypy_input`）輸入，
+主形應該排在異體之前。
+
+| 主形／異體 | 讀音 | lisp 輸入 | flypy 輸入 |
+|---|---|---|---|
+| 為／爲 | wei | `ww` | `ww` |
+| 裡／裏 | li | `li` | `li` |
+| 著／着 | zhe | `ae` | `ve` |
+| 吃／喫 | chi | `ii` | `ii` |
+| 麵／麪 | mian | `mk` | `mm` |
+| 床／牀 | chuang | `ix` | `il` |
+| 峰／峯 | feng | `fn` | `fg` |
+| 群／羣 | qun | `qd` | `qy` |
+| 眾／衆 | zhong | `ah` | `vs` |
+| 啟／啓 | qi | `qi` | `qi` |
+| 三／弎 | san | `ss` | `sj` |
+
+數字的大寫：`參` 的 `san` 讀音原本在 luna 只有 0.01%，被 `reading_weights.tsv`
+提高到絕對值 20000；`弎`、`叁` 則壓到 100。所以 `ss`／`sj` 的順序是
+**三 > 參 > 弎／叁**。
+
+## 破音字的讀音權重
+
+`reading_weights.tsv` 的格式：
+
+```
+# char<TAB>pinyin<TAB>weight
+參	san	20000
+弎	san	100
+弎	sa	100
+叁	san	100
+```
+
+weight 可以寫絕對值（`20000`）或百分比（`100%`）。兩支字表產生器都會套用；
+適合處理「同一個字在不同讀音要有不同權重」的情況。
 
 ## 看報告
 

@@ -94,6 +94,16 @@ class TestApplyPairs(unittest.TestCase):
             [("裡面", "裏面")],
         )
 
+    def test_phrase_gap_is_larger_than_char_gap(self):
+        essay = {f"k{i:02d}": float(100 - i) for i in range(60)}
+        essay.update({"甲": 90.0, "乙": 40.0, "丙": 90.0, "丁": 40.0})
+        pairs = [
+            pair("甲", "乙", "ortho", "char"),
+            pair("丙", "丁", "ortho", "phrase"),
+        ]
+        out, _ = apply_pairs(essay, pairs, page_size=5)
+        self.assertLess(out["丁"], out["乙"])
+
     def test_preferred_takes_max_across_variants(self):
         essay = {"A": 10.0, "B": 100.0, "C": 5.0, "x": 1.0}
         pairs = [pair("A", "B"), pair("A", "C")]

@@ -147,6 +147,7 @@ def apply_pairs(
     pairs: list[Pair],
     page_size: int = 5,
     gap_pages: int = 3,
+    phrase_gap_pages: int = 10,
     passes: int = 3,
 ) -> tuple[dict[str, float], list[dict]]:
     """Align each pair's two weights, keeping both entries.
@@ -211,7 +212,8 @@ def apply_pairs(
         changed = False
         for p in active:
             weight = preferred_weight[p.preferred]
-            gap = page_size * gap_pages * (2 if p.type == "regional" else 1)
+            pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
+            gap = page_size * pages * (2 if p.type == "regional" else 1)
             target = _target_weight(table, weight, gap)
             if out.get(p.variant) != target:
                 changed = True
@@ -225,7 +227,8 @@ def apply_pairs(
         weight = preferred_weight[p.preferred]
         target = out[p.variant]
         gap = final.rank(target) - final.rank(weight)
-        expected = page_size * gap_pages * (2 if p.type == "regional" else 1)
+        pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
+        expected = page_size * pages * (2 if p.type == "regional" else 1)
         report.append(
             {
                 "preferred": p.preferred,

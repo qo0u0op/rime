@@ -72,6 +72,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--report", default=os.path.join(HERE, "essay_report.txt"))
     parser.add_argument("--page-size", type=int, default=5)
     parser.add_argument("--gap-pages", type=int, default=3)
+    parser.add_argument("--phrase-gap-pages", type=int, default=10)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -96,7 +97,11 @@ def main(argv: list[str] | None = None) -> int:
         p for p in derived if (p.preferred, p.variant) not in existing
     ]
     out, report = apply_pairs(
-        essay, pairs, page_size=args.page_size, gap_pages=args.gap_pages
+        essay,
+        pairs,
+        page_size=args.page_size,
+        gap_pages=args.gap_pages,
+        phrase_gap_pages=args.phrase_gap_pages,
     )
     text = build_report(args, len(essay), len(out), report, out)
 

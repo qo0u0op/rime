@@ -16,6 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
+from essay_lib import load_pairs
 from generate_lisp_quick5 import (
     pinyin_to_double_codes,
     cangjie_quick,
@@ -26,6 +27,7 @@ from generate_lisp_quick5 import (
 LUNA_PINYIN = os.path.join(ROOT, "luna_pinyin.dict.yaml")
 CANGJIE5 = os.path.join(ROOT, "cangjie5.dict.yaml")
 OUTPUT = os.path.join(ROOT, "lisp_quick5_phrases.dict.yaml")
+PAIRS = os.path.join(HERE, "essay_pairs.tsv")
 
 # ---------------------------------------------------------------------------
 # 1. Parse phrases from luna_pinyin.dict.yaml (from line 49015)
@@ -118,7 +120,21 @@ def get_cangjie_quicks(char, cangjie_map):
 
 
 # ---------------------------------------------------------------------------
-# 3. Main
+# 3. Variant spellings
+# ---------------------------------------------------------------------------
+
+def phrase_spellings(phrase, mapping):
+  """Original phrase plus every single-character preferred/variant spelling."""
+  variants = {phrase}
+  for index, char in enumerate(phrase):
+    replacement = mapping.get(char)
+    if replacement:
+      variants.add(phrase[:index] + replacement + phrase[index + 1:])
+  return variants
+
+
+# ---------------------------------------------------------------------------
+# 4. Main
 # ---------------------------------------------------------------------------
 
 def main():
@@ -129,6 +145,14 @@ def main():
   print("Parsing phrases from luna_pinyin.dict.yaml ...")
   phrases = parse_phrases(LUNA_PINYIN)
   print(f"  {len(phrases)} phrases found")
+
+  # Character substitution map for variant spellings.
+  mapping = {}
+  if os.path.exists(PAIRS):
+    for pair in load_pairs(PAIRS):
+      if pair.scope == "char" and pair.type == "ortho":
+        mapping[pair.preferred] = pair.variant
+        mapping[pair.variant] = pair.preferred
 
   # Generate entries
   output_lines = []
@@ -150,31 +174,30 @@ def main():
     if not valid:
       continue
 
-    # Get Cangjie quick codes for each character
-    char_cj_codes = []
-    valid = True
-    for char in phrase:
-      cj_quicks = get_cangjie_quicks(char, cangjie_map)
-      if not cj_quicks:
-        skipped_no_cj += 1
-        valid = False
-        break
-      char_cj_codes.append(cj_quicks)
-    if not valid:
-      continue
+    for variant in sorted(phrase_spellings(phrase, mapping)):
+      char_cj_codes = []
+      valid = True
+      for char in variant:
+        cj_quicks = get_cangjie_quicks(char, cangjie_map)
+        if not cj_quicks:
+          skipped_no_cj += 1
+          valid = False
+          break
+        char_cj_codes.append(cj_quicks)
+      if not valid:
+        continue
 
-    # Generate all combinations
-    for dp_combo in product(*char_dp_codes):
-      for cj_combo in product(*char_cj_codes):
-        code_parts = [
-          f"{dp}/{cj}" for dp, cj in zip(dp_combo, cj_combo)
-        ]
-        code_str = " ".join(code_parts)
-        key = (phrase, code_str)
-        if key in seen:
-          continue
-        seen.add(key)
-        output_lines.append(f"{phrase}\t{code_str}")
+      for dp_combo in product(*char_dp_codes):
+        for cj_combo in product(*char_cj_codes):
+          code_parts = [
+            f"{dp}/{cj}" for dp, cj in zip(dp_combo, cj_combo)
+          ]
+          code_str = " ".join(code_parts)
+          key = (variant, code_str)
+          if key in seen:
+            continue
+          seen.add(key)
+          output_lines.append(f"{variant}\t{code_str}")
 
   print(f"Generated {len(output_lines)} entries")
   print(f"  Skipped: {skipped_no_dp} (no dp code), {skipped_no_cj} (no cj code)")

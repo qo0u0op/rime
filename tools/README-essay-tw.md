@@ -22,7 +22,7 @@ Rime 只會讀根目錄的資料檔；所有腳本、對照表、報告、測試
 | `essay_lib.py` | pair 模型、名次表、對齊演算法 |
 | `generate_flypy_quick5.py` | 產生 `flypy_quick5.dict.yaml` |
 | `generate_flypy_quick5_phrases.py` | 產生 `flypy_quick5_phrases.dict.yaml` |
-| `generate_lisp_quick5.py`、`generate_lisp_quick5_phrases.py` | 既有的 lisp 產生器（原樣移入） |
+| `generate_lisp_quick5.py`、`generate_lisp_quick5_phrases.py` | 既有的 lisp 產生器；詞組也會套用字對產生另一種寫法（例：`着實`→`著實`） |
 | `extract_moe_pairs.py`、`xlsx_rows.py` | 從 MOE xlsx 抽對照組 |
 | `extract_opencc_pairs.py` | 從 OpenCC 抽對照組 |
 | `essay_pairs.tsv` | 已核可的對照表 |
@@ -49,9 +49,13 @@ python3 tools/generate_flypy_quick5_phrases.py
 
 ## 對照表的類型
 
-- `ortho`（同詞異寫）：主形與異體都保留，全域名次差目標 15 名（約 3 頁）。
-- `regional`（跨區同義）：主形與另一區用語都保留，目標 30 名（約 6 頁）。
+- `char` + `ortho`（單字同詞異寫）：主形與異體都保留，全域名次差目標 15 名（約 3 頁）。
+- `phrase` + `ortho`（詞的同詞異寫）：目標 50 名（約 10 頁）。詞的重碼少、通常會置頂，
+  所以非 MOE 主形的寫法可以再往後。
+- `phrase` + `regional`（跨區同義）：目標 100 名（約 20 頁），本地用語優先。
 - `reading`（讀音分化）：兩邊權重都不動，只在 0 權重時給下限；用來處理 `妳/嬭`、`洒/灑`、`台/臺`。
+
+可用 `--gap-pages`（單字，預設 3）與 `--phrase-gap-pages`（詞，預設 10）調整。
 
 ## 看報告
 

@@ -47,31 +47,30 @@ def build_rows(
         shared = set(pref_pinyin) & set(var_pinyin)
         if not shared:
             continue
-        reading = max(shared, key=lambda p: _percent(pref_pinyin[p]))
-
-        lisp_dp = sorted(pinyin_to_double_codes(reading))
-        flypy_dp = sorted(pinyin_to_flypy(reading))
-        if not lisp_dp or not flypy_dp:
-            continue
         pref_cj = sorted(_cangjie_quicks(cangjie.get(pair.preferred, [])))
         var_cj = sorted(_cangjie_quicks(cangjie.get(pair.variant, [])))
         if not pref_cj or not var_cj:
             continue
 
-        rows.append(
-            {
-                "preferred": pair.preferred,
-                "variant": pair.variant,
-                "reading": reading,
-                "lisp_input": lisp_dp[0],
-                "flypy_input": flypy_dp[0],
-                "lisp_preferred": f"{lisp_dp[0]}/{pref_cj[0]}",
-                "lisp_variant": f"{lisp_dp[0]}/{var_cj[0]}",
-                "flypy_preferred": f"{flypy_dp[0]}/{pref_cj[0]}",
-                "flypy_variant": f"{flypy_dp[0]}/{var_cj[0]}",
-                "preferred_weight": essay.get(pair.preferred, 0.0),
-            }
-        )
+        for reading in sorted(shared, key=lambda p: (-_percent(pref_pinyin[p]), p)):
+            lisp_dp = sorted(pinyin_to_double_codes(reading))
+            flypy_dp = sorted(pinyin_to_flypy(reading))
+            if not lisp_dp or not flypy_dp:
+                continue
+            rows.append(
+                {
+                    "preferred": pair.preferred,
+                    "variant": pair.variant,
+                    "reading": reading,
+                    "lisp_input": lisp_dp[0],
+                    "flypy_input": flypy_dp[0],
+                    "lisp_preferred": f"{lisp_dp[0]}/{pref_cj[0]}",
+                    "lisp_variant": f"{lisp_dp[0]}/{var_cj[0]}",
+                    "flypy_preferred": f"{flypy_dp[0]}/{pref_cj[0]}",
+                    "flypy_variant": f"{flypy_dp[0]}/{var_cj[0]}",
+                    "preferred_weight": essay.get(pair.preferred, 0.0),
+                }
+            )
 
     rows.sort(key=lambda row: -row["preferred_weight"])
     if limit:

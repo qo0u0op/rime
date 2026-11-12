@@ -61,7 +61,7 @@ python3 tools/generate_flypy_quick5_phrases.py
 
 ## MOE 檢查清單
 
-`tools/moe_check.tsv` 由 `tools/moe_check.py` 從 `essay_pairs.tsv` 產生（1,168 組），
+`tools/moe_check.tsv` 由 `tools/moe_check.py` 從 `essay_pairs.tsv` 產生（1,426 列，破音字會有多個讀音列），
 每列包含 `preferred`、`variant`、讀音，以及 lisp／flypy 的輸入碼。
 
 用法：`grep '^為' tools/moe_check.tsv`，照 `lisp_input`（或 `flypy_input`）輸入，

@@ -74,7 +74,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--report", default=os.path.join(HERE, "essay_report.txt"))
     parser.add_argument("--page-size", type=int, default=5)
     parser.add_argument("--gap-pages", type=int, default=3)
-    parser.add_argument("--phrase-gap-pages", type=int, default=10)
+    parser.add_argument("--phrase-gap-pages", type=int, default=20)
     parser.add_argument("--abcn", default=os.path.join(HERE, "abcn.tsv"))
     parser.add_argument("--variant-cap", type=float, default=0.9)
     parser.add_argument("--rare-cap", type=float, default=0.1)

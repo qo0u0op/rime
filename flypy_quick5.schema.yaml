@@ -37,8 +37,6 @@ translator:
   spelling_hints: 10
   dictionary: flypy_quick5
   prism: flypy_quick5
-  import_tables:
-    - flypy_quick5_phrases
   preedit_format:
     __include: templates/quick5/preedit_format
   comment_format:

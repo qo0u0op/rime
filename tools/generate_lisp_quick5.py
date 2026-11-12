@@ -245,6 +245,8 @@ name: lisp_quick5
 version: "0.1"
 sort: by_weight
 use_preset_vocabulary: true
+import_tables:
+  - lisp_quick5_phrases
 ...
 
 """

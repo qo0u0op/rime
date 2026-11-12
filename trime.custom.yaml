@@ -1,0 +1,301 @@
+patch:
+  preset_keyboards:
+    default:
+      name: Colemak-DH
+      ascii_mode: 1
+      lock: true
+      width: 10
+      columns: 10
+      height: 44
+      label_transform: uppercase
+      keys:
+        # Row 1: q w f p b j l u y ;
+        - { click: q, long_click: Q }
+        - { click: w, long_click: W }
+        - { click: f, long_click: F }
+        - { click: p, long_click: P }
+        - { click: b, long_click: B }
+        - { click: j, long_click: J }
+        - { click: l, long_click: L }
+        - { click: u, long_click: U }
+        - { click: y, long_click: Y }
+        - { click: ";", swipe_up: ":", hint: ":" }
+        # Row 2: a r s t g m n e i o (swipe_up 1-0)
+        - { click: a, long_click: A, swipe_up: "1", hint: "1" }
+        - { click: r, long_click: R, swipe_up: "2", hint: "2" }
+        - { click: s, long_click: S, swipe_up: "3", hint: "3" }
+        - { click: t, long_click: T, swipe_up: "4", hint: "4" }
+        - { click: g, long_click: G, swipe_up: "5", hint: "5" }
+        - { click: m, long_click: M, swipe_up: "6", hint: "6" }
+        - { click: n, long_click: N, swipe_up: "7", hint: "7" }
+        - { click: e, long_click: E, swipe_up: "8", hint: "8" }
+        - { click: i, long_click: I, swipe_up: "9", hint: "9" }
+        - { click: o, long_click: O, swipe_up: "0", hint: "0" }
+        # Row 3: z x c d v k h , . /
+        - { click: z, long_click: Z, swipe_up: "|", hint: "分詞" }
+        - { click: x, long_click: X, swipe_up: "~", hint: "~" }
+        - { click: c, long_click: C, swipe_up: "`", hint: "`" }
+        - { click: d, long_click: D, swipe_up: "'", hint: "'" }
+        - { click: v, long_click: V, swipe_up: '"', hint: '"' }
+        - { click: k, long_click: K }
+        - { click: h, long_click: H }
+        - { click: ",", swipe_up: "<", hint: "<" }
+        - { click: ., swipe_up: ">", hint: ">" }
+        - { click: "/", swipe_up: "?", hint: "?" }
+        # Row 4: 比例 1.5u:1.5u:2u:2u:1.5u:1.5u = 15:15:20:20:15:15 = 100
+        - { click: Shift_short, swipe_up: Shift_lock, width: 15 }
+        - { click: Keyboard_number, width: 15 }
+        - { click: space, swipe_up: Mode_switch, width: 20 }
+        - { click: Return, width: 20 }
+        - { click: Keyboard_symbols, width: 15 }
+        - { click: BackSpace, swipe_up: Delete, width: 15 }
+    mini:
+      import_preset: default
+    flypy_quick5:
+      name: Colemak-DH
+      ascii_mode: 1
+      lock: true
+      width: 10
+      columns: 10
+      height: 44
+      label_transform: uppercase
+      keys:
+        # Row 1: q w f p b j l u y ;
+        - { click: q, long_click: Q }
+        - { click: w, long_click: W }
+        - { click: f, long_click: F }
+        - { click: p, long_click: P }
+        - { click: b, long_click: B }
+        - { click: j, long_click: J }
+        - { click: l, long_click: L }
+        - { click: u, long_click: U }
+        - { click: y, long_click: Y }
+        - { click: ";", swipe_up: ":", hint: ":" }
+        # Row 2: a r s t g m n e i o (swipe_up 1-0)
+        - { click: a, long_click: A, swipe_up: "1", hint: "1" }
+        - { click: r, long_click: R, swipe_up: "2", hint: "2" }
+        - { click: s, long_click: S, swipe_up: "3", hint: "3" }
+        - { click: t, long_click: T, swipe_up: "4", hint: "4" }
+        - { click: g, long_click: G, swipe_up: "5", hint: "5" }
+        - { click: m, long_click: M, swipe_up: "6", hint: "6" }
+        - { click: n, long_click: N, swipe_up: "7", hint: "7" }
+        - { click: e, long_click: E, swipe_up: "8", hint: "8" }
+        - { click: i, long_click: I, swipe_up: "9", hint: "9" }
+        - { click: o, long_click: O, swipe_up: "0", hint: "0" }
+        # Row 3: z x c d v k h , . /
+        - { click: z, long_click: Z, swipe_up: "|", hint: "分詞" }
+        - { click: x, long_click: X, swipe_up: "~", hint: "~" }
+        - { click: c, long_click: C, swipe_up: "`", hint: "`" }
+        - { click: d, long_click: D, swipe_up: "'", hint: "'" }
+        - { click: v, long_click: V, swipe_up: '"', hint: '"' }
+        - { click: k, long_click: K }
+        - { click: h, long_click: H }
+        - { click: ",", swipe_up: "<", hint: "<" }
+        - { click: ., swipe_up: ">", hint: ">" }
+        - { click: "/", swipe_up: "?", hint: "?" }
+        # Row 4: 比例 1.5u:1.5u:2u:2u:1.5u:1.5u = 15:15:20:20:15:15 = 100
+        - { click: Shift_short, swipe_up: Shift_lock, width: 15 }
+        - { click: Keyboard_number, width: 15 }
+        - { click: space, swipe_up: Mode_switch, width: 20 }
+        - { click: Return, width: 20 }
+        - { click: Keyboard_symbols, width: 15 }
+        - { click: BackSpace, swipe_up: Delete, width: 15 }
+    number:
+      name: "數字"
+      width: 20
+      height: 44
+      keys:
+        [
+          { click: "+" },
+          { click: KP_1 },
+          { click: KP_2 },
+          { click: KP_3 },
+          { click: "#" },
+          { click: "-" },
+          { click: KP_4 },
+          { click: KP_5 },
+          { click: KP_6 },
+          { click: "%" },
+          { click: "*" },
+          { click: KP_7 },
+          { click: KP_8 },
+          { click: KP_9 },
+          { click: ":" },
+          { click: "/" },
+          { click: "±" },
+          { click: KP_0 },
+          { click: . },
+          { click: "," },
+          { click: "=" },
+          { click: Keyboard_default, long_click: Keyboard_symbols },
+          { click: space },
+          { click: BackSpace },
+          { click: Return },
+        ]
+    symbols:
+      ascii_mode: 1
+      name: "符號"
+      width: 10
+      height: 44
+      columns: 10
+      keys:
+        [
+          { click: "!" },
+          { click: "@" },
+          { click: "#" },
+          { click: "$" },
+          { click: "%" },
+          { click: "^" },
+          { click: "&" },
+          { click: "*" },
+          { click: "\\" },
+          { click: "|" },
+          { click: 1 },
+          { click: 2 },
+          { click: 3 },
+          { click: 4 },
+          { click: 5 },
+          { click: 6 },
+          { click: 7 },
+          { click: 8 },
+          { click: 9 },
+          { click: 0 },
+          { click: "-" },
+          { click: "_" },
+          { click: "{" },
+          { click: "[" },
+          { click: "(" },
+          { click: ")" },
+          { click: "]" },
+          { click: "}" },
+          { click: "+" },
+          { click: "=" },
+          { click: liquid_keyboard_switch, width: 15 },
+          { click: Keyboard_number, long_click: Color_switch, width: 15 },
+          { click: space, width: 20 },
+          { click: Return, width: 20 },
+          { click: Keyboard_default, long_click: Menu, width: 15 },
+          { click: BackSpace, long_click: Delete, width: 15 },
+        ]
+    editor:
+      name: "編輯"
+      width: 20
+      height: 44
+      keys:
+        # 第 1 列：全選、逐詞左、上、逐詞右、空格
+        - { click: select_all }
+        - { click: Left1 }
+        - { click: Up }
+        - { click: Right1 }
+        - { click: Keyboard_default }
+        # 第 2 列：剪下、左、選擇、右、Tab
+        - { click: cut }
+        - { click: Left }
+        - { click: Shift_L2 }
+        - { click: Right }
+        - { click: Tab1 }
+        # 第 3 列：複製、行首、下、行尾、退格
+        - { click: copy }
+        - { click: Home, label: "⇤" }
+        - { click: Down }
+        - { click: End, label: "⇥" }
+        - { click: BackSpace }
+        # 第 4 列：貼上、復原、返回、重做、Enter
+        - { click: paste }
+        - { click: undo, label: "↶" }
+        - { click: space1 }
+        - { click: redo, label: "↷" }
+        - { click: Return }
+  preset_color_schemes:
+    default:
+      name: E-Ink
+      back_color: 0xFFFFFF
+      text_color: 0x000000
+      border_color: 0xCCCCCC
+      candidate_text_color: 0x000000
+      comment_text_color: 0x000000
+      hilited_candidate_back_color: 0xB0B0B0
+      hilited_candidate_text_color: 0x000000
+      hilited_comment_text_color: 0x000000
+      hilited_text_color: 0x000000
+      key_back_color: 0xFFFFFF
+      key_text_color: 0x000000
+      key_symbol_color: 0x000000
+      keyboard_back_color: 0xFFFFFF
+      label_color: 0x000000
+      hilited_key_back_color: 0xB0B0B0
+      hilited_key_text_color: 0x000000
+      hilited_key_symbol_color: 0x000000
+      hilited_on_key_back_color: 0xB0B0B0
+      hilited_on_key_text_color: 0x000000
+      hilited_off_key_back_color: 0xB0B0B0
+      hilited_off_key_text_color: 0x000000
+      preview_back_color: 0xFFFFFF
+      preview_text_color: 0x000000
+      shadow_color: 0xFFFFFF
+      text_back_color: 0xFFFFFF
+  tool_bar:
+    button_spacing: 5
+    back_style: "ic@arrow-left"
+    primary_button:
+      background:
+        type: circle
+        corner_radius: 10
+        normal: 0x00
+        highlight: hilited_candidate_button_color
+        vertical_inset: 4
+        horizontal_inset: 4
+      foreground:
+        style: "ic@dots_horizontal"
+        normal: candidate_text_color
+        padding: 10
+      # action 留空：AlwaysUi 會直接開啟 SwitchOptionWindow，
+      # 這是 Trime 預設 3-dot 的行為；不要指定 menu_keyboard。
+      long_press_action: Settings
+    buttons:
+      # 清單由右往左排，畫面左→右為：全/半形、中/英、遊標、剪貼簿、emoji、隱藏鍵盤
+      - foreground:
+          style: "ic@keyboard_close"
+        action: Hide
+      - foreground:
+          style: "ic@emoticon"
+        action: liquid_keyboard_emoji
+      - foreground:
+          style: "ic@clipboard"
+        action: clipboard_window
+      - foreground:
+          style: "ic@cursor_text"
+        action: Keyboard_editor
+      - foreground:
+          # 中/英 用漢字；font_size 與 padding 只作用在這個按鈕，
+          # padding 太大（例如 10）會吃掉按鈕高度，造成文字下半截被切掉。
+          option_styles: ["中", "英"]
+          font_size: 16
+          padding: 2
+        action: Mode_switch
+      - foreground:
+          # 半角：半圓；全角：實心圓
+          option_styles: ["ic@circle_half_full", "ic@circle"]
+        action: Zenkaku_Hankaku
+  # 用路徑鍵「只新增」這些 preset_key，
+  # 不能寫成 preset_keys: {...}，否則會覆蓋掉 trime.yaml 原有的全部 preset_keys。
+  "preset_keys/Keyboard_editor":
+    { label: 遊標, functional: false, send: Eisu_toggle, select: editor }
+  "preset_keys/Left1":
+    { label: "⇦", send: Control+Left, repeatable: true, functional: false }
+  "preset_keys/Right1":
+    { label: "⇨", send: Control+Right, repeatable: true, functional: false }
+  "preset_keys/Shift_L2":
+    { label: 選擇, preview: "⇪", functional: false, send: Shift_L }
+  "preset_keys/Tab1": { label: "Tab", functional: false, send: Tab }
+  # 短按 Shift：一般 Shift；上滑 Shift_lock：鎖定 Shift（CapsLock 效果）
+  "preset_keys/Shift_short":
+    { label: Shift, preview: "⇧", functional: false, send: Shift_L }
+  "preset_keys/Shift_lock":
+    {
+      label: CapsLock,
+      preview: "⇪",
+      functional: false,
+      send: Shift_L,
+      shift_lock: click,
+    }

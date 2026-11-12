@@ -16,13 +16,13 @@
 
 ## 方案檔案
 
-| 檔案 | 說明 |
-|---|---|
-| `flypy_luna.schema.yaml` | 小鶴雙拼基礎設定（轉譯成 Luna 拼音） |
-| `flypy_self.schema.yaml` | 轉換後字碼表，不經過轉譯 |
-| `flypy_quick5.schema.yaml` | 小鶴雙拼＋速成（flypy 主方案） |
-| `lisp.schema.yaml` | 自製闊碼雙拼（Colemak-DH 大牛雙拼）基礎設定 |
-| `lisp_quick5.schema.yaml` | 闊碼雙拼＋速成（lisp 主方案） |
+| 檔案                       | 說明                                                                 |
+| -------------------------- | -------------------------------------------------------------------- |
+| `flypy_luna.schema.yaml`   | 小鶴雙拼基礎設定（轉譯成 Luna 拼音）                                 |
+| `flypy_self.schema.yaml`   | 轉換後字碼表，不經過轉譯                                             |
+| `flypy_quick5.schema.yaml` | 小鶴雙拼＋速成（flypy 主方案）                                       |
+| `lisp.schema.yaml`         | 自製闊碼雙拼（符合 Colemak-DH 鍵位的雙拼方案，改自大牛雙拼）基礎設定 |
+| `lisp_quick5.schema.yaml`  | 闊碼雙拼＋速成（lisp 主方案）                                        |
 
 `default.custom.yaml` 的 `schema_list` 預設是 `lisp_quick5` 與 `flypy_quick5`。
 `latex.schema.yaml` 提供 LaTeX 輸入，`cangjie5.dict.yaml` 提供倉頡反查。
@@ -31,8 +31,8 @@
 
 ## 按鍵輸入提示
 
-- flypy：小鶴拼音的鍵位和倉頡字根。
-- lisp：闊碼（Colemak-DH 大牛雙拼）的鍵位和倉頡字根。
+- flypy：小鶴雙拼的鍵位和倉頡字根。
+- lisp：闊碼雙拼的鍵位和倉頡字根。
 
 # 其它功能
 

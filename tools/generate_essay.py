@@ -37,6 +37,8 @@ def build_report(args, input_count, output_count, report, final):
         f"output entries: {output_count}",
         f"added entries: {output_count - input_count}",
         f"pairs applied: {actions.get('ok', 0)}",
+        f"char variants banded: {actions.get('banded', 0)}",
+        f"phrase variants zeroed: {actions.get('zeroed', 0)}",
         f"overshoot: {len(overshoot)}",
         f"conflicts: {len(conflicts)}",
         f"skipped: {len(skipped)}",
@@ -74,7 +76,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--gap-pages", type=int, default=3)
     parser.add_argument("--phrase-gap-pages", type=int, default=10)
     parser.add_argument("--abcn", default=os.path.join(HERE, "abcn.tsv"))
-    parser.add_argument("--rare-gap-pages", type=int, default=10)
+    parser.add_argument("--variant-cap", type=float, default=1000.0)
+    parser.add_argument("--rare-cap", type=float, default=100.0)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -109,6 +112,22 @@ def main(argv: list[str] | None = None) -> int:
             file=sys.stderr,
         )
 
+    for char in essay:
+        if len(char) != 1:
+            continue
+        code = ord(char)
+        if (
+            0x3400 <= code <= 0x4DBF
+            or 0x20000 <= code <= 0x2A6DF
+            or 0x2A700 <= code <= 0x2B73F
+            or 0x2B740 <= code <= 0x2B81F
+            or 0x2B820 <= code <= 0x2CEAF
+            or 0x2CEB0 <= code <= 0x2EBEF
+            or 0x30000 <= code <= 0x3134F
+            or 0x31350 <= code <= 0x323AF
+        ):
+            rare_chars.add(char)
+
     derived = derive_phrase_pairs(essay, pairs)
     existing = {(p.preferred, p.variant) for p in pairs}
     pairs = pairs + [
@@ -121,7 +140,8 @@ def main(argv: list[str] | None = None) -> int:
         gap_pages=args.gap_pages,
         phrase_gap_pages=args.phrase_gap_pages,
         rare_chars=rare_chars,
-        rare_gap_pages=args.rare_gap_pages,
+        variant_cap=args.variant_cap,
+        rare_cap=args.rare_cap,
     )
     text = build_report(args, len(essay), len(out), report, out)
 

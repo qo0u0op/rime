@@ -142,21 +142,54 @@ def derive_phrase_pairs(essay: dict[str, float], pairs: list[Pair]) -> list[Pair
     return derived
 
 
+def apply_char_bands(
+    essay: dict[str, float],
+    pairs: list[Pair],
+    rare_chars: set[str] | None = None,
+    variant_cap: float = 1000.0,
+    rare_cap: float = 100.0,
+) -> dict[str, float]:
+    """Put orthographic variants in a band below common chars and above rare ones."""
+    out = dict(essay)
+    rare = rare_chars or set()
+    protected = {p.preferred for p in pairs}
+
+    for p in pairs:
+        if p.scope != "char" or p.type != "ortho":
+            continue
+        if p.variant in protected:
+            continue
+        preferred = out.get(p.preferred, 10.0)
+        ceiling = min(variant_cap, max(1.0, preferred - 1.0))
+        if p.variant in rare:
+            ceiling = min(ceiling, rare_cap)
+        out[p.variant] = ceiling
+
+    for char in rare:
+        if char in protected:
+            continue
+        if char in out and out[char] > rare_cap:
+            out[char] = rare_cap
+
+    return out
+
+
 def apply_pairs(
     essay: dict[str, float],
     pairs: list[Pair],
     page_size: int = 5,
     gap_pages: int = 3,
-    phrase_gap_pages: int = 10,
+    phrase_gap_pages: int = 20,
     rare_chars: set[str] | None = None,
-    rare_gap_pages: int = 10,
+    variant_cap: float = 1000.0,
+    rare_cap: float = 100.0,
     passes: int = 3,
 ) -> tuple[dict[str, float], list[dict]]:
-    """Align each pair's two weights, keeping both entries.
+    """Apply the char bands and the phrase/regional rules.
 
-    Preferred weights are fixed first, then variant targets are recomputed
-    against the live distribution for a few passes so later pairs do not
-    silently undo earlier ones.
+    Single-character orthographic variants go to a fixed band below common
+    characters but above rare/CJK-extension characters. Phrase variants are
+    zeroed; regional phrases keep a rank gap.
     """
     out = dict(essay)
     preferred_keys = {p.preferred for p in pairs}
@@ -209,21 +242,18 @@ def apply_pairs(
         if wv == 0.0:
             out[p.variant] = floor
 
+    for p in active:
+        if p.scope == "phrase" and p.type == "ortho":
+            out[p.variant] = 0.0
+
+    regional = [p for p in active if p.type == "regional"]
     for _ in range(max(1, passes)):
         table = RankTable(out.values())
         changed = False
-        for p in active:
+        for p in regional:
             weight = preferred_weight[p.preferred]
             pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
-            if (
-                p.scope == "char"
-                and rare_chars
-                and p.variant in rare_chars
-            ):
-                pages = rare_gap_pages
-                gap = page_size * pages
-            else:
-                gap = page_size * pages * (2 if p.type == "regional" else 1)
+            gap = page_size * pages * 2
             target = _target_weight(table, weight, gap)
             if out.get(p.variant) != target:
                 changed = True
@@ -231,26 +261,33 @@ def apply_pairs(
         if not changed:
             break
 
+    out = apply_char_bands(
+        out, active, rare_chars, variant_cap=variant_cap, rare_cap=rare_cap
+    )
+
     final = RankTable(out.values())
     report: list[dict] = []
     for p in active:
         weight = preferred_weight[p.preferred]
-        target = out[p.variant]
-        gap = final.rank(target) - final.rank(weight)
-        pages = phrase_gap_pages if p.scope == "phrase" else gap_pages
-        if p.scope == "char" and rare_chars and p.variant in rare_chars:
-            expected = page_size * rare_gap_pages
+        target = out.get(p.variant, 0.0)
+        if p.scope == "char" and p.type == "ortho":
+            action = "banded"
+        elif p.scope == "phrase" and p.type == "ortho":
+            action = "zeroed"
         else:
-            expected = page_size * pages * (2 if p.type == "regional" else 1)
+            gap = final.rank(target) - final.rank(weight)
+            expected = page_size * phrase_gap_pages * 2
+            action = "overshoot" if gap > expected else "ok"
         report.append(
             {
                 "preferred": p.preferred,
                 "variant": p.variant,
                 "type": p.type,
-                "action": "overshoot" if gap > expected else "ok",
+                "scope": p.scope,
+                "action": action,
                 "weight": weight,
                 "target": target,
-                "gap": gap,
+                "gap": final.rank(target) - final.rank(weight),
             }
         )
     for p in conflicts:
@@ -259,6 +296,7 @@ def apply_pairs(
                 "preferred": p.preferred,
                 "variant": p.variant,
                 "type": p.type,
+                "scope": p.scope,
                 "action": "conflict",
             }
         )
@@ -268,6 +306,7 @@ def apply_pairs(
                 "preferred": p.preferred,
                 "variant": p.variant,
                 "type": p.type,
+                "scope": p.scope,
                 "action": "skip",
             }
         )
@@ -282,6 +321,7 @@ def apply_pairs(
                 "preferred": p.preferred,
                 "variant": p.variant,
                 "type": p.type,
+                "scope": p.scope,
                 "action": "ok",
             }
         )

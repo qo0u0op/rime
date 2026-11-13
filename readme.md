@@ -157,6 +157,18 @@ CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（�
 - `rime-config-desktop-lisp`
 - `rime-config-mobile-all`
 
+推送 `v*` tag 時，CI 會把四個目錄壓成 zip 並附到 GitHub Release：
+
+- `rime-config-desktop-all.zip`
+- `rime-config-desktop-flypy.zip`
+- `rime-config-desktop-lisp.zip`
+- `rime-config-mobile-all.zip`
+
+```bash
+git tag v2026.11.13
+git push origin v2026.11.13
+```
+
 桌面版保留 latex、`cangjie_comment` switch；手機版套用 `tools/mobile/` overlay，
 移除 latex 與 `extended_charset`／`ascii_punct`，加入 `trime.custom.yaml`、
 `hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。手機只產 `all`，不再分 flypy／lisp。
@@ -170,7 +182,7 @@ CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（�
 | 環境 | 來源 | 更新方式 |
 |---|---|---|
 | 桌面（`~/.local/share/fcitx5/rime`） | git repo + pacman hook | `git pull` 後重新部署；來源套件更新由 hook 重生 |
-| 手機（Trime／Hamster） | `rime-config-mobile-all` release | 下載解壓覆蓋使用者目錄 |
+| 手機（Trime／Hamster） | `rime-config-mobile-all.zip` release | 下載解壓覆蓋使用者目錄 |
 
 桌面不建議改用 release 覆蓋，因為 repo 內有些**無法從上游還原**的本地狀態：
 

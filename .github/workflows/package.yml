@@ -2,8 +2,15 @@ name: package-rime
 
 on:
   push:
+    branches:
+      - main
+    tags:
+      - "v*"
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   package:
@@ -20,10 +27,17 @@ jobs:
 
       - name: Package Rime files
         run: |
-          bash tools/package_rime.sh dist/rime-config-desktop-all all desktop
-          bash tools/package_rime.sh dist/rime-config-desktop-flypy flypy desktop
-          bash tools/package_rime.sh dist/rime-config-desktop-lisp lisp desktop
-          bash tools/package_rime.sh dist/rime-config-mobile-all all mobile
+          set -euo pipefail
+          packages=(
+            "rime-config-desktop-all all desktop"
+            "rime-config-desktop-flypy flypy desktop"
+            "rime-config-desktop-lisp lisp desktop"
+            "rime-config-mobile-all all mobile"
+          )
+          for entry in "${packages[@]}"; do
+            read -r name variant platform <<<"$entry"
+            bash tools/package_rime.sh "dist/$name" "$variant" "$platform"
+          done
 
       - uses: actions/upload-artifact@v4
         with:
@@ -44,3 +58,22 @@ jobs:
         with:
           name: rime-config-mobile-all
           path: dist/rime-config-mobile-all
+
+      - name: Zip packages
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          set -euo pipefail
+          cd dist
+          for dir in rime-config-*; do
+            [[ -d "$dir" ]] || continue
+            zip -qr "$dir.zip" "$dir"
+          done
+          ls -lh ./*.zip
+
+      - name: Publish release assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
+          generate_release_notes: true
+          fail_on_unmatched_files: true

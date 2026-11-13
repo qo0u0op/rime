@@ -383,6 +383,10 @@ CI 在 `.github/workflows/package.yml`：
 先跑測試，再產生四個包：desktop 的 `all`／`flypy`／`lisp` 與 mobile 的 `all`。
 `.gram` 不打包，模型由使用者自行下載。
 
+推送 `v*` tag（例如 `v2026.11.13`）時，CI 會把四個目錄壓成
+`rime-config-*.zip` 並附到 GitHub Release；`workflow_dispatch` 只產生 artifact，
+不會建立 release。
+
 ## 8. 測試
 
 ```bash

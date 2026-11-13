@@ -111,10 +111,26 @@ python3 tools/generate_lisp_quick5_phrases.py
 `rime-essay` 更新時，pacman hook `tools/91-rime-essay-tw.hook` 會自動重生 `essay.txt`，
 只印出提示、不會呼叫 `fcitx5-remote`。
 
+注意：pacman `extra` 的 `rime-essay` 套件可能落後上游
+[rime/rime-essay](https://github.com/rime/rime-essay)（目前套件是 2025-02，上游已有 2026-11 的修正）。
+要跟上游時，先下載上游 `essay.txt`，再用 `--essay` 指定：
+
+```bash
+curl -fL -o /tmp/rime-essay.txt \
+  https://raw.githubusercontent.com/rime/rime-essay/master/essay.txt
+python3 tools/generate_essay.py \
+    --essay /tmp/rime-essay.txt \
+    --pairs tools/essay_pairs.tsv \
+    --out essay.txt \
+    --report tools/essay_report.txt
+```
+
+差別只在頻率來源；`essay_pairs.tsv`、`reading_weights.tsv` 與三層權重規則不變。
+
 `rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會把系統 dict
 合併回 repo 並重生四張表。合併是增量式的：上游條目優先，本地獨有的非 PUA 字元會保留，
 舊 PUA 對應由上游部首取代；字典層的讀音權重由 `tools/dict_overrides.tsv` 套用
-（例如 `暫 zhan` 讀音、`暫 zan` 又音）。同樣不自動 commit。
+（例如移除系統版 `暫 zhan 0%`，讓兩個讀音同吃 essay 權重）。同樣不自動 commit。
 手動預覽與套用：
 
 ```bash
@@ -152,7 +168,7 @@ CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（�
 
 桌面不建議改用 release 覆蓋，因為 repo 內有些**無法從上游還原**的本地狀態：
 
-- `cangjie5.dict.yaml` 的 `use_preset_vocabulary: false`（系統版是 `true`）
+- `cangjie5.dict.yaml` 保留本地獨有的 `鿃 bukoo`（上游沒有）；其餘跟系統一致。
 - `essay.txt` 是重生產物，不是上游原始檔
 - `luna_pinyin.dict.yaml` 對 `暫 zhan` 的權重調整
 - 自己的 `*.custom.yaml`、`tools/`、pacman hook 都依賴 repo 路徑

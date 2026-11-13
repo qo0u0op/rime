@@ -173,10 +173,15 @@ sudo cp tools/91-rime-sources.hook /etc/pacman.d/hooks/
 `tools/generate_essay.py`，只重生 `essay.txt` 並印出「請重新部署 Rime」。
 **不會**呼叫 `fcitx5-remote`、不會重啟輸入法。
 
+pacman `extra` 的 `rime-essay` 可能落後上游；要跟最新上游時，下載
+<https://raw.githubusercontent.com/rime/rime-essay/master/essay.txt> 後，
+用 `generate_essay.py --essay /tmp/rime-essay.txt` 指定即可，其餘規則不變。
+
 `91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後，
 以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，本地獨有的
-非 PUA 字元會保留，舊 PUA 對應由上游部首取代，`use_preset_vocabulary: false` 也會保留。
-讀音權重由 `tools/dict_overrides.tsv` 在合併後套用（`暫 zhan` 讀音、`暫 zan` 又音）。
+非 PUA 字元會保留，舊 PUA 對應由上游部首取代；檔頭與條目都以上游為準（所以
+`use_preset_vocabulary: true`，倉頡也吃 essay 權重）。
+讀音權重由 `tools/dict_overrides.tsv` 在合併後套用（移除系統版 `暫 zhan 0%`）。
 合併後重生四張 flypy／lisp 表，不自動 commit，只顯示 `git diff --stat`。
 
 ```bash

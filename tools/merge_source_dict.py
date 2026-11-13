@@ -2,16 +2,14 @@
 """Merge an upstream Rime dictionary into a local copy.
 
 Rules:
-- Header comes from the upstream file, except local overrides that are
-  explicitly kept (`use_preset_vocabulary: false` on cangjie5).
-- Entries come from upstream, in upstream order.
+- Header and entries come from the upstream file, in upstream order.
 - Entries that exist only locally are appended, so a package update never
   deletes locally added characters.
 - Old PUA mappings (U+E000..U+F8FF) that exist only locally are dropped;
   upstream replaced them with proper radicals.
 - When both sides have the same (text, code) pair, upstream wins.
 - Optional overrides force a weight for a (text, code) pair, e.g.
-  `暫 zhan 100%`. See tools/dict_overrides.tsv.
+  `暫 zhan 100%`, or `-` to remove the weight. See tools/dict_overrides.tsv.
 
 Usage: merge_source_dict.py LOCAL UPSTREAM OUT [OVERRIDES]
 """
@@ -19,9 +17,9 @@ Usage: merge_source_dict.py LOCAL UPSTREAM OUT [OVERRIDES]
 import os
 import sys
 
-KEEP_HEADER_OVERRIDES = ("use_preset_vocabulary",)
 PUA_START = 0xE000
 PUA_END = 0xF8FF
+NO_WEIGHT = ("", "-")
 
 
 def split_dict(text):
@@ -32,19 +30,6 @@ def split_dict(text):
         raise SystemExit("dictionary has no '...' separator")
 
     return lines[: idx + 1], lines[idx + 1 :]
-
-
-def header_values(lines):
-    values = {}
-    for line in lines:
-        if line.startswith("#") or ":" not in line:
-            continue
-        if line.startswith((" ", "\t")):
-            continue
-        key, _, value = line.partition(":")
-        values[key.strip()] = value.strip()
-
-    return values
 
 
 def entry_key(line):
@@ -83,7 +68,7 @@ def load_overrides(path, dict_name):
 
 
 def apply_overrides(body, overrides):
-    """Force a weight on each (text, code) pair; append the pair if missing."""
+    """Force (or remove) a weight on each (text, code) pair."""
     applied = 0
     for text, code, weight in overrides:
         key = (text, code)
@@ -92,27 +77,26 @@ def apply_overrides(body, overrides):
             if entry_key(line) != key:
                 continue
             fields = line.split("\t")
-            body[index] = "\t".join([fields[0], fields[1], weight] + fields[3:])
+            if weight in NO_WEIGHT:
+                fields = fields[:2] + fields[3:]
+            else:
+                fields = [fields[0], fields[1], weight] + fields[3:]
+            body[index] = "\t".join(fields)
             found = True
             applied += 1
         if not found:
-            body.append("\t".join([text, code, weight]))
+            if weight in NO_WEIGHT:
+                body.append("\t".join([text, code]))
+            else:
+                body.append("\t".join([text, code, weight]))
             applied += 1
 
     return applied
 
 
 def merge(local_text, upstream_text, overrides=()):
-    local_header, local_body = split_dict(local_text)
-    upstream_header, upstream_body = split_dict(upstream_text)
-
-    local_values = header_values(local_header)
-    header = []
-    for line in upstream_header:
-        key = line.partition(":")[0].strip() if ":" in line else ""
-        if key in KEEP_HEADER_OVERRIDES and key in local_values:
-            line = f"{key}: {local_values[key]}"
-        header.append(line)
+    _, local_body = split_dict(local_text)
+    header, upstream_body = split_dict(upstream_text)
 
     upstream_keys = set()
     body = []

@@ -46,10 +46,10 @@ class TestMergeSourceDict(unittest.TestCase):
         self.assertIn("日\ta", merged)
         self.assertIn("曰\ta", merged)
 
-    def test_keeps_local_header_override(self):
+    def test_upstream_header_wins(self):
         merged, _, _, _ = merge(LOCAL, UPSTREAM)
-        self.assertIn("use_preset_vocabulary: false", merged)
-        self.assertNotIn("use_preset_vocabulary: true", merged)
+        self.assertIn("use_preset_vocabulary: true", merged)
+        self.assertNotIn("use_preset_vocabulary: false", merged)
 
     def test_upstream_order_is_preserved(self):
         merged, _, _, _ = merge(LOCAL, UPSTREAM)
@@ -64,6 +64,11 @@ class TestMergeSourceDict(unittest.TestCase):
         merged, _, _, applied = merge(LOCAL, UPSTREAM, [("日", "a", "0%")])
         self.assertEqual(applied, 1)
         self.assertIn("日\ta\t0%", merged)
+
+    def test_override_removes_weight(self):
+        merged, _, _, applied = merge(LOCAL, UPSTREAM, [("日", "a", "-")])
+        self.assertEqual(applied, 1)
+        self.assertIn("\n日\ta\n", merged)
 
     def test_override_appends_missing_entry(self):
         merged, _, _, applied = merge(LOCAL, UPSTREAM, [("暫", "zhan", "100%")])

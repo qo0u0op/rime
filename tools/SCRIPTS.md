@@ -69,7 +69,7 @@ Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/u
 
 - 以系統 dict 為基準合併（`tools/merge_source_dict.py`）：上游條目優先，
   本地獨有的非 PUA 字元會保留；舊 PUA 對應（U+E000–U+F8FF）會被上游部首取代而移除。
-- 保留 `cangjie5.dict.yaml` 的 `use_preset_vocabulary: false`。
+- 檔頭與條目都取上游（包含 `use_preset_vocabulary`，所以倉頡吃 essay 權重）。
 - 合併後套用 `tools/dict_overrides.tsv` 的讀音權重。
 - `cangjie5.schema.yaml` 只在本地沒有未提交修改時才覆蓋。
 - 接著重生 `flypy_quick5`、`lisp_quick5` 字表與詞組表。
@@ -82,7 +82,7 @@ Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/u
 python3 tools/merge_source_dict.py LOCAL UPSTREAM OUT [OVERRIDES]
 ```
 
-- 檔頭取上游，但 `use_preset_vocabulary` 保留本地值。
+- 檔頭與條目都取上游。
 - 條目以上游順序為主；同一個（字, 碼）以上游為準。
 - 只存在本地的非 PUA 條目附加在最後，所以更新不會刪掉自訂字。
 - 只存在本地的 PUA 條目直接丟棄（上游已改用部首）。
@@ -95,14 +95,13 @@ python3 tools/merge_source_dict.py LOCAL UPSTREAM OUT [OVERRIDES]
 
 ```
 # 檔案	字	碼	權重
-luna_pinyin.dict.yaml	暫	zhan	100%
-luna_pinyin.dict.yaml	暫	zan	0%
+luna_pinyin.dict.yaml	暫	zhan	-
 ```
 
 - 教育部《重編國語辭典》以 `ㄓㄢˋ`（zhan）為「暫」的讀音，`ㄗㄢˋ`（zan）為又音。
 - `luna_pinyin` 的 `use_preset_vocabulary: true` 會把 `essay.txt` 的 `暫 1820` 套到
-  其中一個讀音；沒有覆寫時兩個讀音同權重，系統版則把 zhan 設成 `0%`。
-- 覆寫後 `暫 zhan` 權重 1820、`暫 zan` 為 0，又音仍可輸入但排在後面。
+  兩個讀音；系統版把 zhan 設成 `0%`，移除後兩者都是 1820。
+- 權重寫 `-` 代表移除該欄，讓條目回到 essay 預設權重；也可以寫 `0%`、`100%`。
 
 
 ## 3. 重生 essay

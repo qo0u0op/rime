@@ -129,11 +129,15 @@ bash tools/update_essay.sh --source upstream    # 抓不到就失敗，不退回
 差別只在頻率來源；`essay_pairs.tsv`、`reading_weights.tsv` 與三層權重規則不變。
 `essay.txt` 是 tracked 產物，重生後需自行 commit。
 
-`rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會把系統 dict
-合併回 repo 並重生四張表。合併是增量式的：上游條目優先，本地獨有的非 PUA 字元會保留，
-舊 PUA 對應由上游部首取代；字典層的讀音權重由 `tools/dict_overrides.tsv` 套用
-（例如移除系統版 `暫 zhan 0%`，讓兩個讀音同吃 essay 權重）。同樣不自動 commit。
-手動預覽與套用：
+`rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會同步來源並重生
+四張表：
+
+- `cangjie5.dict.yaml`、`cangjie5.schema.yaml`：**直接複製系統檔**，逐字一致，不保留本地差異。
+- `luna_pinyin.dict.yaml`：以系統檔合併，再套用 `tools/dict_overrides.tsv`
+  （目前只移除系統版的 `暫 zhan 0%`）。
+- 之後重生 `flypy_quick5`、`lisp_quick5` 字表與詞組表。
+
+不自動 commit。手動預覽與套用：
 
 ```bash
 bash tools/update_sources.sh --dry-run
@@ -170,15 +174,17 @@ CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（�
 
 桌面不建議改用 release 覆蓋，因為 repo 內有些**無法從上游還原**的本地狀態：
 
-- `cangjie5.dict.yaml` 保留本地獨有的 `鿃 bukoo`（上游沒有）；其餘跟系統一致。
+- `cangjie5.dict.yaml` 現在是系統檔的逐字複本，沒有本地差異。
 - `essay.txt` 是重生產物，不是上游原始檔
-- `luna_pinyin.dict.yaml` 對 `暫 zhan` 的權重調整
+- `luna_pinyin.dict.yaml` 對 `暫 zhan` 的權重調整（`tools/dict_overrides.tsv`）
 - 自己的 `*.custom.yaml`、`tools/`、pacman hook 都依賴 repo 路徑
 
 release 解壓會直接蓋掉這些差異，而且 hook 的 `Exec` 綁定 repo 路徑。
 手機端沒有這些 hook 與本地修改，`mobile-all` 一次覆蓋即可。
 
-所以：**桌面維持 repo，release 只服務手機與乾淨安裝。**
+同時：桌面維持 repo，release 只服務手機與乾淨安裝。
+
+檔案來源、hook 與系統檔的完整對照，見 [tools/SOURCES.md](tools/SOURCES.md)。
 
 ## 個人 fork 的 PR
 

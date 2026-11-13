@@ -2,6 +2,7 @@
 
 這份文件說明 `tools/` 下每支腳本、它的輸入、輸出，以及哪些檔案只在上游更新時才需要。
 日常使用只要看 [README-essay-tw.md](README-essay-tw.md)；這裡是維護與重新產生資料時的參考。
+檔案從哪裡來、hook 會改哪些檔，見 [SOURCES.md](SOURCES.md)。
 
 ## 1. 執行環境
 
@@ -80,11 +81,9 @@ When = PostTransaction
 Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/update_sources.sh
 ```
 
-- 以系統 dict 為基準合併（`tools/merge_source_dict.py`）：上游條目優先，
-  本地獨有的非 PUA 字元會保留；舊 PUA 對應（U+E000–U+F8FF）會被上游部首取代而移除。
-- 檔頭與條目都取上游（包含 `use_preset_vocabulary`，所以倉頡吃 essay 權重）。
-- 合併後套用 `tools/dict_overrides.tsv` 的讀音權重。
-- `cangjie5.schema.yaml` 只在本地沒有未提交修改時才覆蓋。
+- `cangjie5.dict.yaml`、`cangjie5.schema.yaml`：直接複製系統檔，逐字一致。
+- `luna_pinyin.dict.yaml`：以系統檔合併（`tools/merge_source_dict.py`），
+  再套用 `tools/dict_overrides.tsv` 的讀音權重。
 - 接著重生 `flypy_quick5`、`lisp_quick5` 字表與詞組表。
 - 不自動 commit；hook 只印出 `git diff --stat` 與提示。
 - 手動預覽：`bash tools/update_sources.sh --dry-run`。
@@ -326,12 +325,14 @@ hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可
 | `tools/update_sources.sh`、`tools/merge_source_dict.py` | **不可** | sources hook 需要 |
 | `tools/update_essay.sh` | **不可** | essay hook 需要 |
 | `tools/dict_overrides.tsv` | **不可** | sources hook 需要（字典權重覆寫） |
-| `cangjie5.dict.yaml`、`luna_pinyin.dict.yaml` | **不可** | 來源 dict；sources hook 會合併更新 |
+| `cangjie5.dict.yaml`、`cangjie5.schema.yaml` | **不可** | 系統檔複本；sources hook 會覆蓋 |
+| `luna_pinyin.dict.yaml` | **不可** | 系統檔合併＋overrides；sources hook 更新 |
 | 根目錄 `essay.txt`、四張 dict | 不可 | Rime 需要 |
 
 hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 `essay_pairs.tsv`、`abcn.tsv`、`reading_weights.tsv` 或兩張 dict。
-sources hook 則會合併 `cangjie5.dict.yaml`／`luna_pinyin.dict.yaml` 並重生四張表。
+sources hook 會複製 `cangjie5.dict.yaml`／`cangjie5.schema.yaml`、合併
+`luna_pinyin.dict.yaml`，並重生四張表。
 
 ### `package_rime.sh`
 

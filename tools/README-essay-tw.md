@@ -186,12 +186,12 @@ bash tools/update_essay.sh --source upstream  # 抓不到就失敗，不退回
 
 可用 `RIME_ESSAY_URL` 覆寫下載位置（測試或鏡像用）。
 
-`91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後，
-以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，本地獨有的
-非 PUA 字元會保留，舊 PUA 對應由上游部首取代；檔頭與條目都以上游為準（所以
-`use_preset_vocabulary: true`，倉頡也吃 essay 權重）。
-讀音權重由 `tools/dict_overrides.tsv` 在合併後套用（移除系統版 `暫 zhan 0%`）。
-合併後重生四張 flypy／lisp 表，不自動 commit，只顯示 `git diff --stat`。
+`91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後：
+
+- `cangjie5.dict.yaml`、`cangjie5.schema.yaml` 直接複製系統檔（逐字一致）。
+- `luna_pinyin.dict.yaml` 以 `tools/merge_source_dict.py` 合併，再套用
+  `tools/dict_overrides.tsv`（移除系統版 `暫 zhan 0%`）。
+- 重生四張 flypy／lisp 表，不自動 commit，只顯示 `git diff --stat`。
 
 ```bash
 bash tools/update_sources.sh --dry-run   # 先看差異
@@ -204,6 +204,8 @@ bash tools/update_sources.sh             # 套用並重生
 sudo rm /etc/pacman.d/hooks/91-rime-essay-tw.hook
 sudo rm /etc/pacman.d/hooks/91-rime-sources.hook
 ```
+
+檔案來源與 hook 的完整對照見 [SOURCES.md](SOURCES.md)。
 
 ## 手動重生
 

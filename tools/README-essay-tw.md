@@ -101,9 +101,10 @@ grep '^三' tools/moe_check.tsv
 | 眾／衆 | `ah` | `vs` |
 | 三／弎 | `ss` | `sj` |
 
-數字大寫：`參` 的 `san` 讀音由 `reading_weights.tsv` 設成 `100%`；`參` 的 MOE 異體是
-`参`，`叁` 由《電腦漢字字典》的民國教育部證據補進對照。`ss`／`sj` 的順序是
-**三 > 參 > 弎 > 参 > 叁**。
+數字大寫：`零壹貳參肆伍陸柒捌玖拾佰仟` 的正式讀音都由 `reading_weights.tsv`
+固定在 `100%`（luna 原本會壓低 `參 san` 0.01%、`陸 liu` 6.25%、`拾 shi` 99.90%）。
+`參` 的 MOE 異體是 `参`，`叁` 由《電腦漢字字典》的民國教育部證據補進對照。
+`ss`／`sj` 的順序是 **三 > 參 > 弎 > 参 > 叁**。
 
 ## 外部字典不在執行期
 
@@ -255,8 +256,8 @@ git checkout -- essay.txt flypy_quick5.dict.yaml flypy_quick5_phrases.dict.yaml 
 
 ## 已知限制
 
-- 常用字的**冷門讀音**仍受 luna 百分比影響（例如 `三` 的 `sa` 讀音是 0%）；權重帶保證的是
-  該字的主要讀音。
+- 常用字的冷門讀音仍受 luna 百分比影響（例如 `三` 的 `sa` 讀音是 0%）；權重帶保證的是
+  該字的主要讀音。大寫數字的正式讀音已由 `reading_weights.tsv` 固定。
 - `essay.txt` 是 git tracked；hook 重生後會讓 repo 顯示 modified，需自行 commit。
 - `.gram` 語言模型不會隨 essay 重生。
 - 只處理字形與已存在詞形的權重，不新增未經核可的詞彙。

@@ -1,6 +1,24 @@
 # Per-reading weight overrides for the character tables.
 # char<TAB>pinyin<TAB>weight   (weight may be absolute, e.g. 20000, or a percentage, e.g. 100%)
 #
+# These override the luna percentage when generating flypy_quick5/lisp_quick5.
+#
 # 參 is a 破音字: cān (participate), shēn (ginseng), cēn (參差), sān (financial 三).
 # luna gives sān only 0.01%; with the tiered essay, 100% keeps it at its common-char weight.
 參	san	100%
+
+# 數字（含大寫）：正式讀音固定 100%。
+# luna 會壓低部分讀音，例如 陸 liu 6.25%、拾 shi 99.90%；
+# 拉到 100% 後，打 liu / shi 時這些字仍會排在同音字前面。
+零	ling	100%
+壹	yi	100%
+貳	er	100%
+肆	si	100%
+伍	wu	100%
+陸	liu	100%
+柒	qi	100%
+捌	ba	100%
+玖	jiu	100%
+拾	shi	100%
+佰	bai	100%
+仟	qian	100%

@@ -180,7 +180,8 @@ note: .gram is not regenerated
 - 輸入：`luna_pinyin.dict.yaml`、`cangjie5.dict.yaml`、`tools/reading_weights.tsv`、
   `tools/essay_pairs.tsv`。
 - 輸出：根目錄 `flypy_quick5.dict.yaml`（字表，約 52,000 行含標頭）。
-- 小鶴雙拼代碼 + 倉頡速成碼；權重預設複製 luna 的百分比。
+- 小鶴雙拼代碼 + 倉頡速成碼；權重預設複製 luna 的百分比，再用
+  `tools/reading_weights.tsv` 覆寫特定讀音。
 - 異體字（`essay_pairs.tsv` 的 `char/ortho` variant）不套 luna 百分比，
   直接使用 essay 的窄帶權重。
 - 標頭含：
@@ -293,7 +294,11 @@ preferred<TAB>variant<TAB>scope(char|phrase)<TAB>type(ortho|regional|reading)<TA
 char<TAB>pinyin<TAB>weight
 ```
 
-weight 可寫絕對值（`20000`）或百分比（`100%`）。目前只有 `參 san 100%`。
+weight 可寫絕對值（`20000`）或百分比（`100%`）。目前有兩組：
+
+- `參 san 100%`：luna 只給 0.01%。
+- `零壹貳肆伍陸柒捌玖拾佰仟` 的正式讀音固定 `100%`：luna 會壓低部分讀音
+  （`陸 liu` 6.25%、`拾 shi` 99.90%），拉到 100% 後打 `liu`／`shi` 仍會排在前面。
 
 ## 7. 外部字典與可移除檔案
 

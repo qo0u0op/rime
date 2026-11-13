@@ -9,7 +9,7 @@
 |---|---|
 | Rime 執行 | `librime`、`fcitx5-rime`（或 ibus-rime） |
 | 產生 essay／dict | Python 3.11+，只用標準庫 |
-| pacman hook | `runuser`、`logger`、`flock` |
+| pacman hook | `runuser`、`logger`、`flock`、`curl`（抓上游 essay） |
 | `extract_opencc_pairs.py` | Python `opencc` 套件（或系統 `opencc`） |
 | `extract_evidence.py` | Python `readmdict` 套件 |
 | `extract_moe_pairs.py`／`extract_abcn.py` | 原始 xlsx（Downloads） |
@@ -34,20 +34,33 @@ Target = rime-essay
 [Action]
 Description = Regenerating Taiwan-first rime essay（重生台灣優先的 essay）
 When = PostTransaction
-Exec = /usr/bin/runuser -u d0w0b -- /usr/bin/python3 \
-  /home/d0w0b/.local/share/fcitx5/rime/tools/generate_essay.py \
-  --essay /usr/share/rime-data/essay.txt \
-  --pairs /home/d0w0b/.local/share/fcitx5/rime/tools/essay_pairs.tsv \
-  --out /home/d0w0b/.local/share/fcitx5/rime/essay.txt \
-  --report /home/d0w0b/.local/share/fcitx5/rime/tools/essay_report.txt
+Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/update_essay.sh
 ```
 
 - 只在 `rime-essay` 安裝／升級後執行。
 - 以 `d0w0b` 身分寫入，避免 root 擁有的檔案。
+- **優先抓上游** `https://raw.githubusercontent.com/rime/rime-essay/master/essay.txt`；
+  失敗、逾時或格式不合理時退回 pacman 的 `/usr/share/rime-data/essay.txt`，
+  不讓套件升級失敗。
 - **不呼叫** `fcitx5-remote`、不重啟輸入法；只印出「請重新部署 Rime」。
-- 需要：`generate_essay.py`、`essay_lib.py`、`essay_pairs.tsv`、`abcn.tsv`、
-  `/usr/share/rime-data/essay.txt`。
+- 需要：`update_essay.sh`、`generate_essay.py`、`essay_lib.py`、`essay_pairs.tsv`、
+  `abcn.tsv`、`curl`、`flock`；退回模式另需 `/usr/share/rime-data/essay.txt`。
 - 產出：根目錄 `essay.txt`、`tools/essay_report.txt`。
+
+### `update_essay.sh`
+
+```bash
+bash tools/update_essay.sh [--source auto|upstream|system] [--dry-run]
+# 預設 source=auto：先抓上游，失敗才用 pacman 版本
+```
+
+- `auto`：抓上游，失敗或不合法就退回 pacman 版本。
+- `upstream`：抓不到就失敗，適合手動確認上游狀況。
+- `system`：只用 pacman 版本，適合離線或比對。
+- `--dry-run`：只顯示會用哪個來源，不寫檔。
+- `RIME_ESSAY_URL` 可覆寫下載位置。
+- 驗證：檔案 ≥ 1 MB、≥ 300,000 行、每行都是 `字詞<TAB>數值`。
+- 先寫到暫存檔，成功後才 `mv` 覆蓋，避免留下半份 `essay.txt`。
 
 ### `91-rime-sources.hook`
 
@@ -311,6 +324,7 @@ hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可
 | `tools/essay_pairs.tsv`、`tools/abcn.tsv` | **不可** | hook 需要 |
 | `tools/generate_essay.py`、`tools/essay_lib.py` | **不可** | hook 需要 |
 | `tools/update_sources.sh`、`tools/merge_source_dict.py` | **不可** | sources hook 需要 |
+| `tools/update_essay.sh` | **不可** | essay hook 需要 |
 | `tools/dict_overrides.tsv` | **不可** | sources hook 需要（字典權重覆寫） |
 | `cangjie5.dict.yaml`、`luna_pinyin.dict.yaml` | **不可** | 來源 dict；sources hook 會合併更新 |
 | 根目錄 `essay.txt`、四張 dict | 不可 | Rime 需要 |

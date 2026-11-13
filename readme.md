@@ -108,24 +108,26 @@ python3 tools/generate_lisp_quick5_phrases.py
 
 接著重新部署 Rime（重新啟動 fcitx5，或使用選單的「部署」）。
 
-`rime-essay` 更新時，pacman hook `tools/91-rime-essay-tw.hook` 會自動重生 `essay.txt`，
-只印出提示、不會呼叫 `fcitx5-remote`。
+`rime-essay` 更新時，pacman hook `tools/91-rime-essay-tw.hook` 會呼叫
+`tools/update_essay.sh` 重生 `essay.txt`：
 
-注意：pacman `extra` 的 `rime-essay` 套件可能落後上游
-[rime/rime-essay](https://github.com/rime/rime-essay)（目前套件是 2025-02，上游已有 2026-11 的修正）。
-要跟上游時，先下載上游 `essay.txt`，再用 `--essay` 指定：
+- **優先抓上游** [rime/rime-essay](https://github.com/rime/rime-essay) 的 `essay.txt`。
+- 下載失敗或格式不合理時，**退回 pacman 的** `/usr/share/rime-data/essay.txt`，
+  不會讓套件升級失敗。
+- 只印出提示、不會呼叫 `fcitx5-remote`。
+
+pacman `extra` 的 `rime-essay` 目前停在 2025-02，落後上游（2026-11），所以預設抓上游。
+手動執行：
 
 ```bash
-curl -fL -o /tmp/rime-essay.txt \
-  https://raw.githubusercontent.com/rime/rime-essay/master/essay.txt
-python3 tools/generate_essay.py \
-    --essay /tmp/rime-essay.txt \
-    --pairs tools/essay_pairs.tsv \
-    --out essay.txt \
-    --report tools/essay_report.txt
+bash tools/update_essay.sh --dry-run            # 看會用哪個來源
+bash tools/update_essay.sh                      # 抓上游並重生
+bash tools/update_essay.sh --source system      # 強制用 pacman 版本
+bash tools/update_essay.sh --source upstream    # 抓不到就失敗，不退回
 ```
 
 差別只在頻率來源；`essay_pairs.tsv`、`reading_weights.tsv` 與三層權重規則不變。
+`essay.txt` 是 tracked 產物，重生後需自行 commit。
 
 `rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會把系統 dict
 合併回 repo 並重生四張表。合併是增量式的：上游條目優先，本地獨有的非 PUA 字元會保留，

@@ -170,12 +170,21 @@ sudo cp tools/91-rime-sources.hook /etc/pacman.d/hooks/
 ```
 
 `91-rime-essay-tw.hook` 在 `rime-essay` 安裝或升級後，以 `d0w0b` 身分執行
-`tools/generate_essay.py`，只重生 `essay.txt` 並印出「請重新部署 Rime」。
+`tools/update_essay.sh`，重生 `essay.txt` 並印出「請重新部署 Rime」。
 **不會**呼叫 `fcitx5-remote`、不會重啟輸入法。
 
-pacman `extra` 的 `rime-essay` 可能落後上游；要跟最新上游時，下載
-<https://raw.githubusercontent.com/rime/rime-essay/master/essay.txt> 後，
-用 `generate_essay.py --essay /tmp/rime-essay.txt` 指定即可，其餘規則不變。
+`update_essay.sh` 優先抓上游 <https://github.com/rime/rime-essay> 的 `essay.txt`；
+下載失敗、逾時或格式不合理時退回 pacman 的 `/usr/share/rime-data/essay.txt`。
+pacman `extra` 的套件目前停在 2025-02，落後上游（2026-11），所以預設抓上游。
+
+```bash
+bash tools/update_essay.sh --dry-run          # 只顯示會用哪個來源
+bash tools/update_essay.sh                    # 抓上游並重生
+bash tools/update_essay.sh --source system    # 強制用 pacman 版本
+bash tools/update_essay.sh --source upstream  # 抓不到就失敗，不退回
+```
+
+可用 `RIME_ESSAY_URL` 覆寫下載位置（測試或鏡像用）。
 
 `91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後，
 以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，本地獨有的

@@ -1,0 +1,9 @@
+# Local weight overrides applied after merging upstream dictionaries.
+# Columns: dictionary file, text, code, weight
+#
+# Rime 的 *.custom.yaml 只能修補 schema／config，不能修補 .dict.yaml；
+# 字典層的差異請留在這裡，由 tools/update_sources.sh 在合併後套用。
+#
+# 暫：教育部《重編國語辭典》以 ㄓㄢˋ（zhan）為讀音，ㄗㄢˋ（zan）為又音。
+luna_pinyin.dict.yaml	暫	zhan	100%
+luna_pinyin.dict.yaml	暫	zan	0%

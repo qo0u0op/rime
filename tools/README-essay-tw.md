@@ -174,8 +174,9 @@ sudo cp tools/91-rime-sources.hook /etc/pacman.d/hooks/
 **不會**呼叫 `fcitx5-remote`、不會重啟輸入法。
 
 `91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後，
-以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，但只存在本地的
-字元（PUA／相容區）會保留，`use_preset_vocabulary: false` 也會保留。
+以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，本地獨有的
+非 PUA 字元會保留，舊 PUA 對應由上游部首取代，`use_preset_vocabulary: false` 也會保留。
+讀音權重由 `tools/dict_overrides.tsv` 在合併後套用（`暫 zhan` 讀音、`暫 zan` 又音）。
 合併後重生四張 flypy／lisp 表，不自動 commit，只顯示 `git diff --stat`。
 
 ```bash

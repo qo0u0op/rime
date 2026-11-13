@@ -112,8 +112,9 @@ python3 tools/generate_lisp_quick5_phrases.py
 只印出提示、不會呼叫 `fcitx5-remote`。
 
 `rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會把系統 dict
-合併回 repo 並重生四張表。合併是增量式的：上游條目優先、本地獨有的字元（PUA／相容區）
-保留，`use_preset_vocabulary: false` 也保留；同樣不自動 commit。
+合併回 repo 並重生四張表。合併是增量式的：上游條目優先，本地獨有的非 PUA 字元會保留，
+舊 PUA 對應由上游部首取代；字典層的讀音權重由 `tools/dict_overrides.tsv` 套用
+（例如 `暫 zhan` 讀音、`暫 zan` 又音）。同樣不自動 commit。
 手動預覽與套用：
 
 ```bash

@@ -34,7 +34,7 @@ done
 merge_one() {
   local file="$1" out="$2"
   python3 "$ROOT/tools/merge_source_dict.py" \
-    "$ROOT/$file" "$SYSTEM/$file" "$out"
+    "$ROOT/$file" "$SYSTEM/$file" "$out" "$ROOT/tools/dict_overrides.tsv"
 }
 
 TMP_DIR="$(mktemp -d)"

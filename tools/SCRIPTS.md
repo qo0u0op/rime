@@ -294,11 +294,10 @@ preferred<TAB>variant<TAB>scope(char|phrase)<TAB>type(ortho|regional|reading)<TA
 char<TAB>pinyin<TAB>weight
 ```
 
-weight 可寫絕對值（`20000`）或百分比（`100%`）。目前有兩組：
-
-- `參 san 100%`：luna 只給 0.01%。
-- `零壹貳肆伍陸柒捌玖拾佰仟` 的正式讀音固定 `100%`：luna 會壓低部分讀音
-  （`陸 liu` 6.25%、`拾 shi` 99.90%），拉到 100% 後打 `liu`／`shi` 仍會排在前面。
+weight 可寫絕對值（`20000`）或百分比（`100%`）。目前固定 `100%` 的是
+`參 san` 與 `零壹貳肆伍陸柒捌玖拾佰仟` 的正式讀音：luna 只給 `參 san` 0.01%，
+`陸 liu` 6.25%、`拾 shi` 99.90% 也偏低；拉到 100% 後打 `san`／`liu`／`shi`
+仍會排在前面。
 
 ## 7. 外部字典與可移除檔案
 

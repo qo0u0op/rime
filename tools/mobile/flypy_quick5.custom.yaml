@@ -25,6 +25,7 @@ patch:
     - fallback_segmentor
 
   # 以詞定字：< 選首字、> 選末字（見 lua/select_character.lua）
+  # 可改 bracketleft/bracketright（[]）或 braceleft/braceright（{}）
   'engine/processors/@before 0': lua_processor@*select_character
   key_binder/select_first_character: less
   key_binder/select_last_character: greater

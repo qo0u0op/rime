@@ -74,6 +74,27 @@ Rime 的字頻來自 `essay.txt`。上游 `rime-essay` 以異體字為主（`爲
 - `` `ca ``：`a` 對應的候選（日、曰、昌…）。
 - `cangjie_comment` 開關切換「字根／字母」：字根模式顯示 `中中`、`卜口`，字母模式顯示 `ll`、`yr`。
 
+## 以詞定字
+
+打完詞組後，預設用 `<` 取首字、`>` 取末字（`lua/select_character.lua`）。
+按鍵可在 `flypy_quick5.custom.yaml`、`lisp_quick5.custom.yaml` 調整；
+手機版改 `tools/mobile/flypy_quick5.custom.yaml`、`tools/mobile/lisp_quick5.custom.yaml`。
+
+```yaml
+key_binder/select_first_character: less       # <
+key_binder/select_last_character: greater     # >
+```
+
+| 想用的符號 | 設定值 |
+|---|---|
+| `<>`（預設） | `less` / `greater` |
+| `[]` | `bracketleft` / `bracketright` |
+| `{}` | `braceleft` / `braceright` |
+
+`lua/select_character.lua` 比對時會忽略 Shift，所以設定 `[]` 時 `{` `}` 也會觸發
+同一個動作；設定 `{}` 時只有 Shift 後的 `{` `}` 會觸發。按 `{` `}` 需要 Shift，
+但 processor 會重設 librime 的單擊 Shift 計時，不會切換中英文。
+
 ## 八股文語言模型（octagram）
 
 `grammar.yaml` 定義 `zh-hant-t-essay-bgw`／`bgc`（以及 hans 版）；

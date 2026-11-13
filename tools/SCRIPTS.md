@@ -49,6 +49,44 @@ Exec = /usr/bin/runuser -u d0w0b -- /usr/bin/python3 \
   `/usr/share/rime-data/essay.txt`。
 - 產出：根目錄 `essay.txt`、`tools/essay_report.txt`。
 
+### `91-rime-sources.hook`
+
+`rime-cangjie`／`rime-luna-pinyin` 更新時，把系統 dict 同步回 repo 並重生四張表。
+
+```ini
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = rime-cangjie
+Target = rime-luna-pinyin
+
+[Action]
+Description = Updating rime source dicts（更新倉頡／拼音來源）
+When = PostTransaction
+Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/update_sources.sh
+```
+
+- 以系統 dict 為基準合併（`tools/merge_source_dict.py`）：上游條目優先，
+  本地獨有的字元（PUA／相容區）會保留，不會因套件更新被刪掉。
+- 保留 `cangjie5.dict.yaml` 的 `use_preset_vocabulary: false`。
+- `cangjie5.schema.yaml` 只在本地沒有未提交修改時才覆蓋。
+- 接著重生 `flypy_quick5`、`lisp_quick5` 字表與詞組表。
+- 不自動 commit；hook 只印出 `git diff --stat` 與提示。
+- 手動預覽：`bash tools/update_sources.sh --dry-run`。
+
+### `merge_source_dict.py`
+
+```bash
+python3 tools/merge_source_dict.py LOCAL UPSTREAM OUT
+```
+
+- 檔頭取上游，但 `use_preset_vocabulary` 保留本地值。
+- 條目以上游順序為主；同一個（字, 碼）以上游為準。
+- 只存在本地的條目附加在最後，所以更新不會刪字。
+- 相同輸入重跑結果不變（冪等）。
+
+
 ## 3. 重生 essay
 
 ### `generate_essay.py`
@@ -255,10 +293,13 @@ hook 不會讀它們。若日後要重新抽取，再從原始來源取得即可
 | `tools/reading_weights.tsv` | 不可 | dict 產生器需要 |
 | `tools/essay_pairs.tsv`、`tools/abcn.tsv` | **不可** | hook 需要 |
 | `tools/generate_essay.py`、`tools/essay_lib.py` | **不可** | hook 需要 |
+| `tools/update_sources.sh`、`tools/merge_source_dict.py` | **不可** | sources hook 需要 |
+| `cangjie5.dict.yaml`、`luna_pinyin.dict.yaml` | **不可** | 來源 dict；sources hook 會合併更新 |
 | 根目錄 `essay.txt`、四張 dict | 不可 | Rime 需要 |
 
 hook 更新 essay 時只會覆寫 `essay.txt` 與 `essay_report.txt`；不會動
 `essay_pairs.tsv`、`abcn.tsv`、`reading_weights.tsv` 或兩張 dict。
+sources hook 則會合併 `cangjie5.dict.yaml`／`luna_pinyin.dict.yaml` 並重生四張表。
 
 ### `package_rime.sh`
 

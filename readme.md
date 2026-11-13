@@ -111,6 +111,22 @@ python3 tools/generate_lisp_quick5_phrases.py
 `rime-essay` 更新時，pacman hook `tools/91-rime-essay-tw.hook` 會自動重生 `essay.txt`，
 只印出提示、不會呼叫 `fcitx5-remote`。
 
+`rime-cangjie`／`rime-luna-pinyin` 更新時，`tools/91-rime-sources.hook` 會把系統 dict
+合併回 repo 並重生四張表。合併是增量式的：上游條目優先、本地獨有的字元（PUA／相容區）
+保留，`use_preset_vocabulary: false` 也保留；同樣不自動 commit。
+手動預覽與套用：
+
+```bash
+bash tools/update_sources.sh --dry-run
+bash tools/update_sources.sh
+```
+
+安裝兩個 hook：
+
+```bash
+sudo cp tools/91-rime-essay-tw.hook tools/91-rime-sources.hook /etc/pacman.d/hooks/
+```
+
 CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（不含 `.gram`）：
 
 - `rime-config-desktop-all`
@@ -123,6 +139,27 @@ CI（`.github/workflows/package.yml`）會跑測試並打包四個 artifact（�
 `hamster.app.yaml`、`cangjie5.schema.yaml`，不打包 `latex.*`。手機只產 `all`，不再分 flypy／lisp。
 
 手機差異只存在 `tools/mobile/` 與手機 UI 檔，不再需要 `hamster` 分支。
+
+## 部署方式：桌面用 repo、手機用 release
+
+建議 **hybrid**：
+
+| 環境 | 來源 | 更新方式 |
+|---|---|---|
+| 桌面（`~/.local/share/fcitx5/rime`） | git repo + pacman hook | `git pull` 後重新部署；來源套件更新由 hook 重生 |
+| 手機（Trime／Hamster） | `rime-config-mobile-all` release | 下載解壓覆蓋使用者目錄 |
+
+桌面不建議改用 release 覆蓋，因為 repo 內有些**無法從上游還原**的本地狀態：
+
+- `cangjie5.dict.yaml` 的 `use_preset_vocabulary: false`（系統版是 `true`）
+- `essay.txt` 是重生產物，不是上游原始檔
+- `luna_pinyin.dict.yaml` 對 `暫 zhan` 的權重調整
+- 自己的 `*.custom.yaml`、`tools/`、pacman hook 都依賴 repo 路徑
+
+release 解壓會直接蓋掉這些差異，而且 hook 的 `Exec` 綁定 repo 路徑。
+手機端沒有這些 hook 與本地修改，`mobile-all` 一次覆蓋即可。
+
+所以：**桌面維持 repo，release 只服務手機與乾淨安裝。**
 
 ## 個人 fork 的 PR
 

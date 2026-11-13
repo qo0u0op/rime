@@ -166,16 +166,28 @@ bash tools/package_rime.sh dist/rime-config-mobile-all all mobile
 
 ```bash
 sudo cp tools/91-rime-essay-tw.hook /etc/pacman.d/hooks/
+sudo cp tools/91-rime-sources.hook /etc/pacman.d/hooks/
 ```
 
-hook 在 `rime-essay` 安裝或升級後，以 `d0w0b` 身分執行 `tools/generate_essay.py`，
-只重生 `essay.txt` 並印出「請重新部署 Rime」。
+`91-rime-essay-tw.hook` 在 `rime-essay` 安裝或升級後，以 `d0w0b` 身分執行
+`tools/generate_essay.py`，只重生 `essay.txt` 並印出「請重新部署 Rime」。
 **不會**呼叫 `fcitx5-remote`、不會重啟輸入法。
+
+`91-rime-sources.hook` 在 `rime-cangjie`／`rime-luna-pinyin` 更新後，
+以 `tools/merge_source_dict.py` 把系統 dict 併回 repo：上游條目優先，但只存在本地的
+字元（PUA／相容區）會保留，`use_preset_vocabulary: false` 也會保留。
+合併後重生四張 flypy／lisp 表，不自動 commit，只顯示 `git diff --stat`。
+
+```bash
+bash tools/update_sources.sh --dry-run   # 先看差異
+bash tools/update_sources.sh             # 套用並重生
+```
 
 移除：
 
 ```bash
 sudo rm /etc/pacman.d/hooks/91-rime-essay-tw.hook
+sudo rm /etc/pacman.d/hooks/91-rime-sources.hook
 ```
 
 ## 手動重生

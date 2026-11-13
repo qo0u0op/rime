@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = rime-cangjie
+Target = rime-luna-pinyin
+
+[Action]
+Description = Updating rime source dicts（更新倉頡／拼音來源）
+When = PostTransaction
+Exec = /usr/bin/runuser -u d0w0b -- /home/d0w0b/.local/share/fcitx5/rime/tools/update_sources.sh
